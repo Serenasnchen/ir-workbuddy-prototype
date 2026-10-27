@@ -1,0 +1,8 @@
+name: ir-qa-radar
+version: 1.0.0
+description: 业绩会问题雷达：双轨话题热度、机构话题轨迹、已公开表述索引、口径漂移、Top10 预注册
+category: 投资者关系
+author: IR 部门（试点）
+dependencies:
+  skills: [ir-house-style]
+  python: ">=3.9（仅标准库）"

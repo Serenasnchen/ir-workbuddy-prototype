@@ -1,0 +1,10 @@
+name: ir-holder-watch
+version: 1.0.0
+description: 股东、南向资金与回购的只读监测与回购禁止期日历（公开数据）
+category: 投资者关系
+author: IR 部门（试点）
+dependencies:
+  skills: [ir-house-style]
+  python: ">=3.9"
+  packages: ["pdftotext（poppler）或 pymupdf，二选一"]
+  network: "southbound.py 访问港交所披露易公开页面"

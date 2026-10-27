@@ -1,0 +1,9 @@
+name: ir-number-gatekeeper
+version: 1.0.0
+description: 披露数字守门员：五份文件（或任意子集，txt/PDF）数字勾稽、草稿新数字检测、注入错误自测（确定性脚本）
+category: 投资者关系
+author: IR 部门（试点）
+dependencies:
+  skills: [ir-house-style]
+  python: ">=3.9"
+  packages: ["pymupdf（仅输入为 PDF 时需要；纯文本输入只用标准库）"]

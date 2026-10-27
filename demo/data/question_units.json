@@ -1,0 +1,5962 @@
+{
+ "meta": {
+  "module": "question_units",
+  "title": "M2a 问题单元（分析师提问逐题人工编码）",
+  "notes": "共 202 个问题单元。excerpt 为文字稿原文截取（≤200 字符）；topics 为人工阅读编码，evidence 为原文证据短语。分析师姓名与机构：第三方文字稿，待录音复核。",
+  "as_of": "2026-10-26",
+  "generated_by": "本地 Python",
+  "script": "demo/pipeline/transcripts.py",
+  "inputs": [
+   {
+    "path": "data/parsed/q3-2023.json",
+    "sha256": "5478f8a57fb5a1a47b263c4ed57a591dcc22fe61cfe1ab30640823c585d7a92b"
+   },
+   {
+    "path": "data/parsed/q4-2023.json",
+    "sha256": "086d7e7d9e49485ba217b4b28d766c0b87e317e9181b3c65731d8072a102fd57"
+   },
+   {
+    "path": "data/parsed/q1-2024.json",
+    "sha256": "282ff8dd40e14287d338e0019c010f24a1a57c14a241877ad49db6f75e8c190c"
+   },
+   {
+    "path": "data/parsed/q2-2024.json",
+    "sha256": "dbda9d4167399186d0542de20b1de4402652fdbc3800cd8d5a7b61b9c5b18fe6"
+   },
+   {
+    "path": "data/parsed/q3-2024.json",
+    "sha256": "3793b177c68f36a5e58655ecf5a5ebf0d257a950efbe7154315799af675efb91"
+   },
+   {
+    "path": "data/parsed/q4-2024.json",
+    "sha256": "8724ce5ad99b7d9d09ae9035e8d334d5f878469ef8a2e3761065eebc8b1d3260"
+   },
+   {
+    "path": "data/parsed/q1-2025.json",
+    "sha256": "a9b7509949d73bcd5d2c00e26e91ddc864fde6ef85af8f6193e02ceed288cd0f"
+   },
+   {
+    "path": "data/parsed/q2-2025.json",
+    "sha256": "017a69b77ae21a98e3474d358654761d92aa9057e127bc0c5e07a616eddf6592"
+   },
+   {
+    "path": "data/parsed/q3-2025.json",
+    "sha256": "c649ab5a1a5deff5ee71ace09b08625ca687fb834a223cd8a4e3c3959420a3a2"
+   },
+   {
+    "path": "data/parsed/q4-2025.json",
+    "sha256": "85d74b5868b3e737027cc006f285b8a45a49424f7b35be23957643e20650b24f"
+   },
+   {
+    "path": "data/parsed/q1-2026.json",
+    "sha256": "296280220d952005256a55feddb6d711b50b74a0c0fc27a6500469c074fb7ea4"
+   },
+   {
+    "path": "data/parsed/q2-2026.json",
+    "sha256": "cb6c7ed6c6b64321b03ff11a2ef0efd13008127ac8aa920c9a1cb20139d01715"
+   },
+   {
+    "path": "data/src/transcripts/89632-q3-2023.html",
+    "sha256": "15bc4e838577d7a4338493c2be2ebd559b0554f645454f9c5e119527ca82a5d1"
+   },
+   {
+    "path": "data/src/transcripts/131103-q4-2023.html",
+    "sha256": "ebd24be009fc366222b42da059ad9e0ff2bcbb1ed09033e82550be6941129731"
+   },
+   {
+    "path": "data/src/transcripts/156588-q1-2024.html",
+    "sha256": "370e7f8e0396faa647b15c2ad1a3814a247f66c730935d5da322f436b95eea3a"
+   },
+   {
+    "path": "data/src/transcripts/386083-q2-2024.html",
+    "sha256": "0e9ed32c07330dbc58386a38f6c8136f032e825e5985df9ef598ee1bf24a6ced"
+   },
+   {
+    "path": "data/src/transcripts/221754-q3-2024.html",
+    "sha256": "820f8853ee8e239c266f87a7e40537e3502c9a7f4c22cb737468f2fd8820dbc3"
+   },
+   {
+    "path": "data/src/transcripts/256177-q4-2024.html",
+    "sha256": "780668f461c52d47ad94a2292e29c4889381294189f4c4a218b09b87a7144261"
+   },
+   {
+    "path": "data/src/transcripts/328715-q1-2025.html",
+    "sha256": "f7d3b720a48729f54351628232dc4c7a053db3d3e3f4229cbd2f2679461615de"
+   },
+   {
+    "path": "data/src/transcripts/346447-q2-2025.html",
+    "sha256": "bf7b47801c55e74210b2d34fe814405289d47c4669644625301b757f10b06f73"
+   },
+   {
+    "path": "data/src/transcripts/374535-q3-2025.html",
+    "sha256": "69e87675c23a6d5744e26948593186320553cd0f8da07ce82a3b4cd9aa787f1f"
+   },
+   {
+    "path": "data/src/transcripts/419871-q4-2025.html",
+    "sha256": "7d371cf6adba0ceb0a94cd5a515cbfcfbdd2ca1ecf0e9215d4798417654d4493"
+   },
+   {
+    "path": "data/src/transcripts/609405-q1-2026.html",
+    "sha256": "67588c7cc9d1b6ca1bc68fd0a93b87f5efa022bd645987b547cb382347d71fc4"
+   },
+   {
+    "path": "data/src/transcripts/667897-q2-2026.html",
+    "sha256": "339e976197b5817fc3a3302b0ef071621584a2bd0a793f6210f6e1640197d154"
+   },
+   {
+    "path": "data/src/market_raw/idx/tc_res.html",
+    "sha256": "0aca665f817ad3c390850bdeed257fdf910cc615303088d3db3f10bc255edd41"
+   },
+   {
+    "path": "data/src/ir_official/3Q25_ppt.txt",
+    "sha256": "be1d6ca24974f5b56c1e208baa09fb0b6342527d901411f1b6008f176a3ba696"
+   },
+   {
+    "path": "data/src/ir_official/4Q25_ppt.txt",
+    "sha256": "4967fa62958bdd1de7cd298a60c0512d344264e8d4bcfdc54c200a52bcc87b7e"
+   },
+   {
+    "path": "data/src/ir_official/1Q26_ppt.txt",
+    "sha256": "bf1fc959cb7eb1a5373fa3cc109195981cafa22d86f52cedfd453d443b7baf27"
+   },
+   {
+    "path": "data/src/ir_official/2Q26_ppt.txt",
+    "sha256": "4b38c8ae012201ee08135d11dc3a0d024d992a4bd1fbd401e69069c979132d85"
+   },
+   {
+    "path": "data/src/ir_official/2Q26_release_en.txt",
+    "sha256": "7b366701afbc064b172e395592f4236a725293e392b7ca3b80873b439945d305"
+   },
+   {
+    "path": "demo/pipeline/analyst_aliases.json",
+    "sha256": "bbbba035c1665d14c4b2d14dbe92620a5d06f0766978a16ac3d8d7a6bd1b604e"
+   },
+   {
+    "path": "demo/pipeline/m2_question_coding.json",
+    "sha256": "7e188ce8e309c8b5b260a25b66b9f7cd9d3654862c8aefe0beec8f4021f1a5ee"
+   }
+  ]
+ },
+ "sources": [
+  {
+   "id": "S01",
+   "title": "Tencent Holdings (HKG:0700) Q3 2023 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/89632-q3-2023/",
+   "date": "2023-11-15",
+   "tier": 3,
+   "user_provided": false,
+   "local_copy": "data/src/transcripts/89632-q3-2023.html"
+  },
+  {
+   "id": "S02",
+   "title": "Tencent Holdings (HKG:0700) Q4 2023 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/131103-q4-2023/",
+   "date": "2024-03-20",
+   "tier": 3,
+   "user_provided": false,
+   "local_copy": "data/src/transcripts/131103-q4-2023.html"
+  },
+  {
+   "id": "S03",
+   "title": "Tencent Holdings (HKG:0700) Q1 2024 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/156588-q1-2024/",
+   "date": "2024-05-14",
+   "tier": 3,
+   "user_provided": false,
+   "local_copy": "data/src/transcripts/156588-q1-2024.html"
+  },
+  {
+   "id": "S04",
+   "title": "Tencent Holdings (HKG:0700) Q2 2024 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/386083-q2-2024/",
+   "date": "2024-08-14",
+   "tier": 3,
+   "user_provided": false,
+   "local_copy": "data/src/transcripts/386083-q2-2024.html"
+  },
+  {
+   "id": "S05",
+   "title": "Tencent Holdings (HKG:0700) Q3 2024 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/221754-q3-2024/",
+   "date": "2024-11-13",
+   "tier": 3,
+   "user_provided": false,
+   "local_copy": "data/src/transcripts/221754-q3-2024.html"
+  },
+  {
+   "id": "S06",
+   "title": "Tencent Holdings (HKG:0700) Q4 2024 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/256177-q4-2024/",
+   "date": "2025-03-19",
+   "tier": 3,
+   "user_provided": false,
+   "local_copy": "data/src/transcripts/256177-q4-2024.html"
+  },
+  {
+   "id": "S07",
+   "title": "Tencent Holdings (HKG:0700) Q1 2025 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/328715-q1-2025/",
+   "date": "2025-05-14",
+   "tier": 3,
+   "user_provided": false,
+   "local_copy": "data/src/transcripts/328715-q1-2025.html"
+  },
+  {
+   "id": "S08",
+   "title": "Tencent Holdings (HKG:0700) Q2 2025 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/346447-q2-2025/",
+   "date": "2025-08-13",
+   "tier": 3,
+   "user_provided": false,
+   "local_copy": "data/src/transcripts/346447-q2-2025.html"
+  },
+  {
+   "id": "S09",
+   "title": "Tencent Holdings (HKG:0700) Q3 2025 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/374535-q3-2025/",
+   "date": "2025-11-13",
+   "tier": 3,
+   "user_provided": true,
+   "local_copy": "data/src/transcripts/374535-q3-2025.html"
+  },
+  {
+   "id": "S10",
+   "title": "Tencent Holdings (HKG:0700) Q4 2025 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/419871-q4-2025/",
+   "date": "2026-03-18",
+   "tier": 3,
+   "user_provided": true,
+   "local_copy": "data/src/transcripts/419871-q4-2025.html"
+  },
+  {
+   "id": "S11",
+   "title": "Tencent Holdings (HKG:0700) Q1 2026 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/609405-q1-2026/",
+   "date": "2026-05-13",
+   "tier": 3,
+   "user_provided": true,
+   "local_copy": "data/src/transcripts/609405-q1-2026.html"
+  },
+  {
+   "id": "S12",
+   "title": "Tencent Holdings (HKG:0700) Q2 2026 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/667897-q2-2026/",
+   "date": "2026-08-12",
+   "tier": 3,
+   "user_provided": true,
+   "local_copy": "data/src/transcripts/667897-q2-2026.html"
+  }
+ ],
+ "taxonomy": [
+  {
+   "id": "AI_CAPEX",
+   "name": "资本开支/算力投入"
+  },
+  {
+   "id": "AI_ROI",
+   "name": "投资回报/回本/变现时间"
+  },
+  {
+   "id": "AI_PRODUCTS",
+   "name": "自有AI产品(WorkBuddy/CodeBuddy/元宝/小微/智能体)"
+  },
+  {
+   "id": "MODELS",
+   "name": "混元/Hy模型能力"
+  },
+  {
+   "id": "COMPUTE",
+   "name": "芯片/GPU/算力供给"
+  },
+  {
+   "id": "CLOUD",
+   "name": "腾讯云/对外算力/Token定价"
+  },
+  {
+   "id": "MARGIN",
+   "name": "利润率/折旧/成本"
+  },
+  {
+   "id": "CAPITAL",
+   "name": "回购/派息/自由现金流/负债"
+  },
+  {
+   "id": "ADS",
+   "name": "营销服务/广告"
+  },
+  {
+   "id": "GAMES_DOM",
+   "name": "本土游戏"
+  },
+  {
+   "id": "GAMES_INTL",
+   "name": "国际游戏"
+  },
+  {
+   "id": "FINTECH",
+   "name": "金融科技与企业服务"
+  },
+  {
+   "id": "SOCIAL",
+   "name": "社交/视频号/内容/订阅"
+  },
+  {
+   "id": "REG",
+   "name": "监管/地缘/1260H"
+  },
+  {
+   "id": "PORTFOLIO",
+   "name": "投资组合/处置"
+  }
+ ],
+ "n_units_by_quarter": {
+  "2023Q3": 17,
+  "2023Q4": 16,
+  "2024Q1": 19,
+  "2024Q2": 19,
+  "2024Q3": 20,
+  "2024Q4": 14,
+  "2025Q1": 18,
+  "2025Q2": 17,
+  "2025Q3": 21,
+  "2025Q4": 11,
+  "2026Q1": 17,
+  "2026Q2": 13
+ },
+ "units": [
+  {
+   "q_id": "2023Q3-Q01",
+   "quarter": "2023Q3",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "The first is on Mini Games. Could management share with us more about the future strategy of Mini Games, given Tencent a strong franchise? We will be just staying at a platform for distribution, or…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "future strategy of Mini Games"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6,
+    9
+   ],
+   "unit_words": 78,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S01"
+   ]
+  },
+  {
+   "q_id": "2023Q3-Q02",
+   "quarter": "2023Q3",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "And I have a follow-up question on AI strategy. We have successfully launched our Hunyuan AI model, and we stand up versus our peers with our use cases. Can management share with us how would the…",
+   "topics": [
+    "MODELS",
+    "COMPUTE",
+    "REG"
+   ],
+   "evidence": {
+    "MODELS": "launched our Hunyuan AI model",
+    "COMPUTE": "U.S. chip ban",
+    "REG": "how would the U.S. chip ban impact our AI strategy"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6,
+    9
+   ],
+   "unit_words": 59,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S01"
+   ]
+  },
+  {
+   "q_id": "2023Q3-Q03",
+   "quarter": "2023Q3",
+   "analyst": "Gary Yu",
+   "org": "Morgan Stanley",
+   "excerpt": "My first questions is also related to the games business. I think two years ago, we also identified games as the key investment area for future growth. I think at that time, we were expecting a kind…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "translating into games pipeline"
+   },
+   "slot": 2,
+   "turn_ids": [
+    11
+   ],
+   "unit_words": 105,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S01"
+   ]
+  },
+  {
+   "q_id": "2023Q3-Q04",
+   "quarter": "2023Q3",
+   "analyst": "Gary Yu",
+   "org": "Morgan Stanley",
+   "excerpt": "And then I have a follow-up questions related to our capital management. I think last year we increased dividends. We have also stepped up our share buyback. How should we look at the opportunities…",
+   "topics": [
+    "CAPITAL",
+    "PORTFOLIO"
+   ],
+   "evidence": {
+    "CAPITAL": "stepped up our share buyback",
+    "PORTFOLIO": "opportunities in our investment portfolio"
+   },
+   "slot": 2,
+   "turn_ids": [
+    11
+   ],
+   "unit_words": 57,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S01"
+   ]
+  },
+  {
+   "q_id": "2023Q3-Q05",
+   "quarter": "2023Q3",
+   "analyst": "William Packer",
+   "org": "BNP Paribas Exane",
+   "excerpt": "My question is around the sustainability of growth margin improvement across the key VAS, ads, and finTech segments of your portfolio. Are the gains we've seen year-to-date sustainable into 2024 and…",
+   "topics": [
+    "MARGIN"
+   ],
+   "evidence": {
+    "MARGIN": "sustainability of growth margin improvement"
+   },
+   "slot": 3,
+   "turn_ids": [
+    17,
+    19,
+    21
+   ],
+   "unit_words": 40,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S01"
+   ]
+  },
+  {
+   "q_id": "2023Q3-Q06",
+   "quarter": "2023Q3",
+   "analyst": "William Packer",
+   "org": "BNP Paribas Exane",
+   "excerpt": "And my follow-up question was around domestic gaming. Growth's been volatile in recent years as you've digested the impact of lockdowns, regulation, et cetera. We now seem to have settled into a…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "medium to long-term growth algorithm for the segment"
+   },
+   "slot": 3,
+   "turn_ids": [
+    17,
+    19,
+    21
+   ],
+   "unit_words": 67,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S01"
+   ]
+  },
+  {
+   "q_id": "2023Q3-Q07",
+   "quarter": "2023Q3",
+   "analyst": "John Choi",
+   "org": "Daiwa",
+   "excerpt": "I have just a quick one question on the games. As you mentioned, I think, I think you guys mentioned that domestic, you're more comfortable, you will see more launches. But as we go into the…",
+   "topics": [
+    "GAMES_INTL"
+   ],
+   "evidence": {
+    "GAMES_INTL": "as we go into the international side"
+   },
+   "slot": 4,
+   "turn_ids": [
+    23
+   ],
+   "unit_words": 116,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S01"
+   ]
+  },
+  {
+   "q_id": "2023Q3-Q08",
+   "quarter": "2023Q3",
+   "analyst": "John Choi",
+   "org": "Daiwa",
+   "excerpt": "And just a quick follow-up on your CapEx and headcount plan. Can you kind of share with us, you know, what I think this quarter we did see an elevated CapEx this time, and also headcount did see a…",
+   "topics": [
+    "AI_CAPEX",
+    "MARGIN"
+   ],
+   "evidence": {
+    "AI_CAPEX": "we did see an elevated CapEx this time",
+    "MARGIN": "headcount did see a sequential improvement"
+   },
+   "slot": 4,
+   "turn_ids": [
+    23
+   ],
+   "unit_words": 59,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S01"
+   ]
+  },
+  {
+   "q_id": "2023Q3-Q09",
+   "quarter": "2023Q3",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "First is on the Video Accounts advertising revenue. As we started to lapse out the low base, and although we going to still have the closed loop e-commerce transactions to benefit and support that…",
+   "topics": [
+    "ADS"
+   ],
+   "evidence": {
+    "ADS": "steady state of the growth rate for the overall online ad revenues"
+   },
+   "slot": 5,
+   "turn_ids": [
+    28,
+    30,
+    32
+   ],
+   "unit_words": 61,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S01"
+   ]
+  },
+  {
+   "q_id": "2023Q3-Q10",
+   "quarter": "2023Q3",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "And then a follow-up is on the Hunyuan model. I think management did mention potentially sometime down the road, there will be a commercial product for a consumer ad. So just wondering, you know…",
+   "topics": [
+    "MODELS",
+    "AI_PRODUCTS",
+    "AI_ROI"
+   ],
+   "evidence": {
+    "MODELS": "on the Hunyuan model",
+    "AI_PRODUCTS": "the AI assistant to be integrated into WeChat and QQ",
+    "AI_ROI": "potential also a commercial service charge"
+   },
+   "slot": 5,
+   "turn_ids": [
+    28,
+    30,
+    32
+   ],
+   "unit_words": 72,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S01"
+   ]
+  },
+  {
+   "q_id": "2023Q3-Q11",
+   "quarter": "2023Q3",
+   "analyst": "Thomas Chong",
+   "org": "Jefferies",
+   "excerpt": "My question is about live streaming e-commerce. Given that the competitive environment is very intense, and we are seeing Video Accounts is gaining a very good traction and showing very fast growth.…",
+   "topics": [
+    "SOCIAL",
+    "ADS"
+   ],
+   "evidence": {
+    "SOCIAL": "Video Accounts is gaining a very good traction",
+    "ADS": "the internal advertising as well as the commissions growth trend"
+   },
+   "slot": 6,
+   "turn_ids": [
+    36,
+    38,
+    40
+   ],
+   "unit_words": 87,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S01"
+   ]
+  },
+  {
+   "q_id": "2023Q3-Q12",
+   "quarter": "2023Q3",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "Number one, regarding the growth driver of advertising business. James, you mentioned Weixin Search as one of the driver. Can you share with us a little bit more metrics, in terms of, where the…",
+   "topics": [
+    "ADS"
+   ],
+   "evidence": {
+    "ADS": "regarding the growth driver of advertising business"
+   },
+   "org_note": "文字稿写作 Goldman Sachs，按 交接语与标签均写 Goldman Sachs；其余 11 季均为 JPMorgan，疑为转写错误 记为 JPMorgan",
+   "slot": 7,
+   "turn_ids": [
+    42
+   ],
+   "unit_words": 92,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S01"
+   ]
+  },
+  {
+   "q_id": "2023Q3-Q13",
+   "quarter": "2023Q3",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "Second question is, on the mini game. We noticed that super majority of the mid-core and hardcore game activities are still mostly take place in apps. What does it take for those mid-core and harder…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "migrate into mini game ecosystem"
+   },
+   "org_note": "文字稿写作 Goldman Sachs，按 交接语与标签均写 Goldman Sachs；其余 11 季均为 JPMorgan，疑为转写错误 记为 JPMorgan",
+   "slot": 7,
+   "turn_ids": [
+    42
+   ],
+   "unit_words": 62,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S01"
+   ]
+  },
+  {
+   "q_id": "2023Q3-Q14",
+   "quarter": "2023Q3",
+   "analyst": "Charlene Liu",
+   "org": "HSBC",
+   "excerpt": "First is on advertising, which obviously has been a really strong year for Tencent as the platform has been gaining market share. Considering e-commerce is becoming a bigger contributor, and…",
+   "topics": [
+    "ADS"
+   ],
+   "evidence": {
+    "ADS": "Should we expect, I guess, growth to accelerate"
+   },
+   "slot": 8,
+   "turn_ids": [
+    46,
+    48
+   ],
+   "unit_words": 96,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S01"
+   ]
+  },
+  {
+   "q_id": "2023Q3-Q15",
+   "quarter": "2023Q3",
+   "analyst": "Charlene Liu",
+   "org": "HSBC",
+   "excerpt": "Then on the follow-up international games. Thank you. I guess separately on international games, you know, I guess what factors should we be focusing on, as we think about, again, the outlook?…",
+   "topics": [
+    "GAMES_INTL"
+   ],
+   "evidence": {
+    "GAMES_INTL": "separately on international games"
+   },
+   "slot": 8,
+   "turn_ids": [
+    46,
+    48
+   ],
+   "unit_words": 94,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S01"
+   ]
+  },
+  {
+   "q_id": "2023Q3-Q16",
+   "quarter": "2023Q3",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "So my first question, I think on FBS, we haven't talked too much on the FinTech, NetEase growth and the cloud business so far. Just how should we think about the landscape on these two and the…",
+   "topics": [
+    "FINTECH",
+    "CLOUD"
+   ],
+   "evidence": {
+    "FINTECH": "on FBS",
+    "CLOUD": "so the cloud business, in the competitive landscape and outlook"
+   },
+   "slot": 9,
+   "turn_ids": [
+    51,
+    54
+   ],
+   "unit_words": 76,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S01"
+   ]
+  },
+  {
+   "q_id": "2023Q3-Q17",
+   "quarter": "2023Q3",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "So on our shareholder return policies, how should we think about our current investment portfolio in terms of the investment and reinvestment piece this year? And any lessons or experience from the…",
+   "topics": [
+    "CAPITAL",
+    "PORTFOLIO"
+   ],
+   "evidence": {
+    "CAPITAL": "shareholder return policies",
+    "PORTFOLIO": "current investment portfolio"
+   },
+   "slot": 9,
+   "turn_ids": [
+    51,
+    54
+   ],
+   "unit_words": 65,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S01"
+   ]
+  },
+  {
+   "q_id": "2023Q4-Q01",
+   "quarter": "2023Q4",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "My first question is for online game. As we highlight in our strategy for online games, we will work on enhancing the flagship titles, building emerging franchise games, and launch of new titles.…",
+   "topics": [
+    "GAMES_DOM",
+    "REG"
+   ],
+   "evidence": {
+    "GAMES_DOM": "medium-term growth for the online game",
+    "REG": "number of Banhao being approved"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6
+   ],
+   "unit_words": 114,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S02"
+   ]
+  },
+  {
+   "q_id": "2023Q4-Q02",
+   "quarter": "2023Q4",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "It's for the live streaming e-commerce. Last year, we made very meaningful progress and have stepped up hiring and building of our team for live streaming e-commerce. Can management share with us…",
+   "topics": [
+    "SOCIAL"
+   ],
+   "evidence": {
+    "SOCIAL": "live streaming e-commerce"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6
+   ],
+   "unit_words": 51,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S02"
+   ]
+  },
+  {
+   "q_id": "2023Q4-Q03",
+   "quarter": "2023Q4",
+   "analyst": "William Packer",
+   "org": "BNP Paribas Exane",
+   "excerpt": "Firstly, domestic gaming growth weakened during the 2021-22 rectification period. Then in last August, you talked to weaker Q2 trends reflecting seasonality and less commercial content. You're again…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "evergreen domestic games"
+   },
+   "slot": 2,
+   "turn_ids": [
+    10
+   ],
+   "unit_words": 70,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S02"
+   ]
+  },
+  {
+   "q_id": "2023Q4-Q04",
+   "quarter": "2023Q4",
+   "analyst": "William Packer",
+   "org": "BNP Paribas Exane",
+   "excerpt": "Then my follow-up question is regarding regulation. The market was somewhat alarmed in Q4 regarding new draft rules for the video games industry, which could curtail in-game monetization. Could you…",
+   "topics": [
+    "REG",
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "REG": "new draft rules for the video games industry",
+    "GAMES_DOM": "curtail in-game monetization"
+   },
+   "slot": 2,
+   "turn_ids": [
+    10
+   ],
+   "unit_words": 57,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S02"
+   ]
+  },
+  {
+   "q_id": "2023Q4-Q05",
+   "quarter": "2023Q4",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "My main question is on the AI-powered functionality. So in addition to enhancing and powering the internal advertising targeting capability, what is your expectation of the AI-powered functionality…",
+   "topics": [
+    "CLOUD",
+    "ADS",
+    "AI_ROI"
+   ],
+   "evidence": {
+    "CLOUD": "external cloud and business services customers",
+    "ADS": "continual improvement on the advertiser ROI",
+    "AI_ROI": "generate decent traction of revenue"
+   },
+   "slot": 3,
+   "turn_ids": [
+    14
+   ],
+   "unit_words": 67,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S02"
+   ]
+  },
+  {
+   "q_id": "2023Q4-Q06",
+   "quarter": "2023Q4",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "Second, a very quick follow-up is I understand the user profile for mini-games is quite different from the mobile app game user, but just curious to see if there's any preference shift or…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "cannibalization of the time spent from the app games to the mini-games"
+   },
+   "slot": 3,
+   "turn_ids": [
+    14
+   ],
+   "unit_words": 62,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S02"
+   ]
+  },
+  {
+   "q_id": "2023Q4-Q07",
+   "quarter": "2023Q4",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "One is we've read about the shareholder return. So compared with just regular dividends, buybacks, and we used to have some distribution in specie, how should we view 2024 and maybe in the…",
+   "topics": [
+    "CAPITAL",
+    "PORTFOLIO"
+   ],
+   "evidence": {
+    "CAPITAL": "regular dividends, buybacks",
+    "PORTFOLIO": "reward shareholders maybe around the investment portfolio value"
+   },
+   "slot": 4,
+   "turn_ids": [
+    18,
+    21
+   ],
+   "unit_words": 77,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S02"
+   ]
+  },
+  {
+   "q_id": "2023Q4-Q08",
+   "quarter": "2023Q4",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "And then my second question is on Video Accounts e-commerce. Martin, you mentioned about the Video Accounts e-commerce and combining with mini-program e-commerce. Is it fair to say we are eventually…",
+   "topics": [
+    "SOCIAL"
+   ],
+   "evidence": {
+    "SOCIAL": "Video Accounts e-commerce"
+   },
+   "slot": 4,
+   "turn_ids": [
+    18,
+    21
+   ],
+   "unit_words": 94,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S02"
+   ]
+  },
+  {
+   "q_id": "2023Q4-Q09",
+   "quarter": "2023Q4",
+   "analyst": "Robin Zhu",
+   "org": "Bernstein",
+   "excerpt": "One on AI. I mean, you guys have talked a lot about ads and fintech and so on. Gaming is commonly thought to be one of these areas where generative AI could have quite a big impact potentially when…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "generative AI could have quite a big impact potentially when it comes to game design"
+   },
+   "slot": 5,
+   "turn_ids": [
+    23,
+    25
+   ],
+   "unit_words": 82,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S02"
+   ]
+  },
+  {
+   "q_id": "2023Q4-Q10",
+   "quarter": "2023Q4",
+   "analyst": "Robin Zhu",
+   "org": "Bernstein",
+   "excerpt": "Then a follow-up again on gaming is I think a couple of quarters ago, you mentioned that there was a periodic kind of slowdown in the productivity of AAA game development. Just wanted to get your…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "productivity of AAA game development"
+   },
+   "slot": 5,
+   "turn_ids": [
+    23,
+    25
+   ],
+   "unit_words": 82,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S02"
+   ]
+  },
+  {
+   "q_id": "2023Q4-Q11",
+   "quarter": "2023Q4",
+   "analyst": "Charlene Liu",
+   "org": "HSBC",
+   "excerpt": "First is on fintech. Recently, Tencent has lifted registered capital. I would like to find out a little bit more on how that may be used on consumer loans or perhaps overseas business, and how would…",
+   "topics": [
+    "FINTECH"
+   ],
+   "evidence": {
+    "FINTECH": "Tencent has lifted registered capital"
+   },
+   "slot": 6,
+   "turn_ids": [
+    27,
+    29,
+    32
+   ],
+   "unit_words": 62,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S02"
+   ]
+  },
+  {
+   "q_id": "2023Q4-Q12",
+   "quarter": "2023Q4",
+   "analyst": "Charlene Liu",
+   "org": "HSBC",
+   "excerpt": "The second one would be related to AI developments. Obviously, we've seen developments in AI create new revenue streams and cost optimization for overseas internet platforms. The management has…",
+   "topics": [
+    "MARGIN",
+    "AI_ROI"
+   ],
+   "evidence": {
+    "MARGIN": "benefits, which we have been able to reap on the cost front from AI adoption",
+    "AI_ROI": "how long will it take for Tencent to realize these gains"
+   },
+   "slot": 6,
+   "turn_ids": [
+    27,
+    29,
+    32
+   ],
+   "unit_words": 85,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S02"
+   ]
+  },
+  {
+   "q_id": "2023Q4-Q13",
+   "quarter": "2023Q4",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "My first question is regarding the recent partnership with Douyin, which we believe had quite a bit of ripple effect to the whole game live-streaming and gaming industry. What are the changes have…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "game live-streaming and gaming industry"
+   },
+   "slot": 7,
+   "turn_ids": [
+    34
+   ],
+   "unit_words": 46,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S02"
+   ]
+  },
+  {
+   "q_id": "2023Q4-Q14",
+   "quarter": "2023Q4",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "And then the second one is on the path of Video Accounts monetization. Clearly, I think the industry incumbent has demonstrated the short video monetization capability across advertising…",
+   "topics": [
+    "SOCIAL"
+   ],
+   "evidence": {
+    "SOCIAL": "Video Accounts making inroads into local services"
+   },
+   "slot": 7,
+   "turn_ids": [
+    34
+   ],
+   "unit_words": 49,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S02"
+   ]
+  },
+  {
+   "q_id": "2023Q4-Q15",
+   "quarter": "2023Q4",
+   "analyst": "James Lee",
+   "org": "Mizuho",
+   "excerpt": "My question is on cloud and AI. On the cloud side, I think a competitor recently announced a pretty large-scale price discount for their cloud offering. So just curious, what are you seeing in terms…",
+   "topics": [
+    "CLOUD"
+   ],
+   "evidence": {
+    "CLOUD": "large-scale price discount for their cloud offering"
+   },
+   "slot": 8,
+   "turn_ids": [
+    38,
+    40,
+    42
+   ],
+   "unit_words": 44,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S02"
+   ]
+  },
+  {
+   "q_id": "2023Q4-Q16",
+   "quarter": "2023Q4",
+   "analyst": "James Lee",
+   "org": "Mizuho",
+   "excerpt": "Now, on AI, how should we think about your positioning in large language model? Just curious, what stage are you in now? Can the model handle multiple modalities of data input and output? And just…",
+   "topics": [
+    "MODELS"
+   ],
+   "evidence": {
+    "MODELS": "positioning in large language model"
+   },
+   "slot": 8,
+   "turn_ids": [
+    38,
+    40,
+    42
+   ],
+   "unit_words": 43,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S02"
+   ]
+  },
+  {
+   "q_id": "2024Q1-Q01",
+   "quarter": "2024Q1",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "My first question is on the online game. In our last quarter, we highlight, one of our key strategy is to rejuvenate our key titles, that is showcasing a robust performance on the Supercell game…",
+   "topics": [
+    "GAMES_DOM",
+    "GAMES_INTL"
+   ],
+   "evidence": {
+    "GAMES_DOM": "rejuvenate our key titles",
+    "GAMES_INTL": "robust performance on the Supercell game, the recovery of PUBG"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6,
+    7,
+    10
+   ],
+   "unit_words": 78,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S03"
+   ]
+  },
+  {
+   "q_id": "2024Q1-Q02",
+   "quarter": "2024Q1",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "And I have a follow-up question on the, buyback side. In last quarter, we have committed a, at least HKD 100 billion of, buyback, last quarter. Given our share price have, has been going up very…",
+   "topics": [
+    "CAPITAL"
+   ],
+   "evidence": {
+    "CAPITAL": "pace of the buyback"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6,
+    7,
+    10
+   ],
+   "unit_words": 79,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S03"
+   ]
+  },
+  {
+   "q_id": "2024Q1-Q03",
+   "quarter": "2024Q1",
+   "analyst": "Thomas Chong",
+   "org": "Jefferies",
+   "excerpt": "My first question is about our advertising business. We see a very good set of momentum in the first quarter. How should we think about our market share gain story and the ad tech upgrade on the…",
+   "topics": [
+    "ADS"
+   ],
+   "evidence": {
+    "ADS": "the ad tech upgrade"
+   },
+   "slot": 2,
+   "turn_ids": [
+    13
+   ],
+   "unit_words": 86,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S03"
+   ]
+  },
+  {
+   "q_id": "2024Q1-Q04",
+   "quarter": "2024Q1",
+   "analyst": "Thomas Chong",
+   "org": "Jefferies",
+   "excerpt": "And my second question is about our high-quality growth strategy. Given our high-quality growth, our strategy stand out and our strong earnings growth momentum, how should we expect our earnings…",
+   "topics": [
+    "MARGIN"
+   ],
+   "evidence": {
+    "MARGIN": "earnings growth and margin trend"
+   },
+   "slot": 2,
+   "turn_ids": [
+    13
+   ],
+   "unit_words": 86,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S03"
+   ]
+  },
+  {
+   "q_id": "2024Q1-Q05",
+   "quarter": "2024Q1",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "First is on the gaming. So with the positive growth in the grossing of HOK, Peacekeeper, and also several games also achieving record high grossing recently this quarter. So the strong growth in the…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "HOK, Peacekeeper"
+   },
+   "slot": 3,
+   "turn_ids": [
+    18
+   ],
+   "unit_words": 77,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S03"
+   ]
+  },
+  {
+   "q_id": "2024Q1-Q06",
+   "quarter": "2024Q1",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "Second question is, I'm wondering if there's any chance the games application or the digital content application by Tencent or other developers in China could see an improvement in the App Store…",
+   "topics": [
+    "MARGIN"
+   ],
+   "evidence": {
+    "MARGIN": "uptake in the growth margin for the VAS"
+   },
+   "slot": 3,
+   "turn_ids": [
+    18
+   ],
+   "unit_words": 52,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S03"
+   ]
+  },
+  {
+   "q_id": "2024Q1-Q07",
+   "quarter": "2024Q1",
+   "analyst": "Gary Yu",
+   "org": "Morgan Stanley",
+   "excerpt": "I have a follow-up questions on the game business, and thank you for the earlier comment, regarding what we learned, from the evergreen games. On the same note, what have we learned in terms of…",
+   "topics": [
+    "GAMES_DOM",
+    "GAMES_INTL"
+   ],
+   "evidence": {
+    "GAMES_DOM": "we have DNF Mobile coming up",
+    "GAMES_INTL": "on the international side"
+   },
+   "slot": 4,
+   "turn_ids": [
+    21
+   ],
+   "unit_words": 104,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S03"
+   ]
+  },
+  {
+   "q_id": "2024Q1-Q08",
+   "quarter": "2024Q1",
+   "analyst": "Gary Yu",
+   "org": "Morgan Stanley",
+   "excerpt": "And my second question is also a follow-up question on, margin upside. Across these business segments, how should we look at the sustainable kind of margin level going forward, given it seems like…",
+   "topics": [
+    "MARGIN"
+   ],
+   "evidence": {
+    "MARGIN": "sustainable kind of margin level"
+   },
+   "slot": 4,
+   "turn_ids": [
+    21
+   ],
+   "unit_words": 62,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S03"
+   ]
+  },
+  {
+   "q_id": "2024Q1-Q09",
+   "quarter": "2024Q1",
+   "analyst": "Anna Zhang",
+   "org": "Guosen Securities",
+   "excerpt": "So, the first question I want to ask management is, we saw Meta improve their Advantage+ advertising tool based on the large language models, and we wonder if management can share more on how…",
+   "topics": [
+    "ADS"
+   ],
+   "evidence": {
+    "ADS": "use AI to improve the ad business"
+   },
+   "slot": 5,
+   "turn_ids": [
+    24,
+    26,
+    28,
+    30,
+    32
+   ],
+   "unit_words": 107,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S03"
+   ]
+  },
+  {
+   "q_id": "2024Q1-Q10",
+   "quarter": "2024Q1",
+   "analyst": "Anna Zhang",
+   "org": "Guosen Securities",
+   "excerpt": "I do have a follow-up question. Recently, I noticed, actually, Meta. They announced their the Meta AI function, and they roll out to all the Meta products such as like WhatsApp and like Facebook…",
+   "topics": [
+    "AI_PRODUCTS"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "similar like product like Meta AI"
+   },
+   "slot": 5,
+   "turn_ids": [
+    24,
+    26,
+    28,
+    30,
+    32
+   ],
+   "unit_words": 94,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S03"
+   ]
+  },
+  {
+   "q_id": "2024Q1-Q11",
+   "quarter": "2024Q1",
+   "analyst": "John Choi",
+   "org": "Daiwa",
+   "excerpt": "I have a question about your business services on cloud. I realize that, you know, some of your new business at WeCom, revenue tripled, Tencent Meeting also doubled. Are we seeing a more of…",
+   "topics": [
+    "CLOUD",
+    "FINTECH"
+   ],
+   "evidence": {
+    "CLOUD": "business services on cloud",
+    "FINTECH": "WeCom, revenue tripled, Tencent Meeting also doubled"
+   },
+   "slot": 6,
+   "turn_ids": [
+    34
+   ],
+   "unit_words": 92,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S03"
+   ]
+  },
+  {
+   "q_id": "2024Q1-Q12",
+   "quarter": "2024Q1",
+   "analyst": "John Choi",
+   "org": "Daiwa",
+   "excerpt": "And I have a quick follow-up question on your wealth management. I think, you know, this has been one of the key drivers of your growth and Fintech services. Can you kind of elaborate a bit more…",
+   "topics": [
+    "FINTECH"
+   ],
+   "evidence": {
+    "FINTECH": "your wealth management"
+   },
+   "slot": 6,
+   "turn_ids": [
+    34
+   ],
+   "unit_words": 94,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S03"
+   ]
+  },
+  {
+   "q_id": "2024Q1-Q13",
+   "quarter": "2024Q1",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "One is, I asked about the video accounts and mini program last year on e-commerce. So I want to hear, where do we see we are innovating most in terms of ad tech? We've read about you talk about ad…",
+   "topics": [
+    "ADS",
+    "SOCIAL"
+   ],
+   "evidence": {
+    "ADS": "innovating most in terms of ad tech",
+    "SOCIAL": "leverage video accounts, live streaming, and mini program"
+   },
+   "slot": 7,
+   "turn_ids": [
+    37,
+    39,
+    41,
+    43
+   ],
+   "unit_words": 65,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S03"
+   ]
+  },
+  {
+   "q_id": "2024Q1-Q14",
+   "quarter": "2024Q1",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "Okay, and then my follow-up question is on our investment portfolio, given it's a very sizable, nearly $130 billion in value. So, do we have any thinking on consistent or any distribution policies…",
+   "topics": [
+    "PORTFOLIO",
+    "CAPITAL"
+   ],
+   "evidence": {
+    "PORTFOLIO": "after the JD and Meituan distributions",
+    "CAPITAL": "any distribution policies"
+   },
+   "slot": 7,
+   "turn_ids": [
+    37,
+    39,
+    41,
+    43
+   ],
+   "unit_words": 82,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S03"
+   ]
+  },
+  {
+   "q_id": "2024Q1-Q15",
+   "quarter": "2024Q1",
+   "analyst": "Charlene Liu",
+   "org": "HSBC",
+   "excerpt": "I think first is about applications of Hunyuan, and management has spoken quite extensively- Yes. Can you hear me okay? Yeah. So, ... management has spoken quite extensively on how Hunyuan can…",
+   "topics": [
+    "MODELS",
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "MODELS": "applications of Hunyuan",
+    "GAMES_DOM": "Hunyuan's potential application on the game business"
+   },
+   "slot": 8,
+   "turn_ids": [
+    46,
+    48,
+    50,
+    52,
+    55,
+    57,
+    59,
+    61,
+    63
+   ],
+   "unit_words": 110,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S03"
+   ]
+  },
+  {
+   "q_id": "2024Q1-Q16",
+   "quarter": "2024Q1",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "Number one is on the fintech business. Can you elaborate the slowdown of the fintech business, perhaps decompose the business into payment and non-payments? Also, how should we think about the…",
+   "topics": [
+    "FINTECH"
+   ],
+   "evidence": {
+    "FINTECH": "slowdown of the fintech business"
+   },
+   "slot": 9,
+   "turn_ids": [
+    66,
+    68
+   ],
+   "unit_words": 41,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S03"
+   ]
+  },
+  {
+   "q_id": "2024Q1-Q17",
+   "quarter": "2024Q1",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "The second question is on the Weixin Search, which seems to be picking up monetization momentum in recent quarters. Can you discuss strategy to monetize Weixin Search activities? It would be great…",
+   "topics": [
+    "ADS"
+   ],
+   "evidence": {
+    "ADS": "strategy to monetize Weixin Search activities"
+   },
+   "slot": 9,
+   "turn_ids": [
+    66,
+    68
+   ],
+   "unit_words": 56,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S03"
+   ]
+  },
+  {
+   "q_id": "2024Q1-Q18",
+   "quarter": "2024Q1",
+   "analyst": "Robin Zhu",
+   "org": "Bernstein",
+   "excerpt": "One, James, I think at one point you said that you think Video Accounts monetization could be as big as Moments. Now the Video Accounts engagement is 2X of Moments. Could I get your thoughts on the…",
+   "topics": [
+    "ADS",
+    "SOCIAL"
+   ],
+   "evidence": {
+    "ADS": "intensity of ad revenues per engagement",
+    "SOCIAL": "Video Accounts engagement is 2X of Moments"
+   },
+   "slot": 10,
+   "turn_ids": [
+    71,
+    74
+   ],
+   "unit_words": 84,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S03"
+   ]
+  },
+  {
+   "q_id": "2024Q1-Q19",
+   "quarter": "2024Q1",
+   "analyst": "Robin Zhu",
+   "org": "Bernstein",
+   "excerpt": "And yeah, so, and then secondly, on games, I think different members of management have been critical about the internal game development process. You know, just wanted to get your thoughts on: we…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "consistent launch pipeline in the second half"
+   },
+   "slot": 10,
+   "turn_ids": [
+    71,
+    74
+   ],
+   "unit_words": 90,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S03"
+   ]
+  },
+  {
+   "q_id": "2024Q2-Q01",
+   "quarter": "2024Q2",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "First questions, can management elaborate a little bit, your recent upgrade of the advertising technology platform? When management noted on the prepared remark, the upgraded technology will analyze…",
+   "topics": [
+    "ADS"
+   ],
+   "evidence": {
+    "ADS": "upgrade of the advertising technology platform"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6,
+    9
+   ],
+   "unit_words": 99,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S04"
+   ]
+  },
+  {
+   "q_id": "2024Q2-Q02",
+   "quarter": "2024Q2",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "Second question, given there's a recent supportive comment from the State Council on the digital content, including gaming and others, will that change any of the company's R&D resource deployment…",
+   "topics": [
+    "REG",
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "REG": "supportive comment from the State Council on the digital content",
+    "GAMES_DOM": "including gaming and others"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6,
+    9
+   ],
+   "unit_words": 48,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S04"
+   ]
+  },
+  {
+   "q_id": "2024Q2-Q03",
+   "quarter": "2024Q2",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "First is on the live streaming e-commerce. We noticed that there have been a meaningful slowdown in the GMV growth in the short video platform, live streaming e-commerce, for the competitor in the…",
+   "topics": [
+    "SOCIAL"
+   ],
+   "evidence": {
+    "SOCIAL": "e-commerce strategy for our Video Accounts"
+   },
+   "slot": 2,
+   "turn_ids": [
+    11
+   ],
+   "unit_words": 47,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S04"
+   ]
+  },
+  {
+   "q_id": "2024Q2-Q04",
+   "quarter": "2024Q2",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "My second question is on the accounting side, specifically digging into two items. First, for the G&A, which is up 8% on a year-on-year basis, understand that the headcount is rather flattish on a…",
+   "topics": [
+    "MARGIN"
+   ],
+   "evidence": {
+    "MARGIN": "G&A, which is up 8%"
+   },
+   "slot": 2,
+   "turn_ids": [
+    11
+   ],
+   "unit_words": 76,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S04"
+   ]
+  },
+  {
+   "q_id": "2024Q2-Q05",
+   "quarter": "2024Q2",
+   "analyst": "Miranda Zhuang",
+   "org": "Bank of America",
+   "excerpt": "So my questions are about the profit. My key question is about... So the new higher margin revenue streams have been driving a strong profit beat for the several quarters. Can management update us…",
+   "topics": [
+    "MARGIN"
+   ],
+   "evidence": {
+    "MARGIN": "room of further upside to your gross margins"
+   },
+   "slot": 3,
+   "turn_ids": [
+    15,
+    17,
+    19
+   ],
+   "unit_words": 96,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S04"
+   ]
+  },
+  {
+   "q_id": "2024Q2-Q06",
+   "quarter": "2024Q2",
+   "analyst": "Miranda Zhuang",
+   "org": "Bank of America",
+   "excerpt": "And then my follow-up question about the profit is that we have seen that the share of profit from associates and JVs increased significantly quarter-over-quarter and also year-over-year…",
+   "topics": [
+    "PORTFOLIO"
+   ],
+   "evidence": {
+    "PORTFOLIO": "share of profit from associates and JVs"
+   },
+   "slot": 3,
+   "turn_ids": [
+    15,
+    17,
+    19
+   ],
+   "unit_words": 82,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S04"
+   ]
+  },
+  {
+   "q_id": "2024Q2-Q07",
+   "quarter": "2024Q2",
+   "analyst": "Lincoln Kong",
+   "org": "Goldman Sachs",
+   "excerpt": "One is on games that very big contrast versus last year. This year, we're seeing your re-acceleration in domestic international games, your proactive, adjusted, evergreen existing games, launch of…",
+   "topics": [
+    "GAMES_DOM",
+    "GAMES_INTL"
+   ],
+   "evidence": {
+    "GAMES_DOM": "re-acceleration in domestic international games",
+    "GAMES_INTL": "strong Supercell grossing"
+   },
+   "slot": 4,
+   "turn_ids": [
+    23,
+    26
+   ],
+   "unit_words": 97,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S04"
+   ]
+  },
+  {
+   "q_id": "2024Q2-Q08",
+   "quarter": "2024Q2",
+   "analyst": "Lincoln Kong",
+   "org": "Goldman Sachs",
+   "excerpt": "Second, on the investment portfolio, as we talked about, this will be a self-sustaining portfolio for the time being. What are the likely methods of divestment for mature, more mature assets? Some…",
+   "topics": [
+    "PORTFOLIO"
+   ],
+   "evidence": {
+    "PORTFOLIO": "methods of divestment for mature"
+   },
+   "slot": 4,
+   "turn_ids": [
+    23,
+    26
+   ],
+   "unit_words": 81,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S04"
+   ]
+  },
+  {
+   "q_id": "2024Q2-Q09",
+   "quarter": "2024Q2",
+   "analyst": "Annie Zhang",
+   "org": "Macquarie",
+   "excerpt": "Number one is really on the advertising segment. So second quarter, we've delivered 19% growth, seemed much more resilient versus the prior expectations, especially, considering, you know, in the…",
+   "topics": [
+    "ADS"
+   ],
+   "evidence": {
+    "ADS": "on the advertising segment"
+   },
+   "analyst_note": "文字稿姓名存疑，候选 Ellie Jiang（低置信）",
+   "slot": 5,
+   "turn_ids": [
+    28,
+    31
+   ],
+   "unit_words": 83,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S04"
+   ]
+  },
+  {
+   "q_id": "2024Q2-Q10",
+   "quarter": "2024Q2",
+   "analyst": "Annie Zhang",
+   "org": "Macquarie",
+   "excerpt": "The second one is really on the AI integration progress within our ecosystem. We already heard some exciting upgrades with the advertising segment. Just wondering, if anything else you could share…",
+   "topics": [
+    "MODELS",
+    "AI_PRODUCTS"
+   ],
+   "evidence": {
+    "MODELS": "large language model training progress",
+    "AI_PRODUCTS": "application explorations, opportunities"
+   },
+   "analyst_note": "文字稿姓名存疑，候选 Ellie Jiang（低置信）",
+   "slot": 5,
+   "turn_ids": [
+    28,
+    31
+   ],
+   "unit_words": 62,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S04"
+   ]
+  },
+  {
+   "q_id": "2024Q2-Q11",
+   "quarter": "2024Q2",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "My first question is regarding DNF Mobile. The game has achieved a strong initial momentum since the launch in late May. How do you guys think about the sustainability of this game? I'm asking…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "sustainability of this game"
+   },
+   "slot": 6,
+   "turn_ids": [
+    33
+   ],
+   "unit_words": 82,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S04"
+   ]
+  },
+  {
+   "q_id": "2024Q2-Q12",
+   "quarter": "2024Q2",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "Then second question is regarding Fintech. The growth rate of the Fintech business was negatively affected by a slow consumption environment and also high price sensitivity among consumers. Have you…",
+   "topics": [
+    "FINTECH"
+   ],
+   "evidence": {
+    "FINTECH": "consumption behavior change in terms of financial product transaction"
+   },
+   "slot": 6,
+   "turn_ids": [
+    33
+   ],
+   "unit_words": 54,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S04"
+   ]
+  },
+  {
+   "q_id": "2024Q2-Q13",
+   "quarter": "2024Q2",
+   "analyst": "Charlene Liu",
+   "org": "HSBC",
+   "excerpt": "Can management discuss where we are in the investment cycle for Triple-A titles? And can you please give us an update on latest progress and whatnot? That's the first question.",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "investment cycle for Triple-A titles"
+   },
+   "slot": 7,
+   "turn_ids": [
+    37,
+    40
+   ],
+   "unit_words": 30,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S04"
+   ]
+  },
+  {
+   "q_id": "2024Q2-Q14",
+   "quarter": "2024Q2",
+   "analyst": "Charlene Liu",
+   "org": "HSBC",
+   "excerpt": "And separately, we have seen that cross-pollination of literature, or, you know, existing PC games IP, has played quite a vital role for driving growth in long videos, as well as for mobile games.…",
+   "topics": [
+    "GAMES_DOM",
+    "SOCIAL"
+   ],
+   "evidence": {
+    "GAMES_DOM": "Honor of Kings: World",
+    "SOCIAL": "driving growth in long videos"
+   },
+   "slot": 7,
+   "turn_ids": [
+    37,
+    40
+   ],
+   "unit_words": 82,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S04"
+   ]
+  },
+  {
+   "q_id": "2024Q2-Q15",
+   "quarter": "2024Q2",
+   "analyst": "William Packer",
+   "org": "BNP Paribas Exane",
+   "excerpt": "There's been some press speculation around tensions with app store owners in China regarding several factors, for example, fees and external payment systems. This is parallel to what we're seeing in…",
+   "topics": [
+    "MARGIN",
+    "SOCIAL"
+   ],
+   "evidence": {
+    "MARGIN": "upside for the gaming business gross margin from reducing payments",
+    "SOCIAL": "elements of the WeChat ecosystem"
+   },
+   "slot": 8,
+   "turn_ids": [
+    42
+   ],
+   "unit_words": 82,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S04"
+   ]
+  },
+  {
+   "q_id": "2024Q2-Q16",
+   "quarter": "2024Q2",
+   "analyst": "Thomas Chong",
+   "org": "Jefferies",
+   "excerpt": "My first question is about our cloud business. Given that, I think in the prepared remarks, we talk about AI-related revenue from high computer infrastructure, model library service, and also our AI…",
+   "topics": [
+    "CLOUD"
+   ],
+   "evidence": {
+    "CLOUD": "thoughts about the contribution from AI going forward"
+   },
+   "slot": 9,
+   "turn_ids": [
+    45,
+    48
+   ],
+   "unit_words": 60,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S04"
+   ]
+  },
+  {
+   "q_id": "2024Q2-Q17",
+   "quarter": "2024Q2",
+   "analyst": "Thomas Chong",
+   "org": "Jefferies",
+   "excerpt": "My second question is about capital return. Considering the macro uncertainties these days, any thoughts about upsizing our share repurchase program? Thank you. Thank you.",
+   "topics": [
+    "CAPITAL"
+   ],
+   "evidence": {
+    "CAPITAL": "upsizing our share repurchase program"
+   },
+   "slot": 9,
+   "turn_ids": [
+    45,
+    48
+   ],
+   "unit_words": 25,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S04"
+   ]
+  },
+  {
+   "q_id": "2024Q2-Q18",
+   "quarter": "2024Q2",
+   "analyst": "Gary Yu",
+   "org": "Morgan Stanley",
+   "excerpt": "My first question is regarding domestic games. Again, a follow-up on DNF. I think management mentioned that we expect this to be the next evergreen major hit. How should we look at the longevity and…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "longevity and scale"
+   },
+   "slot": 10,
+   "turn_ids": [
+    50
+   ],
+   "unit_words": 73,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S04"
+   ]
+  },
+  {
+   "q_id": "2024Q2-Q19",
+   "quarter": "2024Q2",
+   "analyst": "Gary Yu",
+   "org": "Morgan Stanley",
+   "excerpt": "And my second question is related to macro. I think management indicated that we have started to see some negative impact on payment. ... How has the recent trend been looking like? So have we seen…",
+   "topics": [
+    "FINTECH",
+    "ADS",
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "FINTECH": "negative impact on payment",
+    "ADS": "Tencent-owned ads property seems to be very resilient",
+    "GAMES_DOM": "resiliency in the games"
+   },
+   "slot": 10,
+   "turn_ids": [
+    50
+   ],
+   "unit_words": 94,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S04"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q01",
+   "quarter": "2024Q3",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "First is on mobile games. This year, we have a few major hits in China gaming markets. In mobile, we have our hugely successful Dungeon & Fighter. In PC, Black Myth: Wukong, which we have an equity…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "hugely successful Dungeon & Fighter"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6,
+    10
+   ],
+   "unit_words": 104,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q02",
+   "quarter": "2024Q3",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "And my second question is on e-commerce. Notice that we upgrade our into our Weixin Mini Shops to enhance our e-commerce offering. Can management share more with us this initiative, including this…",
+   "topics": [
+    "SOCIAL"
+   ],
+   "evidence": {
+    "SOCIAL": "Weixin Mini Shops"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6,
+    10
+   ],
+   "unit_words": 105,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q03",
+   "quarter": "2024Q3",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "First is that related to Weixin search. You mentioned commercial queries and click-through rate grew year over year. Can management share some colors on which industry advertisers started to utilize…",
+   "topics": [
+    "ADS",
+    "AI_PRODUCTS",
+    "AI_ROI"
+   ],
+   "evidence": {
+    "ADS": "commercial keyword to drive the traffic lead",
+    "AI_PRODUCTS": "will your Yuanbao, the Gen AI chat box",
+    "AI_ROI": "commercial sponsor answer"
+   },
+   "slot": 2,
+   "turn_ids": [
+    12
+   ],
+   "unit_words": 85,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q04",
+   "quarter": "2024Q3",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "Second question is related to international games. When you comment on elongating the defer periods, is that only referred to certain big flagship titles that you have? Can you remind us the range…",
+   "topics": [
+    "GAMES_INTL"
+   ],
+   "evidence": {
+    "GAMES_INTL": "related to international games"
+   },
+   "slot": 2,
+   "turn_ids": [
+    12
+   ],
+   "unit_words": 77,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q05",
+   "quarter": "2024Q3",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "I have two questions kicking off with a macro kind of related question. With the shift in more pro-growth domestic policy since September, and while we also see a more complex geopolitical…",
+   "topics": [
+    "REG"
+   ],
+   "evidence": {
+    "REG": "more complex geopolitical environment ahead"
+   },
+   "slot": 3,
+   "turn_ids": [
+    16
+   ],
+   "unit_words": 58,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q06",
+   "quarter": "2024Q3",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "And specifically on consumption, I just want to expand on how are we seeing any latest trends on marketing services, payment indicators with the recent Singles' Day? And you mentioned a decline in…",
+   "topics": [
+    "ADS",
+    "FINTECH"
+   ],
+   "evidence": {
+    "ADS": "latest trends on marketing services",
+    "FINTECH": "payment indicators with the recent Singles' Day"
+   },
+   "slot": 3,
+   "turn_ids": [
+    16
+   ],
+   "unit_words": 62,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q07",
+   "quarter": "2024Q3",
+   "analyst": "Miranda Zhuang",
+   "org": "Bank of America",
+   "excerpt": "So first question, I want to follow up on the Weixin e-commerce business. So management has explained the rationale and the benefits of the Mini Shops and is optimistic about the e-commerce business…",
+   "topics": [
+    "SOCIAL"
+   ],
+   "evidence": {
+    "SOCIAL": "Weixin e-commerce business"
+   },
+   "slot": 4,
+   "turn_ids": [
+    19,
+    22
+   ],
+   "unit_words": 133,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q08",
+   "quarter": "2024Q3",
+   "analyst": "Miranda Zhuang",
+   "org": "Bank of America",
+   "excerpt": "My second question, can I check with the management if there will be any color about the recent open-up and cooperation with Taobao? What kind of benefits are we seeing? And how should we think…",
+   "topics": [
+    "SOCIAL"
+   ],
+   "evidence": {
+    "SOCIAL": "cooperation with Taobao"
+   },
+   "slot": 4,
+   "turn_ids": [
+    19,
+    22
+   ],
+   "unit_words": 44,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q09",
+   "quarter": "2024Q3",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "My first question is about the newly launched game Delta Force. Based on the iOS ranking, the game's monetization seemed to be a little bit behind the curve despite high user time span and retention…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "newly launched game Delta Force"
+   },
+   "slot": 5,
+   "turn_ids": [
+    24
+   ],
+   "unit_words": 54,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q10",
+   "quarter": "2024Q3",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "And then the second question is regarding the payment revenue decline in this quarter. China retail spend actually grew by low single digit in Q3, but your payment revenue declined on a year-on-year…",
+   "topics": [
+    "FINTECH"
+   ],
+   "evidence": {
+    "FINTECH": "payment revenue decline"
+   },
+   "slot": 5,
+   "turn_ids": [
+    24
+   ],
+   "unit_words": 50,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q11",
+   "quarter": "2024Q3",
+   "analyst": "Charlene Liu",
+   "org": "HSBC",
+   "excerpt": "The first question I wanted to ask is about sort of outlook on earnings growth because we have seen close to two years of really strong margin expansion come through. Does Tencent have a more…",
+   "topics": [
+    "MARGIN"
+   ],
+   "evidence": {
+    "MARGIN": "strong margin expansion"
+   },
+   "slot": 6,
+   "turn_ids": [
+    28,
+    30
+   ],
+   "unit_words": 77,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q12",
+   "quarter": "2024Q3",
+   "analyst": "Charlene Liu",
+   "org": "HSBC",
+   "excerpt": "Secondly, do we have an updated budget for 2025 share buyback? Is it fair to assume that Tencent would do at least the absolute amount that Tencent did in 2024? And how's the management thinking…",
+   "topics": [
+    "CAPITAL",
+    "PORTFOLIO"
+   ],
+   "evidence": {
+    "CAPITAL": "2025 share buyback",
+    "PORTFOLIO": "disposal of investments"
+   },
+   "slot": 6,
+   "turn_ids": [
+    28,
+    30
+   ],
+   "unit_words": 59,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q13",
+   "quarter": "2024Q3",
+   "analyst": "John Choi",
+   "org": "Daiwa",
+   "excerpt": "I have a question on AI. I think management mentioned that GPU-powered services accounts for teens for your IaaS business. But can you kind of elaborate a bit more? How do we see the AI-related…",
+   "topics": [
+    "CLOUD",
+    "FINTECH",
+    "AI_ROI"
+   ],
+   "evidence": {
+    "CLOUD": "GPU-powered services accounts for teens for your IaaS business",
+    "FINTECH": "AI-related revenue contribution for the business service",
+    "AI_ROI": "AI-related revenue contribution"
+   },
+   "slot": 7,
+   "turn_ids": [
+    32
+   ],
+   "unit_words": 43,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q14",
+   "quarter": "2024Q3",
+   "analyst": "John Choi",
+   "org": "Daiwa",
+   "excerpt": "And my second question is, could we have more color about your management strategy for monetizing by employing your Hunyuan model for different business lines and how we are able to see it? Thank you.",
+   "topics": [
+    "MODELS",
+    "AI_ROI"
+   ],
+   "evidence": {
+    "MODELS": "your Hunyuan model",
+    "AI_ROI": "monetizing by employing your Hunyuan model"
+   },
+   "slot": 7,
+   "turn_ids": [
+    32
+   ],
+   "unit_words": 35,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q15",
+   "quarter": "2024Q3",
+   "analyst": "Thomas Chong",
+   "org": "Jefferies",
+   "excerpt": "My first question is back to the gaming business. I think recently, if we look into Southeast Asia as well as the domestic market or even globally, we are actually seeing shooting games experience…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "shooting games experience strong growth"
+   },
+   "slot": 8,
+   "turn_ids": [
+    35
+   ],
+   "unit_words": 93,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q16",
+   "quarter": "2024Q3",
+   "analyst": "Thomas Chong",
+   "org": "Jefferies",
+   "excerpt": "And my second question is relating to our fintech business. We have talked about wealth management is experiencing positive growth. I just want to get some color with regard to our strategies in…",
+   "topics": [
+    "FINTECH"
+   ],
+   "evidence": {
+    "FINTECH": "wealth management versus lending"
+   },
+   "slot": 8,
+   "turn_ids": [
+    35
+   ],
+   "unit_words": 66,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q17",
+   "quarter": "2024Q3",
+   "analyst": "Thomas Chong",
+   "org": "Jefferies",
+   "excerpt": "And lastly, it's more about our investees. Any thoughts about unlocking the values of our investees or our free cash flow is already strong enough in returning value to shareholders? Thank you.",
+   "topics": [
+    "PORTFOLIO",
+    "CAPITAL"
+   ],
+   "evidence": {
+    "PORTFOLIO": "unlocking the values of our investees",
+    "CAPITAL": "returning value to shareholders"
+   },
+   "slot": 8,
+   "turn_ids": [
+    35
+   ],
+   "unit_words": 32,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q18",
+   "quarter": "2024Q3",
+   "analyst": "Bai Yang",
+   "org": "CICC",
+   "excerpt": "My question is about the game business. The IEG has made some internal adjustments. Could management share more details on the reason about this adjustment, and how do these adjustments relate to…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "The IEG has made some internal adjustments"
+   },
+   "slot": 9,
+   "turn_ids": [
+    40,
+    42
+   ],
+   "unit_words": 46,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q19",
+   "quarter": "2024Q3",
+   "analyst": "Jialong Shi",
+   "org": "Nomura",
+   "excerpt": "The first question is about the advertising business. Tencent advertising, Tencent ad business has performed much better than industry peers this year. Video Accounts has been a driver for your…",
+   "topics": [
+    "ADS",
+    "SOCIAL"
+   ],
+   "evidence": {
+    "ADS": "outlook for your ad business",
+    "SOCIAL": "potential of your Video Accounts ads"
+   },
+   "slot": 10,
+   "turn_ids": [
+    44
+   ],
+   "unit_words": 105,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q3-Q20",
+   "quarter": "2024Q3",
+   "analyst": "Jialong Shi",
+   "org": "Nomura",
+   "excerpt": "My second question regards the collaboration between WeChat and Taobao. What were the factors that have led to the collaboration? Are we going to see more collaborations of this kind between Tencent…",
+   "topics": [
+    "SOCIAL"
+   ],
+   "evidence": {
+    "SOCIAL": "collaboration between WeChat and Taobao"
+   },
+   "slot": 10,
+   "turn_ids": [
+    44
+   ],
+   "unit_words": 50,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S05"
+   ]
+  },
+  {
+   "q_id": "2024Q4-Q01",
+   "quarter": "2024Q4",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "The first one is on the AI CapEx impact on financials. As we step up the CapEx on AI, our margin will be inevitably dragged by additional depreciation and R&D expenses. Over the past few years, we…",
+   "topics": [
+    "AI_CAPEX",
+    "MARGIN"
+   ],
+   "evidence": {
+    "AI_CAPEX": "AI CapEx impact on financials",
+    "MARGIN": "additional depreciation and R&D expenses"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6
+   ],
+   "unit_words": 60,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S06"
+   ]
+  },
+  {
+   "q_id": "2024Q4-Q02",
+   "quarter": "2024Q4",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "My second question is on Mini Shops. In Q3, we launched our Weixin Mini Shops and Blue Packet gifting function that have been very well received by the user. Can management share with us the…",
+   "topics": [
+    "SOCIAL"
+   ],
+   "evidence": {
+    "SOCIAL": "Weixin Mini Shops"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6
+   ],
+   "unit_words": 45,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S06"
+   ]
+  },
+  {
+   "q_id": "2024Q4-Q03",
+   "quarter": "2024Q4",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "First is for the enterprise-facing service that you mentioned, just wondering if management can illustrate a little bit the demand and adoption rate that you have seen for your SaaS service over the…",
+   "topics": [
+    "FINTECH",
+    "CLOUD"
+   ],
+   "evidence": {
+    "FINTECH": "SaaS service",
+    "CLOUD": "cross-sell and upsell to our cloud customer"
+   },
+   "slot": 2,
+   "turn_ids": [
+    10,
+    12
+   ],
+   "unit_words": 88,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S06"
+   ]
+  },
+  {
+   "q_id": "2024Q4-Q04",
+   "quarter": "2024Q4",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "My second question is on the consumer-facing application. I think in addition to Yuanbao, which obviously has achieved very strong breakout the last couple of months, there is also this EMA…",
+   "topics": [
+    "AI_PRODUCTS"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "Yuanbao position as the AI gateway"
+   },
+   "slot": 2,
+   "turn_ids": [
+    10,
+    12
+   ],
+   "unit_words": 88,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S06"
+   ]
+  },
+  {
+   "q_id": "2024Q4-Q05",
+   "quarter": "2024Q4",
+   "analyst": "Jialong Shi",
+   "org": "Nomura",
+   "excerpt": "We saw Tencent and Yuanbao show very strong growth momentum since this year. Can management elaborate the strategies to further grow the user base in this very competitive market? Yuanbao is a…",
+   "topics": [
+    "AI_PRODUCTS"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "Yuanbao is a hybrid of AI chatbot and an AI search provider"
+   },
+   "slot": 3,
+   "turn_ids": [
+    14,
+    17
+   ],
+   "unit_words": 53,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S06"
+   ]
+  },
+  {
+   "q_id": "2024Q4-Q06",
+   "quarter": "2024Q4",
+   "analyst": "Jialong Shi",
+   "org": "Nomura",
+   "excerpt": "Also relating to that, how big a market share will AI search eventually represent in the entire search market in the future in terms of search queries? How do you guys plan to monetize AI search in…",
+   "topics": [
+    "AI_ROI",
+    "AI_PRODUCTS"
+   ],
+   "evidence": {
+    "AI_ROI": "How do you guys plan to monetize AI search",
+    "AI_PRODUCTS": "AI search eventually represent"
+   },
+   "slot": 3,
+   "turn_ids": [
+    14,
+    17
+   ],
+   "unit_words": 43,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S06"
+   ]
+  },
+  {
+   "q_id": "2024Q4-Q07",
+   "quarter": "2024Q4",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "First, on advertising. With the healthy 17% growth that we saw, should we view this fourth quarter exit rate as a proxy, let's say, to 2025 this year? Given the talk about the AI-powered…",
+   "topics": [
+    "ADS"
+   ],
+   "evidence": {
+    "ADS": "acceleration of this marketing services growth"
+   },
+   "slot": 4,
+   "turn_ids": [
+    19,
+    22
+   ],
+   "unit_words": 86,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S06"
+   ]
+  },
+  {
+   "q_id": "2024Q4-Q08",
+   "quarter": "2024Q4",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "Separately on games, how should we view the growth outlook this year for domestic and international, especially the higher base effect for domestic by the second half of this year? And with AI, what…",
+   "topics": [
+    "GAMES_DOM",
+    "GAMES_INTL"
+   ],
+   "evidence": {
+    "GAMES_DOM": "higher base effect for domestic",
+    "GAMES_INTL": "growth outlook this year for domestic and international"
+   },
+   "slot": 4,
+   "turn_ids": [
+    19,
+    22
+   ],
+   "unit_words": 60,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S06"
+   ]
+  },
+  {
+   "q_id": "2024Q4-Q09",
+   "quarter": "2024Q4",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "My first question is regarding the commercial payments. It's encouraging to see that your commercial payment revenue has turned from negative growth in Q3 to year-on-year flat in Q4. Can you share…",
+   "topics": [
+    "FINTECH"
+   ],
+   "evidence": {
+    "FINTECH": "commercial payment revenue"
+   },
+   "slot": 5,
+   "turn_ids": [
+    24
+   ],
+   "unit_words": 51,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S06"
+   ]
+  },
+  {
+   "q_id": "2024Q4-Q10",
+   "quarter": "2024Q4",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "My second question is a follow-up to the AI and the CapEx. You guided a CapEx to revenue ratio of low teens for 2025, which is a similar ratio as for 2024. This guidance implies a significant…",
+   "topics": [
+    "AI_CAPEX"
+   ],
+   "evidence": {
+    "AI_CAPEX": "CapEx to revenue ratio of low teens for 2025"
+   },
+   "slot": 5,
+   "turn_ids": [
+    24
+   ],
+   "unit_words": 88,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S06"
+   ]
+  },
+  {
+   "q_id": "2024Q4-Q11",
+   "quarter": "2024Q4",
+   "analyst": "John Choi",
+   "org": "Daiwa",
+   "excerpt": "My first question is a follow-up on advertising. Can management share some more color? I think on the prepared remarks, you guys mentioned that we have seen an increase for most industry, like which…",
+   "topics": [
+    "ADS"
+   ],
+   "evidence": {
+    "ADS": "which verticals have benefited most"
+   },
+   "slot": 6,
+   "turn_ids": [
+    29
+   ],
+   "unit_words": 82,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S06"
+   ]
+  },
+  {
+   "q_id": "2024Q4-Q12",
+   "quarter": "2024Q4",
+   "analyst": "John Choi",
+   "org": "Daiwa",
+   "excerpt": "My second question is on capital allocation. I think management shared that the share buyback in this year will be less than last year, but on the other hand, dividends will increase. When it comes…",
+   "topics": [
+    "CAPITAL",
+    "PORTFOLIO"
+   ],
+   "evidence": {
+    "CAPITAL": "share buyback in this year will be less than last year",
+    "PORTFOLIO": "investments in M&A"
+   },
+   "slot": 6,
+   "turn_ids": [
+    29
+   ],
+   "unit_words": 74,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S06"
+   ]
+  },
+  {
+   "q_id": "2024Q4-Q13",
+   "quarter": "2024Q4",
+   "analyst": "Thomas Chong",
+   "org": "Jefferies",
+   "excerpt": "My question is going back to the previous question on spending and also on higher margin business and monetization. Given the fact that we have been pursuing high-quality growth strategy for the…",
+   "topics": [
+    "MARGIN"
+   ],
+   "evidence": {
+    "MARGIN": "margin expansion story in 2025"
+   },
+   "slot": 7,
+   "turn_ids": [
+    33
+   ],
+   "unit_words": 104,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S06"
+   ]
+  },
+  {
+   "q_id": "2024Q4-Q14",
+   "quarter": "2024Q4",
+   "analyst": "Liao Yuan",
+   "org": "CITIC Securities",
+   "excerpt": "My question is regarding the AI and AI agent. We have seen many companies release their own large language models and AI agent. Just want to know how our management view the key competitive factors…",
+   "topics": [
+    "MODELS",
+    "AI_PRODUCTS"
+   ],
+   "evidence": {
+    "MODELS": "key competitive factors in the future of large language models",
+    "AI_PRODUCTS": "we see a lot of AI agent in the market"
+   },
+   "slot": 8,
+   "turn_ids": [
+    39,
+    41
+   ],
+   "unit_words": 83,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S06"
+   ]
+  },
+  {
+   "q_id": "2025Q1-Q01",
+   "quarter": "2025Q1",
+   "analyst": "Thomas Chong",
+   "org": "Jefferies",
+   "excerpt": "My first question is about agentic AI. Can management comment about the outlook and differentiation of Weixin versus peers in the market? In addition, can management also comment about our…",
+   "topics": [
+    "AI_PRODUCTS",
+    "AI_ROI",
+    "CLOUD"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "differentiation of Weixin versus peers",
+    "AI_ROI": "strategies across various AI business models",
+    "CLOUD": "GPU rental"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6
+   ],
+   "unit_words": 43,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S07"
+   ]
+  },
+  {
+   "q_id": "2025Q1-Q02",
+   "quarter": "2025Q1",
+   "analyst": "Thomas Chong",
+   "org": "Jefferies",
+   "excerpt": "My second question is about e-commerce. Can management comment about the latest organizational adjustment in e-commerce, in particular the latest progress in Mini Shops, and what should we expect…",
+   "topics": [
+    "SOCIAL"
+   ],
+   "evidence": {
+    "SOCIAL": "latest progress in Mini Shops"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6
+   ],
+   "unit_words": 70,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S07"
+   ]
+  },
+  {
+   "q_id": "2025Q1-Q03",
+   "quarter": "2025Q1",
+   "analyst": "Adi Yao",
+   "org": "Macquarie",
+   "excerpt": "I just wanted to really check on our current progress with the Yuanbao integration into the Weixin ecosystem. Just wondering, management, if you can shed some light on how do we see the user…",
+   "topics": [
+    "AI_PRODUCTS",
+    "SOCIAL"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "Yuanbao integration into the Weixin ecosystem",
+    "SOCIAL": "Mini Shops, Official Accounts, Video Accounts"
+   },
+   "analyst_note": "文字稿姓名存疑，候选 Ellie Jiang（低置信）",
+   "slot": 2,
+   "turn_ids": [
+    9,
+    11
+   ],
+   "unit_words": 113,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S07"
+   ]
+  },
+  {
+   "q_id": "2025Q1-Q04",
+   "quarter": "2025Q1",
+   "analyst": "Adi Yao",
+   "org": "Macquarie",
+   "excerpt": "If I may, just a quick follow-up. As we see potentially more adoption and the usage picking up across both users and the enterprises side, what do we really plan to do in terms of managing, I guess…",
+   "topics": [
+    "AI_ROI"
+   ],
+   "evidence": {
+    "AI_ROI": "balance between pace of investments versus the revenue runway"
+   },
+   "analyst_note": "文字稿姓名存疑，候选 Ellie Jiang（低置信）",
+   "slot": 2,
+   "turn_ids": [
+    9,
+    11
+   ],
+   "unit_words": 56,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S07"
+   ]
+  },
+  {
+   "q_id": "2025Q1-Q05",
+   "quarter": "2025Q1",
+   "analyst": "William Packer",
+   "org": "BNP Paribas Exane",
+   "excerpt": "It was a very strong quarter for domestic games. Could you help us think through the longer-term implications for the growth algorithm in that segment? Should we think of the strong performance as a…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "growth algorithm in that segment"
+   },
+   "slot": 3,
+   "turn_ids": [
+    14
+   ],
+   "unit_words": 75,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S07"
+   ]
+  },
+  {
+   "q_id": "2025Q1-Q06",
+   "quarter": "2025Q1",
+   "analyst": "William Packer",
+   "org": "BNP Paribas Exane",
+   "excerpt": "As a follow-up, there's been a lot of noise globally recently around regulatory interventions changing the split of economics between app stores and apps. Per management commentary, this is…",
+   "topics": [
+    "REG",
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "REG": "regulatory interventions changing the split of economics between app stores and apps",
+    "GAMES_DOM": "especially in the video game segments"
+   },
+   "slot": 3,
+   "turn_ids": [
+    14
+   ],
+   "unit_words": 75,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S07"
+   ]
+  },
+  {
+   "q_id": "2025Q1-Q07",
+   "quarter": "2025Q1",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "Number one, I wanted to ask, can management share with us over the past two, three months, what are some of the notable user behavior changes that Tencent is able to observe post the deeper…",
+   "topics": [
+    "AI_PRODUCTS",
+    "AI_ROI"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "how users are using Yuanbao",
+    "AI_ROI": "future monetization potential"
+   },
+   "slot": 4,
+   "turn_ids": [
+    17
+   ],
+   "unit_words": 93,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S07"
+   ]
+  },
+  {
+   "q_id": "2025Q1-Q08",
+   "quarter": "2025Q1",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "Following up on gaming, I know in addition to some of the bigger games which have been benefiting from the AI integration, will some of the smaller titles also be integrating with AI in the coming…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "smaller titles also be integrating with AI"
+   },
+   "slot": 4,
+   "turn_ids": [
+    17
+   ],
+   "unit_words": 58,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S07"
+   ]
+  },
+  {
+   "q_id": "2025Q1-Q09",
+   "quarter": "2025Q1",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "My first question is on the high-end GPU. Recently, the U.S. has introduced the licensing requirement for the high-end GPU. We understand that our priority is to use this GPU internally first. Could…",
+   "topics": [
+    "COMPUTE",
+    "REG",
+    "AI_CAPEX"
+   ],
+   "evidence": {
+    "COMPUTE": "licensing requirement for the high-end GPU",
+    "REG": "the U.S. has introduced the licensing requirement",
+    "AI_CAPEX": "impact, if any, our capital expenditure"
+   },
+   "slot": 5,
+   "turn_ids": [
+    21
+   ],
+   "unit_words": 57,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S07"
+   ]
+  },
+  {
+   "q_id": "2025Q1-Q10",
+   "quarter": "2025Q1",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "I have a follow-up on the macro situation. In our press release, we indicate that our consumer loans business has experienced a year-on-year revenue growth after a more conservative approach last…",
+   "topics": [
+    "FINTECH",
+    "ADS"
+   ],
+   "evidence": {
+    "FINTECH": "consumer loans business",
+    "ADS": "on the advertiser side"
+   },
+   "slot": 5,
+   "turn_ids": [
+    21
+   ],
+   "unit_words": 65,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S07"
+   ]
+  },
+  {
+   "q_id": "2025Q1-Q11",
+   "quarter": "2025Q1",
+   "analyst": "John Choi",
+   "org": "Daiwa",
+   "excerpt": "I want to have a quick question on the comment about reinvesting into AI. I think you guys mentioned earlier in your opening remarks, smaller gap between revenue and operating profit. Can you kind…",
+   "topics": [
+    "MARGIN",
+    "AI_CAPEX"
+   ],
+   "evidence": {
+    "MARGIN": "smaller gap between revenue and operating profit",
+    "AI_CAPEX": "Apart from CapEx, what are some of the expense items"
+   },
+   "slot": 6,
+   "turn_ids": [
+    25
+   ],
+   "unit_words": 68,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S07"
+   ]
+  },
+  {
+   "q_id": "2025Q1-Q12",
+   "quarter": "2025Q1",
+   "analyst": "John Choi",
+   "org": "Daiwa",
+   "excerpt": "I have a quick follow-up on the FPS for the domestic game business. As you said, Delta Force did very well this quarter, but also Crossfire Mobile. I just want to understand, are we seeing a…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "FPS for the domestic game business"
+   },
+   "slot": 6,
+   "turn_ids": [
+    25
+   ],
+   "unit_words": 68,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S07"
+   ]
+  },
+  {
+   "q_id": "2025Q1-Q13",
+   "quarter": "2025Q1",
+   "analyst": "Jialong Shi",
+   "org": "Nomura",
+   "excerpt": "I have a few questions for ad business. Each quarter, we hear management mention AI tech as one of the drivers for your ad business. I just wonder how much more room of growth will likely come from…",
+   "topics": [
+    "ADS"
+   ],
+   "evidence": {
+    "ADS": "deployment of AI tech into your ad business"
+   },
+   "slot": 7,
+   "turn_ids": [
+    28
+   ],
+   "unit_words": 62,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S07"
+   ]
+  },
+  {
+   "q_id": "2025Q1-Q14",
+   "quarter": "2025Q1",
+   "analyst": "Jialong Shi",
+   "org": "Nomura",
+   "excerpt": "Regarding Weixin Search, I just wonder what is the latest search query market share for your Weixin Search. How much of the ad revenue is now contributed by Weixin Search? After you guys add the AI…",
+   "topics": [
+    "ADS",
+    "AI_PRODUCTS"
+   ],
+   "evidence": {
+    "ADS": "How much of the ad revenue is now contributed by Weixin Search",
+    "AI_PRODUCTS": "add the AI search feature into Weixin"
+   },
+   "slot": 7,
+   "turn_ids": [
+    28
+   ],
+   "unit_words": 57,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S07"
+   ]
+  },
+  {
+   "q_id": "2025Q1-Q15",
+   "quarter": "2025Q1",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "The first question is on advertising performance, which accelerated from 17% in Q4 to 20% in Q1. We want to understand to what extent is such a strong performance or acceleration driven by macro…",
+   "topics": [
+    "ADS"
+   ],
+   "evidence": {
+    "ADS": "advertising performance"
+   },
+   "slot": 8,
+   "turn_ids": [
+    31
+   ],
+   "unit_words": 81,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S07"
+   ]
+  },
+  {
+   "q_id": "2025Q1-Q16",
+   "quarter": "2025Q1",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "Another question is on the AI product format. You guys have been actively acquiring user adoption for Yuanbao for a while. Can you share us with the user feedback, retention, et cetera, on those…",
+   "topics": [
+    "AI_PRODUCTS"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "user adoption for Yuanbao"
+   },
+   "slot": 8,
+   "turn_ids": [
+    31
+   ],
+   "unit_words": 69,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S07"
+   ]
+  },
+  {
+   "q_id": "2025Q1-Q17",
+   "quarter": "2025Q1",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "One is on our WeChat e-commerce strategy. Just want to hear what are the key KPIs that we see, and is there a plan or timeline for maybe shelf-based offering versus today, which is live stream…",
+   "topics": [
+    "SOCIAL"
+   ],
+   "evidence": {
+    "SOCIAL": "WeChat e-commerce strategy"
+   },
+   "slot": 9,
+   "turn_ids": [
+    37
+   ],
+   "unit_words": 41,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S07"
+   ]
+  },
+  {
+   "q_id": "2025Q1-Q18",
+   "quarter": "2025Q1",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "Second is on payment. I see management noted a slight decline in the payment volumes in Q1. Are these more macro-related, or is it a payment strategy? Because you've also mentioned some improvement…",
+   "topics": [
+    "FINTECH"
+   ],
+   "evidence": {
+    "FINTECH": "slight decline in the payment volumes"
+   },
+   "slot": 9,
+   "turn_ids": [
+    37
+   ],
+   "unit_words": 37,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S07"
+   ]
+  },
+  {
+   "q_id": "2025Q2-Q01",
+   "quarter": "2025Q2",
+   "analyst": "Thomas Chong",
+   "org": "Jefferies",
+   "excerpt": "My question is about advertising. We have seen Tencent and other overseas peers using AI in driving ad revenue growth. Can management comment about the potential for marketing services over the next…",
+   "topics": [
+    "ADS"
+   ],
+   "evidence": {
+    "ADS": "potential for marketing services"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6,
+    8
+   ],
+   "unit_words": 61,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S08"
+   ]
+  },
+  {
+   "q_id": "2025Q2-Q02",
+   "quarter": "2025Q2",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "The first question is, you guys have been integrating more and more AI features to a large number of mobile internet applications this year, aside from launching native Gen AI applications such as…",
+   "topics": [
+    "AI_PRODUCTS",
+    "SOCIAL"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "native Gen AI applications such as Yuanbao",
+    "SOCIAL": "affect the mobile internet ecosystem"
+   },
+   "slot": 2,
+   "turn_ids": [
+    10
+   ],
+   "unit_words": 96,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S08"
+   ]
+  },
+  {
+   "q_id": "2025Q2-Q03",
+   "quarter": "2025Q2",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "My follow-up question is, as you guys continue to offer increasingly more AI features to consumers free of charge, the delivery of these AI features is a lot more expensive than mobile internet…",
+   "topics": [
+    "AI_ROI",
+    "MARGIN"
+   ],
+   "evidence": {
+    "AI_ROI": "directly monetize these consumer-facing AI features",
+    "MARGIN": "potentially hurt Tencent's cost structure"
+   },
+   "slot": 2,
+   "turn_ids": [
+    10
+   ],
+   "unit_words": 71,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S08"
+   ]
+  },
+  {
+   "q_id": "2025Q2-Q04",
+   "quarter": "2025Q2",
+   "analyst": "Robin Zhu",
+   "org": "Bernstein",
+   "excerpt": "I guess a couple of questions on gaming. I think we're seeing the start of a very successful start to life for Delta Force. I was wondering if management could share the views on AAA gaming growth…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "AAA gaming growth in China"
+   },
+   "slot": 3,
+   "turn_ids": [
+    13,
+    15,
+    17,
+    20
+   ],
+   "unit_words": 65,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S08"
+   ]
+  },
+  {
+   "q_id": "2025Q2-Q05",
+   "quarter": "2025Q2",
+   "analyst": "Robin Zhu",
+   "org": "Bernstein",
+   "excerpt": "A second question on capital allocation on AI. What's the argument against potentially allocating a lot more capital to create new dominant top funnels in Yuanbao, IMA, or some of the other stuff…",
+   "topics": [
+    "AI_CAPEX",
+    "AI_PRODUCTS"
+   ],
+   "evidence": {
+    "AI_CAPEX": "capital allocation on AI",
+    "AI_PRODUCTS": "Yuanbao, IMA"
+   },
+   "slot": 3,
+   "turn_ids": [
+    13,
+    15,
+    17,
+    20
+   ],
+   "unit_words": 69,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S08"
+   ]
+  },
+  {
+   "q_id": "2025Q2-Q06",
+   "quarter": "2025Q2",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "I have a question about the impact on the new advertising law for gaming companies' sales and marketing. Under the new ad regulation effective in July, sales and marketing spending in excess of 15%…",
+   "topics": [
+    "REG",
+    "ADS",
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "REG": "new advertising law",
+    "ADS": "affect our advertising income",
+    "GAMES_DOM": "especially for mini games"
+   },
+   "slot": 4,
+   "turn_ids": [
+    22,
+    24
+   ],
+   "unit_words": 80,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S08"
+   ]
+  },
+  {
+   "q_id": "2025Q2-Q07",
+   "quarter": "2025Q2",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "First, regarding management comment on the business services revenue growth, see acceleration this quarter benefiting from the increasing enterprise demand for the GPU rental and also the API token…",
+   "topics": [
+    "CLOUD",
+    "COMPUTE",
+    "FINTECH"
+   ],
+   "evidence": {
+    "CLOUD": "GPU rental and also the API token usage",
+    "COMPUTE": "allocate more GPU resources",
+    "FINTECH": "business services revenue line"
+   },
+   "slot": 5,
+   "turn_ids": [
+    26,
+    28
+   ],
+   "unit_words": 87,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S08"
+   ]
+  },
+  {
+   "q_id": "2025Q2-Q08",
+   "quarter": "2025Q2",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "Second question is follow-up on the advertising. Obviously, with the upgrade on the foundation model and also the expansions of the AI capabilities, I recall management mentioned about last quarter…",
+   "topics": [
+    "ADS",
+    "MODELS"
+   ],
+   "evidence": {
+    "ADS": "eCPM improvement",
+    "MODELS": "upgrade on the foundation model"
+   },
+   "slot": 5,
+   "turn_ids": [
+    26,
+    28
+   ],
+   "unit_words": 105,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S08"
+   ]
+  },
+  {
+   "q_id": "2025Q2-Q09",
+   "quarter": "2025Q2",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "Maybe a first question on games. With this expanding evergreen game titles, we obviously have a very strong pipeline. Is it fair to say we are moving towards an overall platform now with increased…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "normalized growth rate for the overall gaming business"
+   },
+   "slot": 6,
+   "turn_ids": [
+    30
+   ],
+   "unit_words": 69,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S08"
+   ]
+  },
+  {
+   "q_id": "2025Q2-Q10",
+   "quarter": "2025Q2",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "A second question on just AI models. I want to hear what are the next priorities for the Hunyuan model family, especially as we're seeing some closing of gaps between Chinese models versus…",
+   "topics": [
+    "MODELS",
+    "AI_PRODUCTS"
+   ],
+   "evidence": {
+    "MODELS": "priorities for the Hunyuan model family",
+    "AI_PRODUCTS": "agent potentials, particularly in Hunyuan and into WeChat"
+   },
+   "slot": 6,
+   "turn_ids": [
+    30
+   ],
+   "unit_words": 78,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S08"
+   ]
+  },
+  {
+   "q_id": "2025Q2-Q11",
+   "quarter": "2025Q2",
+   "analyst": "Charlene Liu",
+   "org": "HSBC",
+   "excerpt": "I wanted to ask about the government's anti-inflation efforts. In fact, these efforts should reduce competition but probably accelerate consolidation of certain sectors. What are your observations…",
+   "topics": [
+    "REG"
+   ],
+   "evidence": {
+    "REG": "government's anti-inflation efforts"
+   },
+   "slot": 7,
+   "turn_ids": [
+    34
+   ],
+   "unit_words": 55,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S08"
+   ]
+  },
+  {
+   "q_id": "2025Q2-Q12",
+   "quarter": "2025Q2",
+   "analyst": "Charlene Liu",
+   "org": "HSBC",
+   "excerpt": "Also, separately, we see commercial payment volume growth turn positive in the second quarter. Can we expect that growth to sustain or even accelerate? Thank you so much.",
+   "topics": [
+    "FINTECH"
+   ],
+   "evidence": {
+    "FINTECH": "commercial payment volume growth"
+   },
+   "slot": 7,
+   "turn_ids": [
+    34
+   ],
+   "unit_words": 28,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S08"
+   ]
+  },
+  {
+   "q_id": "2025Q2-Q13",
+   "quarter": "2025Q2",
+   "analyst": "Liao Yuan",
+   "org": "CITIC Securities",
+   "excerpt": "My question is about your gaming business. We see that FPS has always been Tencent's strength. Recently, we see great success across main titles such as Delta Force, Peacekeeper , and VALORANT. We…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "Delta Force, Peacekeeper"
+   },
+   "slot": 8,
+   "turn_ids": [
+    37
+   ],
+   "unit_words": 106,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S08"
+   ]
+  },
+  {
+   "q_id": "2025Q2-Q14",
+   "quarter": "2025Q2",
+   "analyst": "William Packer",
+   "org": "BNP Paribas Exane",
+   "excerpt": "At your last earnings update, you shared some expected levels of CapEx spend with chip spending in place for our strategic priority in the context of the AI opportunity. Since May, we've had a huge…",
+   "topics": [
+    "AI_CAPEX",
+    "COMPUTE",
+    "REG",
+    "MARGIN"
+   ],
+   "evidence": {
+    "AI_CAPEX": "consequent impacts on your CapEx spend",
+    "COMPUTE": "chip sourcing options",
+    "REG": "news flow around chip restrictions",
+    "MARGIN": "follow-through on group margins"
+   },
+   "slot": 9,
+   "turn_ids": [
+    40
+   ],
+   "unit_words": 71,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S08"
+   ]
+  },
+  {
+   "q_id": "2025Q2-Q15",
+   "quarter": "2025Q2",
+   "analyst": "William Packer",
+   "org": "BNP Paribas Exane",
+   "excerpt": "My follow-up is around the impressive quarter of gross margins in the VAS segment following the recent or e pic decisions. Do we think that those changes in out-of-store take rates in your…",
+   "topics": [
+    "MARGIN",
+    "GAMES_INTL"
+   ],
+   "evidence": {
+    "MARGIN": "gross margins in the VAS segment",
+    "GAMES_INTL": "out-of-store take rates in your international business"
+   },
+   "slot": 9,
+   "turn_ids": [
+    40
+   ],
+   "unit_words": 65,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S08"
+   ]
+  },
+  {
+   "q_id": "2025Q2-Q16",
+   "quarter": "2025Q2",
+   "analyst": "Ellie Jiang",
+   "org": "Macquarie",
+   "excerpt": "I have a question on the overall AI strategy. The management has shared a lot of the insights into us kind of exploring into different dimensions of AI integrations. Just in terms of the KPIs we're…",
+   "topics": [
+    "AI_PRODUCTS",
+    "MODELS",
+    "COMPUTE"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "application-agentic AI layer",
+    "MODELS": "from the model layer",
+    "COMPUTE": "especially on the supply side"
+   },
+   "slot": 10,
+   "turn_ids": [
+    44
+   ],
+   "unit_words": 74,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S08"
+   ]
+  },
+  {
+   "q_id": "2025Q2-Q17",
+   "quarter": "2025Q2",
+   "analyst": "Ellie Jiang",
+   "org": "Macquarie",
+   "excerpt": "As a follow-up to the prior question on the AI investment front, how would we really assess the potential M&A opportunities in the market right now, considering there are actually a surging volume…",
+   "topics": [
+    "PORTFOLIO"
+   ],
+   "evidence": {
+    "PORTFOLIO": "potential M&A opportunities"
+   },
+   "slot": 10,
+   "turn_ids": [
+    44
+   ],
+   "unit_words": 51,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S08"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q01",
+   "quarter": "2025Q3",
+   "analyst": "Liao Yuan",
+   "org": "CITIC Securities",
+   "excerpt": "My first question is about your gaming business. Your international gaming business growth rate has been accelerating for multiple quarters. Just want to know, what have you done right to achieve…",
+   "topics": [
+    "GAMES_INTL"
+   ],
+   "evidence": {
+    "GAMES_INTL": "international gaming business growth rate"
+   },
+   "org_note": "文字稿写作 Citi，按 2024Q4/2025Q2 均为 CITIC Securities；同季 Citi 另有 Alicia Yap 提问，'Citi' 疑为 'CITIC' 的转写错误 记为 CITIC Securities",
+   "slot": 1,
+   "turn_ids": [
+    6
+   ],
+   "unit_words": 74,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q02",
+   "quarter": "2025Q3",
+   "analyst": "Liao Yuan",
+   "org": "CITIC Securities",
+   "excerpt": "My second quick question is about your CapEx. In this quarter, CapEx was around CNY 13 billion, but the cash payment for CapEx was CNY 20 billion. How should we interpret the difference between…",
+   "topics": [
+    "AI_CAPEX"
+   ],
+   "evidence": {
+    "AI_CAPEX": "CapEx was around CNY 13 billion"
+   },
+   "org_note": "文字稿写作 Citi，按 2024Q4/2025Q2 均为 CITIC Securities；同季 Citi 另有 Alicia Yap 提问，'Citi' 疑为 'CITIC' 的转写错误 记为 CITIC Securities",
+   "slot": 1,
+   "turn_ids": [
+    6
+   ],
+   "unit_words": 49,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q03",
+   "quarter": "2025Q3",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "First questions, can management elaborate about your comment on the upgrading Hunyuan team and also the Hunyuan infrastructure? What should we be expecting to see from the upgraded version? Does…",
+   "topics": [
+    "MODELS",
+    "AI_PRODUCTS"
+   ],
+   "evidence": {
+    "MODELS": "upgrading Hunyuan team",
+    "AI_PRODUCTS": "how Yuanbao might complement the AI capabilities"
+   },
+   "slot": 2,
+   "turn_ids": [
+    10,
+    12
+   ],
+   "unit_words": 55,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q04",
+   "quarter": "2025Q3",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "Second question is on your advertising marketing service revenue. Does that automated ad campaign solution, the AI Marketing Plus, better serve the smaller advertiser? Should we expect the solution…",
+   "topics": [
+    "ADS"
+   ],
+   "evidence": {
+    "ADS": "AI Marketing Plus"
+   },
+   "slot": 2,
+   "turn_ids": [
+    10,
+    12
+   ],
+   "unit_words": 56,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q05",
+   "quarter": "2025Q3",
+   "analyst": "Gary Yu",
+   "org": "Morgan Stanley",
+   "excerpt": "My first question is a follow-up on Yuanbao and Weixin. It appears that both the Yuanbao adoptions and also enjoyed engineering AI function on Weixin hinder on foundation model capabilities. Yet…",
+   "topics": [
+    "AI_PRODUCTS",
+    "AI_CAPEX",
+    "MODELS"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "Yuanbao adoptions",
+    "AI_CAPEX": "CapEx spending remains low",
+    "MODELS": "foundation model capabilities"
+   },
+   "slot": 3,
+   "turn_ids": [
+    16
+   ],
+   "unit_words": 75,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q06",
+   "quarter": "2025Q3",
+   "analyst": "Gary Yu",
+   "org": "Morgan Stanley",
+   "excerpt": "My follow-up question is regarding some of the expense items, selling and marketing and R&D. When should we expect some of the internal AI adoption to benefit on cost efficiency in order to offset…",
+   "topics": [
+    "MARGIN",
+    "AI_ROI"
+   ],
+   "evidence": {
+    "MARGIN": "selling and marketing and R&D",
+    "AI_ROI": "internal AI adoption to benefit on cost efficiency"
+   },
+   "slot": 3,
+   "turn_ids": [
+    16
+   ],
+   "unit_words": 50,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q07",
+   "quarter": "2025Q3",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "First one, you mentioned that Tencent is developing agentic AI capabilities within Weixin in the prepared remark. Can you share your thoughts about how agentic AI creates value to consumers in…",
+   "topics": [
+    "AI_PRODUCTS"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "agentic AI capabilities within Weixin"
+   },
+   "slot": 4,
+   "turn_ids": [
+    19
+   ],
+   "unit_words": 41,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q08",
+   "quarter": "2025Q3",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "Second one is on CapEx. Did I hear John right? The CapEx for 2025 will be lower than the previous guidance, but higher than the 2024 actual CapEx spending, if I get that right. Does it reflect a…",
+   "topics": [
+    "AI_CAPEX",
+    "COMPUTE"
+   ],
+   "evidence": {
+    "AI_CAPEX": "lower than the previous guidance",
+    "COMPUTE": "change of AI chip availability"
+   },
+   "slot": 4,
+   "turn_ids": [
+    19
+   ],
+   "unit_words": 63,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q09",
+   "quarter": "2025Q3",
+   "analyst": "William Packer",
+   "org": "BNP Paribas Exane",
+   "excerpt": "Firstly, Bloomberg have reported today that you've come to terms regarding a 15% commission with Apple within the WeChat ecosystem below their usual 30%. While you probably prefer not to talk about…",
+   "topics": [
+    "GAMES_DOM",
+    "SOCIAL"
+   ],
+   "evidence": {
+    "GAMES_DOM": "mini games and domestic video games",
+    "SOCIAL": "within the WeChat ecosystem"
+   },
+   "slot": 5,
+   "turn_ids": [
+    22
+   ],
+   "unit_words": 65,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q10",
+   "quarter": "2025Q3",
+   "analyst": "William Packer",
+   "org": "BNP Paribas Exane",
+   "excerpt": "Secondly, as a follow-up, Q3 was another very good quarter for marketing services with revenue growth accelerating. Could you help frame the growth outlook in the shorter term of 2026 and any new…",
+   "topics": [
+    "ADS"
+   ],
+   "evidence": {
+    "ADS": "very good quarter for marketing services"
+   },
+   "slot": 5,
+   "turn_ids": [
+    22
+   ],
+   "unit_words": 41,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q11",
+   "quarter": "2025Q3",
+   "analyst": "Charlene Liu",
+   "org": "HSBC",
+   "excerpt": "I think a quick one on R&D spending, especially as a percentage of revenue, how do we expect that to trend in the near and medium term?",
+   "topics": [
+    "MARGIN"
+   ],
+   "evidence": {
+    "MARGIN": "R&D spending, especially as a percentage of revenue"
+   },
+   "slot": 6,
+   "turn_ids": [
+    26
+   ],
+   "unit_words": 27,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q12",
+   "quarter": "2025Q3",
+   "analyst": "Charlene Liu",
+   "org": "HSBC",
+   "excerpt": "Then separately, we've seen really good GPM optimization at the segmental level. How should we think about overall impact to OPM, taking into consideration potential uptake in AI investments…",
+   "topics": [
+    "MARGIN"
+   ],
+   "evidence": {
+    "MARGIN": "overall impact to OPM"
+   },
+   "slot": 6,
+   "turn_ids": [
+    26
+   ],
+   "unit_words": 61,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q13",
+   "quarter": "2025Q3",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "I have questions about the investment strategy. Given the strong equity market performance year to date globally, could management share some thoughts on our investment portfolio and strategy and…",
+   "topics": [
+    "PORTFOLIO"
+   ],
+   "evidence": {
+    "PORTFOLIO": "our investment portfolio and strategy"
+   },
+   "slot": 7,
+   "turn_ids": [
+    29,
+    31,
+    33
+   ],
+   "unit_words": 46,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q14",
+   "quarter": "2025Q3",
+   "analyst": "Robin Zhu",
+   "org": "Bernstein",
+   "excerpt": "One is, if we look at the shooter genre, there seems to be a bit of a changing of guard with Battlefield, Delta Force, Arc Raiders now doing quite well. I would be curious your thoughts on what you…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "For Delta Force specifically"
+   },
+   "slot": 9,
+   "turn_ids": [
+    37
+   ],
+   "unit_words": 83,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q15",
+   "quarter": "2025Q3",
+   "analyst": "Robin Zhu",
+   "org": "Bernstein",
+   "excerpt": "I guess to follow up on an earlier question on the mini games developments, I'd be curious if you could try and dimension some of the relative contributions of in-app advertising versus in-app…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "mini games developments"
+   },
+   "slot": 9,
+   "turn_ids": [
+    37
+   ],
+   "unit_words": 81,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q16",
+   "quarter": "2025Q3",
+   "analyst": "Thomas Chong",
+   "org": "Jefferies",
+   "excerpt": "My question is on the FBS side. Given that we are emphasizing more on the consumer loan side, I just want to get some color with regard to the macro environment. Is this a factor that we need to…",
+   "topics": [
+    "FINTECH"
+   ],
+   "evidence": {
+    "FINTECH": "consumer loan revenue growth"
+   },
+   "slot": 10,
+   "turn_ids": [
+    40
+   ],
+   "unit_words": 48,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q17",
+   "quarter": "2025Q3",
+   "analyst": "Thomas Chong",
+   "org": "Jefferies",
+   "excerpt": "On the other hand, if we look into our cloud revenue, how should we think about the growth rate going forward? Should we take into account the CapEx spending, or should we expect the growth may…",
+   "topics": [
+    "CLOUD",
+    "AI_CAPEX"
+   ],
+   "evidence": {
+    "CLOUD": "our cloud revenue",
+    "AI_CAPEX": "Should we take into account the CapEx spending"
+   },
+   "slot": 10,
+   "turn_ids": [
+    40
+   ],
+   "unit_words": 43,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q18",
+   "quarter": "2025Q3",
+   "analyst": "John Choi",
+   "org": "Daiwa",
+   "excerpt": "I just want to quickly follow up on the advertising business. I think another strong quarter, as you said. I think last quarter, management mentioned that it was more due to AI implementation. For…",
+   "topics": [
+    "ADS"
+   ],
+   "evidence": {
+    "ADS": "follow up on the advertising business"
+   },
+   "slot": 11,
+   "turn_ids": [
+    43
+   ],
+   "unit_words": 76,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q19",
+   "quarter": "2025Q3",
+   "analyst": "John Choi",
+   "org": "Daiwa",
+   "excerpt": "Also, just on the quick follow-up on the payment side, I think Martin just mentioned that the overall household spending has a high relation. You also, I think, mentioned the retail and…",
+   "topics": [
+    "FINTECH"
+   ],
+   "evidence": {
+    "FINTECH": "follow-up on the payment side"
+   },
+   "slot": 11,
+   "turn_ids": [
+    43
+   ],
+   "unit_words": 85,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q20",
+   "quarter": "2025Q3",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "I have a question on advertising just following up on. I want to hear how the AI Marketing Plus product and the early data points on the performance and ROI for merchants on that. I also see you…",
+   "topics": [
+    "ADS",
+    "SOCIAL"
+   ],
+   "evidence": {
+    "ADS": "AI Marketing Plus product",
+    "SOCIAL": "mini shop transaction ecosystem"
+   },
+   "slot": 12,
+   "turn_ids": [
+    47,
+    50
+   ],
+   "unit_words": 77,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q3-Q21",
+   "quarter": "2025Q3",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "My second question, just want to ask about the analogy from our Weixin and QQ because we have seen Facebook and Instagram kind of serving different cohorts within the company. We have been serving…",
+   "topics": [
+    "SOCIAL"
+   ],
+   "evidence": {
+    "SOCIAL": "our Weixin and QQ"
+   },
+   "slot": 12,
+   "turn_ids": [
+    47,
+    50
+   ],
+   "unit_words": 75,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S09"
+   ]
+  },
+  {
+   "q_id": "2025Q4-Q01",
+   "quarter": "2025Q4",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "I have a question on the AI front versus the margin. In our prepared remark, we expect increased profit from our existing business to more than cover incremental AI investment. Understand we need to…",
+   "topics": [
+    "MARGIN"
+   ],
+   "evidence": {
+    "MARGIN": "gap between revenue and profit growth into 2026"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6
+   ],
+   "unit_words": 68,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S10"
+   ]
+  },
+  {
+   "q_id": "2025Q4-Q02",
+   "quarter": "2025Q4",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "My second question is also on AI, how we strategically prioritize given the ongoing constraint in GPU and AI talent. As we previously emphasized, prioritizing internal AI deployment. Given the…",
+   "topics": [
+    "COMPUTE",
+    "MODELS"
+   ],
+   "evidence": {
+    "COMPUTE": "ongoing constraint in GPU and AI talent",
+    "MODELS": "development of a SOTA large language model"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6
+   ],
+   "unit_words": 70,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S10"
+   ]
+  },
+  {
+   "q_id": "2025Q4-Q03",
+   "quarter": "2025Q4",
+   "analyst": "Robin Zhu",
+   "org": "Bernstein",
+   "excerpt": "clearly we're heading into this AI cycle of investment. How should we think about your assessment of ROI and, you know, the timing of returns and, you know, how you prioritize building versus…",
+   "topics": [
+    "AI_ROI",
+    "AI_CAPEX",
+    "COMPUTE"
+   ],
+   "evidence": {
+    "AI_ROI": "assessment of ROI and, you know, the timing of returns",
+    "AI_CAPEX": "this AI cycle of investment",
+    "COMPUTE": "how you prioritize building versus renting"
+   },
+   "slot": 2,
+   "turn_ids": [
+    9,
+    11,
+    13,
+    15,
+    17
+   ],
+   "unit_words": 135,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S10"
+   ]
+  },
+  {
+   "q_id": "2025Q4-Q04",
+   "quarter": "2025Q4",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "Want to ask about the AI agentic agent potential with the recent launch of QClaw, WorkBuddy, and we saw the SkillHub as well. How should we view parallels of, let's say, Android versus what we are…",
+   "topics": [
+    "AI_PRODUCTS",
+    "CLOUD",
+    "MODELS"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "recent launch of QClaw, WorkBuddy",
+    "CLOUD": "You mentioned about Tencent Cloud in that opportunity",
+    "MODELS": "for example, models"
+   },
+   "slot": 3,
+   "turn_ids": [
+    20
+   ],
+   "unit_words": 72,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S10"
+   ]
+  },
+  {
+   "q_id": "2025Q4-Q05",
+   "quarter": "2025Q4",
+   "analyst": "Ellie Jiang",
+   "org": "Macquarie",
+   "excerpt": "How would management evaluate Tencent's value propositioning in this new agentic era? Since we are putting HunYuan alongside with the other LLMs, you know, kind of towards the prosumers and…",
+   "topics": [
+    "AI_PRODUCTS",
+    "MODELS"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "this new agentic era",
+    "MODELS": "diluting our own foundation models value"
+   },
+   "slot": 4,
+   "turn_ids": [
+    23
+   ],
+   "unit_words": 52,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S10"
+   ]
+  },
+  {
+   "q_id": "2025Q4-Q06",
+   "quarter": "2025Q4",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "I have a question related to the physical AI. Considering the proliferation of the productivity-focused AI agent across, you know, enterprises, especially the traditional industry, do you believe…",
+   "topics": [
+    "MODELS",
+    "AI_PRODUCTS"
+   ],
+   "evidence": {
+    "MODELS": "world models like the 3D models",
+    "AI_PRODUCTS": "productivity-focused AI agent"
+   },
+   "slot": 5,
+   "turn_ids": [
+    26
+   ],
+   "unit_words": 69,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S10"
+   ]
+  },
+  {
+   "q_id": "2025Q4-Q07",
+   "quarter": "2025Q4",
+   "analyst": "John Choi",
+   "org": "Daiwa",
+   "excerpt": "I have a question related to games and you know, AI disruption. You know, we're seeing you know, already starting to see some headcount and game development costs being impacted. How do you think AI…",
+   "topics": [
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "GAMES_DOM": "game development costs being impacted"
+   },
+   "slot": 6,
+   "turn_ids": [
+    29
+   ],
+   "unit_words": 115,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S10"
+   ]
+  },
+  {
+   "q_id": "2025Q4-Q08",
+   "quarter": "2025Q4",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "I want to follow up on the AI cloud side of the business, given very strong demand for AI compute. On the other hand, also, price inflation for the server AI servers due to the rising cost of DRAM…",
+   "topics": [
+    "CLOUD",
+    "COMPUTE"
+   ],
+   "evidence": {
+    "CLOUD": "Tencent Cloud's pricing power",
+    "COMPUTE": "rising cost of DRAM and HBM"
+   },
+   "slot": 7,
+   "turn_ids": [
+    33
+   ],
+   "unit_words": 110,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S10"
+   ]
+  },
+  {
+   "q_id": "2025Q4-Q09",
+   "quarter": "2025Q4",
+   "analyst": "Gary Yu",
+   "org": "Morgan Stanley",
+   "excerpt": "I have one question regarding the comment quite a few times that we mentioned that we are not a first mover or we are even a latecomer in AI. In the U.S., we have also observed that it's becoming…",
+   "topics": [
+    "MODELS",
+    "COMPUTE"
+   ],
+   "evidence": {
+    "MODELS": "compute modeled applications",
+    "COMPUTE": "resources in terms of compute, talents, and data"
+   },
+   "slot": 8,
+   "turn_ids": [
+    37
+   ],
+   "unit_words": 100,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S10"
+   ]
+  },
+  {
+   "q_id": "2025Q4-Q10",
+   "quarter": "2025Q4",
+   "analyst": "William Packer",
+   "org": "BNP Paribas Exane",
+   "excerpt": "Press reports suggest Apple is planning to cut App Store commission rates by 5% for apps and 2%-3% for mini games in March in China. Tencent's a potential major beneficiary. To what extent should we…",
+   "topics": [
+    "MARGIN",
+    "GAMES_DOM"
+   ],
+   "evidence": {
+    "MARGIN": "flow through to Tencent's gross margin",
+    "GAMES_DOM": "2%-3% for mini games"
+   },
+   "slot": 9,
+   "turn_ids": [
+    40
+   ],
+   "unit_words": 65,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S10"
+   ]
+  },
+  {
+   "q_id": "2025Q4-Q11",
+   "quarter": "2025Q4",
+   "analyst": "Alex Liu",
+   "org": "Bank of America",
+   "excerpt": "My question is really just on AI chips. We're seeing a growing number of your tech peers are prioritizing the development of in-house chip design capabilities. I'm just curious where in-house chip…",
+   "topics": [
+    "COMPUTE"
+   ],
+   "evidence": {
+    "COMPUTE": "in-house chip design capabilities"
+   },
+   "slot": 10,
+   "turn_ids": [
+    43
+   ],
+   "unit_words": 41,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S10"
+   ]
+  },
+  {
+   "q_id": "2026Q1-Q01",
+   "quarter": "2026Q1",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "First, since, you know, the release of Hunyuan 3 Preview, I think management also mentioned, the model has been deeply integrated to a lot of the internal core products, including the Yuanbao, Ima…",
+   "topics": [
+    "MODELS",
+    "AI_PRODUCTS",
+    "SOCIAL"
+   ],
+   "evidence": {
+    "MODELS": "release of Hunyuan 3 Preview",
+    "AI_PRODUCTS": "Yuanbao, Ima, and WorkBuddy",
+    "SOCIAL": "more broadly into WeChat workflows"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6,
+    8
+   ],
+   "unit_words": 90,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S11"
+   ]
+  },
+  {
+   "q_id": "2026Q1-Q02",
+   "quarter": "2026Q1",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "Second questions is, with agents increasingly potentially replacing the traditional click-throughs on the web pages and also the apps, could management share your view on the future advertising…",
+   "topics": [
+    "ADS",
+    "AI_PRODUCTS"
+   ],
+   "evidence": {
+    "ADS": "future advertising pricing",
+    "AI_PRODUCTS": "agents increasingly potentially replacing the traditional click-throughs"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6,
+    8
+   ],
+   "unit_words": 92,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S11"
+   ]
+  },
+  {
+   "q_id": "2026Q1-Q03",
+   "quarter": "2026Q1",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "I have a question on the ROI on AI investment. If we look at the global peers, they have been allocating 80% to even 100% of their operating cash flow to AI CapEx, compared to us, which we invest…",
+   "topics": [
+    "AI_ROI",
+    "AI_CAPEX",
+    "CAPITAL"
+   ],
+   "evidence": {
+    "AI_ROI": "ROI on AI investment",
+    "AI_CAPEX": "guidance on the AI-related CapEx",
+    "CAPITAL": "operating cash flow to AI CapEx"
+   },
+   "slot": 2,
+   "turn_ids": [
+    12,
+    14
+   ],
+   "unit_words": 100,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S11"
+   ]
+  },
+  {
+   "q_id": "2026Q1-Q04",
+   "quarter": "2026Q1",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "When you allocate a financial resource to CapEx, and AI investments, how do you evaluate the AI infrastructure spent internally? What is the ROI framework or payback period you are underwriting…",
+   "topics": [
+    "AI_ROI",
+    "AI_CAPEX"
+   ],
+   "evidence": {
+    "AI_ROI": "payback period",
+    "AI_CAPEX": "who pays these AI CapEx"
+   },
+   "slot": 3,
+   "turn_ids": [
+    16,
+    18
+   ],
+   "unit_words": 78,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S11"
+   ]
+  },
+  {
+   "q_id": "2026Q1-Q05",
+   "quarter": "2026Q1",
+   "analyst": "William Packer",
+   "org": "BNP Paribas Exane",
+   "excerpt": "Firstly, with domestic gaming your biggest revenue and free cash flow driver, could you help us think through how generative AI is impacting that business today? Is it driving incremental…",
+   "topics": [
+    "GAMES_DOM",
+    "MARGIN"
+   ],
+   "evidence": {
+    "GAMES_DOM": "how generative AI is impacting that business",
+    "MARGIN": "cost efficiencies benefits hit the margins"
+   },
+   "slot": 4,
+   "turn_ids": [
+    22,
+    24
+   ],
+   "unit_words": 63,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S11"
+   ]
+  },
+  {
+   "q_id": "2026Q1-Q06",
+   "quarter": "2026Q1",
+   "analyst": "William Packer",
+   "org": "BNP Paribas Exane",
+   "excerpt": "As a quick follow-up, thanks for the commentary on the CapEx outlook. Could you talk through any implications for the share buyback in the second half of the year? Thanks very much. Thanks for the…",
+   "topics": [
+    "CAPITAL",
+    "AI_CAPEX"
+   ],
+   "evidence": {
+    "CAPITAL": "implications for the share buyback",
+    "AI_CAPEX": "commentary on the CapEx outlook"
+   },
+   "slot": 4,
+   "turn_ids": [
+    22,
+    24
+   ],
+   "unit_words": 36,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S11"
+   ]
+  },
+  {
+   "q_id": "2026Q1-Q07",
+   "quarter": "2026Q1",
+   "analyst": "Robin Zhu",
+   "org": "Bernstein",
+   "excerpt": "One, in terms of the changes that we've made to our data pipeline and training RL infer and so on, do you feel now that, you know, having seen the release of Hunyuan 3, we're now on a more…",
+   "topics": [
+    "MODELS"
+   ],
+   "evidence": {
+    "MODELS": "having seen the release of Hunyuan 3"
+   },
+   "slot": 5,
+   "turn_ids": [
+    26
+   ],
+   "unit_words": 84,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S11"
+   ]
+  },
+  {
+   "q_id": "2026Q1-Q08",
+   "quarter": "2026Q1",
+   "analyst": "Robin Zhu",
+   "org": "Bernstein",
+   "excerpt": "Second, just on the kind of philosophy of some of the AI product investments, I think one of the tensions in the U.S. has been, you know, I think OpenAI has been the big DAU player, whereas…",
+   "topics": [
+    "AI_PRODUCTS",
+    "AI_ROI"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "AI product investments",
+    "AI_ROI": "highly willing payers"
+   },
+   "slot": 5,
+   "turn_ids": [
+    26
+   ],
+   "unit_words": 112,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S11"
+   ]
+  },
+  {
+   "q_id": "2026Q1-Q09",
+   "quarter": "2026Q1",
+   "analyst": "Alex Liu",
+   "org": "Bank of America",
+   "excerpt": "I'm especially, you know, interested in the concept that, you know, Tencent's AI agents could access the Mini Program ecosystem and use Mini Program code as the AI Skills. Just wondering on that, is…",
+   "topics": [
+    "AI_PRODUCTS",
+    "SOCIAL"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "Tencent's AI agents could access the Mini Program ecosystem",
+    "SOCIAL": "use Mini Program code as the AI Skills"
+   },
+   "slot": 6,
+   "turn_ids": [
+    30
+   ],
+   "unit_words": 44,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S11"
+   ]
+  },
+  {
+   "q_id": "2026Q1-Q10",
+   "quarter": "2026Q1",
+   "analyst": "Alex Liu",
+   "org": "Bank of America",
+   "excerpt": "A follow-up would be related to the last questions. You know, given the tight supply of computing resources right now, I was wondering how is management balancing the pace of rolling out additional…",
+   "topics": [
+    "COMPUTE",
+    "AI_PRODUCTS"
+   ],
+   "evidence": {
+    "COMPUTE": "tight compute capacity on hand",
+    "AI_PRODUCTS": "rolling out additional AI features"
+   },
+   "slot": 6,
+   "turn_ids": [
+    30
+   ],
+   "unit_words": 50,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S11"
+   ]
+  },
+  {
+   "q_id": "2026Q1-Q11",
+   "quarter": "2026Q1",
+   "analyst": "Charlene Liu",
+   "org": "HSBC",
+   "excerpt": "First is on monetization. We're seeing Doubao starting to explore subscription models for their to C users. I would like to understand how big the management thinks that the to C subscription market…",
+   "topics": [
+    "AI_ROI",
+    "AI_PRODUCTS",
+    "ADS"
+   ],
+   "evidence": {
+    "AI_ROI": "to C subscription market",
+    "AI_PRODUCTS": "monetization avenue for to C AI",
+    "ADS": "how much upside do you expect from ad and Mini Programs"
+   },
+   "slot": 7,
+   "turn_ids": [
+    34
+   ],
+   "unit_words": 74,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S11"
+   ]
+  },
+  {
+   "q_id": "2026Q1-Q12",
+   "quarter": "2026Q1",
+   "analyst": "Charlene Liu",
+   "org": "HSBC",
+   "excerpt": "The second question is on compute power bottleneck. The U.S. players obviously have sort of moved on to working on resolving bottleneck issues or shortages in CPU and networking chips beyond GPU.…",
+   "topics": [
+    "COMPUTE"
+   ],
+   "evidence": {
+    "COMPUTE": "shortages in CPU and networking chips"
+   },
+   "slot": 7,
+   "turn_ids": [
+    34
+   ],
+   "unit_words": 55,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S11"
+   ]
+  },
+  {
+   "q_id": "2026Q1-Q13",
+   "quarter": "2026Q1",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "One is on the consumer AI agent side. Compared with a potential kind of Weixin agent that we've been talking about, which is at the app level, knowing that Weixin is super app. How does management…",
+   "topics": [
+    "AI_PRODUCTS",
+    "SOCIAL"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "potential kind of Weixin agent",
+    "SOCIAL": "knowing that Weixin is super app"
+   },
+   "slot": 8,
+   "turn_ids": [
+    38
+   ],
+   "unit_words": 70,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S11"
+   ]
+  },
+  {
+   "q_id": "2026Q1-Q14",
+   "quarter": "2026Q1",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "On second, on advertising, we've seen a very good re-acceleration, noting that we are very patient on ad load versus peers, with a slight kind of edge up of ad load in the first quarter. I'm just…",
+   "topics": [
+    "ADS",
+    "AI_CAPEX"
+   ],
+   "evidence": {
+    "ADS": "slight kind of edge up of ad load",
+    "AI_CAPEX": "more reinvestments into AI"
+   },
+   "slot": 8,
+   "turn_ids": [
+    38
+   ],
+   "unit_words": 78,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S11"
+   ]
+  },
+  {
+   "q_id": "2026Q1-Q15",
+   "quarter": "2026Q1",
+   "analyst": "Ellie Jiang",
+   "org": "Macquarie",
+   "excerpt": "Number one is, if you look at the WorkBuddy, its current traction, it does seem like we have been gaining very early leadership, especially in the productivity agent space. Within the 20% growth in…",
+   "topics": [
+    "AI_PRODUCTS",
+    "FINTECH",
+    "CLOUD",
+    "AI_ROI"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "if you look at the WorkBuddy",
+    "FINTECH": "20% growth in Business Services",
+    "CLOUD": "traditional Cloud revenue",
+    "AI_ROI": "internal ARR target"
+   },
+   "slot": 9,
+   "turn_ids": [
+    42
+   ],
+   "unit_words": 105,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S11"
+   ]
+  },
+  {
+   "q_id": "2026Q1-Q16",
+   "quarter": "2026Q1",
+   "analyst": "Thomas Chong",
+   "org": "Jefferies",
+   "excerpt": "My question is about AI on the content side. Given that we have seen some disruptions coming from AI in the online video space, should we expect Tencent Video will also have expecting AI drama to be…",
+   "topics": [
+    "SOCIAL",
+    "MARGIN"
+   ],
+   "evidence": {
+    "SOCIAL": "Tencent Video",
+    "MARGIN": "content cost"
+   },
+   "slot": 10,
+   "turn_ids": [
+    45
+   ],
+   "unit_words": 59,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S11"
+   ]
+  },
+  {
+   "q_id": "2026Q1-Q17",
+   "quarter": "2026Q1",
+   "analyst": "Thomas Chong",
+   "org": "Jefferies",
+   "excerpt": "My second question is on AI on the FinTech segment. Given the risk management is substantially enhanced with AI, how should we think about the online lending and the wealth management outlook with…",
+   "topics": [
+    "FINTECH"
+   ],
+   "evidence": {
+    "FINTECH": "online lending and the wealth management outlook"
+   },
+   "slot": 10,
+   "turn_ids": [
+    45
+   ],
+   "unit_words": 36,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S11"
+   ]
+  },
+  {
+   "q_id": "2026Q2-Q01",
+   "quarter": "2026Q2",
+   "analyst": "Robin Zhu",
+   "org": "Bernstein",
+   "excerpt": "I guess if we look at your latest quarter's CapEx, RMB 53 billion, it is a step up from the previous quarter. Annualized, it is over RMB 200 billion if we just multiply by 4. How should we think…",
+   "topics": [
+    "AI_CAPEX",
+    "MARGIN",
+    "AI_ROI"
+   ],
+   "evidence": {
+    "AI_CAPEX": "latest quarter's CapEx, RMB 53 billion",
+    "MARGIN": "the D&A costs",
+    "AI_ROI": "payback cycle"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6,
+    9,
+    11
+   ],
+   "unit_words": 120,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S12"
+   ]
+  },
+  {
+   "q_id": "2026Q2-Q02",
+   "quarter": "2026Q2",
+   "analyst": "Robin Zhu",
+   "org": "Bernstein",
+   "excerpt": "And if I may have a follow-up just on WorkBuddy. Love to hear your thoughts on every AI lab is essentially incentivized to develop their own harness app of some kind. Your thoughts on how the market…",
+   "topics": [
+    "AI_PRODUCTS"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "follow-up just on WorkBuddy"
+   },
+   "slot": 1,
+   "turn_ids": [
+    6,
+    9,
+    11
+   ],
+   "unit_words": 101,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S12"
+   ]
+  },
+  {
+   "q_id": "2026Q2-Q03",
+   "quarter": "2026Q2",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "I have a question regarding the Xiaowei development. Could management share any preliminary feedback or challenges from the testing phase of Xiaowei? From a commercial standpoint, how should we…",
+   "topics": [
+    "AI_PRODUCTS",
+    "AI_ROI",
+    "ADS",
+    "SOCIAL"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "Xiaowei development",
+    "AI_ROI": "net monetization potential",
+    "ADS": "high margin ad impression inventory",
+    "SOCIAL": "self-performed transaction in Mini Program"
+   },
+   "slot": 2,
+   "turn_ids": [
+    13,
+    15
+   ],
+   "unit_words": 105,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S12"
+   ]
+  },
+  {
+   "q_id": "2026Q2-Q04",
+   "quarter": "2026Q2",
+   "analyst": "Kenneth Fong",
+   "org": "UBS",
+   "excerpt": "I have a follow-up question on the AI cloud. Domestic API token prices face very rapid commoditizations. The China cloud market remains structurally price sensitive. How do we think about the margin…",
+   "topics": [
+    "CLOUD",
+    "MARGIN"
+   ],
+   "evidence": {
+    "CLOUD": "Domestic API token prices",
+    "MARGIN": "margin profile of Tencent AI Cloud"
+   },
+   "slot": 2,
+   "turn_ids": [
+    13,
+    15
+   ],
+   "unit_words": 65,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S12"
+   ]
+  },
+  {
+   "q_id": "2026Q2-Q05",
+   "quarter": "2026Q2",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "First on the model. Just want to hear after the progressive Hunyuan 3, which is on cost efficiency, I would say, and very good in agents, where will Hunyuan 4 differentiate itself as we look into a…",
+   "topics": [
+    "MODELS"
+   ],
+   "evidence": {
+    "MODELS": "Hunyuan 4"
+   },
+   "slot": 3,
+   "turn_ids": [
+    18,
+    21
+   ],
+   "unit_words": 71,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S12"
+   ]
+  },
+  {
+   "q_id": "2026Q2-Q06",
+   "quarter": "2026Q2",
+   "analyst": "Ronald Keung",
+   "org": "Goldman Sachs",
+   "excerpt": "A second question is on the CapEx and the focus on our AI initiatives. But looking at some of the U.S. peers where there has been shift in strategy on the hyperscaler business, I just want to hear…",
+   "topics": [
+    "AI_CAPEX",
+    "CLOUD",
+    "AI_ROI"
+   ],
+   "evidence": {
+    "AI_CAPEX": "prioritizing more CapEx on",
+    "CLOUD": "focus more on cloud as a potential high ROIC business",
+    "AI_ROI": "high ROIC business"
+   },
+   "slot": 3,
+   "turn_ids": [
+    18,
+    21
+   ],
+   "unit_words": 103,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S12"
+   ]
+  },
+  {
+   "q_id": "2026Q2-Q07",
+   "quarter": "2026Q2",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "First questions is on the Xiaowei. Could management elaborate on your comment on the agent-to-agent transaction loop? Will this concept lead to the long-term visions for a fully autonomous agents…",
+   "topics": [
+    "AI_PRODUCTS",
+    "MODELS",
+    "COMPUTE",
+    "SOCIAL"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "agent-to-agent transaction loop",
+    "MODELS": "proprietary WeLM models",
+    "COMPUTE": "on-device inference for Xiaowei",
+    "SOCIAL": "fully autonomous agents ecosystem within the Weixin"
+   },
+   "slot": 4,
+   "turn_ids": [
+    23
+   ],
+   "unit_words": 80,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S12"
+   ]
+  },
+  {
+   "q_id": "2026Q2-Q08",
+   "quarter": "2026Q2",
+   "analyst": "Alicia Yap",
+   "org": "Citi",
+   "excerpt": "A quick follow-up is on your marketing service revenue. So this quarter's, the growth rate accelerated to 22%. Should we expect this ongoing upgrade of the attack and also this automated campaign to…",
+   "topics": [
+    "ADS",
+    "MODELS"
+   ],
+   "evidence": {
+    "ADS": "marketing service revenue",
+    "MODELS": "deeper integrations into your Hunyuan 3 model"
+   },
+   "slot": 4,
+   "turn_ids": [
+    23
+   ],
+   "unit_words": 58,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S12"
+   ]
+  },
+  {
+   "q_id": "2026Q2-Q09",
+   "quarter": "2026Q2",
+   "analyst": "Alex Liu",
+   "org": "Bank of America",
+   "excerpt": "We noted that Tencent has recently increased the buyback. The buyback activity started from May. At the same time, the CapEx has been accelerated meaningfully as well. We understand it is still in a…",
+   "topics": [
+    "CAPITAL",
+    "AI_CAPEX"
+   ],
+   "evidence": {
+    "CAPITAL": "capital allocation priority",
+    "AI_CAPEX": "CapEx has been accelerated meaningfully"
+   },
+   "slot": 5,
+   "turn_ids": [
+    27
+   ],
+   "unit_words": 63,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S12"
+   ]
+  },
+  {
+   "q_id": "2026Q2-Q10",
+   "quarter": "2026Q2",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "My first question is on Hunyuan flagship strategy. The Hunyuan 3 competes on cost efficiency rather than raw capacity capability. If you succeeded in building a truly frontier level model, which…",
+   "topics": [
+    "MODELS",
+    "AI_ROI",
+    "AI_CAPEX"
+   ],
+   "evidence": {
+    "MODELS": "truly frontier level model",
+    "AI_ROI": "what specific business value would that create",
+    "AI_CAPEX": "major increase in training spend"
+   },
+   "slot": 6,
+   "turn_ids": [
+    32,
+    34
+   ],
+   "unit_words": 86,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S12"
+   ]
+  },
+  {
+   "q_id": "2026Q2-Q11",
+   "quarter": "2026Q2",
+   "analyst": "Alex Yao",
+   "org": "JPMorgan",
+   "excerpt": "My follow-up question is on AI products economics. The new AI product drag rose from roughly RMB 8.8 billion in first quarter to about RMB 10.5 billion this quarter. Can you walk us through how you…",
+   "topics": [
+    "AI_PRODUCTS",
+    "AI_ROI",
+    "MARGIN"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "AI products economics",
+    "AI_ROI": "return thresholds",
+    "MARGIN": "new AI product drag rose"
+   },
+   "slot": 6,
+   "turn_ids": [
+    32,
+    34
+   ],
+   "unit_words": 86,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S12"
+   ]
+  },
+  {
+   "q_id": "2026Q2-Q12",
+   "quarter": "2026Q2",
+   "analyst": "Gary Yu",
+   "org": "Morgan Stanley",
+   "excerpt": "I have one follow-up on the AI investment. I understand the priority on model training WorkBuddy, then maybe cloud. Where does Xiaowei fit in terms of inferencing capacity required to support…",
+   "topics": [
+    "AI_PRODUCTS",
+    "COMPUTE"
+   ],
+   "evidence": {
+    "AI_PRODUCTS": "Where does Xiaowei fit",
+    "COMPUTE": "inferencing capacity required to support Xiaowei"
+   },
+   "slot": 7,
+   "turn_ids": [
+    39
+   ],
+   "unit_words": 41,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S12"
+   ]
+  },
+  {
+   "q_id": "2026Q2-Q13",
+   "quarter": "2026Q2",
+   "analyst": "Gary Yu",
+   "org": "Morgan Stanley",
+   "excerpt": "My second question is on management view about timing and visibility of monetization and ROIC for these new AI initiatives. Particularly, should we expect close to net attributable earnings growth…",
+   "topics": [
+    "AI_ROI",
+    "MARGIN"
+   ],
+   "evidence": {
+    "AI_ROI": "timing and visibility of monetization and ROIC",
+    "MARGIN": "operating profit, including AI investment"
+   },
+   "slot": 7,
+   "turn_ids": [
+    39
+   ],
+   "unit_words": 55,
+   "review": "第三方文字稿，待录音复核",
+   "excerpt_label": "公开披露",
+   "label": "推断",
+   "label_note": "话题标签为人工逐条阅读编码（判断），非关键词自动匹配",
+   "tier": 3,
+   "src": [
+    "S12"
+   ]
+  }
+ ]
+}

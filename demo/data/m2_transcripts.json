@@ -1,0 +1,5954 @@
+{
+ "meta": {
+  "module": "m2_transcripts",
+  "title": "M2a 业绩会实录分析：发言人修正 · 双轨热度 · 缺口 · 机构轨迹 · 叙事演变",
+  "notes": "12 个季度（2023Q3–2026Q2）StockAnalysis 第三方文字稿（非官方逐字稿）。分析师归属依主持人交接语修正，均为'第三方文字稿，待录音复核'。话题标签：分析师侧为人工逐条阅读编码；管理层侧为词表计数（见 NOTES）。用户提供的 4 个季度文字稿链接与 3 份官方 PPT、官网 Results 页面均已登记并使用（见 user_provided_sources）。预测只到'机构历史关注话题→可能延续'，不对个人评价。内部准备材料，不构成公司口径。",
+  "as_of": "2026-10-26",
+  "generated_by": "本地 Python",
+  "script": "demo/pipeline/transcripts.py",
+  "inputs": [
+   {
+    "path": "data/parsed/q3-2023.json",
+    "sha256": "5478f8a57fb5a1a47b263c4ed57a591dcc22fe61cfe1ab30640823c585d7a92b"
+   },
+   {
+    "path": "data/parsed/q4-2023.json",
+    "sha256": "086d7e7d9e49485ba217b4b28d766c0b87e317e9181b3c65731d8072a102fd57"
+   },
+   {
+    "path": "data/parsed/q1-2024.json",
+    "sha256": "282ff8dd40e14287d338e0019c010f24a1a57c14a241877ad49db6f75e8c190c"
+   },
+   {
+    "path": "data/parsed/q2-2024.json",
+    "sha256": "dbda9d4167399186d0542de20b1de4402652fdbc3800cd8d5a7b61b9c5b18fe6"
+   },
+   {
+    "path": "data/parsed/q3-2024.json",
+    "sha256": "3793b177c68f36a5e58655ecf5a5ebf0d257a950efbe7154315799af675efb91"
+   },
+   {
+    "path": "data/parsed/q4-2024.json",
+    "sha256": "8724ce5ad99b7d9d09ae9035e8d334d5f878469ef8a2e3761065eebc8b1d3260"
+   },
+   {
+    "path": "data/parsed/q1-2025.json",
+    "sha256": "a9b7509949d73bcd5d2c00e26e91ddc864fde6ef85af8f6193e02ceed288cd0f"
+   },
+   {
+    "path": "data/parsed/q2-2025.json",
+    "sha256": "017a69b77ae21a98e3474d358654761d92aa9057e127bc0c5e07a616eddf6592"
+   },
+   {
+    "path": "data/parsed/q3-2025.json",
+    "sha256": "c649ab5a1a5deff5ee71ace09b08625ca687fb834a223cd8a4e3c3959420a3a2"
+   },
+   {
+    "path": "data/parsed/q4-2025.json",
+    "sha256": "85d74b5868b3e737027cc006f285b8a45a49424f7b35be23957643e20650b24f"
+   },
+   {
+    "path": "data/parsed/q1-2026.json",
+    "sha256": "296280220d952005256a55feddb6d711b50b74a0c0fc27a6500469c074fb7ea4"
+   },
+   {
+    "path": "data/parsed/q2-2026.json",
+    "sha256": "cb6c7ed6c6b64321b03ff11a2ef0efd13008127ac8aa920c9a1cb20139d01715"
+   },
+   {
+    "path": "data/src/transcripts/89632-q3-2023.html",
+    "sha256": "15bc4e838577d7a4338493c2be2ebd559b0554f645454f9c5e119527ca82a5d1"
+   },
+   {
+    "path": "data/src/transcripts/131103-q4-2023.html",
+    "sha256": "ebd24be009fc366222b42da059ad9e0ff2bcbb1ed09033e82550be6941129731"
+   },
+   {
+    "path": "data/src/transcripts/156588-q1-2024.html",
+    "sha256": "370e7f8e0396faa647b15c2ad1a3814a247f66c730935d5da322f436b95eea3a"
+   },
+   {
+    "path": "data/src/transcripts/386083-q2-2024.html",
+    "sha256": "0e9ed32c07330dbc58386a38f6c8136f032e825e5985df9ef598ee1bf24a6ced"
+   },
+   {
+    "path": "data/src/transcripts/221754-q3-2024.html",
+    "sha256": "820f8853ee8e239c266f87a7e40537e3502c9a7f4c22cb737468f2fd8820dbc3"
+   },
+   {
+    "path": "data/src/transcripts/256177-q4-2024.html",
+    "sha256": "780668f461c52d47ad94a2292e29c4889381294189f4c4a218b09b87a7144261"
+   },
+   {
+    "path": "data/src/transcripts/328715-q1-2025.html",
+    "sha256": "f7d3b720a48729f54351628232dc4c7a053db3d3e3f4229cbd2f2679461615de"
+   },
+   {
+    "path": "data/src/transcripts/346447-q2-2025.html",
+    "sha256": "bf7b47801c55e74210b2d34fe814405289d47c4669644625301b757f10b06f73"
+   },
+   {
+    "path": "data/src/transcripts/374535-q3-2025.html",
+    "sha256": "69e87675c23a6d5744e26948593186320553cd0f8da07ce82a3b4cd9aa787f1f"
+   },
+   {
+    "path": "data/src/transcripts/419871-q4-2025.html",
+    "sha256": "7d371cf6adba0ceb0a94cd5a515cbfcfbdd2ca1ecf0e9215d4798417654d4493"
+   },
+   {
+    "path": "data/src/transcripts/609405-q1-2026.html",
+    "sha256": "67588c7cc9d1b6ca1bc68fd0a93b87f5efa022bd645987b547cb382347d71fc4"
+   },
+   {
+    "path": "data/src/transcripts/667897-q2-2026.html",
+    "sha256": "339e976197b5817fc3a3302b0ef071621584a2bd0a793f6210f6e1640197d154"
+   },
+   {
+    "path": "data/src/market_raw/idx/tc_res.html",
+    "sha256": "0aca665f817ad3c390850bdeed257fdf910cc615303088d3db3f10bc255edd41"
+   },
+   {
+    "path": "data/src/ir_official/3Q25_ppt.txt",
+    "sha256": "be1d6ca24974f5b56c1e208baa09fb0b6342527d901411f1b6008f176a3ba696"
+   },
+   {
+    "path": "data/src/ir_official/4Q25_ppt.txt",
+    "sha256": "4967fa62958bdd1de7cd298a60c0512d344264e8d4bcfdc54c200a52bcc87b7e"
+   },
+   {
+    "path": "data/src/ir_official/1Q26_ppt.txt",
+    "sha256": "bf1fc959cb7eb1a5373fa3cc109195981cafa22d86f52cedfd453d443b7baf27"
+   },
+   {
+    "path": "data/src/ir_official/2Q26_ppt.txt",
+    "sha256": "4b38c8ae012201ee08135d11dc3a0d024d992a4bd1fbd401e69069c979132d85"
+   },
+   {
+    "path": "data/src/ir_official/2Q26_release_en.txt",
+    "sha256": "7b366701afbc064b172e395592f4236a725293e392b7ca3b80873b439945d305"
+   },
+   {
+    "path": "demo/pipeline/analyst_aliases.json",
+    "sha256": "bbbba035c1665d14c4b2d14dbe92620a5d06f0766978a16ac3d8d7a6bd1b604e"
+   },
+   {
+    "path": "demo/pipeline/m2_question_coding.json",
+    "sha256": "7e188ce8e309c8b5b260a25b66b9f7cd9d3654862c8aefe0beec8f4021f1a5ee"
+   }
+  ]
+ },
+ "sources": [
+  {
+   "id": "S01",
+   "title": "Tencent Holdings (HKG:0700) Q3 2023 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/89632-q3-2023/",
+   "date": "2023-11-15",
+   "tier": 3,
+   "user_provided": false,
+   "local_copy": "data/src/transcripts/89632-q3-2023.html"
+  },
+  {
+   "id": "S02",
+   "title": "Tencent Holdings (HKG:0700) Q4 2023 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/131103-q4-2023/",
+   "date": "2024-03-20",
+   "tier": 3,
+   "user_provided": false,
+   "local_copy": "data/src/transcripts/131103-q4-2023.html"
+  },
+  {
+   "id": "S03",
+   "title": "Tencent Holdings (HKG:0700) Q1 2024 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/156588-q1-2024/",
+   "date": "2024-05-14",
+   "tier": 3,
+   "user_provided": false,
+   "local_copy": "data/src/transcripts/156588-q1-2024.html"
+  },
+  {
+   "id": "S04",
+   "title": "Tencent Holdings (HKG:0700) Q2 2024 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/386083-q2-2024/",
+   "date": "2024-08-14",
+   "tier": 3,
+   "user_provided": false,
+   "local_copy": "data/src/transcripts/386083-q2-2024.html"
+  },
+  {
+   "id": "S05",
+   "title": "Tencent Holdings (HKG:0700) Q3 2024 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/221754-q3-2024/",
+   "date": "2024-11-13",
+   "tier": 3,
+   "user_provided": false,
+   "local_copy": "data/src/transcripts/221754-q3-2024.html"
+  },
+  {
+   "id": "S06",
+   "title": "Tencent Holdings (HKG:0700) Q4 2024 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/256177-q4-2024/",
+   "date": "2025-03-19",
+   "tier": 3,
+   "user_provided": false,
+   "local_copy": "data/src/transcripts/256177-q4-2024.html"
+  },
+  {
+   "id": "S07",
+   "title": "Tencent Holdings (HKG:0700) Q1 2025 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/328715-q1-2025/",
+   "date": "2025-05-14",
+   "tier": 3,
+   "user_provided": false,
+   "local_copy": "data/src/transcripts/328715-q1-2025.html"
+  },
+  {
+   "id": "S08",
+   "title": "Tencent Holdings (HKG:0700) Q2 2025 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/346447-q2-2025/",
+   "date": "2025-08-13",
+   "tier": 3,
+   "user_provided": false,
+   "local_copy": "data/src/transcripts/346447-q2-2025.html"
+  },
+  {
+   "id": "S09",
+   "title": "Tencent Holdings (HKG:0700) Q3 2025 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/374535-q3-2025/",
+   "date": "2025-11-13",
+   "tier": 3,
+   "user_provided": true,
+   "local_copy": "data/src/transcripts/374535-q3-2025.html"
+  },
+  {
+   "id": "S10",
+   "title": "Tencent Holdings (HKG:0700) Q4 2025 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/419871-q4-2025/",
+   "date": "2026-03-18",
+   "tier": 3,
+   "user_provided": true,
+   "local_copy": "data/src/transcripts/419871-q4-2025.html"
+  },
+  {
+   "id": "S11",
+   "title": "Tencent Holdings (HKG:0700) Q1 2026 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/609405-q1-2026/",
+   "date": "2026-05-13",
+   "tier": 3,
+   "user_provided": true,
+   "local_copy": "data/src/transcripts/609405-q1-2026.html"
+  },
+  {
+   "id": "S12",
+   "title": "Tencent Holdings (HKG:0700) Q2 2026 Earnings Call Transcript & Audio（StockAnalysis 页面，数据源 Quartr；第三方文字稿，非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/667897-q2-2026/",
+   "date": "2026-08-12",
+   "tier": 3,
+   "user_provided": true,
+   "local_copy": "data/src/transcripts/667897-q2-2026.html"
+  },
+  {
+   "id": "S13",
+   "title": "腾讯控股官网 投资者关系 · Results 页面（本地快照）",
+   "url": "https://www.tencent.com/investors/results/",
+   "date": "2026-10-26",
+   "tier": 2,
+   "user_provided": true,
+   "local_copy": "data/src/market_raw/idx/tc_res.html"
+  },
+  {
+   "id": "S14",
+   "title": "腾讯 3Q25 业绩演示材料（PPT）",
+   "url": "https://static.www.tencent.com/uploads/2025/11/13/3ff004e913507e0309f3f62a553185b2.pdf",
+   "date": "2025-11-13",
+   "tier": 2,
+   "user_provided": true,
+   "listed_on_ir_results_page": true,
+   "local_copy": "data/src/ir_official/3Q25_ppt.pdf",
+   "text_used": "data/src/ir_official/3Q25_ppt.txt"
+  },
+  {
+   "id": "S15",
+   "title": "腾讯 4Q25 业绩演示材料（PPT）",
+   "url": "https://static.www.tencent.com/uploads/2026/03/18/2804dbdae364ca25b82d21bc8304f1d3.pdf",
+   "date": "2026-03-18",
+   "tier": 2,
+   "user_provided": true,
+   "listed_on_ir_results_page": true,
+   "local_copy": "data/src/ir_official/4Q25_ppt.pdf",
+   "text_used": "data/src/ir_official/4Q25_ppt.txt"
+  },
+  {
+   "id": "S16",
+   "title": "腾讯 1Q26 业绩演示材料（PPT）",
+   "url": "https://static.www.tencent.com/uploads/2026/05/13/e048dfed72bc718f7986a83f23c8e294.pdf",
+   "date": "2026-05-13",
+   "tier": 2,
+   "user_provided": false,
+   "listed_on_ir_results_page": true,
+   "local_copy": "data/src/ir_official/1Q26_ppt.pdf",
+   "text_used": "data/src/ir_official/1Q26_ppt.txt"
+  },
+  {
+   "id": "S17",
+   "title": "腾讯 2Q26 业绩演示材料（PPT）",
+   "url": "https://static.www.tencent.com/website-2026-upload/2Q26-earnings-PPT_20260812_1800-88b183.pdf",
+   "date": "2026-08-12",
+   "tier": 2,
+   "user_provided": true,
+   "listed_on_ir_results_page": true,
+   "local_copy": "data/src/ir_official/2Q26_ppt.pdf",
+   "text_used": "data/src/ir_official/2Q26_ppt.txt"
+  },
+  {
+   "id": "S18",
+   "title": "腾讯 2Q26 英文业绩新闻稿",
+   "url": "https://www.tencent.com/wp-content/uploads/2026/08/Tencent-Announces-2026-Second-Quarter-Results.pdf",
+   "date": "2026-08-12",
+   "tier": 2,
+   "user_provided": false,
+   "listed_on_ir_results_page": true,
+   "local_copy": "data/src/ir_official/2Q26_release_en.pdf",
+   "text_used": "data/src/ir_official/2Q26_release_en.txt"
+  }
+ ],
+ "user_provided_sources": [
+  {
+   "url_as_given": "https://stockanalysis.com/quote/hkg/0700/transcripts/374535-q3-2025/?utm_source=chatgpt.com",
+   "url_registered": "https://stockanalysis.com/quote/hkg/0700/transcripts/374535-q3-2025/",
+   "source_id": "S09",
+   "used_for": "实录正文：发言人归属修正、问题单元编码、双轨热度、缺口、机构轨迹、回测、叙事演变",
+   "status": "已使用"
+  },
+  {
+   "url_as_given": "https://stockanalysis.com/quote/hkg/0700/transcripts/419871-q4-2025/?utm_source=chatgpt.com",
+   "url_registered": "https://stockanalysis.com/quote/hkg/0700/transcripts/419871-q4-2025/",
+   "source_id": "S10",
+   "used_for": "实录正文：发言人归属修正、问题单元编码、双轨热度、缺口、机构轨迹、回测、叙事演变",
+   "status": "已使用"
+  },
+  {
+   "url_as_given": "https://stockanalysis.com/quote/hkg/0700/transcripts/609405-q1-2026/?utm_source=chatgpt.com",
+   "url_registered": "https://stockanalysis.com/quote/hkg/0700/transcripts/609405-q1-2026/",
+   "source_id": "S11",
+   "used_for": "实录正文：发言人归属修正、问题单元编码、双轨热度、缺口、机构轨迹、回测、叙事演变",
+   "status": "已使用"
+  },
+  {
+   "url_as_given": "https://stockanalysis.com/quote/hkg/0700/transcripts/667897-q2-2026/?utm_source=chatgpt.com",
+   "url_registered": "https://stockanalysis.com/quote/hkg/0700/transcripts/667897-q2-2026/",
+   "source_id": "S12",
+   "used_for": "实录正文：发言人归属修正、问题单元编码、双轨热度、缺口、机构轨迹、回测、叙事演变",
+   "status": "已使用"
+  },
+  {
+   "url_as_given": "https://static.www.tencent.com/uploads/2025/11/13/3ff004e913507e0309f3f62a553185b2.pdf?utm_source=chatgpt.com",
+   "url_registered": "https://static.www.tencent.com/uploads/2025/11/13/3ff004e913507e0309f3f62a553185b2.pdf",
+   "source_id": "S14",
+   "used_for": "文字稿数字保真抽查：CFO/分析师口述的收入、毛利、资本开支与官方 PPT 逐项比对（见 transcript_fidelity）",
+   "status": "已使用"
+  },
+  {
+   "url_as_given": "https://static.www.tencent.com/uploads/2026/03/18/2804dbdae364ca25b82d21bc8304f1d3.pdf?utm_source=chatgpt.com",
+   "url_registered": "https://static.www.tencent.com/uploads/2026/03/18/2804dbdae364ca25b82d21bc8304f1d3.pdf",
+   "source_id": "S15",
+   "used_for": "文字稿数字保真抽查：CFO/分析师口述的收入、毛利、资本开支与官方 PPT 逐项比对（见 transcript_fidelity）",
+   "status": "已使用"
+  },
+  {
+   "url_as_given": "https://www.tencent.com/investors/results/?utm_source=chatgpt.com",
+   "url_registered": "https://www.tencent.com/investors/results/",
+   "source_id": "S13",
+   "used_for": "核对各季 PPT/新闻稿链接确实列于腾讯官网 Results 页面（本地快照 tc_res.html）",
+   "status": "已使用"
+  },
+  {
+   "url_as_given": "https://static.www.tencent.com/website-2026-upload/2Q26-earnings-PPT_20260812_1800-88b183.pdf?utm_source=chatgpt.com",
+   "url_registered": "https://static.www.tencent.com/website-2026-upload/2Q26-earnings-PPT_20260812_1800-88b183.pdf",
+   "source_id": "S17",
+   "used_for": "文字稿数字保真抽查：CFO/分析师口述的收入、毛利、资本开支与官方 PPT 逐项比对（见 transcript_fidelity）",
+   "status": "已使用"
+  }
+ ],
+ "taxonomy": [
+  {
+   "id": "AI_CAPEX",
+   "name": "资本开支/算力投入"
+  },
+  {
+   "id": "AI_ROI",
+   "name": "投资回报/回本/变现时间"
+  },
+  {
+   "id": "AI_PRODUCTS",
+   "name": "自有AI产品(WorkBuddy/CodeBuddy/元宝/小微/智能体)"
+  },
+  {
+   "id": "MODELS",
+   "name": "混元/Hy模型能力"
+  },
+  {
+   "id": "COMPUTE",
+   "name": "芯片/GPU/算力供给"
+  },
+  {
+   "id": "CLOUD",
+   "name": "腾讯云/对外算力/Token定价"
+  },
+  {
+   "id": "MARGIN",
+   "name": "利润率/折旧/成本"
+  },
+  {
+   "id": "CAPITAL",
+   "name": "回购/派息/自由现金流/负债"
+  },
+  {
+   "id": "ADS",
+   "name": "营销服务/广告"
+  },
+  {
+   "id": "GAMES_DOM",
+   "name": "本土游戏"
+  },
+  {
+   "id": "GAMES_INTL",
+   "name": "国际游戏"
+  },
+  {
+   "id": "FINTECH",
+   "name": "金融科技与企业服务"
+  },
+  {
+   "id": "SOCIAL",
+   "name": "社交/视频号/内容/订阅"
+  },
+  {
+   "id": "REG",
+   "name": "监管/地缘/1260H"
+  },
+  {
+   "id": "PORTFOLIO",
+   "name": "投资组合/处置"
+  }
+ ],
+ "attribution": {
+  "rules": {
+   "R1": "删除网页页脚",
+   "R3": "拆出被并入主持人发言的分析师提问",
+   "R4": "管理层标签下的交接语→主持人",
+   "R5": "管理层标签下的提问→分析师（自报姓名/交接后提问句式）",
+   "R6": "'Speaker N'→按交接语归属分析师",
+   "R7": "标签姓名/机构按别名表归一",
+   "R8": "散场语→主持人",
+   "R9": "交接语机构与别名表冲突",
+   "ALIAS": "低置信别名（不合并姓名）",
+   "FLAG": "人工标记的存疑发言（保留原标签）"
+  },
+  "fix_counts": {
+   "FLAG": 3,
+   "R5": 2,
+   "R7": 7,
+   "R9": 2,
+   "R3": 4,
+   "R6": 26,
+   "R8": 1,
+   "ALIAS": 4,
+   "R4": 1
+  },
+  "per_quarter": {
+   "2023Q3": {
+    "turns": 56,
+    "turns_fixed": 3,
+    "roles": {
+     "moderator": 15,
+     "mgmt": 23,
+     "analyst": 18
+    }
+   },
+   "2023Q4": {
+    "turns": 46,
+    "turns_fixed": 0,
+    "roles": {
+     "moderator": 13,
+     "mgmt": 19,
+     "analyst": 14
+    }
+   },
+   "2024Q1": {
+    "turns": 76,
+    "turns_fixed": 23,
+    "roles": {
+     "moderator": 16,
+     "mgmt": 31,
+     "analyst": 29
+    }
+   },
+   "2024Q2": {
+    "turns": 54,
+    "turns_fixed": 3,
+    "roles": {
+     "moderator": 14,
+     "mgmt": 23,
+     "analyst": 17
+    }
+   },
+   "2024Q3": {
+    "turns": 48,
+    "turns_fixed": 3,
+    "roles": {
+     "moderator": 13,
+     "mgmt": 21,
+     "analyst": 14
+    }
+   },
+   "2024Q4": {
+    "turns": 44,
+    "turns_fixed": 1,
+    "roles": {
+     "moderator": 10,
+     "mgmt": 22,
+     "analyst": 12
+    }
+   },
+   "2025Q1": {
+    "turns": 42,
+    "turns_fixed": 4,
+    "roles": {
+     "moderator": 11,
+     "mgmt": 21,
+     "analyst": 10
+    }
+   },
+   "2025Q2": {
+    "turns": 47,
+    "turns_fixed": 0,
+    "roles": {
+     "moderator": 13,
+     "mgmt": 18,
+     "analyst": 16
+    }
+   },
+   "2025Q3": {
+    "turns": 52,
+    "turns_fixed": 8,
+    "roles": {
+     "moderator": 14,
+     "mgmt": 23,
+     "analyst": 15
+    }
+   },
+   "2025Q4": {
+    "turns": 46,
+    "turns_fixed": 0,
+    "roles": {
+     "moderator": 12,
+     "mgmt": 20,
+     "analyst": 14
+    }
+   },
+   "2026Q1": {
+    "turns": 48,
+    "turns_fixed": 0,
+    "roles": {
+     "moderator": 12,
+     "mgmt": 22,
+     "analyst": 14
+    }
+   },
+   "2026Q2": {
+    "turns": 42,
+    "turns_fixed": 1,
+    "roles": {
+     "moderator": 10,
+     "mgmt": 20,
+     "analyst": 12
+    }
+   }
+  },
+  "needs_review_待录音复核": [
+   {
+    "quarter": "2023Q3",
+    "turn_id": 15,
+    "src_i": 15,
+    "speaker": "John Lo",
+    "speaker_raw": "John Lo",
+    "role": "mgmt",
+    "notes": [
+     "FLAG[低] 文字稿标为 John Lo 的 'Thank you.' 紧跟主持人 'Thank you, Gary. We will take the-'，可能是 Gary Yu 的致谢；无实质内容，保留管理层标签"
+    ]
+   },
+   {
+    "quarter": "2023Q3",
+    "turn_id": 42,
+    "src_i": 42,
+    "speaker": "Alex Yao",
+    "speaker_raw": "Alex Yao",
+    "role": "analyst",
+    "notes": [
+     "R7[中] 标签机构 'Co-Head of Asia TMT Research, Goldman Sachs' 与别名表不一致，记为 JPMorgan",
+     "R9[中] 机构冲突：文字稿写作 Goldman Sachs，记为 JPMorgan（交接语与标签均写 Goldman Sachs；其余 11 季均为 JPMorgan，疑为转写错误）"
+    ]
+   },
+   {
+    "quarter": "2024Q1",
+    "turn_id": 21,
+    "src_i": 20,
+    "speaker": "Gary Yu",
+    "speaker_raw": "Speaker 10",
+    "role": "analyst",
+    "notes": [
+     "R6[中] 文字稿标为 'Speaker 10'，按主持人交接语（'Gary'）归属（别名 'Gary' → Gary Yu：全部 12 季中 Morgan Stanley 只有一位 Gary；2026Q2 第 39 条文字稿标为 'Speaker 12'）"
+    ]
+   },
+   {
+    "quarter": "2024Q1",
+    "turn_id": 75,
+    "src_i": 73,
+    "speaker": "Wendy Huang",
+    "speaker_raw": "Speaker 18",
+    "role": "moderator",
+    "notes": [
+     "R8[中] 散场语误标为 Speaker 18，改为 IR 主持人"
+    ]
+   },
+   {
+    "quarter": "2024Q2",
+    "turn_id": 28,
+    "src_i": 28,
+    "speaker": "Annie Zhang",
+    "speaker_raw": "Speaker 11",
+    "role": "analyst",
+    "notes": [
+     "ALIAS[低] 姓名存疑：文字稿作 'Annie Zhang'，候选 Ellie Jiang（机构确定为 Macquarie；姓名与 Ellie Jiang 读音部分相近，但也可能是另一位 Macquarie 分析师）；机构确定为 Macquarie",
+     "R6[低] 文字稿标为 'Speaker 11'，按主持人交接语（'Annie Zhang'）归属（别名 'Annie Zhang' → Ellie Jiang：机构确定为 Macquarie；姓名与 Ellie Jiang 读音部分相近，但也可能是另一位 Macquarie 分析师）"
+    ]
+   },
+   {
+    "quarter": "2024Q2",
+    "turn_id": 31,
+    "src_i": 31,
+    "speaker": "Annie Zhang",
+    "speaker_raw": "Speaker 11",
+    "role": "analyst",
+    "notes": [
+     "ALIAS[低] 姓名存疑：文字稿作 'Annie Zhang'，候选 Ellie Jiang（机构确定为 Macquarie；姓名与 Ellie Jiang 读音部分相近，但也可能是另一位 Macquarie 分析师）；机构确定为 Macquarie",
+     "R6[低] 文字稿标为 'Speaker 11'，按主持人交接语（'Annie Zhang'）归属（别名 'Annie Zhang' → Ellie Jiang：机构确定为 Macquarie；姓名与 Ellie Jiang 读音部分相近，但也可能是另一位 Macquarie 分析师）"
+    ]
+   },
+   {
+    "quarter": "2024Q4",
+    "turn_id": 8,
+    "src_i": 8,
+    "speaker": "Martin Lau",
+    "speaker_raw": "Martin Lau",
+    "role": "mgmt",
+    "notes": [
+     "FLAG[中] 末尾方括号内 '[Thank you, Martin. We will take the next question]' 为转写方插入的主持人语句，未拆分"
+    ]
+   },
+   {
+    "quarter": "2025Q1",
+    "turn_id": 9,
+    "src_i": 9,
+    "speaker": "Adi Yao",
+    "speaker_raw": "Adi Yao",
+    "role": "analyst",
+    "notes": [
+     "ALIAS[低] 姓名存疑：文字稿作 'Adi Yao'，候选 Ellie Jiang（机构确定为 Macquarie；'Adi' 与 'Ellie' 读音相近，未能确认）；机构确定为 Macquarie"
+    ]
+   },
+   {
+    "quarter": "2025Q1",
+    "turn_id": 11,
+    "src_i": 11,
+    "speaker": "Adi Yao",
+    "speaker_raw": "Adi Yao",
+    "role": "analyst",
+    "notes": [
+     "ALIAS[低] 姓名存疑：文字稿作 'Adi Yao'，候选 Ellie Jiang（机构确定为 Macquarie；'Adi' 与 'Ellie' 读音相近，未能确认）；机构确定为 Macquarie"
+    ]
+   },
+   {
+    "quarter": "2025Q1",
+    "turn_id": 28,
+    "src_i": 28,
+    "speaker": "Jialong Shi",
+    "speaker_raw": "Speaker 12",
+    "role": "analyst",
+    "notes": [
+     "R6[中] 文字稿标为 'Speaker 12'，按主持人交接语（'Dialo[geuss]'）归属（别名 'Dialo[geuss]' → Jialong Shi：同为 Nomura；2024Q3/2024Q4 Nomura 提问人为 Jialong Shi）"
+    ]
+   },
+   {
+    "quarter": "2025Q3",
+    "turn_id": 6,
+    "src_i": 5,
+    "speaker": "Liao Yuan",
+    "speaker_raw": "Wendy Huang",
+    "role": "analyst",
+    "notes": [
+     "R9[中] 机构冲突：文字稿写作 Citi，记为 CITIC Securities（2024Q4/2025Q2 均为 CITIC Securities；同季 Citi 另有 Alicia Yap 提问，'Citi' 疑为 'CITIC' 的转写错误）"
+    ]
+   },
+   {
+    "quarter": "2025Q3",
+    "turn_id": 35,
+    "src_i": 33,
+    "speaker": "Martin Lau",
+    "speaker_raw": "Martin Lau",
+    "role": "mgmt",
+    "notes": [
+     "FLAG[低] 文字稿标为 Martin Lau 的 'I'm too busy. Ronald or Ronald?' 语义不明，疑为转写/归属错误；无实质内容，保留原标签"
+    ]
+   },
+   {
+    "quarter": "2025Q3",
+    "turn_id": 43,
+    "src_i": 40,
+    "speaker": "John Choi",
+    "speaker_raw": "Wendy Huang",
+    "role": "analyst",
+    "notes": [
+     "R3[中] 主持人发言中并入了分析师提问，按交接语（'Zhuang Chuai'）拆出并归属（别名 'Zhuang Chuai' → John Choi：同为 Daiwa，读音接近 John Choi）"
+    ]
+   },
+   {
+    "quarter": "2026Q2",
+    "turn_id": 39,
+    "src_i": 39,
+    "speaker": "Gary Yu",
+    "speaker_raw": "Speaker 12",
+    "role": "analyst",
+    "notes": [
+     "R6[中] 文字稿标为 'Speaker 12'，按主持人交接语（'Gary'）归属（别名 'Gary' → Gary Yu：全部 12 季中 Morgan Stanley 只有一位 Gary；2026Q2 第 39 条文字稿标为 'Speaker 12'）"
+    ]
+   }
+  ],
+  "alias_table": "demo/pipeline/analyst_aliases.json",
+  "fixed_dir": "data/parsed_fixed/",
+  "note": "只修正角色层面（管理层/分析师/主持人）与分析师姓名机构；管理层内部谁答了哪题的标签未修正。"
+ },
+ "heat": {
+  "quarters": [
+   "2023Q3",
+   "2023Q4",
+   "2024Q1",
+   "2024Q2",
+   "2024Q3",
+   "2024Q4",
+   "2025Q1",
+   "2025Q2",
+   "2025Q3",
+   "2025Q4",
+   "2026Q1",
+   "2026Q2"
+  ],
+  "rows": {
+   "2023Q3": {
+    "mgmt": {
+     "words": 8485,
+     "words_prepared": 0,
+     "words_qa": 8485,
+     "mentions": {
+      "AI_CAPEX": 8,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 2,
+      "MODELS": 23,
+      "COMPUTE": 14,
+      "CLOUD": 12,
+      "MARGIN": 48,
+      "CAPITAL": 13,
+      "ADS": 70,
+      "GAMES_DOM": 42,
+      "GAMES_INTL": 20,
+      "FINTECH": 42,
+      "SOCIAL": 99,
+      "REG": 1,
+      "PORTFOLIO": 9
+     },
+     "per10k": {
+      "AI_CAPEX": 9.4,
+      "AI_ROI": 0.0,
+      "AI_PRODUCTS": 2.4,
+      "MODELS": 27.1,
+      "COMPUTE": 16.5,
+      "CLOUD": 14.1,
+      "MARGIN": 56.6,
+      "CAPITAL": 15.3,
+      "ADS": 82.5,
+      "GAMES_DOM": 49.5,
+      "GAMES_INTL": 23.6,
+      "FINTECH": 49.5,
+      "SOCIAL": 116.7,
+      "REG": 1.2,
+      "PORTFOLIO": 10.6
+     },
+     "mentions_prepared": {
+      "AI_CAPEX": 0,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 0,
+      "MODELS": 0,
+      "COMPUTE": 0,
+      "CLOUD": 0,
+      "MARGIN": 0,
+      "CAPITAL": 0,
+      "ADS": 0,
+      "GAMES_DOM": 0,
+      "GAMES_INTL": 0,
+      "FINTECH": 0,
+      "SOCIAL": 0,
+      "REG": 0,
+      "PORTFOLIO": 0
+     },
+     "per10k_prepared": {
+      "AI_CAPEX": null,
+      "AI_ROI": null,
+      "AI_PRODUCTS": null,
+      "MODELS": null,
+      "COMPUTE": null,
+      "CLOUD": null,
+      "MARGIN": null,
+      "CAPITAL": null,
+      "ADS": null,
+      "GAMES_DOM": null,
+      "GAMES_INTL": null,
+      "FINTECH": null,
+      "SOCIAL": null,
+      "REG": null,
+      "PORTFOLIO": null
+     },
+     "mentions_qa": {
+      "AI_CAPEX": 8,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 2,
+      "MODELS": 23,
+      "COMPUTE": 14,
+      "CLOUD": 12,
+      "MARGIN": 48,
+      "CAPITAL": 13,
+      "ADS": 70,
+      "GAMES_DOM": 42,
+      "GAMES_INTL": 20,
+      "FINTECH": 42,
+      "SOCIAL": 99,
+      "REG": 1,
+      "PORTFOLIO": 9
+     }
+    },
+    "analyst": {
+     "n_units": 17,
+     "analyst_words": 1442,
+     "n_orgs": 9,
+     "counts": {
+      "AI_CAPEX": 1,
+      "AI_ROI": 1,
+      "AI_PRODUCTS": 1,
+      "MODELS": 2,
+      "COMPUTE": 1,
+      "CLOUD": 1,
+      "MARGIN": 2,
+      "CAPITAL": 2,
+      "ADS": 4,
+      "GAMES_DOM": 4,
+      "GAMES_INTL": 2,
+      "FINTECH": 1,
+      "SOCIAL": 1,
+      "REG": 1,
+      "PORTFOLIO": 2
+     },
+     "share": {
+      "AI_CAPEX": 0.059,
+      "AI_ROI": 0.059,
+      "AI_PRODUCTS": 0.059,
+      "MODELS": 0.118,
+      "COMPUTE": 0.059,
+      "CLOUD": 0.059,
+      "MARGIN": 0.118,
+      "CAPITAL": 0.118,
+      "ADS": 0.235,
+      "GAMES_DOM": 0.235,
+      "GAMES_INTL": 0.118,
+      "FINTECH": 0.059,
+      "SOCIAL": 0.059,
+      "REG": 0.059,
+      "PORTFOLIO": 0.118
+     }
+    }
+   },
+   "2023Q4": {
+    "mgmt": {
+     "words": 8336,
+     "words_prepared": 0,
+     "words_qa": 8336,
+     "mentions": {
+      "AI_CAPEX": 5,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 0,
+      "MODELS": 27,
+      "COMPUTE": 3,
+      "CLOUD": 9,
+      "MARGIN": 32,
+      "CAPITAL": 20,
+      "ADS": 44,
+      "GAMES_DOM": 36,
+      "GAMES_INTL": 23,
+      "FINTECH": 61,
+      "SOCIAL": 67,
+      "REG": 4,
+      "PORTFOLIO": 13
+     },
+     "per10k": {
+      "AI_CAPEX": 6.0,
+      "AI_ROI": 0.0,
+      "AI_PRODUCTS": 0.0,
+      "MODELS": 32.4,
+      "COMPUTE": 3.6,
+      "CLOUD": 10.8,
+      "MARGIN": 38.4,
+      "CAPITAL": 24.0,
+      "ADS": 52.8,
+      "GAMES_DOM": 43.2,
+      "GAMES_INTL": 27.6,
+      "FINTECH": 73.2,
+      "SOCIAL": 80.4,
+      "REG": 4.8,
+      "PORTFOLIO": 15.6
+     },
+     "mentions_prepared": {
+      "AI_CAPEX": 0,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 0,
+      "MODELS": 0,
+      "COMPUTE": 0,
+      "CLOUD": 0,
+      "MARGIN": 0,
+      "CAPITAL": 0,
+      "ADS": 0,
+      "GAMES_DOM": 0,
+      "GAMES_INTL": 0,
+      "FINTECH": 0,
+      "SOCIAL": 0,
+      "REG": 0,
+      "PORTFOLIO": 0
+     },
+     "per10k_prepared": {
+      "AI_CAPEX": null,
+      "AI_ROI": null,
+      "AI_PRODUCTS": null,
+      "MODELS": null,
+      "COMPUTE": null,
+      "CLOUD": null,
+      "MARGIN": null,
+      "CAPITAL": null,
+      "ADS": null,
+      "GAMES_DOM": null,
+      "GAMES_INTL": null,
+      "FINTECH": null,
+      "SOCIAL": null,
+      "REG": null,
+      "PORTFOLIO": null
+     },
+     "mentions_qa": {
+      "AI_CAPEX": 5,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 0,
+      "MODELS": 27,
+      "COMPUTE": 3,
+      "CLOUD": 9,
+      "MARGIN": 32,
+      "CAPITAL": 20,
+      "ADS": 44,
+      "GAMES_DOM": 36,
+      "GAMES_INTL": 23,
+      "FINTECH": 61,
+      "SOCIAL": 67,
+      "REG": 4,
+      "PORTFOLIO": 13
+     }
+    },
+    "analyst": {
+     "n_units": 16,
+     "analyst_words": 1177,
+     "n_orgs": 8,
+     "counts": {
+      "AI_CAPEX": 0,
+      "AI_ROI": 2,
+      "AI_PRODUCTS": 0,
+      "MODELS": 1,
+      "COMPUTE": 0,
+      "CLOUD": 2,
+      "MARGIN": 1,
+      "CAPITAL": 1,
+      "ADS": 1,
+      "GAMES_DOM": 7,
+      "GAMES_INTL": 0,
+      "FINTECH": 1,
+      "SOCIAL": 3,
+      "REG": 2,
+      "PORTFOLIO": 1
+     },
+     "share": {
+      "AI_CAPEX": 0.0,
+      "AI_ROI": 0.125,
+      "AI_PRODUCTS": 0.0,
+      "MODELS": 0.062,
+      "COMPUTE": 0.0,
+      "CLOUD": 0.125,
+      "MARGIN": 0.062,
+      "CAPITAL": 0.062,
+      "ADS": 0.062,
+      "GAMES_DOM": 0.438,
+      "GAMES_INTL": 0.0,
+      "FINTECH": 0.062,
+      "SOCIAL": 0.188,
+      "REG": 0.125,
+      "PORTFOLIO": 0.062
+     }
+    }
+   },
+   "2024Q1": {
+    "mgmt": {
+     "words": 7449,
+     "words_prepared": 0,
+     "words_qa": 7449,
+     "mentions": {
+      "AI_CAPEX": 7,
+      "AI_ROI": 1,
+      "AI_PRODUCTS": 0,
+      "MODELS": 13,
+      "COMPUTE": 2,
+      "CLOUD": 9,
+      "MARGIN": 31,
+      "CAPITAL": 15,
+      "ADS": 63,
+      "GAMES_DOM": 26,
+      "GAMES_INTL": 13,
+      "FINTECH": 45,
+      "SOCIAL": 57,
+      "REG": 0,
+      "PORTFOLIO": 13
+     },
+     "per10k": {
+      "AI_CAPEX": 9.4,
+      "AI_ROI": 1.3,
+      "AI_PRODUCTS": 0.0,
+      "MODELS": 17.5,
+      "COMPUTE": 2.7,
+      "CLOUD": 12.1,
+      "MARGIN": 41.6,
+      "CAPITAL": 20.1,
+      "ADS": 84.6,
+      "GAMES_DOM": 34.9,
+      "GAMES_INTL": 17.5,
+      "FINTECH": 60.4,
+      "SOCIAL": 76.5,
+      "REG": 0.0,
+      "PORTFOLIO": 17.5
+     },
+     "mentions_prepared": {
+      "AI_CAPEX": 0,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 0,
+      "MODELS": 0,
+      "COMPUTE": 0,
+      "CLOUD": 0,
+      "MARGIN": 0,
+      "CAPITAL": 0,
+      "ADS": 0,
+      "GAMES_DOM": 0,
+      "GAMES_INTL": 0,
+      "FINTECH": 0,
+      "SOCIAL": 0,
+      "REG": 0,
+      "PORTFOLIO": 0
+     },
+     "per10k_prepared": {
+      "AI_CAPEX": null,
+      "AI_ROI": null,
+      "AI_PRODUCTS": null,
+      "MODELS": null,
+      "COMPUTE": null,
+      "CLOUD": null,
+      "MARGIN": null,
+      "CAPITAL": null,
+      "ADS": null,
+      "GAMES_DOM": null,
+      "GAMES_INTL": null,
+      "FINTECH": null,
+      "SOCIAL": null,
+      "REG": null,
+      "PORTFOLIO": null
+     },
+     "mentions_qa": {
+      "AI_CAPEX": 7,
+      "AI_ROI": 1,
+      "AI_PRODUCTS": 0,
+      "MODELS": 13,
+      "COMPUTE": 2,
+      "CLOUD": 9,
+      "MARGIN": 31,
+      "CAPITAL": 15,
+      "ADS": 63,
+      "GAMES_DOM": 26,
+      "GAMES_INTL": 13,
+      "FINTECH": 45,
+      "SOCIAL": 57,
+      "REG": 0,
+      "PORTFOLIO": 13
+     }
+    },
+    "analyst": {
+     "n_units": 19,
+     "analyst_words": 1702,
+     "n_orgs": 10,
+     "counts": {
+      "AI_CAPEX": 0,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 1,
+      "MODELS": 1,
+      "COMPUTE": 0,
+      "CLOUD": 1,
+      "MARGIN": 3,
+      "CAPITAL": 2,
+      "ADS": 5,
+      "GAMES_DOM": 5,
+      "GAMES_INTL": 2,
+      "FINTECH": 3,
+      "SOCIAL": 2,
+      "REG": 0,
+      "PORTFOLIO": 1
+     },
+     "share": {
+      "AI_CAPEX": 0.0,
+      "AI_ROI": 0.0,
+      "AI_PRODUCTS": 0.053,
+      "MODELS": 0.053,
+      "COMPUTE": 0.0,
+      "CLOUD": 0.053,
+      "MARGIN": 0.158,
+      "CAPITAL": 0.105,
+      "ADS": 0.263,
+      "GAMES_DOM": 0.263,
+      "GAMES_INTL": 0.105,
+      "FINTECH": 0.158,
+      "SOCIAL": 0.105,
+      "REG": 0.0,
+      "PORTFOLIO": 0.053
+     }
+    }
+   },
+   "2024Q2": {
+    "mgmt": {
+     "words": 8622,
+     "words_prepared": 0,
+     "words_qa": 8622,
+     "mentions": {
+      "AI_CAPEX": 6,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 4,
+      "MODELS": 6,
+      "COMPUTE": 9,
+      "CLOUD": 7,
+      "MARGIN": 28,
+      "CAPITAL": 11,
+      "ADS": 41,
+      "GAMES_DOM": 50,
+      "GAMES_INTL": 21,
+      "FINTECH": 34,
+      "SOCIAL": 74,
+      "REG": 2,
+      "PORTFOLIO": 13
+     },
+     "per10k": {
+      "AI_CAPEX": 7.0,
+      "AI_ROI": 0.0,
+      "AI_PRODUCTS": 4.6,
+      "MODELS": 7.0,
+      "COMPUTE": 10.4,
+      "CLOUD": 8.1,
+      "MARGIN": 32.5,
+      "CAPITAL": 12.8,
+      "ADS": 47.6,
+      "GAMES_DOM": 58.0,
+      "GAMES_INTL": 24.4,
+      "FINTECH": 39.4,
+      "SOCIAL": 85.8,
+      "REG": 2.3,
+      "PORTFOLIO": 15.1
+     },
+     "mentions_prepared": {
+      "AI_CAPEX": 0,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 0,
+      "MODELS": 0,
+      "COMPUTE": 0,
+      "CLOUD": 0,
+      "MARGIN": 0,
+      "CAPITAL": 0,
+      "ADS": 0,
+      "GAMES_DOM": 0,
+      "GAMES_INTL": 0,
+      "FINTECH": 0,
+      "SOCIAL": 0,
+      "REG": 0,
+      "PORTFOLIO": 0
+     },
+     "per10k_prepared": {
+      "AI_CAPEX": null,
+      "AI_ROI": null,
+      "AI_PRODUCTS": null,
+      "MODELS": null,
+      "COMPUTE": null,
+      "CLOUD": null,
+      "MARGIN": null,
+      "CAPITAL": null,
+      "ADS": null,
+      "GAMES_DOM": null,
+      "GAMES_INTL": null,
+      "FINTECH": null,
+      "SOCIAL": null,
+      "REG": null,
+      "PORTFOLIO": null
+     },
+     "mentions_qa": {
+      "AI_CAPEX": 6,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 4,
+      "MODELS": 6,
+      "COMPUTE": 9,
+      "CLOUD": 7,
+      "MARGIN": 28,
+      "CAPITAL": 11,
+      "ADS": 41,
+      "GAMES_DOM": 50,
+      "GAMES_INTL": 21,
+      "FINTECH": 34,
+      "SOCIAL": 74,
+      "REG": 2,
+      "PORTFOLIO": 13
+     }
+    },
+    "analyst": {
+     "n_units": 19,
+     "analyst_words": 1483,
+     "n_orgs": 10,
+     "counts": {
+      "AI_CAPEX": 0,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 1,
+      "MODELS": 1,
+      "COMPUTE": 0,
+      "CLOUD": 1,
+      "MARGIN": 3,
+      "CAPITAL": 1,
+      "ADS": 3,
+      "GAMES_DOM": 7,
+      "GAMES_INTL": 1,
+      "FINTECH": 2,
+      "SOCIAL": 3,
+      "REG": 1,
+      "PORTFOLIO": 2
+     },
+     "share": {
+      "AI_CAPEX": 0.0,
+      "AI_ROI": 0.0,
+      "AI_PRODUCTS": 0.053,
+      "MODELS": 0.053,
+      "COMPUTE": 0.0,
+      "CLOUD": 0.053,
+      "MARGIN": 0.158,
+      "CAPITAL": 0.053,
+      "ADS": 0.158,
+      "GAMES_DOM": 0.368,
+      "GAMES_INTL": 0.053,
+      "FINTECH": 0.105,
+      "SOCIAL": 0.158,
+      "REG": 0.053,
+      "PORTFOLIO": 0.105
+     }
+    }
+   },
+   "2024Q3": {
+    "mgmt": {
+     "words": 7788,
+     "words_prepared": 0,
+     "words_qa": 7788,
+     "mentions": {
+      "AI_CAPEX": 7,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 2,
+      "MODELS": 9,
+      "COMPUTE": 6,
+      "CLOUD": 10,
+      "MARGIN": 22,
+      "CAPITAL": 14,
+      "ADS": 36,
+      "GAMES_DOM": 39,
+      "GAMES_INTL": 22,
+      "FINTECH": 41,
+      "SOCIAL": 78,
+      "REG": 5,
+      "PORTFOLIO": 11
+     },
+     "per10k": {
+      "AI_CAPEX": 9.0,
+      "AI_ROI": 0.0,
+      "AI_PRODUCTS": 2.6,
+      "MODELS": 11.6,
+      "COMPUTE": 7.7,
+      "CLOUD": 12.8,
+      "MARGIN": 28.2,
+      "CAPITAL": 18.0,
+      "ADS": 46.2,
+      "GAMES_DOM": 50.1,
+      "GAMES_INTL": 28.2,
+      "FINTECH": 52.6,
+      "SOCIAL": 100.2,
+      "REG": 6.4,
+      "PORTFOLIO": 14.1
+     },
+     "mentions_prepared": {
+      "AI_CAPEX": 0,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 0,
+      "MODELS": 0,
+      "COMPUTE": 0,
+      "CLOUD": 0,
+      "MARGIN": 0,
+      "CAPITAL": 0,
+      "ADS": 0,
+      "GAMES_DOM": 0,
+      "GAMES_INTL": 0,
+      "FINTECH": 0,
+      "SOCIAL": 0,
+      "REG": 0,
+      "PORTFOLIO": 0
+     },
+     "per10k_prepared": {
+      "AI_CAPEX": null,
+      "AI_ROI": null,
+      "AI_PRODUCTS": null,
+      "MODELS": null,
+      "COMPUTE": null,
+      "CLOUD": null,
+      "MARGIN": null,
+      "CAPITAL": null,
+      "ADS": null,
+      "GAMES_DOM": null,
+      "GAMES_INTL": null,
+      "FINTECH": null,
+      "SOCIAL": null,
+      "REG": null,
+      "PORTFOLIO": null
+     },
+     "mentions_qa": {
+      "AI_CAPEX": 7,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 2,
+      "MODELS": 9,
+      "COMPUTE": 6,
+      "CLOUD": 10,
+      "MARGIN": 22,
+      "CAPITAL": 14,
+      "ADS": 36,
+      "GAMES_DOM": 39,
+      "GAMES_INTL": 22,
+      "FINTECH": 41,
+      "SOCIAL": 78,
+      "REG": 5,
+      "PORTFOLIO": 11
+     }
+    },
+    "analyst": {
+     "n_units": 20,
+     "analyst_words": 1494,
+     "n_orgs": 10,
+     "counts": {
+      "AI_CAPEX": 0,
+      "AI_ROI": 3,
+      "AI_PRODUCTS": 1,
+      "MODELS": 1,
+      "COMPUTE": 0,
+      "CLOUD": 1,
+      "MARGIN": 1,
+      "CAPITAL": 2,
+      "ADS": 3,
+      "GAMES_DOM": 4,
+      "GAMES_INTL": 1,
+      "FINTECH": 4,
+      "SOCIAL": 5,
+      "REG": 1,
+      "PORTFOLIO": 2
+     },
+     "share": {
+      "AI_CAPEX": 0.0,
+      "AI_ROI": 0.15,
+      "AI_PRODUCTS": 0.05,
+      "MODELS": 0.05,
+      "COMPUTE": 0.0,
+      "CLOUD": 0.05,
+      "MARGIN": 0.05,
+      "CAPITAL": 0.1,
+      "ADS": 0.15,
+      "GAMES_DOM": 0.2,
+      "GAMES_INTL": 0.05,
+      "FINTECH": 0.2,
+      "SOCIAL": 0.25,
+      "REG": 0.05,
+      "PORTFOLIO": 0.1
+     }
+    }
+   },
+   "2024Q4": {
+    "mgmt": {
+     "words": 8347,
+     "words_prepared": 0,
+     "words_qa": 8347,
+     "mentions": {
+      "AI_CAPEX": 32,
+      "AI_ROI": 2,
+      "AI_PRODUCTS": 31,
+      "MODELS": 37,
+      "COMPUTE": 33,
+      "CLOUD": 17,
+      "MARGIN": 43,
+      "CAPITAL": 23,
+      "ADS": 43,
+      "GAMES_DOM": 20,
+      "GAMES_INTL": 12,
+      "FINTECH": 29,
+      "SOCIAL": 44,
+      "REG": 0,
+      "PORTFOLIO": 6
+     },
+     "per10k": {
+      "AI_CAPEX": 38.3,
+      "AI_ROI": 2.4,
+      "AI_PRODUCTS": 37.1,
+      "MODELS": 44.3,
+      "COMPUTE": 39.5,
+      "CLOUD": 20.4,
+      "MARGIN": 51.5,
+      "CAPITAL": 27.6,
+      "ADS": 51.5,
+      "GAMES_DOM": 24.0,
+      "GAMES_INTL": 14.4,
+      "FINTECH": 34.7,
+      "SOCIAL": 52.7,
+      "REG": 0.0,
+      "PORTFOLIO": 7.2
+     },
+     "mentions_prepared": {
+      "AI_CAPEX": 0,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 0,
+      "MODELS": 0,
+      "COMPUTE": 0,
+      "CLOUD": 0,
+      "MARGIN": 0,
+      "CAPITAL": 0,
+      "ADS": 0,
+      "GAMES_DOM": 0,
+      "GAMES_INTL": 0,
+      "FINTECH": 0,
+      "SOCIAL": 0,
+      "REG": 0,
+      "PORTFOLIO": 0
+     },
+     "per10k_prepared": {
+      "AI_CAPEX": null,
+      "AI_ROI": null,
+      "AI_PRODUCTS": null,
+      "MODELS": null,
+      "COMPUTE": null,
+      "CLOUD": null,
+      "MARGIN": null,
+      "CAPITAL": null,
+      "ADS": null,
+      "GAMES_DOM": null,
+      "GAMES_INTL": null,
+      "FINTECH": null,
+      "SOCIAL": null,
+      "REG": null,
+      "PORTFOLIO": null
+     },
+     "mentions_qa": {
+      "AI_CAPEX": 32,
+      "AI_ROI": 2,
+      "AI_PRODUCTS": 31,
+      "MODELS": 37,
+      "COMPUTE": 33,
+      "CLOUD": 17,
+      "MARGIN": 43,
+      "CAPITAL": 23,
+      "ADS": 43,
+      "GAMES_DOM": 20,
+      "GAMES_INTL": 12,
+      "FINTECH": 29,
+      "SOCIAL": 44,
+      "REG": 0,
+      "PORTFOLIO": 6
+     }
+    },
+    "analyst": {
+     "n_units": 14,
+     "analyst_words": 1128,
+     "n_orgs": 8,
+     "counts": {
+      "AI_CAPEX": 2,
+      "AI_ROI": 1,
+      "AI_PRODUCTS": 4,
+      "MODELS": 1,
+      "COMPUTE": 0,
+      "CLOUD": 1,
+      "MARGIN": 2,
+      "CAPITAL": 1,
+      "ADS": 2,
+      "GAMES_DOM": 1,
+      "GAMES_INTL": 1,
+      "FINTECH": 2,
+      "SOCIAL": 1,
+      "REG": 0,
+      "PORTFOLIO": 1
+     },
+     "share": {
+      "AI_CAPEX": 0.143,
+      "AI_ROI": 0.071,
+      "AI_PRODUCTS": 0.286,
+      "MODELS": 0.071,
+      "COMPUTE": 0.0,
+      "CLOUD": 0.071,
+      "MARGIN": 0.143,
+      "CAPITAL": 0.071,
+      "ADS": 0.143,
+      "GAMES_DOM": 0.071,
+      "GAMES_INTL": 0.071,
+      "FINTECH": 0.143,
+      "SOCIAL": 0.071,
+      "REG": 0.0,
+      "PORTFOLIO": 0.071
+     }
+    }
+   },
+   "2025Q1": {
+    "mgmt": {
+     "words": 8347,
+     "words_prepared": 0,
+     "words_qa": 8347,
+     "mentions": {
+      "AI_CAPEX": 14,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 28,
+      "MODELS": 12,
+      "COMPUTE": 30,
+      "CLOUD": 13,
+      "MARGIN": 28,
+      "CAPITAL": 5,
+      "ADS": 71,
+      "GAMES_DOM": 40,
+      "GAMES_INTL": 14,
+      "FINTECH": 21,
+      "SOCIAL": 58,
+      "REG": 9,
+      "PORTFOLIO": 0
+     },
+     "per10k": {
+      "AI_CAPEX": 16.8,
+      "AI_ROI": 0.0,
+      "AI_PRODUCTS": 33.5,
+      "MODELS": 14.4,
+      "COMPUTE": 35.9,
+      "CLOUD": 15.6,
+      "MARGIN": 33.5,
+      "CAPITAL": 6.0,
+      "ADS": 85.1,
+      "GAMES_DOM": 47.9,
+      "GAMES_INTL": 16.8,
+      "FINTECH": 25.2,
+      "SOCIAL": 69.5,
+      "REG": 10.8,
+      "PORTFOLIO": 0.0
+     },
+     "mentions_prepared": {
+      "AI_CAPEX": 0,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 0,
+      "MODELS": 0,
+      "COMPUTE": 0,
+      "CLOUD": 0,
+      "MARGIN": 0,
+      "CAPITAL": 0,
+      "ADS": 0,
+      "GAMES_DOM": 0,
+      "GAMES_INTL": 0,
+      "FINTECH": 0,
+      "SOCIAL": 0,
+      "REG": 0,
+      "PORTFOLIO": 0
+     },
+     "per10k_prepared": {
+      "AI_CAPEX": null,
+      "AI_ROI": null,
+      "AI_PRODUCTS": null,
+      "MODELS": null,
+      "COMPUTE": null,
+      "CLOUD": null,
+      "MARGIN": null,
+      "CAPITAL": null,
+      "ADS": null,
+      "GAMES_DOM": null,
+      "GAMES_INTL": null,
+      "FINTECH": null,
+      "SOCIAL": null,
+      "REG": null,
+      "PORTFOLIO": null
+     },
+     "mentions_qa": {
+      "AI_CAPEX": 14,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 28,
+      "MODELS": 12,
+      "COMPUTE": 30,
+      "CLOUD": 13,
+      "MARGIN": 28,
+      "CAPITAL": 5,
+      "ADS": 71,
+      "GAMES_DOM": 40,
+      "GAMES_INTL": 14,
+      "FINTECH": 21,
+      "SOCIAL": 58,
+      "REG": 9,
+      "PORTFOLIO": 0
+     }
+    },
+    "analyst": {
+     "n_units": 18,
+     "analyst_words": 1295,
+     "n_orgs": 9,
+     "counts": {
+      "AI_CAPEX": 2,
+      "AI_ROI": 3,
+      "AI_PRODUCTS": 5,
+      "MODELS": 0,
+      "COMPUTE": 1,
+      "CLOUD": 1,
+      "MARGIN": 1,
+      "CAPITAL": 0,
+      "ADS": 4,
+      "GAMES_DOM": 4,
+      "GAMES_INTL": 0,
+      "FINTECH": 2,
+      "SOCIAL": 3,
+      "REG": 2,
+      "PORTFOLIO": 0
+     },
+     "share": {
+      "AI_CAPEX": 0.111,
+      "AI_ROI": 0.167,
+      "AI_PRODUCTS": 0.278,
+      "MODELS": 0.0,
+      "COMPUTE": 0.056,
+      "CLOUD": 0.056,
+      "MARGIN": 0.056,
+      "CAPITAL": 0.0,
+      "ADS": 0.222,
+      "GAMES_DOM": 0.222,
+      "GAMES_INTL": 0.0,
+      "FINTECH": 0.111,
+      "SOCIAL": 0.167,
+      "REG": 0.111,
+      "PORTFOLIO": 0.0
+     }
+    }
+   },
+   "2025Q2": {
+    "mgmt": {
+     "words": 6444,
+     "words_prepared": 0,
+     "words_qa": 6444,
+     "mentions": {
+      "AI_CAPEX": 6,
+      "AI_ROI": 1,
+      "AI_PRODUCTS": 23,
+      "MODELS": 18,
+      "COMPUTE": 18,
+      "CLOUD": 17,
+      "MARGIN": 24,
+      "CAPITAL": 5,
+      "ADS": 39,
+      "GAMES_DOM": 35,
+      "GAMES_INTL": 21,
+      "FINTECH": 28,
+      "SOCIAL": 44,
+      "REG": 0,
+      "PORTFOLIO": 5
+     },
+     "per10k": {
+      "AI_CAPEX": 9.3,
+      "AI_ROI": 1.6,
+      "AI_PRODUCTS": 35.7,
+      "MODELS": 27.9,
+      "COMPUTE": 27.9,
+      "CLOUD": 26.4,
+      "MARGIN": 37.2,
+      "CAPITAL": 7.8,
+      "ADS": 60.5,
+      "GAMES_DOM": 54.3,
+      "GAMES_INTL": 32.6,
+      "FINTECH": 43.5,
+      "SOCIAL": 68.3,
+      "REG": 0.0,
+      "PORTFOLIO": 7.8
+     },
+     "mentions_prepared": {
+      "AI_CAPEX": 0,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 0,
+      "MODELS": 0,
+      "COMPUTE": 0,
+      "CLOUD": 0,
+      "MARGIN": 0,
+      "CAPITAL": 0,
+      "ADS": 0,
+      "GAMES_DOM": 0,
+      "GAMES_INTL": 0,
+      "FINTECH": 0,
+      "SOCIAL": 0,
+      "REG": 0,
+      "PORTFOLIO": 0
+     },
+     "per10k_prepared": {
+      "AI_CAPEX": null,
+      "AI_ROI": null,
+      "AI_PRODUCTS": null,
+      "MODELS": null,
+      "COMPUTE": null,
+      "CLOUD": null,
+      "MARGIN": null,
+      "CAPITAL": null,
+      "ADS": null,
+      "GAMES_DOM": null,
+      "GAMES_INTL": null,
+      "FINTECH": null,
+      "SOCIAL": null,
+      "REG": null,
+      "PORTFOLIO": null
+     },
+     "mentions_qa": {
+      "AI_CAPEX": 6,
+      "AI_ROI": 1,
+      "AI_PRODUCTS": 23,
+      "MODELS": 18,
+      "COMPUTE": 18,
+      "CLOUD": 17,
+      "MARGIN": 24,
+      "CAPITAL": 5,
+      "ADS": 39,
+      "GAMES_DOM": 35,
+      "GAMES_INTL": 21,
+      "FINTECH": 28,
+      "SOCIAL": 44,
+      "REG": 0,
+      "PORTFOLIO": 5
+     }
+    },
+    "analyst": {
+     "n_units": 17,
+     "analyst_words": 1333,
+     "n_orgs": 10,
+     "counts": {
+      "AI_CAPEX": 2,
+      "AI_ROI": 1,
+      "AI_PRODUCTS": 4,
+      "MODELS": 3,
+      "COMPUTE": 3,
+      "CLOUD": 1,
+      "MARGIN": 3,
+      "CAPITAL": 0,
+      "ADS": 3,
+      "GAMES_DOM": 4,
+      "GAMES_INTL": 1,
+      "FINTECH": 2,
+      "SOCIAL": 1,
+      "REG": 3,
+      "PORTFOLIO": 1
+     },
+     "share": {
+      "AI_CAPEX": 0.118,
+      "AI_ROI": 0.059,
+      "AI_PRODUCTS": 0.235,
+      "MODELS": 0.176,
+      "COMPUTE": 0.176,
+      "CLOUD": 0.059,
+      "MARGIN": 0.176,
+      "CAPITAL": 0.0,
+      "ADS": 0.176,
+      "GAMES_DOM": 0.235,
+      "GAMES_INTL": 0.059,
+      "FINTECH": 0.118,
+      "SOCIAL": 0.059,
+      "REG": 0.176,
+      "PORTFOLIO": 0.059
+     }
+    }
+   },
+   "2025Q3": {
+    "mgmt": {
+     "words": 5633,
+     "words_prepared": 0,
+     "words_qa": 5633,
+     "mentions": {
+      "AI_CAPEX": 11,
+      "AI_ROI": 1,
+      "AI_PRODUCTS": 31,
+      "MODELS": 26,
+      "COMPUTE": 9,
+      "CLOUD": 9,
+      "MARGIN": 26,
+      "CAPITAL": 6,
+      "ADS": 48,
+      "GAMES_DOM": 23,
+      "GAMES_INTL": 20,
+      "FINTECH": 39,
+      "SOCIAL": 51,
+      "REG": 0,
+      "PORTFOLIO": 4
+     },
+     "per10k": {
+      "AI_CAPEX": 19.5,
+      "AI_ROI": 1.8,
+      "AI_PRODUCTS": 55.0,
+      "MODELS": 46.2,
+      "COMPUTE": 16.0,
+      "CLOUD": 16.0,
+      "MARGIN": 46.2,
+      "CAPITAL": 10.7,
+      "ADS": 85.2,
+      "GAMES_DOM": 40.8,
+      "GAMES_INTL": 35.5,
+      "FINTECH": 69.2,
+      "SOCIAL": 90.5,
+      "REG": 0.0,
+      "PORTFOLIO": 7.1
+     },
+     "mentions_prepared": {
+      "AI_CAPEX": 0,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 0,
+      "MODELS": 0,
+      "COMPUTE": 0,
+      "CLOUD": 0,
+      "MARGIN": 0,
+      "CAPITAL": 0,
+      "ADS": 0,
+      "GAMES_DOM": 0,
+      "GAMES_INTL": 0,
+      "FINTECH": 0,
+      "SOCIAL": 0,
+      "REG": 0,
+      "PORTFOLIO": 0
+     },
+     "per10k_prepared": {
+      "AI_CAPEX": null,
+      "AI_ROI": null,
+      "AI_PRODUCTS": null,
+      "MODELS": null,
+      "COMPUTE": null,
+      "CLOUD": null,
+      "MARGIN": null,
+      "CAPITAL": null,
+      "ADS": null,
+      "GAMES_DOM": null,
+      "GAMES_INTL": null,
+      "FINTECH": null,
+      "SOCIAL": null,
+      "REG": null,
+      "PORTFOLIO": null
+     },
+     "mentions_qa": {
+      "AI_CAPEX": 11,
+      "AI_ROI": 1,
+      "AI_PRODUCTS": 31,
+      "MODELS": 26,
+      "COMPUTE": 9,
+      "CLOUD": 9,
+      "MARGIN": 26,
+      "CAPITAL": 6,
+      "ADS": 48,
+      "GAMES_DOM": 23,
+      "GAMES_INTL": 20,
+      "FINTECH": 39,
+      "SOCIAL": 51,
+      "REG": 0,
+      "PORTFOLIO": 4
+     }
+    },
+    "analyst": {
+     "n_units": 21,
+     "analyst_words": 1438,
+     "n_orgs": 11,
+     "counts": {
+      "AI_CAPEX": 4,
+      "AI_ROI": 1,
+      "AI_PRODUCTS": 3,
+      "MODELS": 2,
+      "COMPUTE": 1,
+      "CLOUD": 1,
+      "MARGIN": 3,
+      "CAPITAL": 0,
+      "ADS": 4,
+      "GAMES_DOM": 3,
+      "GAMES_INTL": 1,
+      "FINTECH": 2,
+      "SOCIAL": 3,
+      "REG": 0,
+      "PORTFOLIO": 1
+     },
+     "share": {
+      "AI_CAPEX": 0.19,
+      "AI_ROI": 0.048,
+      "AI_PRODUCTS": 0.143,
+      "MODELS": 0.095,
+      "COMPUTE": 0.048,
+      "CLOUD": 0.048,
+      "MARGIN": 0.143,
+      "CAPITAL": 0.0,
+      "ADS": 0.19,
+      "GAMES_DOM": 0.143,
+      "GAMES_INTL": 0.048,
+      "FINTECH": 0.095,
+      "SOCIAL": 0.143,
+      "REG": 0.0,
+      "PORTFOLIO": 0.048
+     }
+    }
+   },
+   "2025Q4": {
+    "mgmt": {
+     "words": 9241,
+     "words_prepared": 0,
+     "words_qa": 9241,
+     "mentions": {
+      "AI_CAPEX": 11,
+      "AI_ROI": 6,
+      "AI_PRODUCTS": 76,
+      "MODELS": 37,
+      "COMPUTE": 35,
+      "CLOUD": 38,
+      "MARGIN": 29,
+      "CAPITAL": 12,
+      "ADS": 33,
+      "GAMES_DOM": 18,
+      "GAMES_INTL": 10,
+      "FINTECH": 29,
+      "SOCIAL": 35,
+      "REG": 3,
+      "PORTFOLIO": 3
+     },
+     "per10k": {
+      "AI_CAPEX": 11.9,
+      "AI_ROI": 6.5,
+      "AI_PRODUCTS": 82.2,
+      "MODELS": 40.0,
+      "COMPUTE": 37.9,
+      "CLOUD": 41.1,
+      "MARGIN": 31.4,
+      "CAPITAL": 13.0,
+      "ADS": 35.7,
+      "GAMES_DOM": 19.5,
+      "GAMES_INTL": 10.8,
+      "FINTECH": 31.4,
+      "SOCIAL": 37.9,
+      "REG": 3.2,
+      "PORTFOLIO": 3.2
+     },
+     "mentions_prepared": {
+      "AI_CAPEX": 0,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 0,
+      "MODELS": 0,
+      "COMPUTE": 0,
+      "CLOUD": 0,
+      "MARGIN": 0,
+      "CAPITAL": 0,
+      "ADS": 0,
+      "GAMES_DOM": 0,
+      "GAMES_INTL": 0,
+      "FINTECH": 0,
+      "SOCIAL": 0,
+      "REG": 0,
+      "PORTFOLIO": 0
+     },
+     "per10k_prepared": {
+      "AI_CAPEX": null,
+      "AI_ROI": null,
+      "AI_PRODUCTS": null,
+      "MODELS": null,
+      "COMPUTE": null,
+      "CLOUD": null,
+      "MARGIN": null,
+      "CAPITAL": null,
+      "ADS": null,
+      "GAMES_DOM": null,
+      "GAMES_INTL": null,
+      "FINTECH": null,
+      "SOCIAL": null,
+      "REG": null,
+      "PORTFOLIO": null
+     },
+     "mentions_qa": {
+      "AI_CAPEX": 11,
+      "AI_ROI": 6,
+      "AI_PRODUCTS": 76,
+      "MODELS": 37,
+      "COMPUTE": 35,
+      "CLOUD": 38,
+      "MARGIN": 29,
+      "CAPITAL": 12,
+      "ADS": 33,
+      "GAMES_DOM": 18,
+      "GAMES_INTL": 10,
+      "FINTECH": 29,
+      "SOCIAL": 35,
+      "REG": 3,
+      "PORTFOLIO": 3
+     }
+    },
+    "analyst": {
+     "n_units": 11,
+     "analyst_words": 1002,
+     "n_orgs": 10,
+     "counts": {
+      "AI_CAPEX": 1,
+      "AI_ROI": 1,
+      "AI_PRODUCTS": 3,
+      "MODELS": 5,
+      "COMPUTE": 5,
+      "CLOUD": 2,
+      "MARGIN": 2,
+      "CAPITAL": 0,
+      "ADS": 0,
+      "GAMES_DOM": 2,
+      "GAMES_INTL": 0,
+      "FINTECH": 0,
+      "SOCIAL": 0,
+      "REG": 0,
+      "PORTFOLIO": 0
+     },
+     "share": {
+      "AI_CAPEX": 0.091,
+      "AI_ROI": 0.091,
+      "AI_PRODUCTS": 0.273,
+      "MODELS": 0.455,
+      "COMPUTE": 0.455,
+      "CLOUD": 0.182,
+      "MARGIN": 0.182,
+      "CAPITAL": 0.0,
+      "ADS": 0.0,
+      "GAMES_DOM": 0.182,
+      "GAMES_INTL": 0.0,
+      "FINTECH": 0.0,
+      "SOCIAL": 0.0,
+      "REG": 0.0,
+      "PORTFOLIO": 0.0
+     }
+    }
+   },
+   "2026Q1": {
+    "mgmt": {
+     "words": 8384,
+     "words_prepared": 0,
+     "words_qa": 8384,
+     "mentions": {
+      "AI_CAPEX": 9,
+      "AI_ROI": 5,
+      "AI_PRODUCTS": 68,
+      "MODELS": 40,
+      "COMPUTE": 33,
+      "CLOUD": 28,
+      "MARGIN": 21,
+      "CAPITAL": 10,
+      "ADS": 36,
+      "GAMES_DOM": 13,
+      "GAMES_INTL": 12,
+      "FINTECH": 22,
+      "SOCIAL": 43,
+      "REG": 0,
+      "PORTFOLIO": 3
+     },
+     "per10k": {
+      "AI_CAPEX": 10.7,
+      "AI_ROI": 6.0,
+      "AI_PRODUCTS": 81.1,
+      "MODELS": 47.7,
+      "COMPUTE": 39.4,
+      "CLOUD": 33.4,
+      "MARGIN": 25.0,
+      "CAPITAL": 11.9,
+      "ADS": 42.9,
+      "GAMES_DOM": 15.5,
+      "GAMES_INTL": 14.3,
+      "FINTECH": 26.2,
+      "SOCIAL": 51.3,
+      "REG": 0.0,
+      "PORTFOLIO": 3.6
+     },
+     "mentions_prepared": {
+      "AI_CAPEX": 0,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 0,
+      "MODELS": 0,
+      "COMPUTE": 0,
+      "CLOUD": 0,
+      "MARGIN": 0,
+      "CAPITAL": 0,
+      "ADS": 0,
+      "GAMES_DOM": 0,
+      "GAMES_INTL": 0,
+      "FINTECH": 0,
+      "SOCIAL": 0,
+      "REG": 0,
+      "PORTFOLIO": 0
+     },
+     "per10k_prepared": {
+      "AI_CAPEX": null,
+      "AI_ROI": null,
+      "AI_PRODUCTS": null,
+      "MODELS": null,
+      "COMPUTE": null,
+      "CLOUD": null,
+      "MARGIN": null,
+      "CAPITAL": null,
+      "ADS": null,
+      "GAMES_DOM": null,
+      "GAMES_INTL": null,
+      "FINTECH": null,
+      "SOCIAL": null,
+      "REG": null,
+      "PORTFOLIO": null
+     },
+     "mentions_qa": {
+      "AI_CAPEX": 9,
+      "AI_ROI": 5,
+      "AI_PRODUCTS": 68,
+      "MODELS": 40,
+      "COMPUTE": 33,
+      "CLOUD": 28,
+      "MARGIN": 21,
+      "CAPITAL": 10,
+      "ADS": 36,
+      "GAMES_DOM": 13,
+      "GAMES_INTL": 12,
+      "FINTECH": 22,
+      "SOCIAL": 43,
+      "REG": 0,
+      "PORTFOLIO": 3
+     }
+    },
+    "analyst": {
+     "n_units": 17,
+     "analyst_words": 1360,
+     "n_orgs": 10,
+     "counts": {
+      "AI_CAPEX": 4,
+      "AI_ROI": 5,
+      "AI_PRODUCTS": 8,
+      "MODELS": 2,
+      "COMPUTE": 2,
+      "CLOUD": 1,
+      "MARGIN": 2,
+      "CAPITAL": 2,
+      "ADS": 3,
+      "GAMES_DOM": 1,
+      "GAMES_INTL": 0,
+      "FINTECH": 2,
+      "SOCIAL": 4,
+      "REG": 0,
+      "PORTFOLIO": 0
+     },
+     "share": {
+      "AI_CAPEX": 0.235,
+      "AI_ROI": 0.294,
+      "AI_PRODUCTS": 0.471,
+      "MODELS": 0.118,
+      "COMPUTE": 0.118,
+      "CLOUD": 0.059,
+      "MARGIN": 0.118,
+      "CAPITAL": 0.118,
+      "ADS": 0.176,
+      "GAMES_DOM": 0.059,
+      "GAMES_INTL": 0.0,
+      "FINTECH": 0.118,
+      "SOCIAL": 0.235,
+      "REG": 0.0,
+      "PORTFOLIO": 0.0
+     }
+    }
+   },
+   "2026Q2": {
+    "mgmt": {
+     "words": 7302,
+     "words_prepared": 0,
+     "words_qa": 7302,
+     "mentions": {
+      "AI_CAPEX": 19,
+      "AI_ROI": 3,
+      "AI_PRODUCTS": 81,
+      "MODELS": 61,
+      "COMPUTE": 40,
+      "CLOUD": 40,
+      "MARGIN": 31,
+      "CAPITAL": 8,
+      "ADS": 33,
+      "GAMES_DOM": 8,
+      "GAMES_INTL": 13,
+      "FINTECH": 21,
+      "SOCIAL": 37,
+      "REG": 1,
+      "PORTFOLIO": 5
+     },
+     "per10k": {
+      "AI_CAPEX": 26.0,
+      "AI_ROI": 4.1,
+      "AI_PRODUCTS": 110.9,
+      "MODELS": 83.5,
+      "COMPUTE": 54.8,
+      "CLOUD": 54.8,
+      "MARGIN": 42.5,
+      "CAPITAL": 11.0,
+      "ADS": 45.2,
+      "GAMES_DOM": 11.0,
+      "GAMES_INTL": 17.8,
+      "FINTECH": 28.8,
+      "SOCIAL": 50.7,
+      "REG": 1.4,
+      "PORTFOLIO": 6.8
+     },
+     "mentions_prepared": {
+      "AI_CAPEX": 0,
+      "AI_ROI": 0,
+      "AI_PRODUCTS": 0,
+      "MODELS": 0,
+      "COMPUTE": 0,
+      "CLOUD": 0,
+      "MARGIN": 0,
+      "CAPITAL": 0,
+      "ADS": 0,
+      "GAMES_DOM": 0,
+      "GAMES_INTL": 0,
+      "FINTECH": 0,
+      "SOCIAL": 0,
+      "REG": 0,
+      "PORTFOLIO": 0
+     },
+     "per10k_prepared": {
+      "AI_CAPEX": null,
+      "AI_ROI": null,
+      "AI_PRODUCTS": null,
+      "MODELS": null,
+      "COMPUTE": null,
+      "CLOUD": null,
+      "MARGIN": null,
+      "CAPITAL": null,
+      "ADS": null,
+      "GAMES_DOM": null,
+      "GAMES_INTL": null,
+      "FINTECH": null,
+      "SOCIAL": null,
+      "REG": null,
+      "PORTFOLIO": null
+     },
+     "mentions_qa": {
+      "AI_CAPEX": 19,
+      "AI_ROI": 3,
+      "AI_PRODUCTS": 81,
+      "MODELS": 61,
+      "COMPUTE": 40,
+      "CLOUD": 40,
+      "MARGIN": 31,
+      "CAPITAL": 8,
+      "ADS": 33,
+      "GAMES_DOM": 8,
+      "GAMES_INTL": 13,
+      "FINTECH": 21,
+      "SOCIAL": 37,
+      "REG": 1,
+      "PORTFOLIO": 5
+     }
+    },
+    "analyst": {
+     "n_units": 13,
+     "analyst_words": 1105,
+     "n_orgs": 7,
+     "counts": {
+      "AI_CAPEX": 4,
+      "AI_ROI": 6,
+      "AI_PRODUCTS": 5,
+      "MODELS": 4,
+      "COMPUTE": 2,
+      "CLOUD": 2,
+      "MARGIN": 4,
+      "CAPITAL": 1,
+      "ADS": 2,
+      "GAMES_DOM": 0,
+      "GAMES_INTL": 0,
+      "FINTECH": 0,
+      "SOCIAL": 2,
+      "REG": 0,
+      "PORTFOLIO": 0
+     },
+     "share": {
+      "AI_CAPEX": 0.308,
+      "AI_ROI": 0.462,
+      "AI_PRODUCTS": 0.385,
+      "MODELS": 0.308,
+      "COMPUTE": 0.154,
+      "CLOUD": 0.154,
+      "MARGIN": 0.308,
+      "CAPITAL": 0.077,
+      "ADS": 0.154,
+      "GAMES_DOM": 0.0,
+      "GAMES_INTL": 0.0,
+      "FINTECH": 0.0,
+      "SOCIAL": 0.154,
+      "REG": 0.0,
+      "PORTFOLIO": 0.0
+     }
+    }
+   }
+  },
+  "definition": {
+   "mgmt": "管理层全部发言（含开场陈述与问答答复）中各话题词表命中次数 ÷ 管理层词数 × 10000；另给仅开场陈述口径",
+   "analyst": "该季问题单元中带该话题标签的单元数 ÷ 问题单元总数 n（多标签，列和可>1）"
+  },
+  "sample_sizes": {
+   "2023Q3": {
+    "mgmt_words": 8485,
+    "n_units": 17,
+    "n_orgs": 9
+   },
+   "2023Q4": {
+    "mgmt_words": 8336,
+    "n_units": 16,
+    "n_orgs": 8
+   },
+   "2024Q1": {
+    "mgmt_words": 7449,
+    "n_units": 19,
+    "n_orgs": 10
+   },
+   "2024Q2": {
+    "mgmt_words": 8622,
+    "n_units": 19,
+    "n_orgs": 10
+   },
+   "2024Q3": {
+    "mgmt_words": 7788,
+    "n_units": 20,
+    "n_orgs": 10
+   },
+   "2024Q4": {
+    "mgmt_words": 8347,
+    "n_units": 14,
+    "n_orgs": 8
+   },
+   "2025Q1": {
+    "mgmt_words": 8347,
+    "n_units": 18,
+    "n_orgs": 9
+   },
+   "2025Q2": {
+    "mgmt_words": 6444,
+    "n_units": 17,
+    "n_orgs": 10
+   },
+   "2025Q3": {
+    "mgmt_words": 5633,
+    "n_units": 21,
+    "n_orgs": 11
+   },
+   "2025Q4": {
+    "mgmt_words": 9241,
+    "n_units": 11,
+    "n_orgs": 10
+   },
+   "2026Q1": {
+    "mgmt_words": 8384,
+    "n_units": 17,
+    "n_orgs": 10
+   },
+   "2026Q2": {
+    "mgmt_words": 7302,
+    "n_units": 13,
+    "n_orgs": 7
+   }
+  },
+  "src": [
+   "S01",
+   "S02",
+   "S03",
+   "S04",
+   "S05",
+   "S06",
+   "S07",
+   "S08",
+   "S09",
+   "S10",
+   "S11",
+   "S12"
+  ],
+  "label": "计算"
+ },
+ "gap": {
+  "window": [
+   "2025Q3",
+   "2025Q4",
+   "2026Q1",
+   "2026Q2"
+  ],
+  "n_units": 62,
+  "n_tags": 118,
+  "mgmt_words": 30560,
+  "mgmt_topic_mentions": 1423,
+  "rows": [
+   {
+    "topic": "AI_CAPEX",
+    "name": "资本开支/算力投入",
+    "mgmt_mentions": 50,
+    "push_share": 0.0351,
+    "push_share_prepared_only": 0,
+    "analyst_units": 13,
+    "pull_share_units": 0.2097,
+    "pull_share_norm": 0.1102,
+    "gap_pp": 7.5,
+    "gap_pp_prepared_only": 11.0,
+    "flag": ""
+   },
+   {
+    "topic": "AI_ROI",
+    "name": "投资回报/回本/变现时间",
+    "mgmt_mentions": 15,
+    "push_share": 0.0105,
+    "push_share_prepared_only": 0,
+    "analyst_units": 13,
+    "pull_share_units": 0.2097,
+    "pull_share_norm": 0.1102,
+    "gap_pp": 10.0,
+    "gap_pp_prepared_only": 11.0,
+    "flag": "分析师关注占比最大缺口"
+   },
+   {
+    "topic": "AI_PRODUCTS",
+    "name": "自有AI产品(WorkBuddy/CodeBuddy/元宝/小微/智能体)",
+    "mgmt_mentions": 256,
+    "push_share": 0.1799,
+    "push_share_prepared_only": 0,
+    "analyst_units": 19,
+    "pull_share_units": 0.3065,
+    "pull_share_norm": 0.161,
+    "gap_pp": -1.9,
+    "gap_pp_prepared_only": 16.1,
+    "flag": ""
+   },
+   {
+    "topic": "MODELS",
+    "name": "混元/Hy模型能力",
+    "mgmt_mentions": 164,
+    "push_share": 0.1152,
+    "push_share_prepared_only": 0,
+    "analyst_units": 13,
+    "pull_share_units": 0.2097,
+    "pull_share_norm": 0.1102,
+    "gap_pp": -0.5,
+    "gap_pp_prepared_only": 11.0,
+    "flag": ""
+   },
+   {
+    "topic": "COMPUTE",
+    "name": "芯片/GPU/算力供给",
+    "mgmt_mentions": 117,
+    "push_share": 0.0822,
+    "push_share_prepared_only": 0,
+    "analyst_units": 10,
+    "pull_share_units": 0.1613,
+    "pull_share_norm": 0.0847,
+    "gap_pp": 0.3,
+    "gap_pp_prepared_only": 8.5,
+    "flag": ""
+   },
+   {
+    "topic": "CLOUD",
+    "name": "腾讯云/对外算力/Token定价",
+    "mgmt_mentions": 115,
+    "push_share": 0.0808,
+    "push_share_prepared_only": 0,
+    "analyst_units": 6,
+    "pull_share_units": 0.0968,
+    "pull_share_norm": 0.0508,
+    "gap_pp": -3.0,
+    "gap_pp_prepared_only": 5.1,
+    "flag": ""
+   },
+   {
+    "topic": "MARGIN",
+    "name": "利润率/折旧/成本",
+    "mgmt_mentions": 107,
+    "push_share": 0.0752,
+    "push_share_prepared_only": 0,
+    "analyst_units": 11,
+    "pull_share_units": 0.1774,
+    "pull_share_norm": 0.0932,
+    "gap_pp": 1.8,
+    "gap_pp_prepared_only": 9.3,
+    "flag": ""
+   },
+   {
+    "topic": "CAPITAL",
+    "name": "回购/派息/自由现金流/负债",
+    "mgmt_mentions": 36,
+    "push_share": 0.0253,
+    "push_share_prepared_only": 0,
+    "analyst_units": 3,
+    "pull_share_units": 0.0484,
+    "pull_share_norm": 0.0254,
+    "gap_pp": 0.0,
+    "gap_pp_prepared_only": 2.5,
+    "flag": ""
+   },
+   {
+    "topic": "ADS",
+    "name": "营销服务/广告",
+    "mgmt_mentions": 150,
+    "push_share": 0.1054,
+    "push_share_prepared_only": 0,
+    "analyst_units": 9,
+    "pull_share_units": 0.1452,
+    "pull_share_norm": 0.0763,
+    "gap_pp": -2.9,
+    "gap_pp_prepared_only": 7.6,
+    "flag": ""
+   },
+   {
+    "topic": "GAMES_DOM",
+    "name": "本土游戏",
+    "mgmt_mentions": 62,
+    "push_share": 0.0436,
+    "push_share_prepared_only": 0,
+    "analyst_units": 6,
+    "pull_share_units": 0.0968,
+    "pull_share_norm": 0.0508,
+    "gap_pp": 0.7,
+    "gap_pp_prepared_only": 5.1,
+    "flag": ""
+   },
+   {
+    "topic": "GAMES_INTL",
+    "name": "国际游戏",
+    "mgmt_mentions": 55,
+    "push_share": 0.0387,
+    "push_share_prepared_only": 0,
+    "analyst_units": 1,
+    "pull_share_units": 0.0161,
+    "pull_share_norm": 0.0085,
+    "gap_pp": -3.0,
+    "gap_pp_prepared_only": 0.8,
+    "flag": ""
+   },
+   {
+    "topic": "FINTECH",
+    "name": "金融科技与企业服务",
+    "mgmt_mentions": 111,
+    "push_share": 0.078,
+    "push_share_prepared_only": 0,
+    "analyst_units": 4,
+    "pull_share_units": 0.0645,
+    "pull_share_norm": 0.0339,
+    "gap_pp": -4.4,
+    "gap_pp_prepared_only": 3.4,
+    "flag": "管理层主动提及占比最大缺口"
+   },
+   {
+    "topic": "SOCIAL",
+    "name": "社交/视频号/内容/订阅",
+    "mgmt_mentions": 166,
+    "push_share": 0.1167,
+    "push_share_prepared_only": 0,
+    "analyst_units": 9,
+    "pull_share_units": 0.1452,
+    "pull_share_norm": 0.0763,
+    "gap_pp": -4.0,
+    "gap_pp_prepared_only": 7.6,
+    "flag": ""
+   },
+   {
+    "topic": "REG",
+    "name": "监管/地缘/1260H",
+    "mgmt_mentions": 4,
+    "push_share": 0.0028,
+    "push_share_prepared_only": 0,
+    "analyst_units": 0,
+    "pull_share_units": 0.0,
+    "pull_share_norm": 0.0,
+    "gap_pp": -0.3,
+    "gap_pp_prepared_only": 0.0,
+    "flag": ""
+   },
+   {
+    "topic": "PORTFOLIO",
+    "name": "投资组合/处置",
+    "mgmt_mentions": 15,
+    "push_share": 0.0105,
+    "push_share_prepared_only": 0,
+    "analyst_units": 1,
+    "pull_share_units": 0.0161,
+    "pull_share_norm": 0.0085,
+    "gap_pp": -0.2,
+    "gap_pp_prepared_only": 0.8,
+    "flag": ""
+   }
+  ],
+  "max_pull_gap": "AI_ROI",
+  "max_push_gap": "FINTECH",
+  "top3_pull_gap": [
+   "AI_ROI",
+   "AI_CAPEX",
+   "MARGIN"
+  ],
+  "top3_push_gap": [
+   "FINTECH",
+   "SOCIAL",
+   "CLOUD"
+  ],
+  "definition": "管理层主动提及占比=窗口内管理层话题词表命中占全部话题命中的比例；分析师关注占比(归一)=话题标签数占全部标签数的比例；gap_pp=分析师关注占比(归一)−管理层主动提及占比，单位百分点；正值=分析师追问多于管理层主动提及，负值反之。pull_share_units 为未归一的'问题单元占比'。",
+  "src": [
+   "S09",
+   "S10",
+   "S11",
+   "S12"
+  ],
+  "label": "计算"
+ },
+ "keywords": {
+  "rows": [
+   {
+    "keyword": "WorkBuddy",
+    "regex": "\\bWork ?Buddy\\b",
+    "by_quarter": {
+     "2023Q3": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2023Q4": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q1": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q2": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q3": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q4": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q1": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q2": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q3": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q4": {
+      "mgmt": 2,
+      "analyst": 1,
+      "moderator": 0
+     },
+     "2026Q1": {
+      "mgmt": 11,
+      "analyst": 2,
+      "moderator": 0
+     },
+     "2026Q2": {
+      "mgmt": 27,
+      "analyst": 4,
+      "moderator": 0
+     }
+    },
+    "first_mgmt": "2025Q4",
+    "first_analyst": "2025Q4",
+    "label": "计算"
+   },
+   {
+    "keyword": "CodeBuddy",
+    "regex": "\\bCode ?Buddy\\b",
+    "by_quarter": {
+     "2023Q3": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2023Q4": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q1": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q2": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q3": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q4": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q1": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q2": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q3": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q4": {
+      "mgmt": 1,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2026Q1": {
+      "mgmt": 7,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2026Q2": {
+      "mgmt": 6,
+      "analyst": 0,
+      "moderator": 0
+     }
+    },
+    "first_mgmt": "2025Q4",
+    "first_analyst": null,
+    "label": "计算"
+   },
+   {
+    "keyword": "Yuanbao/元宝",
+    "regex": "\\bYuanbao\\b",
+    "by_quarter": {
+     "2023Q3": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2023Q4": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q1": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q2": {
+      "mgmt": 2,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q3": {
+      "mgmt": 2,
+      "analyst": 1,
+      "moderator": 0
+     },
+     "2024Q4": {
+      "mgmt": 14,
+      "analyst": 4,
+      "moderator": 0
+     },
+     "2025Q1": {
+      "mgmt": 10,
+      "analyst": 5,
+      "moderator": 0
+     },
+     "2025Q2": {
+      "mgmt": 10,
+      "analyst": 2,
+      "moderator": 0
+     },
+     "2025Q3": {
+      "mgmt": 19,
+      "analyst": 4,
+      "moderator": 0
+     },
+     "2025Q4": {
+      "mgmt": 7,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2026Q1": {
+      "mgmt": 5,
+      "analyst": 1,
+      "moderator": 0
+     },
+     "2026Q2": {
+      "mgmt": 6,
+      "analyst": 0,
+      "moderator": 0
+     }
+    },
+    "first_mgmt": "2024Q2",
+    "first_analyst": "2024Q3",
+    "label": "计算"
+   },
+   {
+    "keyword": "Hunyuan/混元",
+    "regex": "\\bHun ?yuan\\b",
+    "by_quarter": {
+     "2023Q3": {
+      "mgmt": 19,
+      "analyst": 2,
+      "moderator": 0
+     },
+     "2023Q4": {
+      "mgmt": 9,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q1": {
+      "mgmt": 12,
+      "analyst": 4,
+      "moderator": 0
+     },
+     "2024Q2": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q3": {
+      "mgmt": 7,
+      "analyst": 1,
+      "moderator": 0
+     },
+     "2024Q4": {
+      "mgmt": 13,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q1": {
+      "mgmt": 4,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q2": {
+      "mgmt": 5,
+      "analyst": 2,
+      "moderator": 0
+     },
+     "2025Q3": {
+      "mgmt": 16,
+      "analyst": 2,
+      "moderator": 0
+     },
+     "2025Q4": {
+      "mgmt": 20,
+      "analyst": 1,
+      "moderator": 0
+     },
+     "2026Q1": {
+      "mgmt": 26,
+      "analyst": 3,
+      "moderator": 0
+     },
+     "2026Q2": {
+      "mgmt": 44,
+      "analyst": 7,
+      "moderator": 0
+     }
+    },
+    "first_mgmt": "2023Q3",
+    "first_analyst": "2023Q3",
+    "label": "计算"
+   },
+   {
+    "keyword": "Xiaowei/小微",
+    "regex": "\\bXiaowei\\b",
+    "by_quarter": {
+     "2023Q3": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2023Q4": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q1": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q2": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q3": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q4": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q1": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q2": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q3": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q4": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2026Q1": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2026Q2": {
+      "mgmt": 13,
+      "analyst": 8,
+      "moderator": 0
+     }
+    },
+    "first_mgmt": "2026Q2",
+    "first_analyst": "2026Q2",
+    "label": "计算"
+   },
+   {
+    "keyword": "QClaw/OpenClaw/Claw",
+    "regex": "\\b(?:QClaw|OpenClaw|claws?)\\b",
+    "by_quarter": {
+     "2023Q3": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2023Q4": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q1": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q2": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q3": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q4": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q1": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q2": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q3": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q4": {
+      "mgmt": 21,
+      "analyst": 2,
+      "moderator": 0
+     },
+     "2026Q1": {
+      "mgmt": 1,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2026Q2": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     }
+    },
+    "first_mgmt": "2025Q4",
+    "first_analyst": "2025Q4",
+    "label": "计算"
+   },
+   {
+    "keyword": "agent/agentic/智能体",
+    "regex": "\\bagent(?:s|ic)?\\b",
+    "by_quarter": {
+     "2023Q3": {
+      "mgmt": 1,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2023Q4": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q1": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q2": {
+      "mgmt": 1,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q3": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q4": {
+      "mgmt": 10,
+      "analyst": 3,
+      "moderator": 0
+     },
+     "2025Q1": {
+      "mgmt": 13,
+      "analyst": 1,
+      "moderator": 0
+     },
+     "2025Q2": {
+      "mgmt": 6,
+      "analyst": 4,
+      "moderator": 0
+     },
+     "2025Q3": {
+      "mgmt": 11,
+      "analyst": 3,
+      "moderator": 0
+     },
+     "2025Q4": {
+      "mgmt": 19,
+      "analyst": 6,
+      "moderator": 0
+     },
+     "2026Q1": {
+      "mgmt": 35,
+      "analyst": 12,
+      "moderator": 0
+     },
+     "2026Q2": {
+      "mgmt": 22,
+      "analyst": 7,
+      "moderator": 0
+     }
+    },
+    "first_mgmt": "2023Q3",
+    "first_analyst": "2024Q4",
+    "label": "计算"
+   },
+   {
+    "keyword": "token",
+    "regex": "\\btokens?\\b",
+    "by_quarter": {
+     "2023Q3": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2023Q4": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q1": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q2": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q3": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q4": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q1": {
+      "mgmt": 2,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q2": {
+      "mgmt": 2,
+      "analyst": 1,
+      "moderator": 0
+     },
+     "2025Q3": {
+      "mgmt": 1,
+      "analyst": 1,
+      "moderator": 0
+     },
+     "2025Q4": {
+      "mgmt": 4,
+      "analyst": 1,
+      "moderator": 0
+     },
+     "2026Q1": {
+      "mgmt": 9,
+      "analyst": 1,
+      "moderator": 0
+     },
+     "2026Q2": {
+      "mgmt": 14,
+      "analyst": 1,
+      "moderator": 0
+     }
+    },
+    "first_mgmt": "2025Q1",
+    "first_analyst": "2025Q2",
+    "label": "计算"
+   },
+   {
+    "keyword": "capex",
+    "regex": "\\b(?:cap ?ex|capital expenditures?)\\b",
+    "by_quarter": {
+     "2023Q3": {
+      "mgmt": 7,
+      "analyst": 2,
+      "moderator": 0
+     },
+     "2023Q4": {
+      "mgmt": 4,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q1": {
+      "mgmt": 4,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q2": {
+      "mgmt": 5,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q3": {
+      "mgmt": 5,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q4": {
+      "mgmt": 26,
+      "analyst": 6,
+      "moderator": 0
+     },
+     "2025Q1": {
+      "mgmt": 8,
+      "analyst": 2,
+      "moderator": 0
+     },
+     "2025Q2": {
+      "mgmt": 5,
+      "analyst": 2,
+      "moderator": 0
+     },
+     "2025Q3": {
+      "mgmt": 9,
+      "analyst": 11,
+      "moderator": 0
+     },
+     "2025Q4": {
+      "mgmt": 6,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2026Q1": {
+      "mgmt": 4,
+      "analyst": 5,
+      "moderator": 0
+     },
+     "2026Q2": {
+      "mgmt": 16,
+      "analyst": 4,
+      "moderator": 1
+     }
+    },
+    "first_mgmt": "2023Q3",
+    "first_analyst": "2023Q3",
+    "label": "计算"
+   },
+   {
+    "keyword": "ROI/ROIC/payback",
+    "regex": "\\b(?:ROI[CS]?|payback)\\b",
+    "by_quarter": {
+     "2023Q3": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2023Q4": {
+      "mgmt": 0,
+      "analyst": 1,
+      "moderator": 0
+     },
+     "2024Q1": {
+      "mgmt": 1,
+      "analyst": 1,
+      "moderator": 0
+     },
+     "2024Q2": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q3": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q4": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q1": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q2": {
+      "mgmt": 1,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q3": {
+      "mgmt": 1,
+      "analyst": 2,
+      "moderator": 0
+     },
+     "2025Q4": {
+      "mgmt": 2,
+      "analyst": 1,
+      "moderator": 0
+     },
+     "2026Q1": {
+      "mgmt": 2,
+      "analyst": 3,
+      "moderator": 0
+     },
+     "2026Q2": {
+      "mgmt": 0,
+      "analyst": 3,
+      "moderator": 0
+     }
+    },
+    "first_mgmt": "2024Q1",
+    "first_analyst": "2023Q4",
+    "label": "计算"
+   },
+   {
+    "keyword": "generative AI",
+    "regex": "\\b(?:generative AI|Gen ?AI)\\b",
+    "by_quarter": {
+     "2023Q3": {
+      "mgmt": 2,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2023Q4": {
+      "mgmt": 2,
+      "analyst": 1,
+      "moderator": 0
+     },
+     "2024Q1": {
+      "mgmt": 4,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q2": {
+      "mgmt": 1,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2024Q3": {
+      "mgmt": 0,
+      "analyst": 1,
+      "moderator": 0
+     },
+     "2024Q4": {
+      "mgmt": 3,
+      "analyst": 2,
+      "moderator": 0
+     },
+     "2025Q1": {
+      "mgmt": 2,
+      "analyst": 1,
+      "moderator": 0
+     },
+     "2025Q2": {
+      "mgmt": 1,
+      "analyst": 1,
+      "moderator": 0
+     },
+     "2025Q3": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2025Q4": {
+      "mgmt": 4,
+      "analyst": 0,
+      "moderator": 0
+     },
+     "2026Q1": {
+      "mgmt": 3,
+      "analyst": 1,
+      "moderator": 0
+     },
+     "2026Q2": {
+      "mgmt": 0,
+      "analyst": 0,
+      "moderator": 0
+     }
+    },
+    "first_mgmt": "2023Q3",
+    "first_analyst": "2023Q4",
+    "label": "计算"
+   }
+  ],
+  "check_2026Q2_WorkBuddy": {
+   "mgmt": 27,
+   "analyst": 4,
+   "moderator": 0,
+   "total": 31,
+   "status": "复核一致",
+   "wording": "2026Q2 业绩会提及 WorkBuddy 31 次，其中管理层 27 次、分析师 4 次【计算】",
+   "src": [
+    "S12"
+   ],
+   "label": "计算"
+  }
+ },
+ "org_trajectory": {
+  "orgs": [
+   {
+    "org": "Citi",
+    "n_quarters": 12,
+    "n_units": 23,
+    "quarters": {
+     "2023Q3": {
+      "topics": [
+       "AI_ROI",
+       "AI_PRODUCTS",
+       "MODELS",
+       "ADS"
+      ],
+      "analysts_note": "Alicia Yap（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2023Q3-Q09",
+       "2023Q3-Q10"
+      ]
+     },
+     "2023Q4": {
+      "topics": [
+       "AI_ROI",
+       "CLOUD",
+       "ADS",
+       "GAMES_DOM"
+      ],
+      "analysts_note": "Alicia Yap（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2023Q4-Q05",
+       "2023Q4-Q06"
+      ]
+     },
+     "2024Q1": {
+      "topics": [
+       "MARGIN",
+       "GAMES_DOM"
+      ],
+      "analysts_note": "Alicia Yap（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q1-Q05",
+       "2024Q1-Q06"
+      ]
+     },
+     "2024Q2": {
+      "topics": [
+       "ADS",
+       "GAMES_DOM",
+       "REG"
+      ],
+      "analysts_note": "Alicia Yap（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q2-Q01",
+       "2024Q2-Q02"
+      ]
+     },
+     "2024Q3": {
+      "topics": [
+       "AI_ROI",
+       "AI_PRODUCTS",
+       "ADS",
+       "GAMES_INTL"
+      ],
+      "analysts_note": "Alicia Yap（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q3-Q03",
+       "2024Q3-Q04"
+      ]
+     },
+     "2024Q4": {
+      "topics": [
+       "AI_PRODUCTS",
+       "CLOUD",
+       "FINTECH"
+      ],
+      "analysts_note": "Alicia Yap（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q4-Q03",
+       "2024Q4-Q04"
+      ]
+     },
+     "2025Q1": {
+      "topics": [
+       "AI_ROI",
+       "AI_PRODUCTS",
+       "GAMES_DOM"
+      ],
+      "analysts_note": "Alicia Yap（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q1-Q07",
+       "2025Q1-Q08"
+      ]
+     },
+     "2025Q2": {
+      "topics": [
+       "MODELS",
+       "COMPUTE",
+       "CLOUD",
+       "ADS",
+       "FINTECH"
+      ],
+      "analysts_note": "Alicia Yap（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q2-Q07",
+       "2025Q2-Q08"
+      ]
+     },
+     "2025Q3": {
+      "topics": [
+       "AI_PRODUCTS",
+       "MODELS",
+       "ADS"
+      ],
+      "analysts_note": "Alicia Yap（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q3-Q03",
+       "2025Q3-Q04"
+      ]
+     },
+     "2025Q4": {
+      "topics": [
+       "AI_PRODUCTS",
+       "MODELS"
+      ],
+      "analysts_note": "Alicia Yap（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q4-Q06"
+      ]
+     },
+     "2026Q1": {
+      "topics": [
+       "AI_PRODUCTS",
+       "MODELS",
+       "ADS",
+       "SOCIAL"
+      ],
+      "analysts_note": "Alicia Yap（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2026Q1-Q01",
+       "2026Q1-Q02"
+      ]
+     },
+     "2026Q2": {
+      "topics": [
+       "MODELS",
+       "AI_PRODUCTS",
+       "COMPUTE",
+       "ADS",
+       "SOCIAL"
+      ],
+      "analysts_note": "Alicia Yap（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2026Q2-Q07",
+       "2026Q2-Q08"
+      ]
+     }
+    },
+    "top_topics_all": [
+     "AI_PRODUCTS",
+     "ADS",
+     "MODELS"
+    ]
+   },
+   {
+    "org": "Goldman Sachs",
+    "n_quarters": 12,
+    "n_units": 23,
+    "quarters": {
+     "2023Q3": {
+      "topics": [
+       "CLOUD",
+       "CAPITAL",
+       "FINTECH",
+       "PORTFOLIO"
+      ],
+      "analysts_note": "Ronald Keung（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2023Q3-Q16",
+       "2023Q3-Q17"
+      ]
+     },
+     "2023Q4": {
+      "topics": [
+       "CAPITAL",
+       "SOCIAL",
+       "PORTFOLIO"
+      ],
+      "analysts_note": "Ronald Keung（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2023Q4-Q07",
+       "2023Q4-Q08"
+      ]
+     },
+     "2024Q1": {
+      "topics": [
+       "CAPITAL",
+       "ADS",
+       "SOCIAL",
+       "PORTFOLIO"
+      ],
+      "analysts_note": "Ronald Keung（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q1-Q13",
+       "2024Q1-Q14"
+      ]
+     },
+     "2024Q2": {
+      "topics": [
+       "GAMES_DOM",
+       "GAMES_INTL",
+       "PORTFOLIO"
+      ],
+      "analysts_note": "Lincoln Kong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q2-Q07",
+       "2024Q2-Q08"
+      ]
+     },
+     "2024Q3": {
+      "topics": [
+       "ADS",
+       "FINTECH",
+       "REG"
+      ],
+      "analysts_note": "Ronald Keung（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q3-Q05",
+       "2024Q3-Q06"
+      ]
+     },
+     "2024Q4": {
+      "topics": [
+       "ADS",
+       "GAMES_DOM",
+       "GAMES_INTL"
+      ],
+      "analysts_note": "Ronald Keung（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q4-Q07",
+       "2024Q4-Q08"
+      ]
+     },
+     "2025Q1": {
+      "topics": [
+       "FINTECH",
+       "SOCIAL"
+      ],
+      "analysts_note": "Ronald Keung（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q1-Q17",
+       "2025Q1-Q18"
+      ]
+     },
+     "2025Q2": {
+      "topics": [
+       "AI_PRODUCTS",
+       "MODELS",
+       "GAMES_DOM"
+      ],
+      "analysts_note": "Ronald Keung（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q2-Q09",
+       "2025Q2-Q10"
+      ]
+     },
+     "2025Q3": {
+      "topics": [
+       "SOCIAL",
+       "ADS"
+      ],
+      "analysts_note": "Ronald Keung（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q3-Q20",
+       "2025Q3-Q21"
+      ]
+     },
+     "2025Q4": {
+      "topics": [
+       "AI_PRODUCTS",
+       "MODELS",
+       "CLOUD"
+      ],
+      "analysts_note": "Ronald Keung（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q4-Q04"
+      ]
+     },
+     "2026Q1": {
+      "topics": [
+       "AI_CAPEX",
+       "AI_PRODUCTS",
+       "ADS",
+       "SOCIAL"
+      ],
+      "analysts_note": "Ronald Keung（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2026Q1-Q13",
+       "2026Q1-Q14"
+      ]
+     },
+     "2026Q2": {
+      "topics": [
+       "AI_CAPEX",
+       "AI_ROI",
+       "MODELS",
+       "CLOUD"
+      ],
+      "analysts_note": "Ronald Keung（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2026Q2-Q05",
+       "2026Q2-Q06"
+      ]
+     }
+    },
+    "top_topics_all": [
+     "SOCIAL",
+     "ADS",
+     "PORTFOLIO"
+    ]
+   },
+   {
+    "org": "JPMorgan",
+    "n_quarters": 12,
+    "n_units": 22,
+    "quarters": {
+     "2023Q3": {
+      "topics": [
+       "ADS",
+       "GAMES_DOM"
+      ],
+      "analysts_note": "Alex Yao（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2023Q3-Q12",
+       "2023Q3-Q13"
+      ]
+     },
+     "2023Q4": {
+      "topics": [
+       "GAMES_DOM",
+       "SOCIAL"
+      ],
+      "analysts_note": "Alex Yao（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2023Q4-Q13",
+       "2023Q4-Q14"
+      ]
+     },
+     "2024Q1": {
+      "topics": [
+       "ADS",
+       "FINTECH"
+      ],
+      "analysts_note": "Alex Yao（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q1-Q16",
+       "2024Q1-Q17"
+      ]
+     },
+     "2024Q2": {
+      "topics": [
+       "GAMES_DOM",
+       "FINTECH"
+      ],
+      "analysts_note": "Alex Yao（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q2-Q11",
+       "2024Q2-Q12"
+      ]
+     },
+     "2024Q3": {
+      "topics": [
+       "GAMES_DOM",
+       "FINTECH"
+      ],
+      "analysts_note": "Alex Yao（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q3-Q09",
+       "2024Q3-Q10"
+      ]
+     },
+     "2024Q4": {
+      "topics": [
+       "AI_CAPEX",
+       "FINTECH"
+      ],
+      "analysts_note": "Alex Yao（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q4-Q09",
+       "2024Q4-Q10"
+      ]
+     },
+     "2025Q1": {
+      "topics": [
+       "AI_PRODUCTS",
+       "ADS"
+      ],
+      "analysts_note": "Alex Yao（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q1-Q15",
+       "2025Q1-Q16"
+      ]
+     },
+     "2025Q2": {
+      "topics": [
+       "AI_ROI",
+       "AI_PRODUCTS",
+       "MARGIN",
+       "SOCIAL"
+      ],
+      "analysts_note": "Alex Yao（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q2-Q02",
+       "2025Q2-Q03"
+      ]
+     },
+     "2025Q3": {
+      "topics": [
+       "AI_CAPEX",
+       "AI_PRODUCTS",
+       "COMPUTE"
+      ],
+      "analysts_note": "Alex Yao（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q3-Q07",
+       "2025Q3-Q08"
+      ]
+     },
+     "2025Q4": {
+      "topics": [
+       "COMPUTE",
+       "CLOUD"
+      ],
+      "analysts_note": "Alex Yao（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q4-Q08"
+      ]
+     },
+     "2026Q1": {
+      "topics": [
+       "AI_CAPEX",
+       "AI_ROI"
+      ],
+      "analysts_note": "Alex Yao（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2026Q1-Q04"
+      ]
+     },
+     "2026Q2": {
+      "topics": [
+       "AI_ROI",
+       "AI_CAPEX",
+       "AI_PRODUCTS",
+       "MODELS",
+       "MARGIN"
+      ],
+      "analysts_note": "Alex Yao（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2026Q2-Q10",
+       "2026Q2-Q11"
+      ]
+     }
+    },
+    "top_topics_all": [
+     "AI_CAPEX",
+     "AI_ROI",
+     "AI_PRODUCTS"
+    ]
+   },
+   {
+    "org": "UBS",
+    "n_quarters": 12,
+    "n_units": 21,
+    "quarters": {
+     "2023Q3": {
+      "topics": [
+       "MODELS",
+       "COMPUTE",
+       "GAMES_DOM",
+       "REG"
+      ],
+      "analysts_note": "Kenneth Fong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2023Q3-Q01",
+       "2023Q3-Q02"
+      ]
+     },
+     "2023Q4": {
+      "topics": [
+       "GAMES_DOM",
+       "SOCIAL",
+       "REG"
+      ],
+      "analysts_note": "Kenneth Fong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2023Q4-Q01",
+       "2023Q4-Q02"
+      ]
+     },
+     "2024Q1": {
+      "topics": [
+       "CAPITAL",
+       "GAMES_DOM",
+       "GAMES_INTL"
+      ],
+      "analysts_note": "Kenneth Fong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q1-Q01",
+       "2024Q1-Q02"
+      ]
+     },
+     "2024Q2": {
+      "topics": [
+       "MARGIN",
+       "SOCIAL"
+      ],
+      "analysts_note": "Kenneth Fong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q2-Q03",
+       "2024Q2-Q04"
+      ]
+     },
+     "2024Q3": {
+      "topics": [
+       "GAMES_DOM",
+       "SOCIAL"
+      ],
+      "analysts_note": "Kenneth Fong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q3-Q01",
+       "2024Q3-Q02"
+      ]
+     },
+     "2024Q4": {
+      "topics": [
+       "AI_CAPEX",
+       "MARGIN",
+       "SOCIAL"
+      ],
+      "analysts_note": "Kenneth Fong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q4-Q01",
+       "2024Q4-Q02"
+      ]
+     },
+     "2025Q1": {
+      "topics": [
+       "AI_CAPEX",
+       "COMPUTE",
+       "ADS",
+       "FINTECH",
+       "REG"
+      ],
+      "analysts_note": "Kenneth Fong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q1-Q09",
+       "2025Q1-Q10"
+      ]
+     },
+     "2025Q2": {
+      "topics": [
+       "ADS",
+       "GAMES_DOM",
+       "REG"
+      ],
+      "analysts_note": "Kenneth Fong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q2-Q06"
+      ]
+     },
+     "2025Q3": {
+      "topics": [
+       "PORTFOLIO"
+      ],
+      "analysts_note": "Kenneth Fong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q3-Q13"
+      ]
+     },
+     "2025Q4": {
+      "topics": [
+       "MODELS",
+       "COMPUTE",
+       "MARGIN"
+      ],
+      "analysts_note": "Kenneth Fong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q4-Q01",
+       "2025Q4-Q02"
+      ]
+     },
+     "2026Q1": {
+      "topics": [
+       "AI_CAPEX",
+       "AI_ROI",
+       "CAPITAL"
+      ],
+      "analysts_note": "Kenneth Fong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2026Q1-Q03"
+      ]
+     },
+     "2026Q2": {
+      "topics": [
+       "AI_ROI",
+       "AI_PRODUCTS",
+       "CLOUD",
+       "MARGIN",
+       "ADS",
+       "SOCIAL"
+      ],
+      "analysts_note": "Kenneth Fong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2026Q2-Q03",
+       "2026Q2-Q04"
+      ]
+     }
+    },
+    "top_topics_all": [
+     "GAMES_DOM",
+     "SOCIAL",
+     "MARGIN"
+    ]
+   },
+   {
+    "org": "Jefferies",
+    "n_quarters": 9,
+    "n_units": 16,
+    "quarters": {
+     "2023Q3": {
+      "topics": [
+       "ADS",
+       "SOCIAL"
+      ],
+      "analysts_note": "Thomas Chong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2023Q3-Q11"
+      ]
+     },
+     "2024Q1": {
+      "topics": [
+       "MARGIN",
+       "ADS"
+      ],
+      "analysts_note": "Thomas Chong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q1-Q03",
+       "2024Q1-Q04"
+      ]
+     },
+     "2024Q2": {
+      "topics": [
+       "CLOUD",
+       "CAPITAL"
+      ],
+      "analysts_note": "Thomas Chong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q2-Q16",
+       "2024Q2-Q17"
+      ]
+     },
+     "2024Q3": {
+      "topics": [
+       "CAPITAL",
+       "GAMES_DOM",
+       "FINTECH",
+       "PORTFOLIO"
+      ],
+      "analysts_note": "Thomas Chong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q3-Q15",
+       "2024Q3-Q16",
+       "2024Q3-Q17"
+      ]
+     },
+     "2024Q4": {
+      "topics": [
+       "MARGIN"
+      ],
+      "analysts_note": "Thomas Chong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q4-Q13"
+      ]
+     },
+     "2025Q1": {
+      "topics": [
+       "AI_ROI",
+       "AI_PRODUCTS",
+       "CLOUD",
+       "SOCIAL"
+      ],
+      "analysts_note": "Thomas Chong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q1-Q01",
+       "2025Q1-Q02"
+      ]
+     },
+     "2025Q2": {
+      "topics": [
+       "ADS"
+      ],
+      "analysts_note": "Thomas Chong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q2-Q01"
+      ]
+     },
+     "2025Q3": {
+      "topics": [
+       "AI_CAPEX",
+       "CLOUD",
+       "FINTECH"
+      ],
+      "analysts_note": "Thomas Chong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q3-Q16",
+       "2025Q3-Q17"
+      ]
+     },
+     "2026Q1": {
+      "topics": [
+       "MARGIN",
+       "FINTECH",
+       "SOCIAL"
+      ],
+      "analysts_note": "Thomas Chong（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2026Q1-Q16",
+       "2026Q1-Q17"
+      ]
+     }
+    },
+    "top_topics_all": [
+     "CLOUD",
+     "MARGIN",
+     "ADS"
+    ]
+   },
+   {
+    "org": "HSBC",
+    "n_quarters": 8,
+    "n_units": 15,
+    "quarters": {
+     "2023Q3": {
+      "topics": [
+       "ADS",
+       "GAMES_INTL"
+      ],
+      "analysts_note": "Charlene Liu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2023Q3-Q14",
+       "2023Q3-Q15"
+      ]
+     },
+     "2023Q4": {
+      "topics": [
+       "AI_ROI",
+       "MARGIN",
+       "FINTECH"
+      ],
+      "analysts_note": "Charlene Liu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2023Q4-Q11",
+       "2023Q4-Q12"
+      ]
+     },
+     "2024Q1": {
+      "topics": [
+       "MODELS",
+       "GAMES_DOM"
+      ],
+      "analysts_note": "Charlene Liu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q1-Q15"
+      ]
+     },
+     "2024Q2": {
+      "topics": [
+       "GAMES_DOM",
+       "SOCIAL"
+      ],
+      "analysts_note": "Charlene Liu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q2-Q13",
+       "2024Q2-Q14"
+      ]
+     },
+     "2024Q3": {
+      "topics": [
+       "MARGIN",
+       "CAPITAL",
+       "PORTFOLIO"
+      ],
+      "analysts_note": "Charlene Liu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q3-Q11",
+       "2024Q3-Q12"
+      ]
+     },
+     "2025Q2": {
+      "topics": [
+       "FINTECH",
+       "REG"
+      ],
+      "analysts_note": "Charlene Liu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q2-Q11",
+       "2025Q2-Q12"
+      ]
+     },
+     "2025Q3": {
+      "topics": [
+       "MARGIN"
+      ],
+      "analysts_note": "Charlene Liu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q3-Q11",
+       "2025Q3-Q12"
+      ]
+     },
+     "2026Q1": {
+      "topics": [
+       "AI_ROI",
+       "AI_PRODUCTS",
+       "COMPUTE",
+       "ADS"
+      ],
+      "analysts_note": "Charlene Liu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2026Q1-Q11",
+       "2026Q1-Q12"
+      ]
+     }
+    },
+    "top_topics_all": [
+     "MARGIN",
+     "GAMES_DOM",
+     "AI_ROI"
+    ]
+   },
+   {
+    "org": "BNP Paribas Exane",
+    "n_quarters": 8,
+    "n_units": 14,
+    "quarters": {
+     "2023Q3": {
+      "topics": [
+       "MARGIN",
+       "GAMES_DOM"
+      ],
+      "analysts_note": "William Packer（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2023Q3-Q05",
+       "2023Q3-Q06"
+      ]
+     },
+     "2023Q4": {
+      "topics": [
+       "GAMES_DOM",
+       "REG"
+      ],
+      "analysts_note": "William Packer（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2023Q4-Q03",
+       "2023Q4-Q04"
+      ]
+     },
+     "2024Q2": {
+      "topics": [
+       "MARGIN",
+       "SOCIAL"
+      ],
+      "analysts_note": "William Packer（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q2-Q15"
+      ]
+     },
+     "2025Q1": {
+      "topics": [
+       "GAMES_DOM",
+       "REG"
+      ],
+      "analysts_note": "William Packer（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q1-Q05",
+       "2025Q1-Q06"
+      ]
+     },
+     "2025Q2": {
+      "topics": [
+       "MARGIN",
+       "AI_CAPEX",
+       "COMPUTE",
+       "GAMES_INTL",
+       "REG"
+      ],
+      "analysts_note": "William Packer（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q2-Q14",
+       "2025Q2-Q15"
+      ]
+     },
+     "2025Q3": {
+      "topics": [
+       "ADS",
+       "GAMES_DOM",
+       "SOCIAL"
+      ],
+      "analysts_note": "William Packer（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q3-Q09",
+       "2025Q3-Q10"
+      ]
+     },
+     "2025Q4": {
+      "topics": [
+       "MARGIN",
+       "GAMES_DOM"
+      ],
+      "analysts_note": "William Packer（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q4-Q10"
+      ]
+     },
+     "2026Q1": {
+      "topics": [
+       "AI_CAPEX",
+       "MARGIN",
+       "CAPITAL",
+       "GAMES_DOM"
+      ],
+      "analysts_note": "William Packer（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2026Q1-Q05",
+       "2026Q1-Q06"
+      ]
+     }
+    },
+    "top_topics_all": [
+     "GAMES_DOM",
+     "MARGIN",
+     "REG"
+    ]
+   },
+   {
+    "org": "Bernstein",
+    "n_quarters": 7,
+    "n_units": 13,
+    "quarters": {
+     "2023Q4": {
+      "topics": [
+       "GAMES_DOM"
+      ],
+      "analysts_note": "Robin Zhu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2023Q4-Q09",
+       "2023Q4-Q10"
+      ]
+     },
+     "2024Q1": {
+      "topics": [
+       "ADS",
+       "GAMES_DOM",
+       "SOCIAL"
+      ],
+      "analysts_note": "Robin Zhu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q1-Q18",
+       "2024Q1-Q19"
+      ]
+     },
+     "2025Q2": {
+      "topics": [
+       "AI_CAPEX",
+       "AI_PRODUCTS",
+       "GAMES_DOM"
+      ],
+      "analysts_note": "Robin Zhu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q2-Q04",
+       "2025Q2-Q05"
+      ]
+     },
+     "2025Q3": {
+      "topics": [
+       "GAMES_DOM"
+      ],
+      "analysts_note": "Robin Zhu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q3-Q14",
+       "2025Q3-Q15"
+      ]
+     },
+     "2025Q4": {
+      "topics": [
+       "AI_CAPEX",
+       "AI_ROI",
+       "COMPUTE"
+      ],
+      "analysts_note": "Robin Zhu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q4-Q03"
+      ]
+     },
+     "2026Q1": {
+      "topics": [
+       "AI_ROI",
+       "AI_PRODUCTS",
+       "MODELS"
+      ],
+      "analysts_note": "Robin Zhu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2026Q1-Q07",
+       "2026Q1-Q08"
+      ]
+     },
+     "2026Q2": {
+      "topics": [
+       "AI_CAPEX",
+       "AI_ROI",
+       "AI_PRODUCTS",
+       "MARGIN"
+      ],
+      "analysts_note": "Robin Zhu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2026Q2-Q01",
+       "2026Q2-Q02"
+      ]
+     }
+    },
+    "top_topics_all": [
+     "GAMES_DOM",
+     "AI_CAPEX",
+     "AI_ROI"
+    ]
+   },
+   {
+    "org": "Daiwa",
+    "n_quarters": 7,
+    "n_units": 13,
+    "quarters": {
+     "2023Q3": {
+      "topics": [
+       "AI_CAPEX",
+       "MARGIN",
+       "GAMES_INTL"
+      ],
+      "analysts_note": "John Choi（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2023Q3-Q07",
+       "2023Q3-Q08"
+      ]
+     },
+     "2024Q1": {
+      "topics": [
+       "FINTECH",
+       "CLOUD"
+      ],
+      "analysts_note": "John Choi（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q1-Q11",
+       "2024Q1-Q12"
+      ]
+     },
+     "2024Q3": {
+      "topics": [
+       "AI_ROI",
+       "MODELS",
+       "CLOUD",
+       "FINTECH"
+      ],
+      "analysts_note": "John Choi（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q3-Q13",
+       "2024Q3-Q14"
+      ]
+     },
+     "2024Q4": {
+      "topics": [
+       "CAPITAL",
+       "ADS",
+       "PORTFOLIO"
+      ],
+      "analysts_note": "John Choi（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q4-Q11",
+       "2024Q4-Q12"
+      ]
+     },
+     "2025Q1": {
+      "topics": [
+       "AI_CAPEX",
+       "MARGIN",
+       "GAMES_DOM"
+      ],
+      "analysts_note": "John Choi（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q1-Q11",
+       "2025Q1-Q12"
+      ]
+     },
+     "2025Q3": {
+      "topics": [
+       "ADS",
+       "FINTECH"
+      ],
+      "analysts_note": "John Choi（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q3-Q18",
+       "2025Q3-Q19"
+      ]
+     },
+     "2025Q4": {
+      "topics": [
+       "GAMES_DOM"
+      ],
+      "analysts_note": "John Choi（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q4-Q07"
+      ]
+     }
+    },
+    "top_topics_all": [
+     "FINTECH",
+     "AI_CAPEX",
+     "AI_ROI"
+    ]
+   },
+   {
+    "org": "Morgan Stanley",
+    "n_quarters": 6,
+    "n_units": 11,
+    "quarters": {
+     "2023Q3": {
+      "topics": [
+       "CAPITAL",
+       "GAMES_DOM",
+       "PORTFOLIO"
+      ],
+      "analysts_note": "Gary Yu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2023Q3-Q03",
+       "2023Q3-Q04"
+      ]
+     },
+     "2024Q1": {
+      "topics": [
+       "MARGIN",
+       "GAMES_DOM",
+       "GAMES_INTL"
+      ],
+      "analysts_note": "Gary Yu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q1-Q07",
+       "2024Q1-Q08"
+      ]
+     },
+     "2024Q2": {
+      "topics": [
+       "GAMES_DOM",
+       "ADS",
+       "FINTECH"
+      ],
+      "analysts_note": "Gary Yu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q2-Q18",
+       "2024Q2-Q19"
+      ]
+     },
+     "2025Q3": {
+      "topics": [
+       "AI_CAPEX",
+       "AI_ROI",
+       "AI_PRODUCTS",
+       "MODELS",
+       "MARGIN"
+      ],
+      "analysts_note": "Gary Yu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q3-Q05",
+       "2025Q3-Q06"
+      ]
+     },
+     "2025Q4": {
+      "topics": [
+       "MODELS",
+       "COMPUTE"
+      ],
+      "analysts_note": "Gary Yu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q4-Q09"
+      ]
+     },
+     "2026Q2": {
+      "topics": [
+       "AI_ROI",
+       "AI_PRODUCTS",
+       "COMPUTE",
+       "MARGIN"
+      ],
+      "analysts_note": "Gary Yu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2026Q2-Q12",
+       "2026Q2-Q13"
+      ]
+     }
+    },
+    "top_topics_all": [
+     "GAMES_DOM",
+     "MARGIN",
+     "AI_ROI"
+    ]
+   },
+   {
+    "org": "Bank of America",
+    "n_quarters": 5,
+    "n_units": 8,
+    "quarters": {
+     "2024Q2": {
+      "topics": [
+       "MARGIN",
+       "PORTFOLIO"
+      ],
+      "analysts_note": "Miranda Zhuang（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q2-Q05",
+       "2024Q2-Q06"
+      ]
+     },
+     "2024Q3": {
+      "topics": [
+       "SOCIAL"
+      ],
+      "analysts_note": "Miranda Zhuang（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q3-Q07",
+       "2024Q3-Q08"
+      ]
+     },
+     "2025Q4": {
+      "topics": [
+       "COMPUTE"
+      ],
+      "analysts_note": "Alex Liu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q4-Q11"
+      ]
+     },
+     "2026Q1": {
+      "topics": [
+       "AI_PRODUCTS",
+       "COMPUTE",
+       "SOCIAL"
+      ],
+      "analysts_note": "Alex Liu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2026Q1-Q09",
+       "2026Q1-Q10"
+      ]
+     },
+     "2026Q2": {
+      "topics": [
+       "AI_CAPEX",
+       "CAPITAL"
+      ],
+      "analysts_note": "Alex Liu（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2026Q2-Q09"
+      ]
+     }
+    },
+    "top_topics_all": [
+     "SOCIAL",
+     "AI_PRODUCTS",
+     "COMPUTE"
+    ]
+   },
+   {
+    "org": "Macquarie",
+    "n_quarters": 5,
+    "n_units": 8,
+    "quarters": {
+     "2024Q2": {
+      "topics": [
+       "AI_PRODUCTS",
+       "MODELS",
+       "ADS"
+      ],
+      "analysts_note": "Annie Zhang（姓名存疑）（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q2-Q09",
+       "2024Q2-Q10"
+      ]
+     },
+     "2025Q1": {
+      "topics": [
+       "AI_ROI",
+       "AI_PRODUCTS",
+       "SOCIAL"
+      ],
+      "analysts_note": "Adi Yao（姓名存疑）（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q1-Q03",
+       "2025Q1-Q04"
+      ]
+     },
+     "2025Q2": {
+      "topics": [
+       "AI_PRODUCTS",
+       "MODELS",
+       "COMPUTE",
+       "PORTFOLIO"
+      ],
+      "analysts_note": "Ellie Jiang（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q2-Q16",
+       "2025Q2-Q17"
+      ]
+     },
+     "2025Q4": {
+      "topics": [
+       "AI_PRODUCTS",
+       "MODELS"
+      ],
+      "analysts_note": "Ellie Jiang（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q4-Q05"
+      ]
+     },
+     "2026Q1": {
+      "topics": [
+       "AI_ROI",
+       "AI_PRODUCTS",
+       "CLOUD",
+       "FINTECH"
+      ],
+      "analysts_note": "Ellie Jiang（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2026Q1-Q15"
+      ]
+     }
+    },
+    "top_topics_all": [
+     "AI_PRODUCTS",
+     "MODELS",
+     "AI_ROI"
+    ]
+   },
+   {
+    "org": "Nomura",
+    "n_quarters": 3,
+    "n_units": 6,
+    "quarters": {
+     "2024Q3": {
+      "topics": [
+       "SOCIAL",
+       "ADS"
+      ],
+      "analysts_note": "Jialong Shi（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q3-Q19",
+       "2024Q3-Q20"
+      ]
+     },
+     "2024Q4": {
+      "topics": [
+       "AI_PRODUCTS",
+       "AI_ROI"
+      ],
+      "analysts_note": "Jialong Shi（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q4-Q05",
+       "2024Q4-Q06"
+      ]
+     },
+     "2025Q1": {
+      "topics": [
+       "ADS",
+       "AI_PRODUCTS"
+      ],
+      "analysts_note": "Jialong Shi（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q1-Q13",
+       "2025Q1-Q14"
+      ]
+     }
+    },
+    "top_topics_all": [
+     "AI_PRODUCTS",
+     "ADS",
+     "SOCIAL"
+    ]
+   },
+   {
+    "org": "CITIC Securities",
+    "n_quarters": 3,
+    "n_units": 4,
+    "quarters": {
+     "2024Q4": {
+      "topics": [
+       "AI_PRODUCTS",
+       "MODELS"
+      ],
+      "analysts_note": "Liao Yuan（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q4-Q14"
+      ]
+     },
+     "2025Q2": {
+      "topics": [
+       "GAMES_DOM"
+      ],
+      "analysts_note": "Liao Yuan（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q2-Q13"
+      ]
+     },
+     "2025Q3": {
+      "topics": [
+       "AI_CAPEX",
+       "GAMES_INTL"
+      ],
+      "analysts_note": "Liao Yuan（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2025Q3-Q01",
+       "2025Q3-Q02"
+      ]
+     }
+    },
+    "top_topics_all": [
+     "AI_CAPEX",
+     "AI_PRODUCTS",
+     "MODELS"
+    ]
+   },
+   {
+    "org": "Guosen Securities",
+    "n_quarters": 1,
+    "n_units": 2,
+    "quarters": {
+     "2024Q1": {
+      "topics": [
+       "AI_PRODUCTS",
+       "ADS"
+      ],
+      "analysts_note": "Anna Zhang（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q1-Q09",
+       "2024Q1-Q10"
+      ]
+     }
+    },
+    "top_topics_all": [
+     "AI_PRODUCTS",
+     "ADS"
+    ]
+   },
+   {
+    "org": "Mizuho",
+    "n_quarters": 1,
+    "n_units": 2,
+    "quarters": {
+     "2023Q4": {
+      "topics": [
+       "MODELS",
+       "CLOUD"
+      ],
+      "analysts_note": "James Lee（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2023Q4-Q15",
+       "2023Q4-Q16"
+      ]
+     }
+    },
+    "top_topics_all": [
+     "MODELS",
+     "CLOUD"
+    ]
+   },
+   {
+    "org": "CICC",
+    "n_quarters": 1,
+    "n_units": 1,
+    "quarters": {
+     "2024Q3": {
+      "topics": [
+       "GAMES_DOM"
+      ],
+      "analysts_note": "Bai Yang（第三方文字稿，待录音复核）",
+      "q_ids": [
+       "2024Q3-Q18"
+      ]
+     }
+    },
+    "top_topics_all": [
+     "GAMES_DOM"
+    ]
+   }
+  ],
+  "note": "以机构为主键；姓名只作附注（第三方文字稿，待录音复核）。话题按该季出现次数排序。",
+  "src": [
+   "S01",
+   "S02",
+   "S03",
+   "S04",
+   "S05",
+   "S06",
+   "S07",
+   "S08",
+   "S09",
+   "S10",
+   "S11",
+   "S12"
+  ],
+  "label": "推断"
+ },
+ "backtest": {
+  "train_quarters": [
+   "2025Q3",
+   "2025Q4",
+   "2026Q1"
+  ],
+  "test_quarter": "2026Q2",
+  "n_orgs": 7,
+  "n_predictions": 14,
+  "excluded_orgs_no_history": [],
+  "method": "每家机构取其训练期（2025Q3–2026Q1）问题单元中出现次数最多的 2 个话题（并列时取最近出现、再取全体频次），与该机构 2026Q2 实际话题集合比对",
+  "precision_at2": 0.429,
+  "org_hit_rate": 0.714,
+  "hits": 6,
+  "baseline": {
+   "rule": "所有机构都预测训练期全体最常见的 2 个话题",
+   "topics": [
+    "AI_PRODUCTS",
+    "AI_CAPEX"
+   ],
+   "hits": 9,
+   "precision_at2": 0.643,
+   "org_hit_rate": 1.0
+  },
+  "rows": [
+   {
+    "org": "Bernstein",
+    "history_units": 5,
+    "history_quarters": [
+     "2025Q3",
+     "2025Q4",
+     "2026Q1"
+    ],
+    "history_topic_counts": {
+     "GAMES_DOM": 2,
+     "AI_ROI": 2,
+     "AI_CAPEX": 1,
+     "COMPUTE": 1,
+     "MODELS": 1,
+     "AI_PRODUCTS": 1
+    },
+    "predicted_top2": [
+     "AI_ROI",
+     "GAMES_DOM"
+    ],
+    "actual_topics": [
+     "AI_CAPEX",
+     "AI_ROI",
+     "AI_PRODUCTS",
+     "MARGIN"
+    ],
+    "hits": [
+     "AI_ROI"
+    ],
+    "baseline_hits": [
+     "AI_PRODUCTS",
+     "AI_CAPEX"
+    ]
+   },
+   {
+    "org": "UBS",
+    "history_units": 4,
+    "history_quarters": [
+     "2025Q3",
+     "2025Q4",
+     "2026Q1"
+    ],
+    "history_topic_counts": {
+     "PORTFOLIO": 1,
+     "MARGIN": 1,
+     "COMPUTE": 1,
+     "MODELS": 1,
+     "AI_ROI": 1,
+     "AI_CAPEX": 1,
+     "CAPITAL": 1
+    },
+    "predicted_top2": [
+     "AI_CAPEX",
+     "AI_ROI"
+    ],
+    "actual_topics": [
+     "AI_ROI",
+     "AI_PRODUCTS",
+     "CLOUD",
+     "MARGIN",
+     "ADS",
+     "SOCIAL"
+    ],
+    "hits": [
+     "AI_ROI"
+    ],
+    "baseline_hits": [
+     "AI_PRODUCTS"
+    ]
+   },
+   {
+    "org": "Goldman Sachs",
+    "history_units": 5,
+    "history_quarters": [
+     "2025Q3",
+     "2025Q4",
+     "2026Q1"
+    ],
+    "history_topic_counts": {
+     "SOCIAL": 3,
+     "ADS": 2,
+     "AI_PRODUCTS": 2,
+     "CLOUD": 1,
+     "MODELS": 1,
+     "AI_CAPEX": 1
+    },
+    "predicted_top2": [
+     "SOCIAL",
+     "AI_PRODUCTS"
+    ],
+    "actual_topics": [
+     "AI_CAPEX",
+     "AI_ROI",
+     "MODELS",
+     "CLOUD"
+    ],
+    "hits": [],
+    "baseline_hits": [
+     "AI_CAPEX"
+    ]
+   },
+   {
+    "org": "Citi",
+    "history_units": 5,
+    "history_quarters": [
+     "2025Q3",
+     "2025Q4",
+     "2026Q1"
+    ],
+    "history_topic_counts": {
+     "AI_PRODUCTS": 4,
+     "MODELS": 3,
+     "ADS": 2,
+     "SOCIAL": 1
+    },
+    "predicted_top2": [
+     "AI_PRODUCTS",
+     "MODELS"
+    ],
+    "actual_topics": [
+     "AI_PRODUCTS",
+     "MODELS",
+     "COMPUTE",
+     "ADS",
+     "SOCIAL"
+    ],
+    "hits": [
+     "AI_PRODUCTS",
+     "MODELS"
+    ],
+    "baseline_hits": [
+     "AI_PRODUCTS"
+    ]
+   },
+   {
+    "org": "Bank of America",
+    "history_units": 3,
+    "history_quarters": [
+     "2025Q4",
+     "2026Q1"
+    ],
+    "history_topic_counts": {
+     "COMPUTE": 2,
+     "AI_PRODUCTS": 2,
+     "SOCIAL": 1
+    },
+    "predicted_top2": [
+     "AI_PRODUCTS",
+     "COMPUTE"
+    ],
+    "actual_topics": [
+     "AI_CAPEX",
+     "CAPITAL"
+    ],
+    "hits": [],
+    "baseline_hits": [
+     "AI_CAPEX"
+    ]
+   },
+   {
+    "org": "JPMorgan",
+    "history_units": 4,
+    "history_quarters": [
+     "2025Q3",
+     "2025Q4",
+     "2026Q1"
+    ],
+    "history_topic_counts": {
+     "AI_CAPEX": 2,
+     "COMPUTE": 2,
+     "AI_PRODUCTS": 1,
+     "CLOUD": 1,
+     "AI_ROI": 1
+    },
+    "predicted_top2": [
+     "AI_CAPEX",
+     "COMPUTE"
+    ],
+    "actual_topics": [
+     "AI_CAPEX",
+     "AI_ROI",
+     "AI_PRODUCTS",
+     "MODELS",
+     "MARGIN"
+    ],
+    "hits": [
+     "AI_CAPEX"
+    ],
+    "baseline_hits": [
+     "AI_PRODUCTS",
+     "AI_CAPEX"
+    ]
+   },
+   {
+    "org": "Morgan Stanley",
+    "history_units": 3,
+    "history_quarters": [
+     "2025Q3",
+     "2025Q4"
+    ],
+    "history_topic_counts": {
+     "MODELS": 2,
+     "AI_PRODUCTS": 1,
+     "AI_CAPEX": 1,
+     "MARGIN": 1,
+     "AI_ROI": 1,
+     "COMPUTE": 1
+    },
+    "predicted_top2": [
+     "MODELS",
+     "COMPUTE"
+    ],
+    "actual_topics": [
+     "AI_ROI",
+     "AI_PRODUCTS",
+     "COMPUTE",
+     "MARGIN"
+    ],
+    "hits": [
+     "COMPUTE"
+    ],
+    "baseline_hits": [
+     "AI_PRODUCTS"
+    ]
+   }
+  ],
+  "label": "计算",
+  "caveat": "仅作合理性检查：样本极小，话题为人工编码，不能据此评价任何个人；预测只表示'机构历史关注话题→可能延续'。"
+ },
+ "narrative": {
+  "first_seen": [
+   {
+    "keyword": "AI（生成式AI）",
+    "first_quarter_mgmt": "2023Q3",
+    "turn_id": 3,
+    "speaker_as_transcribed": "James Mitchell",
+    "note": "样本窗口起点为 2023Q3，首季即出现不代表历史首次",
+    "src": [
+     "S01"
+    ],
+    "label": "计算"
+   },
+   {
+    "keyword": "混元 Hunyuan",
+    "first_quarter_mgmt": "2023Q3",
+    "turn_id": 1,
+    "speaker_as_transcribed": "Pony Ma",
+    "note": "样本窗口起点为 2023Q3，首季即出现不代表历史首次",
+    "src": [
+     "S01"
+    ],
+    "label": "计算"
+   },
+   {
+    "keyword": "元宝 Yuanbao",
+    "first_quarter_mgmt": "2024Q2",
+    "turn_id": 30,
+    "speaker_as_transcribed": "Martin Lau",
+    "note": "",
+    "src": [
+     "S04"
+    ],
+    "label": "计算"
+   },
+   {
+    "keyword": "智能体 agent/agentic",
+    "first_quarter_mgmt": "2023Q3",
+    "turn_id": 8,
+    "speaker_as_transcribed": "Martin Lau",
+    "note": "样本窗口起点为 2023Q3，首季即出现不代表历史首次",
+    "src": [
+     "S01"
+    ],
+    "label": "计算"
+   },
+   {
+    "keyword": "WorkBuddy",
+    "first_quarter_mgmt": "2025Q4",
+    "turn_id": 2,
+    "speaker_as_transcribed": "Martin Lau",
+    "note": "",
+    "src": [
+     "S10"
+    ],
+    "label": "计算"
+   },
+   {
+    "keyword": "CodeBuddy",
+    "first_quarter_mgmt": "2025Q4",
+    "turn_id": 3,
+    "speaker_as_transcribed": "James Mitchell",
+    "note": "",
+    "src": [
+     "S10"
+    ],
+    "label": "计算"
+   },
+   {
+    "keyword": "小微 Xiaowei",
+    "first_quarter_mgmt": "2026Q2",
+    "turn_id": 2,
+    "speaker_as_transcribed": "Martin Lau",
+    "note": "",
+    "src": [
+     "S12"
+    ],
+    "label": "计算"
+   },
+   {
+    "keyword": "capex",
+    "first_quarter_mgmt": "2023Q3",
+    "turn_id": 4,
+    "speaker_as_transcribed": "John Lo",
+    "note": "样本窗口起点为 2023Q3，首季即出现不代表历史首次",
+    "src": [
+     "S01"
+    ],
+    "label": "计算"
+   }
+  ],
+  "quotes": [
+   {
+    "quarter": "2023Q3",
+    "group": "生成式AI",
+    "kind": "样本首季已出现",
+    "quote": "We're also starting to provide generative AI tools to advertiser partners",
+    "words": 11,
+    "speaker_as_transcribed": "James Mitchell",
+    "turn_id": 3,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S01"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2023Q3",
+    "group": "混元",
+    "kind": "样本首季已出现",
+    "quote": "For cloud, we upgrade the size and capabilities of our proprietary foundation model, Tencent Hunyuan.",
+    "words": 15,
+    "speaker_as_transcribed": "Pony Ma",
+    "turn_id": 1,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S01"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2023Q3",
+    "group": "混元",
+    "kind": "关键表态",
+    "quote": "we have been pretty far along in terms of building up Hunyuan, and we feel that we are one of the leaders within China",
+    "words": 24,
+    "speaker_as_transcribed": "Martin Lau",
+    "turn_id": 8,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S01"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2023Q3",
+    "group": "智能体",
+    "kind": "样本首季已出现",
+    "quote": "it's more like a smart agent for people, right? You know, that is further down the road.",
+    "words": 17,
+    "speaker_as_transcribed": "Martin Lau",
+    "turn_id": 8,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S01"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2023Q3",
+    "group": "capex 立场",
+    "kind": "关键表态",
+    "quote": "operating CapEx represents about 3-3.5% of total revenue",
+    "words": 8,
+    "speaker_as_transcribed": "John Lo",
+    "turn_id": 25,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S01"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2024Q2",
+    "group": "元宝",
+    "kind": "首次出现",
+    "quote": "we are deploying our LLM in Yuanbao, right? You know, which is an app that we have launched",
+    "words": 18,
+    "speaker_as_transcribed": "Martin Lau",
+    "turn_id": 30,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S04"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2024Q4",
+    "group": "元宝",
+    "kind": "关键表态",
+    "quote": "right now, it is, you know, a chatbot and searcher, but over time, I think, you know, it would actually proliferate into all-capable AI assistants",
+    "words": 25,
+    "speaker_as_transcribed": "Martin Lau",
+    "turn_id": 15,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S06"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2024Q4",
+    "group": "capex 立场",
+    "kind": "关键表态",
+    "quote": "We intend to further increase our capital expenditures in 2025 and expect our CapEx to account for low teens % of our revenue.",
+    "words": 23,
+    "speaker_as_transcribed": "Martin Lau",
+    "turn_id": 2,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S06"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2024Q4",
+    "group": "capex 立场",
+    "kind": "关键表态",
+    "quote": "the step up in late 2024 should be sufficient to address GenAI and other needs in 2025 at this sort of new normal run rate",
+    "words": 25,
+    "speaker_as_transcribed": "James Mitchell",
+    "turn_id": 26,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S06"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2025Q1",
+    "group": "智能体",
+    "kind": "关键表态",
+    "quote": "there is the opportunity for us to create a pretty unique agentic AI that connects with the unique components of the Weixin ecosystem",
+    "words": 23,
+    "speaker_as_transcribed": "Martin Lau",
+    "turn_id": 7,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S07"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2025Q3",
+    "group": "capex 立场",
+    "kind": "关键表态",
+    "quote": "The 2025 CapEx will be lower to our previous guided range, but the amount will be higher than that of 2024.",
+    "words": 21,
+    "speaker_as_transcribed": "John Lo",
+    "turn_id": 8,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S09"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2025Q3",
+    "group": "capex 立场",
+    "kind": "关键表态",
+    "quote": "It is indeed a change in terms of the AI chip availability.",
+    "words": 12,
+    "speaker_as_transcribed": "Martin Lau",
+    "turn_id": 20,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S09"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2025Q4",
+    "group": "WorkBuddy",
+    "kind": "首次出现",
+    "quote": "we have introduced a number of AI tools for enhancing productivity, including WorkBuddy, QClaw, and Tencent Cloud Lighthouse.",
+    "words": 18,
+    "speaker_as_transcribed": "Martin Lau",
+    "turn_id": 2,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S10"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2025Q4",
+    "group": "CodeBuddy",
+    "kind": "首次出现",
+    "quote": "We added Tencent CodeBuddy to our developer toolkit",
+    "words": 8,
+    "speaker_as_transcribed": "James Mitchell",
+    "turn_id": 3,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S10"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2025Q4",
+    "group": "capex 立场",
+    "kind": "关键表态",
+    "quote": "we view these strategic investment conceptually similar to investment in an affiliate or to CapEx.",
+    "words": 15,
+    "speaker_as_transcribed": "Martin Lau",
+    "turn_id": 2,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S10"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2025Q4",
+    "group": "混元",
+    "kind": "关键表态",
+    "quote": "HunYuan 3.0 is in internal testing and currently represents a bigger step in capabilities versus HunYuan 2.0",
+    "words": 17,
+    "speaker_as_transcribed": "Martin Lau",
+    "turn_id": 2,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S10"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2026Q1",
+    "group": "WorkBuddy",
+    "kind": "关键表态",
+    "quote": "we believe that our WorkBuddy is currently the most widely used productivity AI agent service in China.",
+    "words": 17,
+    "speaker_as_transcribed": "Pony Ma",
+    "turn_id": 1,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S11"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2026Q1",
+    "group": "capex 立场",
+    "kind": "关键表态",
+    "quote": "We and you should expect a substantial increase in CapEx, especially in the second half of this year",
+    "words": 18,
+    "speaker_as_transcribed": "James Mitchell",
+    "turn_id": 13,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S11"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2026Q2",
+    "group": "小微",
+    "kind": "首次出现",
+    "quote": "we recently released a prototype of Xiaowei, which delivers an embedded and context-aware agentic AI experience within Weixin",
+    "words": 18,
+    "speaker_as_transcribed": "Martin Lau",
+    "turn_id": 2,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S12"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2026Q2",
+    "group": "WorkBuddy",
+    "kind": "关键表态",
+    "quote": "it is token production for WorkBuddy that carries the most enduring economic value to us",
+    "words": 15,
+    "speaker_as_transcribed": "James Mitchell",
+    "turn_id": 20,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S12"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2026Q2",
+    "group": "混元",
+    "kind": "关键表态",
+    "quote": "Hunyuan 3 is a very small model, even in today's terms, but it's actually very widely used.",
+    "words": 17,
+    "speaker_as_transcribed": "Martin Lau",
+    "turn_id": 19,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S12"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2026Q2",
+    "group": "capex 立场",
+    "kind": "关键表态",
+    "quote": "it is more of a sort of a lump sum that we are going to be investing this year and next year.",
+    "words": 22,
+    "speaker_as_transcribed": "Martin Lau",
+    "turn_id": 30,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S12"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2026Q2",
+    "group": "capex 立场",
+    "kind": "关键表态",
+    "quote": "we will steer more cash toward the capital expenditures than we had in the past, and therefore, potentially less cash toward buybacks.",
+    "words": 22,
+    "speaker_as_transcribed": "James Mitchell",
+    "turn_id": 28,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S12"
+    ],
+    "label": "公开披露"
+   },
+   {
+    "quarter": "2026Q2",
+    "group": "回报/ROI",
+    "kind": "关键表态",
+    "quote": "we could recover the depreciation almost immediately by renting the compute out to third parties",
+    "words": 15,
+    "speaker_as_transcribed": "James Mitchell",
+    "turn_id": 7,
+    "tier": 3,
+    "quote_note": "非官方逐字稿，引用前以官方录音为准",
+    "speaker_note": "管理层内部的发言人标签未修正，个别答复的具体发言人可能有误",
+    "src": [
+     "S12"
+    ],
+    "label": "公开披露"
+   }
+  ],
+  "note": "引语均为管理层原话（≤25 词英文），tier=3，非官方逐字稿，引用前以官方录音为准。"
+ },
+ "transcript_fidelity": {
+  "rows": [
+   {
+    "quarter": "2025Q3",
+    "item": "总收入（十亿元）",
+    "speaker_role": "mgmt",
+    "transcript_value": 193.0,
+    "transcript_phrase": "total revenue was CNY 193 billion",
+    "official_value": 192.9,
+    "official_doc": "3Q25 ppt",
+    "status": "取整后一致",
+    "src": [
+     "S09",
+     "S14"
+    ],
+    "label": "计算"
+   },
+   {
+    "quarter": "2025Q3",
+    "item": "毛利（十亿元）",
+    "speaker_role": "mgmt",
+    "transcript_value": 109.0,
+    "transcript_phrase": "Gross profit was CNY 109 billion",
+    "official_value": 108.8,
+    "official_doc": "3Q25 ppt",
+    "status": "取整后一致",
+    "src": [
+     "S09",
+     "S14"
+    ],
+    "label": "计算"
+   },
+   {
+    "quarter": "2025Q3",
+    "item": "经营性资本开支（十亿元）",
+    "speaker_role": "mgmt",
+    "transcript_value": 12.0,
+    "transcript_phrase": "Operating CapEx was CNY 12 billion",
+    "official_value": 12.0,
+    "official_doc": "3Q25 ppt",
+    "status": "一致",
+    "src": [
+     "S09",
+     "S14"
+    ],
+    "label": "计算"
+   },
+   {
+    "quarter": "2025Q4",
+    "item": "总收入（十亿元）",
+    "speaker_role": "mgmt",
+    "transcript_value": 94.0,
+    "transcript_phrase": "total revenue was RMB 94 billion",
+    "official_value": 194.4,
+    "official_doc": "4Q25 ppt",
+    "status": "不一致",
+    "src": [
+     "S10",
+     "S15"
+    ],
+    "label": "计算"
+   },
+   {
+    "quarter": "2025Q4",
+    "item": "毛利（十亿元）",
+    "speaker_role": "mgmt",
+    "transcript_value": 8.0,
+    "transcript_phrase": "Gross profit was RMB 8 billion",
+    "official_value": 108.3,
+    "official_doc": "4Q25 ppt",
+    "status": "不一致",
+    "src": [
+     "S10",
+     "S15"
+    ],
+    "label": "计算"
+   },
+   {
+    "quarter": "2025Q4",
+    "item": "经营性资本开支（十亿元）",
+    "speaker_role": "mgmt",
+    "transcript_value": 16.9,
+    "transcript_phrase": "operating CapEx was CNY 16.9 billion",
+    "official_value": 16.9,
+    "official_doc": "4Q25 ppt",
+    "status": "一致",
+    "src": [
+     "S10",
+     "S15"
+    ],
+    "label": "计算"
+   },
+   {
+    "quarter": "2026Q1",
+    "item": "总收入（十亿元）",
+    "speaker_role": "mgmt",
+    "transcript_value": 196.0,
+    "transcript_phrase": "total revenue was RMB 196 billion",
+    "official_value": 196.5,
+    "official_doc": "1Q26 ppt",
+    "status": "取整后一致",
+    "src": [
+     "S11",
+     "S16"
+    ],
+    "label": "计算"
+   },
+   {
+    "quarter": "2026Q1",
+    "item": "毛利（十亿元）",
+    "speaker_role": "mgmt",
+    "transcript_value": 111.0,
+    "transcript_phrase": "Gross profit was RMB 111 billion",
+    "official_value": 111.3,
+    "official_doc": "1Q26 ppt",
+    "status": "取整后一致",
+    "src": [
+     "S11",
+     "S16"
+    ],
+    "label": "计算"
+   },
+   {
+    "quarter": "2026Q1",
+    "item": "经营性资本开支（十亿元）",
+    "speaker_role": "mgmt",
+    "transcript_value": 31.2,
+    "transcript_phrase": "Operating CapEx was RMB 31.2 billion",
+    "official_value": 31.2,
+    "official_doc": "1Q26 ppt",
+    "status": "一致",
+    "src": [
+     "S11",
+     "S16"
+    ],
+    "label": "计算"
+   },
+   {
+    "quarter": "2026Q2",
+    "item": "总收入（十亿元）",
+    "speaker_role": "mgmt",
+    "transcript_value": 204.8,
+    "transcript_phrase": "total revenue was RMB 204.8 billion",
+    "official_value": 204.8,
+    "official_doc": "2Q26 ppt",
+    "status": "一致",
+    "src": [
+     "S12",
+     "S17"
+    ],
+    "label": "计算"
+   },
+   {
+    "quarter": "2026Q2",
+    "item": "毛利（十亿元）",
+    "speaker_role": "mgmt",
+    "transcript_value": 118.0,
+    "transcript_phrase": "Gross profit was RMB 118 billion",
+    "official_value": 118.4,
+    "official_doc": "2Q26 ppt",
+    "status": "取整后一致",
+    "src": [
+     "S12",
+     "S17"
+    ],
+    "label": "计算"
+   },
+   {
+    "quarter": "2026Q2",
+    "item": "经营性资本开支（十亿元）",
+    "speaker_role": "mgmt",
+    "transcript_value": 51.8,
+    "transcript_phrase": "Operating CapEx was RMB 51.8 billion",
+    "official_value": 51.8,
+    "official_doc": "2Q26 ppt",
+    "status": "一致",
+    "src": [
+     "S12",
+     "S17"
+    ],
+    "label": "计算"
+   },
+   {
+    "quarter": "2025Q3",
+    "item": "分析师口述：当季资本开支付现（十亿元）",
+    "speaker_role": "analyst",
+    "transcript_value": 20.0,
+    "transcript_phrase": "cash payment for CapEx was CNY 20 billion",
+    "official_value": 20.0,
+    "official_doc": "3Q25 ppt",
+    "status": "一致",
+    "src": [
+     "S09",
+     "S14"
+    ],
+    "label": "计算"
+   },
+   {
+    "quarter": "2026Q2",
+    "item": "分析师口述：当季资本开支（十亿元）",
+    "speaker_role": "analyst",
+    "transcript_value": 53.0,
+    "transcript_phrase": "latest quarter's CapEx, RMB 53 billion",
+    "official_value": 52.8,
+    "official_doc": "2Q26 ppt",
+    "status": "取整后一致",
+    "src": [
+     "S12",
+     "S17"
+    ],
+    "label": "计算"
+   },
+   {
+    "quarter": "2026Q2",
+    "item": "CFO 口述：资本开支付现（十亿元）",
+    "speaker_role": "mgmt",
+    "transcript_value": 59.3,
+    "transcript_phrase": "capital expenditure payments of RMB 59.3 billion",
+    "official_value": 59.3,
+    "official_doc": "2Q26 release_en",
+    "status": "一致",
+    "src": [
+     "S12",
+     "S18"
+    ],
+    "label": "计算"
+   }
+  ],
+  "n_items": 15,
+  "n_consistent": 13,
+  "note": "抽查第三方文字稿中的数字是否与腾讯官方 PPT / 新闻稿一致，用于评估文字稿转写质量；不替代官方口径。"
+ },
+ "self_check": {
+  "2026Q2 第39条归属": {
+   "expect": "analyst / Morgan Stanley",
+   "got": "analyst / Morgan Stanley / Gary Yu",
+   "pass": true
+  },
+  "问题单元编码错误数": {
+   "expect": 0,
+   "got": 0,
+   "pass": true,
+   "details": []
+  },
+  "叙事引语校验错误数": {
+   "expect": 0,
+   "got": 0,
+   "pass": true,
+   "details": []
+  },
+  "excerpt 长度≤200": {
+   "pass": true,
+   "got": 200
+  },
+  "未归属发言（含残留 Speaker N）": {
+   "expect": 0,
+   "got": 0,
+   "pass": true,
+   "details": []
+  },
+  "2026Q2 WorkBuddy 计数复核": {
+   "expect": "管理层27/分析师4（任务给定值）",
+   "got": {
+    "mgmt": 27,
+    "analyst": 4,
+    "moderator": 0
+   },
+   "pass": true
+  },
+  "用户提供链接全部登记": {
+   "pass": true,
+   "got": [
+    "S09",
+    "S10",
+    "S11",
+    "S12",
+    "S14",
+    "S15",
+    "S13",
+    "S17"
+   ]
+  },
+  "官方材料链接见于官网 Results 页面": {
+   "pass": true,
+   "got": {
+    "S14": true,
+    "S15": true,
+    "S16": true,
+    "S17": true,
+    "S18": true
+   }
+  },
+  "保真抽查无'不一致'": {
+   "pass": false,
+   "got": "13/15"
+  },
+  "禁用词扫描": {
+   "pass": true,
+   "got": []
+  }
+ }
+}

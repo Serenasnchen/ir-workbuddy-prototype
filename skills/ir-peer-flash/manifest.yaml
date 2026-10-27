@@ -1,0 +1,8 @@
+name: ir-peer-flash
+version: 1.0.0
+description: 同业业绩速评与 8 议题对比矩阵（只用公开材料）
+category: 投资者关系
+author: IR 部门（试点）
+dependencies:
+  skills: [ir-house-style]
+  python: ">=3.9（仅标准库）"

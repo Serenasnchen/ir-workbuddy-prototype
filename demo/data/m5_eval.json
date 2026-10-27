@@ -1,0 +1,177 @@
+{
+ "meta": {
+  "module": "m5_eval",
+  "title": "评测记分牌与运行回放",
+  "as_of": "2026-10-26",
+  "generated_by": "本地 Python",
+  "script": "demo/pipeline/eval.py",
+  "inputs": [
+   {
+    "path": "demo/data/m1_peer.json",
+    "sha256": "58ea9b21f3f631154a9533058a50aa747abe964da133feea7450266b7120b24d"
+   },
+   {
+    "path": "demo/data/m2_transcripts.json",
+    "sha256": "5930df86122b9cc7ad11261c51855aa0b20d434ffcdb96382d23499f929ed46b"
+   },
+   {
+    "path": "demo/data/m2_radar.json",
+    "sha256": "53592abce62baae5b86ce9c5a395719fa95992adf23d3a4d296be46532d64f0c"
+   },
+   {
+    "path": "demo/data/m3_holders.json",
+    "sha256": "adb1812f278cae402e28d12d90df6ffccb00e5a7b9caf3343c2dc8d361a1dd39"
+   },
+   {
+    "path": "demo/data/m4_gatekeeper.json",
+    "sha256": "b6d14f73486b79e12224a776a936ecd8e422c4dff404ec2c7e2676d2aa7e9c4f"
+   }
+  ],
+  "notes": "只报实测值；未执行的测试如实标注。评测门槛为试点建议值。"
+ },
+ "sources": [],
+ "scoreboard": [
+  {
+   "id": "T1",
+   "test": "数字抽取（2Q26 五份官方文件）",
+   "metric": "抽查回原文一致",
+   "value": "10/10",
+   "threshold": "≥99%",
+   "status": "通过",
+   "note": "注册表 66 个指标，每个记录文件与行号",
+   "module": "m4_gatekeeper"
+  },
+  {
+   "id": "T2",
+   "test": "注入错误检出（7 类）",
+   "metric": "召回率 / 误报率",
+   "value": "96.7%（种子 7，30 处）；样本外 98.5%（600 处）／红色误报 0.4%（249 段）",
+   "threshold": "≥95% / ≤3%",
+   "status": "通过",
+   "note": "规则调试时看过种子 7 与干净段落，样本外以种子 101–120 为准",
+   "module": "m4_gatekeeper"
+  },
+  {
+   "id": "T3",
+   "test": "引用真实性（逐字回原文）",
+   "metric": "逐字可匹配率",
+   "value": "211/212（99.5%）",
+   "threshold": "100%，不达标须标注",
+   "status": "已标注",
+   "note": "同业 80 条；雷达 131/132。未能本地复核的 1 条已标“联网人工核对，本地无副本”",
+   "module": "m2_radar"
+  },
+  {
+   "id": "T4",
+   "test": "新信息检测（未披露数字）",
+   "metric": "召回率",
+   "value": "79/80（98.8%）",
+   "threshold": "100%",
+   "status": "未达门槛",
+   "note": "启发式规则；未达 100% 意味着上线前必须保留人工复核",
+   "module": "m4_gatekeeper"
+  },
+  {
+   "id": "T5",
+   "test": "同业矩阵（8 家 × 8 议题）",
+   "metric": "字段可回溯 / 随机抽查",
+   "value": "64 格全部带来源；127 个数字锚点逐字匹配；随机抽查 14/14",
+   "threshold": "≥95%",
+   "status": "通过",
+   "note": "出稿时点需在实机运行中计时（见报告第六章）",
+   "module": "m1_peer"
+  },
+  {
+   "id": "T6",
+   "test": "股东数据对账（回购、南向）",
+   "metric": "与港交所原件差异",
+   "value": "回购 96 个交易日股数逐日一致；金额仅小数差 34.19 港元；南向与 CCASS 6 个样本日差异 0",
+   "threshold": "0",
+   "status": "通过",
+   "note": "另发现 2026-09-18 翌日披露报表原件数值不自洽，已列入待确认",
+   "module": "m3_holders"
+  },
+  {
+   "id": "T7",
+   "test": "Q2 回测与 Q3 预注册",
+   "metric": "议题命中率",
+   "value": "回测：机构轨迹 43%，朴素基线 64%；Q3 Top10 已封存",
+   "threshold": "只报实测值",
+   "status": "待 11-18 会后核对",
+   "note": "SHA-256 d36d361639b5caa2…",
+   "module": "m2_transcripts"
+  },
+  {
+   "id": "T8",
+   "test": "安全红队与版本回归",
+   "metric": "越权与外泄拦截率",
+   "value": "未执行",
+   "threshold": "100% 拦截",
+   "status": "未执行",
+   "note": "原型阶段未接入任何内部数据；列入试点阶段 0 的必做项",
+   "module": ""
+  }
+ ],
+ "trace": [
+  {
+   "module": "同业矩阵",
+   "generated_by": "本地 Python",
+   "script": "demo/pipeline/peer.py",
+   "inputs": 57,
+   "as_of": "2026-10-26",
+   "network": {},
+   "self_check": "通过"
+  },
+  {
+   "module": "实录分析",
+   "generated_by": "本地 Python",
+   "script": "demo/pipeline/transcripts.py",
+   "inputs": 32,
+   "as_of": "2026-10-26",
+   "network": {},
+   "self_check": "9/10 通过（未通过项为发现的转写错误，属预期）"
+  },
+  {
+   "module": "问题雷达",
+   "generated_by": "本地 Python",
+   "script": "demo/pipeline/radar.py",
+   "inputs": 53,
+   "as_of": "2026-10-26",
+   "network": {
+    "get": 0,
+    "errors": 0,
+    "cache_hits": 20
+   },
+   "self_check": "通过"
+  },
+  {
+   "module": "股东·资金·回购",
+   "generated_by": "本地 Python",
+   "script": "demo/pipeline/holders.py",
+   "inputs": 154,
+   "as_of": "2026-10-26",
+   "network": {
+    "get": 0,
+    "post": 0,
+    "errors": 0,
+    "cache_files_used": 13
+   },
+   "self_check": "通过"
+  },
+  {
+   "module": "数字守门员",
+   "generated_by": "本地 Python",
+   "script": "demo/pipeline/gatekeeper.py",
+   "inputs": 64,
+   "as_of": "2026-10-26",
+   "network": {},
+   "self_check": "通过"
+  }
+ ],
+ "integrity": [
+  "本页所有结果由本地 Python 脚本基于公开数据生成，不是 WorkBuddy 的运行产物；WorkBuddy 实机运行截图见报告第六章。",
+  "第三方文字稿（StockAnalysis）不是官方逐字稿；引语对外使用前须以官方网络直播回放复核。",
+  "券商观点与一致预期属二手信息；因果判断一律标为推断。",
+  "内部准备材料，不构成公司口径。"
+ ]
+}

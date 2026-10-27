@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Q3 业绩准备台｜腾讯 IR × WorkBuddy 原型</title>
+<style>{{CSS}}</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <h1>Q3 业绩准备台</h1>
+      <p>腾讯 IR 个人智能体原型：WorkBuddy + IR 技能包｜内部准备材料，不构成公司口径</p>
+    </div>
+    <div class="asof">数据截至 <strong>{{AS_OF}}</strong><br>生成于 {{BUILT_AT}}｜点任意带下划线的数字查看出处</div>
+  </div>
+  <nav class="tabs" role="tablist" aria-label="模块">
+    <button class="tab" role="tab"><span class="k">1</span>今日简报</button>
+    <button class="tab" role="tab"><span class="k">2</span>同业矩阵</button>
+    <button class="tab" role="tab"><span class="k">3</span>问题雷达</button>
+    <button class="tab" role="tab"><span class="k">4</span>股东·资金·回购</button>
+    <button class="tab" role="tab"><span class="k">5</span>数字守门员</button>
+    <button class="tab" role="tab"><span class="k">6</span>评测与回放</button>
+  </nav>
+</header>
+
+<main>
+  <section class="panel" id="brief" role="tabpanel"></section>
+  <section class="panel" id="peers" role="tabpanel"></section>
+  <section class="panel" id="radar" role="tabpanel"></section>
+  <section class="panel" id="holders" role="tabpanel"></section>
+  <section class="panel" id="gatekeeper" role="tabpanel"></section>
+  <section class="panel" id="eval" role="tabpanel"></section>
+</main>
+
+<aside class="drawer" id="drawer" aria-hidden="true" aria-label="证据面板">
+  <header><button class="close" aria-label="关闭">×</button><h4>证据</h4></header>
+  <div class="body"></div>
+</aside>
+
+<footer class="trace"><div class="trace-inner" id="trace"></div></footer>
+
+<script>window.DATA = {{DATA}};</script>
+<script>{{JS}}</script>
+</body>
+</html>

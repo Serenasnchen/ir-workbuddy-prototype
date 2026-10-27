@@ -1,0 +1,5906 @@
+{
+ "meta": {
+  "module": "m1_peer",
+  "title": "M1 同业矩阵与速评：8 家 × 8 议题 · capex 双口径 · Meta / 阿里速评",
+  "as_of": "2026-10-26",
+  "generated_by": "本地 Python",
+  "content_by": "单元格与速评文字为人工整理；数字、引语由本脚本逐条比对本地原文后写出",
+  "script": "demo/pipeline/peer.py",
+  "inputs": [
+   {
+    "path": "data/parsed/q1-2026.json",
+    "sha256": "296280220d952005256a55feddb6d711b50b74a0c0fc27a6500469c074fb7ea4"
+   },
+   {
+    "path": "data/parsed/q2-2026.json",
+    "sha256": "cb6c7ed6c6b64321b03ff11a2ef0efd13008127ac8aa920c9a1cb20139d01715"
+   },
+   {
+    "path": "data/parsed/q3-2025.json",
+    "sha256": "c649ab5a1a5deff5ee71ace09b08625ca687fb834a223cd8a4e3c3959420a3a2"
+   },
+   {
+    "path": "data/parsed/q4-2025.json",
+    "sha256": "85d74b5868b3e737027cc006f285b8a45a49424f7b35be23957643e20650b24f"
+   },
+   {
+    "path": "data/research/parts/capex-cn.json",
+    "sha256": "2f1fd44e134e02069f215fa712c5e3f4eb9b27bb9c95816ab014a8a5e7338600"
+   },
+   {
+    "path": "data/research/parts/capex-us.json",
+    "sha256": "7106b16dc2e4d942d0bc2af2925afaf1b6ee069f2ca24f8864679b1e940a3388"
+   },
+   {
+    "path": "data/research/parts/mkt.json",
+    "sha256": "f77f3ab36dd6442679b1c7502ad02335307e8f000efa7ab3cc22f6e90cda07a2"
+   },
+   {
+    "path": "data/research/parts/peer-flash-alibaba.json",
+    "sha256": "e8deb4e466338453a415232c2b8aad080d3a9ac8c5b6459b12c2b79c30b63482"
+   },
+   {
+    "path": "data/src/ir_official/1Q26_hkex_en.txt",
+    "sha256": "0d5a7df868679b07b5b44623b6fc9216529e4b273597d5f2e05cb586fa59422b"
+   },
+   {
+    "path": "data/src/ir_official/1Q26_ppt.txt",
+    "sha256": "bf1fc959cb7eb1a5373fa3cc109195981cafa22d86f52cedfd453d443b7baf27"
+   },
+   {
+    "path": "data/src/ir_official/1Q26_release_en.txt",
+    "sha256": "8a7d40f30f9db36f1fc43a18bc5993acf05acb057f575d2104f12ffdf0c3e780"
+   },
+   {
+    "path": "data/src/ir_official/2Q25_hkex_en.txt",
+    "sha256": "5df68159dbbfc12b27587c740572c1ad1c556ab57d34e51f40176bfedf2c6469"
+   },
+   {
+    "path": "data/src/ir_official/2Q26_hkex_en.txt",
+    "sha256": "0806252b46200d571040dff19c939054c084c1a583d092632e636771495dd704"
+   },
+   {
+    "path": "data/src/ir_official/2Q26_ppt.txt",
+    "sha256": "4b38c8ae012201ee08135d11dc3a0d024d992a4bd1fbd401e69069c979132d85"
+   },
+   {
+    "path": "data/src/ir_official/2Q26_release_en.txt",
+    "sha256": "7b366701afbc064b172e395592f4236a725293e392b7ca3b80873b439945d305"
+   },
+   {
+    "path": "data/src/ir_official/3Q25_hkex_en.txt",
+    "sha256": "68d3168c486d41256a8f8881c276bdaa46e533e7cdd50f7de14ee6a37c81412f"
+   },
+   {
+    "path": "data/src/ir_official/3Q25_ppt.txt",
+    "sha256": "be1d6ca24974f5b56c1e208baa09fb0b6342527d901411f1b6008f176a3ba696"
+   },
+   {
+    "path": "data/src/ir_official/4Q25_hkex_en.txt",
+    "sha256": "68cf347625747fba9e269328b01d53772bd09dbcc1a635cc77475a6ba8837f28"
+   },
+   {
+    "path": "data/src/ir_official/4Q25_ppt.txt",
+    "sha256": "4967fa62958bdd1de7cd298a60c0512d344264e8d4bcfdc54c200a52bcc87b7e"
+   },
+   {
+    "path": "data/src/peers/alphabet_q3_2026_date_announcement.html",
+    "sha256": "6ecc11cd7ded6fc605f3e7b552df51393bd11419c346c126eae13a3dd5c853e1"
+   },
+   {
+    "path": "data/src/peers/amzn_q1_2026_transcript_stockanalysis.html",
+    "sha256": "03bad6bf4daa19bcb6123d65e52da09ba439d4bdf885d2c350849b6333688e56"
+   },
+   {
+    "path": "data/src/peers/amzn_q2_2026_8k_ex991.htm",
+    "sha256": "ca671c80a7d3465babe164d62892d885beecc0e658371630859f7ca394fe5e08"
+   },
+   {
+    "path": "data/src/peers/amzn_q2_2026_transcript_stockanalysis.html",
+    "sha256": "3644512b368781bb9bf3c6b86e0f0fb96489000d327823f8f3b698f292a9f242"
+   },
+   {
+    "path": "data/src/peers/amzn_q3_2026_date.html",
+    "sha256": "5fa9f7c3de5e4107963637261c5754384e6583375231957fbb36d297af16c9aa"
+   },
+   {
+    "path": "data/src/peers/baba_fy26q4_transcript_stockanalysis.html",
+    "sha256": "d930d8da84863454c9e740eb0151622986c91db0b46cfc1f1e5bf08e05ff5a67"
+   },
+   {
+    "path": "data/src/peers/baba_fy27q1_6k_ex991.htm",
+    "sha256": "10938a9ae8f04fd97cd98f977fdb6104f596902a578b3a229bfb324ee051baed"
+   },
+   {
+    "path": "data/src/peers/baba_fy27q1_transcript_stockanalysis.html",
+    "sha256": "aaf4078963913e3f5386a5e1d304e626bf8b1b5c3c80c623e63381548735a07a"
+   },
+   {
+    "path": "data/src/peers/baba_transcripts_index.html",
+    "sha256": "9beef9e5b778ffbb6db0888fc2c2ccd0add758b22ee6fe2e39acd18bc6b3dc42"
+   },
+   {
+    "path": "data/src/peers/bidu_q1_2026_transcript_stockanalysis.html",
+    "sha256": "84992da94accd2c017b9d334ba8ea7bbb770daac7eb4fe7d4c59ab0c783c685d"
+   },
+   {
+    "path": "data/src/peers/bidu_q2_2026_6k_ex991.htm",
+    "sha256": "3623257ac96dbcb71a99b4d6651785d90a740ed0dbcedb6d1c2ac735eb7d60f4"
+   },
+   {
+    "path": "data/src/peers/bidu_q2_2026_transcript_stockanalysis.html",
+    "sha256": "66d0db6885c756d918072cb99953da52b2b58ca92426e494462313e5810e0e9e"
+   },
+   {
+    "path": "data/src/peers/bidu_transcripts_index.html",
+    "sha256": "1a61fb03beb73d011783411568de413d434f57aec1266bcc4f59871d320edcfb"
+   },
+   {
+    "path": "data/src/peers/googl_q1_2026_transcript_stockanalysis.html",
+    "sha256": "b95b4cf1e9a708c8972c93a7db52f4bed715f62ffc9d4498af3a7d6e8d84f067"
+   },
+   {
+    "path": "data/src/peers/googl_q2_2026_release.pdf",
+    "sha256": "65f35a2e9c287112121f736321c7526d603ba8e0dae27acac56c7d7357602aa8"
+   },
+   {
+    "path": "data/src/peers/googl_q2_2026_transcript_stockanalysis.html",
+    "sha256": "dd656c4f71037a9fa85499ff11248f14eb7817d11fa26a1a042888190ece01e3"
+   },
+   {
+    "path": "data/src/peers/jd_q1_2026_transcript_stockanalysis.html",
+    "sha256": "5f31ad8d7c2bbf75b501160c425ed98b39aadf62188ec7b4d0630624066dfaaf"
+   },
+   {
+    "path": "data/src/peers/jd_q2_2026_6k_ex991.htm",
+    "sha256": "fdca372f2a09f461499400dd1065c5b076c18e7e0f15e1b3d207af85daaa2d52"
+   },
+   {
+    "path": "data/src/peers/jd_q2_2026_transcript_stockanalysis.html",
+    "sha256": "6ef226cce2a62177c5234321b41407b3c2b5a144d528d0c51883f76b073223ae"
+   },
+   {
+    "path": "data/src/peers/jd_transcripts_index.html",
+    "sha256": "a8a571e01b9b4f5c88ef86ed4a5b07cd4d89c1d1105107325eaca764d5f22370"
+   },
+   {
+    "path": "data/src/peers/manifest.tsv",
+    "sha256": "cd4d21348951c2dde5ccd9a65273e924d3e212db5eb2b90b2e74addfbb9e923b"
+   },
+   {
+    "path": "data/src/peers/meta_q2_2026_release.pdf",
+    "sha256": "b3b181046d78b553af6547e45e5907496fb343ecbc7ffad4003ba74b08db8564"
+   },
+   {
+    "path": "data/src/peers/meta_q2_2026_transcript_stockanalysis.html",
+    "sha256": "71c0bc0db21b10d0814fa6e74562dc9b90cb9a8e582c0550690e1c02d2f1c577"
+   },
+   {
+    "path": "data/src/peers/meta_q3_2026_release.html",
+    "sha256": "3bba8e2b6f12871ebf9a85116de520619c237ef25b05c5b27413b397dc984df1"
+   },
+   {
+    "path": "data/src/peers/meta_q3_2026_release.pdf",
+    "sha256": "2e3c8324a8ceed11b398000645ad0d117a7bb74f08cdda9c2f97cf51bc48d232"
+   },
+   {
+    "path": "data/src/peers/meta_q3_2026_transcript_stockanalysis.html",
+    "sha256": "fc0f17eb3219d7019c15b7f44535bf402e4140aef842a994b1c7d17269e83e7c"
+   },
+   {
+    "path": "data/src/peers/meta_transcripts_index.html",
+    "sha256": "dca827ea5321cf4ed33652e3d1545ff84cfe35fae040cb3f386ce9d0cfe32ee0"
+   },
+   {
+    "path": "data/src/peers/msft_fy26q3_transcript_stockanalysis.html",
+    "sha256": "b9550ba3d05c5693660cd3184e6350243902daf852d12b49b657e49c48ed5158"
+   },
+   {
+    "path": "data/src/peers/msft_fy26q4_transcript_stockanalysis.html",
+    "sha256": "f2a3871d94ffc90f29249f057d240d45cdb3f8cdc369f25d3da2598d9dc1d6dc"
+   },
+   {
+    "path": "data/src/peers/msft_ir_fy27q1_event.html",
+    "sha256": "373e978f99947b5752f8dcca09ac9b5722e4197efae63b280b531db4607255ae"
+   },
+   {
+    "path": "data/src/results_page.html",
+    "sha256": "9645dd7468d2b9b034725dd0f97f338192641ce500689a4b9303d6961d0a1689"
+   },
+   {
+    "path": "data/src/transcripts/374535-q3-2025.html",
+    "sha256": "69e87675c23a6d5744e26948593186320553cd0f8da07ce82a3b4cd9aa787f1f"
+   },
+   {
+    "path": "data/src/transcripts/419871-q4-2025.html",
+    "sha256": "7d371cf6adba0ceb0a94cd5a515cbfcfbdd2ca1ecf0e9215d4798417654d4493"
+   },
+   {
+    "path": "data/src/transcripts/609405-q1-2026.html",
+    "sha256": "67588c7cc9d1b6ca1bc68fd0a93b87f5efa022bd645987b547cb382347d71fc4"
+   },
+   {
+    "path": "data/src/transcripts/667897-q2-2026.html",
+    "sha256": "339e976197b5817fc3a3302b0ef071621584a2bd0a793f6210f6e1640197d154"
+   },
+   {
+    "path": "demo/pipeline/peer_data.py",
+    "sha256": "1ba7057c1b84adfe36d257a6f05c002c31b84e8429c817a79417463d8788922f"
+   },
+   {
+    "path": "demo/pipeline/peer_flash_data.py",
+    "sha256": "8a4b84e9643ae90e94b69884a1fdd52ff18ee3a9dbacee3e4f036f6ef499aafd"
+   },
+   {
+    "path": "demo/pipeline/sa_transcript.py",
+    "sha256": "bb165ca030b3402c100fcd467d72989b4f500b8619315b96036c38b5e07c114f"
+   }
+  ],
+  "watermark": "内部准备材料，不构成公司口径",
+  "disclaimer": "仅使用公开信息；不评论股价与估值，不展示董事个人交易；第三方实录为非官方逐字稿；券商观点属二手信息；所有因果判断均为推断；本材料不构成投资意见，也不代表公司口径。",
+  "notes": "截至 2026-10-26：Meta 已发布 2026Q3（10-21），矩阵用最新季；Alphabet、Microsoft、Amazon 分别于 10-28、10-28、10-29 发布，暂用上一季并在 rerun 写明重跑方法；腾讯 Q3 董事会 11-18；阿里/百度/京东 9 月季度日期未公告。第三方实录（StockAnalysis 等）为非官方逐字稿，分析师归属待录音复核；所有因果判断标“推断”。已应用 capex-cn / capex-us / peer-flash-alibaba 核查中的更正与删除项（见 NOTES）。",
+  "labels": [
+   "公开披露",
+   "结构化数据",
+   "计算",
+   "推断"
+  ],
+  "tiers": {
+   "1": "公司公告/港交所/SEC",
+   "2": "官方新闻稿/官方 webcast/官方 PPT",
+   "3": "第三方文字稿（非官方逐字稿）",
+   "4": "媒体/券商转述（二手）"
+  },
+  "self_check": {
+   "status": "pass",
+   "cells": "64 格（8 家 × 8 议题）全部具备 value_short(≤20字)/src/label/change_vs_prior；上一季快照 64 格",
+   "quotes_verified": "80 条引语逐字比对通过（其中 80 条对本地原始文件，0 条仅能对核查底稿）",
+   "anchors_verified": "127 个数字锚点逐字比对通过",
+   "src_ids": "所有 src 均存在于 sources；label 均属 公开披露/结构化数据/计算/推断",
+   "fx_check": "阿里/百度/京东人民币折美元与公司披露值差 ≤1 百万；腾讯、阿里披露同比与计算一致",
+   "scan": {
+    "forbidden_words_hits": 0,
+    "valuation_terms_hits": 0,
+    "email_hits": 0,
+    "privacy_hits": 0,
+    "note": "禁用词按 CONTRACT.md 第4节；估值/股价类用语另设词表扫描；隐私扫描含邮箱、本机用户名与绝对路径"
+   },
+   "random_spot_check": {
+    "method": "固定种子随机抽取（种子 20261026），从 206 条可回溯到本地原始文件的数字/引语中抽 14 条，用不经解析器的原始文件文本重新查找",
+    "passed": 14,
+    "total": 14,
+    "items": [
+     {
+      "kind": "数字",
+      "where": "NUMBER_ANCHORS[15]",
+      "src": "S20",
+      "file": "data/src/peers/meta_q3_2026_release.html",
+      "text": "Purchases of property and equipment (33,942) (18,829)",
+      "found": true,
+      "context": "6,873 79,586 Cash flows from investing activities Purchases of property and equipment (33,942) (18,829) (83,055) (48,308) Purchases of marketable securit"
+     },
+     {
+      "kind": "数字",
+      "where": "flash:meta_2026q3:key_numbers[5]",
+      "src": "S20",
+      "file": "data/src/peers/meta_q3_2026_release.html",
+      "text": "Free cash flow $ (2,120) $ 10,625",
+      "found": true,
+      "context": "nts on finance leases (964) (545) (2,769) (1,770) Free cash flow $ (2,120) $ 10,625 $ 11,049 $ 29,508 View original content to downlo"
+     },
+     {
+      "kind": "数字",
+      "where": "NUMBER_ANCHORS[30]",
+      "src": "S52",
+      "file": "data/src/peers/amzn_q1_2026_transcript_stockanalysis.html",
+      "text": "Our cash CapEx is $43.2 billion in Q1",
+      "found": true,
+      "context": "s. Turning to total company capital expenditures. Our cash CapEx is $43.2 billion in Q1. This primarily relates to AWS and generative AI "
+     },
+     {
+      "kind": "数字",
+      "where": "NUMBER_ANCHORS[87]",
+      "src": "S84",
+      "file": "data/src/peers/bidu_transcripts_index.html",
+      "text": "Earnings Call: Q2 2026 Aug 18, 2026",
+      "found": true,
+      "context": " Baidu Earnings Call Transcripts Fiscal Year 2026 Earnings Call: Q2 2026 Aug 18, 2026 Q2 2026 revenue declined year-over-year, but AI C"
+     },
+     {
+      "kind": "数字",
+      "where": "NUMBER_ANCHORS[18]",
+      "src": "S20",
+      "file": "data/src/peers/meta_q3_2026_release.html",
+      "text": "Depreciation and amortization 7,154 4,963",
+      "found": true,
+      "context": "ome to net cash provided by operating activities: Depreciation and amortization 7,154 4,963 19,509 13,205 Share-based compensation 7,363 5,55"
+     },
+     {
+      "kind": "数字",
+      "where": "flash:meta_2026q3:key_numbers[6]",
+      "src": "S20",
+      "file": "data/src/peers/meta_q3_2026_release.html",
+      "text": "Repurchases of Class A common stock — (3,327) — (26,248)",
+      "found": true,
+      "context": "f equity awards (4,064) (5,135) (12,768) (14,128) Repurchases of Class A common stock - (3,327) - (26,248) Payments for dividends and dividend equivalents ("
+     },
+     {
+      "kind": "数字",
+      "where": "NUMBER_ANCHORS[63]",
+      "src": "S90",
+      "file": "data/src/peers/jd_q2_2026_6k_ex991.htm",
+      "text": "Free cash flow 22,018 31,835 4,692",
+      "found": true,
+      "context": "er capital expenditures* (1,956 ) (3,003 ) (443 ) Free cash flow 22,018 31,835 4,692 * Including capital expenditures related to the C"
+     },
+     {
+      "kind": "引语",
+      "where": "alphabet:T7@Q2'26",
+      "src": "S31",
+      "file": "data/src/peers/googl_q2_2026_transcript_stockanalysis.html",
+      "text": "We had negative free cash flow of $5.9 billion in the second quarter, driven by our investments in CapEx.",
+      "found": true,
+      "context": "40% was in data centers and networking equipment. We had negative free cash flow of $5.9 billion in the second quarter, driven by our investments in CapEx. Free cash flow was $53.3 billion for the trailing"
+     },
+     {
+      "kind": "引语",
+      "where": "amazon:T7@Q2'26",
+      "src": "S51",
+      "file": "data/src/peers/amzn_q2_2026_transcript_stockanalysis.html",
+      "text": "we'll spend a lot of CapEx and encounter free cash flow headwinds until these data centers come online",
+      "found": true,
+      "context": " in advance of when we can start monetizing them, we'll spend a lot of CapEx and encounter free cash flow headwinds until these data centers come online, can be monetized, and we get a few years into th"
+     },
+     {
+      "kind": "引语",
+      "where": "alibaba:T1@FY27Q1",
+      "src": "S62",
+      "file": "data/src/peers/baba_fy27q1_transcript_stockanalysis.html",
+      "text": "CapEx was CNY 67.7 billion this quarter, reflecting our continued investments in AI infrastructure",
+      "found": true,
+      "context": "ibuted to the investment in cloud infrastructure. CapEx was CNY 67.7 billion this quarter, reflecting our continued investments in AI infrastructure to meet strong and growing customer demand. The s"
+     },
+     {
+      "kind": "引语",
+      "where": "tencent:T2@2Q26",
+      "src": "S04",
+      "file": "data/src/transcripts/667897-q2-2026.html",
+      "text": "it is more of a sort of a lump sum that we are going to be investing this year and next year",
+      "found": true,
+      "context": " we allocate for building the AI native business, it is more of a sort of a lump sum that we are going to be investing this year and next year. I think one should not assume that it will be so"
+     },
+     {
+      "kind": "引语",
+      "where": "flash:alibaba_2026q2:analyst_focus[0]",
+      "src": "S62",
+      "file": "data/src/peers/baba_fy27q1_transcript_stockanalysis.html",
+      "text": "Are there any updates to the existing three-year CapEx budget that you have of this CNY 380 billion that you mentioned before?",
+      "found": true,
+      "context": "the expected CapEx trend for the coming quarters? Are there any updates to the existing three-year CapEx budget that you have of this CNY 380 billion that you mentioned before? We would appreciate if management can also provid"
+     },
+     {
+      "kind": "引语",
+      "where": "flash:meta_2026q3:quotes[2]",
+      "src": "S22",
+      "file": "data/src/peers/meta_q3_2026_transcript_stockanalysis.html",
+      "text": "We do not have any specific financing plans to announce at this time",
+      "found": true,
+      "context": "g across every part of our business driven by AI. We do not have any specific financing plans to announce at this time, but we thought it was prudent to establish the a"
+     },
+     {
+      "kind": "引语",
+      "where": "alphabet:T1@Q2'26",
+      "src": "S31",
+      "file": "data/src/peers/googl_q2_2026_transcript_stockanalysis.html",
+      "text": "CapEx was $44.9 billion in the second quarter, with the vast majority of this spent in technical infrastructure",
+      "found": true,
+      "context": "er and $185.7 billion for the trailing 12 months. CapEx was $44.9 billion in the second quarter, with the vast majority of this spent in technical infrastructure to support our investments in AI. Approximately 6"
+     }
+    ]
+   },
+   "manual_spot_check": [
+    {
+     "item": "Meta Q3 capex（含融资租赁本金）$34.91bn；PP&E 33,942＋融资租赁本金 964",
+     "file": "data/src/peers/meta_q3_2026_release.html",
+     "result": "一致"
+    },
+    {
+     "item": "Meta Q3 FCF (2,120) vs 上年同期 10,625",
+     "file": "data/src/peers/meta_q3_2026_release.html",
+     "result": "一致（PDF 版同）"
+    },
+    {
+     "item": "Meta 2026 capex 指引 $135–145bn，前值 $130–145bn",
+     "file": "data/src/peers/meta_q3_2026_release.html",
+     "result": "一致"
+    },
+    {
+     "item": "Meta 折旧摊销 7,154 vs 4,963",
+     "file": "data/src/peers/meta_q3_2026_release.html",
+     "result": "一致"
+    },
+    {
+     "item": "阿里 capex RMB67,678m（+75%，上年同期 38,676m）",
+     "file": "data/src/peers/baba_fy27q1_6k_ex991.htm",
+     "result": "一致"
+    },
+    {
+     "item": "阿里 FCF 流出 44,670m（上年同期 18,815m）",
+     "file": "data/src/peers/baba_fy27q1_6k_ex991.htm",
+     "result": "一致"
+    },
+    {
+     "item": "阿里本季回购 US$162 million",
+     "file": "data/src/peers/baba_fy27q1_6k_ex991.htm",
+     "result": "一致；第三方实录误作“$162 billion”，已在单元格注明"
+    },
+    {
+     "item": "百度 capex 11,390m（上年同期 3,800m、1Q26 5,916m）",
+     "file": "data/src/peers/bidu_q2_2026_6k_ex991.htm",
+     "result": "一致"
+    },
+    {
+     "item": "百度回购：2026 年初以来 US$259 million",
+     "file": "data/src/peers/bidu_q2_2026_6k_ex991.htm",
+     "result": "原稿写“本季未提回购”，已更正"
+    },
+    {
+     "item": "京东 capex 净额 5,520m（开发物业 2,517m、其他 3,003m；上年同期 3,032m）",
+     "file": "data/src/peers/jd_q2_2026_6k_ex991.htm",
+     "result": "一致"
+    },
+    {
+     "item": "京东 TTM FCF 31.4bn（实录称 31bn）；1Q26 TTM 21.6bn（实录称 22bn）",
+     "file": "data/src/peers/jd_q2_2026_6k_ex991.htm",
+     "result": "改以 6-K 为准（314 亿），实录数并列注明"
+    },
+    {
+     "item": "腾讯 2Q26 业绩会分析师人数",
+     "file": "data/parsed/q2-2026.json",
+     "result": "实为 7 位（原稿漏列花旗 Alicia Yap），已更正"
+    },
+    {
+     "item": "“按 Q2 年化超 2,000 亿”出处",
+     "file": "data/parsed/q2-2026.json",
+     "result": "伯恩斯坦 Robin Zhu 提问原话 “Annualized, it is over RMB 200 billion if we just multiply by 4”，非公司指引"
+    },
+    {
+     "item": "腾讯 2Q26 非 IFRS 经营利润率 36.9%",
+     "file": "data/parsed/q2-2026.json",
+     "result": "CFO 原话一致；新闻稿写作约 37%"
+    },
+    {
+     "item": "阿里“截至 6 月季末累计投入约 1,900 亿”英文原句",
+     "file": "data/src/peers/baba_fy27q1_transcript_stockanalysis.html",
+     "result": "一致；改用此句作引语（可对本地原文逐字核对）"
+    },
+    {
+     "item": "阿里实录“本季 capex CNY 67.1 billion”",
+     "file": "data/src/peers/baba_fy27q1_transcript_stockanalysis.html",
+     "result": "与公告 67,678m 不一致，以公告为准"
+    }
+   ],
+   "unused_sources": []
+  }
+ },
+ "sources": [
+  {
+   "id": "S01",
+   "title": "腾讯 2Q26 港交所业绩公告（英文）",
+   "url": "https://www.tencent.com/wp-content/uploads/2026/08/E700_IRA.pdf",
+   "date": "2026-08-12",
+   "tier": 1,
+   "local_copy": "data/src/ir_official/2Q26_hkex_en.txt",
+   "user_provided": false
+  },
+  {
+   "id": "S02",
+   "title": "腾讯 2Q26 业绩新闻稿（英文）",
+   "url": "https://www.tencent.com/wp-content/uploads/2026/08/Tencent-Announces-2026-Second-Quarter-Results.pdf",
+   "date": "2026-08-12",
+   "tier": 2,
+   "local_copy": "data/src/ir_official/2Q26_release_en.txt",
+   "user_provided": false
+  },
+  {
+   "id": "S03",
+   "title": "腾讯 2Q26 业绩 PPT（用户提供链接）",
+   "url": "https://static.www.tencent.com/website-2026-upload/2Q26-earnings-PPT_20260812_1800-88b183.pdf",
+   "date": "2026-08-12",
+   "tier": 2,
+   "local_copy": "data/src/ir_official/2Q26_ppt.txt",
+   "user_provided": true
+  },
+  {
+   "id": "S04",
+   "title": "腾讯 2Q26 业绩会实录（StockAnalysis 667897，用户提供链接；非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/667897-q2-2026/",
+   "date": "2026-08-12",
+   "tier": 3,
+   "local_copy": "data/parsed/q2-2026.json",
+   "raw_copy": "data/src/transcripts/667897-q2-2026.html",
+   "user_provided": true,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S05",
+   "title": "腾讯 1Q26 港交所业绩公告（英文）",
+   "url": "https://static.www.tencent.com/uploads/2026/05/13/59cf8219adbb046153f69387479350ac.pdf",
+   "date": "2026-05-13",
+   "tier": 1,
+   "local_copy": "data/src/ir_official/1Q26_hkex_en.txt",
+   "user_provided": false
+  },
+  {
+   "id": "S06",
+   "title": "腾讯 1Q26 业绩新闻稿（英文）",
+   "url": "https://static.www.tencent.com/uploads/2026/05/13/47382ae415a209fd161bc19a1f9b3704.pdf",
+   "date": "2026-05-13",
+   "tier": 2,
+   "local_copy": "data/src/ir_official/1Q26_release_en.txt",
+   "user_provided": false
+  },
+  {
+   "id": "S07",
+   "title": "腾讯 1Q26 业绩 PPT",
+   "url": "https://static.www.tencent.com/uploads/2026/05/13/e048dfed72bc718f7986a83f23c8e294.pdf",
+   "date": "2026-05-13",
+   "tier": 2,
+   "local_copy": "data/src/ir_official/1Q26_ppt.txt",
+   "user_provided": false
+  },
+  {
+   "id": "S08",
+   "title": "腾讯 1Q26 业绩会实录（StockAnalysis 609405，用户提供链接；非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/609405-q1-2026/",
+   "date": "2026-05-13",
+   "tier": 3,
+   "local_copy": "data/parsed/q1-2026.json",
+   "raw_copy": "data/src/transcripts/609405-q1-2026.html",
+   "user_provided": true,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S09",
+   "title": "腾讯 4Q25/FY25 业绩 PPT（用户提供链接）",
+   "url": "https://static.www.tencent.com/uploads/2026/03/18/2804dbdae364ca25b82d21bc8304f1d3.pdf",
+   "date": "2026-03-18",
+   "tier": 2,
+   "local_copy": "data/src/ir_official/4Q25_ppt.txt",
+   "user_provided": true
+  },
+  {
+   "id": "S10",
+   "title": "腾讯 4Q25/FY25 港交所业绩公告（英文）",
+   "url": "https://static.www.tencent.com/uploads/2026/03/18/f78591955e05a6db4e31e128bdaefefa.pdf",
+   "date": "2026-03-18",
+   "tier": 1,
+   "local_copy": "data/src/ir_official/4Q25_hkex_en.txt",
+   "user_provided": false
+  },
+  {
+   "id": "S11",
+   "title": "腾讯 4Q25 业绩会实录（StockAnalysis 419871，用户提供链接；非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/419871-q4-2025/",
+   "date": "2026-03-18",
+   "tier": 3,
+   "local_copy": "data/parsed/q4-2025.json",
+   "raw_copy": "data/src/transcripts/419871-q4-2025.html",
+   "user_provided": true,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S12",
+   "title": "腾讯 3Q25 业绩 PPT（用户提供链接）",
+   "url": "https://static.www.tencent.com/uploads/2025/11/13/3ff004e913507e0309f3f62a553185b2.pdf",
+   "date": "2025-11-13",
+   "tier": 2,
+   "local_copy": "data/src/ir_official/3Q25_ppt.txt",
+   "user_provided": true
+  },
+  {
+   "id": "S13",
+   "title": "腾讯 3Q25 港交所业绩公告（英文）",
+   "url": "https://static.www.tencent.com/uploads/2025/11/13/e63656944030f90a5e4c8f1718d8bdd6.pdf",
+   "date": "2025-11-13",
+   "tier": 1,
+   "local_copy": "data/src/ir_official/3Q25_hkex_en.txt",
+   "user_provided": false
+  },
+  {
+   "id": "S14",
+   "title": "腾讯 3Q25 业绩会实录（StockAnalysis 374535，用户提供链接；非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/374535-q3-2025/",
+   "date": "2025-11-13",
+   "tier": 3,
+   "local_copy": "data/parsed/q3-2025.json",
+   "raw_copy": "data/src/transcripts/374535-q3-2025.html",
+   "user_provided": true,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S15",
+   "title": "腾讯 IR 业绩页（用户提供链接；1Q25–2Q26 官方材料索引）",
+   "url": "https://www.tencent.com/investors/results/",
+   "date": "2026-08-12",
+   "tier": 2,
+   "local_copy": "data/src/results_page.html",
+   "user_provided": true
+  },
+  {
+   "id": "S16",
+   "title": "腾讯 董事会会议日期公告（港交所 2026-09-24：2026-11-18 审批 Q3 业绩）",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0924/2026092401585.pdf",
+   "date": "2026-09-24",
+   "tier": 1,
+   "local_copy": "data/research/parts/mkt.json",
+   "user_provided": false,
+   "verified_via": "核查底稿（data/research/parts），无本地原文；引语/数字以底稿中的核查记录为准"
+  },
+  {
+   "id": "S17",
+   "title": "腾讯 2Q25 港交所业绩公告（英文）",
+   "url": "https://static.www.tencent.com/uploads/2025/08/13/04bb9aff753a14a149d7c278f9fd29fa.pdf",
+   "date": "2025-08-13",
+   "tier": 1,
+   "local_copy": "data/src/ir_official/2Q25_hkex_en.txt",
+   "user_provided": false
+  },
+  {
+   "id": "S18",
+   "title": "腾讯 2026 中期报告（附注20：资本资产及计算机设备部件预付款 811.16 亿元）",
+   "url": "https://www.tencent.com/wp-content/uploads/2026/08/E700_IR.pdf",
+   "date": "2026-08-22",
+   "tier": 1,
+   "local_copy": "data/research/parts/capex-cn.json",
+   "user_provided": false,
+   "verified_via": "核查底稿（data/research/parts），无本地原文；引语/数字以底稿中的核查记录为准"
+  },
+  {
+   "id": "S20",
+   "title": "Meta Reports Third Quarter 2026 Results（IR 新闻稿网页）",
+   "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx",
+   "date": "2026-10-21",
+   "tier": 2,
+   "local_copy": "data/src/peers/meta_q3_2026_release.html",
+   "user_provided": false
+  },
+  {
+   "id": "S21",
+   "title": "Meta Q3 2026 业绩新闻稿（PDF）",
+   "url": "https://s21.q4cdn.com/399680738/files/doc_news/Meta-Reports-Third-Quarter-2026-Results-2026.pdf",
+   "date": "2026-10-21",
+   "tier": 2,
+   "local_copy": "data/src/peers/meta_q3_2026_release.pdf",
+   "user_provided": false
+  },
+  {
+   "id": "S22",
+   "title": "Meta Q3 2026 业绩会实录（StockAnalysis 718643；非官方逐字稿）",
+   "url": "https://stockanalysis.com/stocks/meta/transcripts/718643-q3-2026/",
+   "date": "2026-10-21",
+   "tier": 3,
+   "local_copy": "data/src/peers/meta_q3_2026_transcript_stockanalysis.html",
+   "user_provided": false,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S23",
+   "title": "Meta Q2 2026 业绩会实录（StockAnalysis 657318；非官方逐字稿）",
+   "url": "https://stockanalysis.com/stocks/meta/transcripts/657318-q2-2026/",
+   "date": "2026-07-29",
+   "tier": 3,
+   "local_copy": "data/src/peers/meta_q2_2026_transcript_stockanalysis.html",
+   "user_provided": false,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S24",
+   "title": "Meta Reports Second Quarter 2026 Results（Exhibit 99.1 PDF）",
+   "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2026/q2/Meta-06-30-2026-Exhibit-99-1-FINAL.pdf",
+   "date": "2026-07-29",
+   "tier": 2,
+   "local_copy": "data/src/peers/meta_q2_2026_release.pdf",
+   "user_provided": false
+  },
+  {
+   "id": "S26",
+   "title": "Meta 2026 capex 指引历次调整（capex-us 核查底稿：01-28 给出 $115–135bn，04-29 上调至 $125–145bn；对应 Meta Q1 2026 业绩新闻稿）",
+   "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-First-Quarter-2026-Results/",
+   "date": "2026-04-29",
+   "tier": 2,
+   "local_copy": "data/research/parts/capex-us.json",
+   "user_provided": false,
+   "verified_via": "核查底稿（data/research/parts），无本地原文；引语/数字以底稿中的核查记录为准"
+  },
+  {
+   "id": "S25",
+   "title": "Meta 实录目录页（StockAnalysis；核实最新季）",
+   "url": "https://stockanalysis.com/stocks/meta/transcripts/",
+   "date": "2026-10-26",
+   "tier": 3,
+   "local_copy": "data/src/peers/meta_transcripts_index.html",
+   "user_provided": false,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S30",
+   "title": "Alphabet Announces Second Quarter 2026 Results（Exhibit 99.1 PDF）",
+   "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q2/2026q2-alphabet-earnings-release.pdf",
+   "date": "2026-07-22",
+   "tier": 2,
+   "local_copy": "data/src/peers/googl_q2_2026_release.pdf",
+   "user_provided": false
+  },
+  {
+   "id": "S31",
+   "title": "Alphabet Q2 2026 业绩会实录（StockAnalysis 657320；非官方逐字稿）",
+   "url": "https://stockanalysis.com/stocks/googl/transcripts/657320-q2-2026/",
+   "date": "2026-07-22",
+   "tier": 3,
+   "local_copy": "data/src/peers/googl_q2_2026_transcript_stockanalysis.html",
+   "user_provided": false,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S32",
+   "title": "Alphabet Q1 2026 业绩会实录（StockAnalysis 551989；非官方逐字稿）",
+   "url": "https://stockanalysis.com/stocks/googl/transcripts/551989-q1-2026/",
+   "date": "2026-04-29",
+   "tier": 3,
+   "local_copy": "data/src/peers/googl_q1_2026_transcript_stockanalysis.html",
+   "user_provided": false,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S33",
+   "title": "Alphabet IR：Q3 2026 业绩电话会日期公告（2026-10-28）",
+   "url": "https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Date-of-Third-Quarter-2026-Financial-Results-Conference-Call-2026-8tpGZsLS6v/default.aspx",
+   "date": "2026-10-06",
+   "tier": 2,
+   "local_copy": "data/src/peers/alphabet_q3_2026_date_announcement.html",
+   "user_provided": false
+  },
+  {
+   "id": "S40",
+   "title": "Microsoft FY26 Q4 Press Release & Webcast（经 capex-us 核查）",
+   "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
+   "date": "2026-07-29",
+   "tier": 2,
+   "local_copy": "data/research/parts/capex-us.json",
+   "user_provided": false,
+   "verified_via": "核查底稿（data/research/parts），无本地原文；引语/数字以底稿中的核查记录为准"
+  },
+  {
+   "id": "S41",
+   "title": "Microsoft FY26 Q4 官方电话会实录页（经 capex-us 核查）",
+   "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+   "date": "2026-07-29",
+   "tier": 2,
+   "local_copy": "data/research/parts/capex-us.json",
+   "user_provided": false,
+   "verified_via": "核查底稿（data/research/parts），无本地原文；引语/数字以底稿中的核查记录为准"
+  },
+  {
+   "id": "S42",
+   "title": "Microsoft FY26Q4 业绩会实录（StockAnalysis 647770；非官方逐字稿）",
+   "url": "https://stockanalysis.com/stocks/msft/transcripts/647770-q4-2026/",
+   "date": "2026-07-29",
+   "tier": 3,
+   "local_copy": "data/src/peers/msft_fy26q4_transcript_stockanalysis.html",
+   "user_provided": false,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S43",
+   "title": "Microsoft FY26Q3 业绩会实录（StockAnalysis 547930；非官方逐字稿）",
+   "url": "https://stockanalysis.com/stocks/msft/transcripts/547930-q3-2026/",
+   "date": "2026-04-29",
+   "tier": 3,
+   "local_copy": "data/src/peers/msft_fy26q3_transcript_stockanalysis.html",
+   "user_provided": false,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S44",
+   "title": "Microsoft IR：FY27 Q1 业绩电话会（2026-10-28）",
+   "url": "https://www.microsoft.com/en-us/investor/events/fy-2027/earnings-fy-2027-q1",
+   "date": "2026-10-26",
+   "tier": 2,
+   "local_copy": "data/src/peers/msft_ir_fy27q1_event.html",
+   "user_provided": false
+  },
+  {
+   "id": "S50",
+   "title": "Amazon.com Announces Second Quarter Results（SEC 8-K Ex.99.1）",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001018724/000101872426000024/amzn-20260630xex991.htm",
+   "date": "2026-07-30",
+   "tier": 1,
+   "local_copy": "data/src/peers/amzn_q2_2026_8k_ex991.htm",
+   "user_provided": false
+  },
+  {
+   "id": "S51",
+   "title": "Amazon Q2 2026 业绩会实录（StockAnalysis 657334；非官方逐字稿）",
+   "url": "https://stockanalysis.com/stocks/amzn/transcripts/657334-q2-2026/",
+   "date": "2026-07-30",
+   "tier": 3,
+   "local_copy": "data/src/peers/amzn_q2_2026_transcript_stockanalysis.html",
+   "user_provided": false,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S52",
+   "title": "Amazon Q1 2026 业绩会实录（StockAnalysis 552741；非官方逐字稿）",
+   "url": "https://stockanalysis.com/stocks/amzn/transcripts/552741-q1-2026/",
+   "date": "2026-04-29",
+   "tier": 3,
+   "local_copy": "data/src/peers/amzn_q1_2026_transcript_stockanalysis.html",
+   "user_provided": false,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S53",
+   "title": "Amazon：Q3 2026 业绩电话会日期（2026-10-29）",
+   "url": "https://www.aboutamazon.com/news/company-news/amazon-earnings-q3-2026-report",
+   "date": "2026-10-26",
+   "tier": 2,
+   "local_copy": "data/src/peers/amzn_q3_2026_date.html",
+   "user_provided": false
+  },
+  {
+   "id": "S54",
+   "title": "Amazon.com Announces First Quarter Results 2026（经 capex-us 核查）",
+   "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-First-Quarter-Results/default.aspx",
+   "date": "2026-04-29",
+   "tier": 2,
+   "local_copy": "data/research/parts/capex-us.json",
+   "user_provided": false,
+   "verified_via": "核查底稿（data/research/parts），无本地原文；引语/数字以底稿中的核查记录为准"
+  },
+  {
+   "id": "S60",
+   "title": "Alibaba Group Announces June Quarter 2026 Results（SEC 6-K Ex99.1）",
+   "url": "https://www.sec.gov/Archives/edgar/data/1577552/000110465926099220/tm2623667d1_ex99-1.htm",
+   "date": "2026-08-20",
+   "tier": 1,
+   "local_copy": "data/src/peers/baba_fy27q1_6k_ex991.htm",
+   "user_provided": false
+  },
+  {
+   "id": "S61",
+   "title": "Alibaba March Quarter and FY2026 Results（SEC 6-K；经 capex-cn 核查）",
+   "url": "https://www.sec.gov/Archives/edgar/data/1577552/000110465926060224/tm2614494d1_ex99-1.htm",
+   "date": "2026-05-13",
+   "tier": 1,
+   "local_copy": "data/research/parts/capex-cn.json",
+   "user_provided": false,
+   "verified_via": "核查底稿（data/research/parts），无本地原文；引语/数字以底稿中的核查记录为准"
+  },
+  {
+   "id": "S62",
+   "title": "阿里 FY27Q1（2026-06 季）业绩会实录（StockAnalysis 667892；非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/9988/transcripts/667892-q1-2027/",
+   "date": "2026-08-20",
+   "tier": 3,
+   "local_copy": "data/src/peers/baba_fy27q1_transcript_stockanalysis.html",
+   "user_provided": false,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S63",
+   "title": "阿里 FY26Q4（2026-03 季）业绩会实录（StockAnalysis 541101；非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/9988/transcripts/541101-q4-2026/",
+   "date": "2026-05-13",
+   "tier": 3,
+   "local_copy": "data/src/peers/baba_fy26q4_transcript_stockanalysis.html",
+   "user_provided": false,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S64",
+   "title": "新浪财经：阿里巴巴 FY27Q1 财报电话会分析师问答实录（第三方文字稿；经 peer-flash 核查）",
+   "url": "http://finance.sina.com.cn/tech/2026-08-20/doc-ininzprc1620509.shtml",
+   "date": "2026-08-20",
+   "tier": 3,
+   "local_copy": "data/research/parts/peer-flash-alibaba.json",
+   "user_provided": false,
+   "verified_via": "核查底稿（data/research/parts），无本地原文；引语/数字以底稿中的核查记录为准",
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S65",
+   "title": "Alibaba to Invest RMB380 billion in AI and Cloud Infrastructure Over Next Three Years（原文 at least RMB380 billion）",
+   "url": "https://home.alibabagroup.com/document-1830678592242057216",
+   "date": "2025-02-24",
+   "tier": 2,
+   "local_copy": "data/research/parts/capex-cn.json",
+   "user_provided": false,
+   "verified_via": "核查底稿（data/research/parts），无本地原文；引语/数字以底稿中的核查记录为准"
+  },
+  {
+   "id": "S66",
+   "title": "阿里巴巴 Placing of New Shares 完成公告（SEC 6-K）",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001577552/000119312526365894/baba-ex99_1.htm",
+   "date": "2026-08-26",
+   "tier": 1,
+   "local_copy": "data/research/parts/peer-flash-alibaba.json",
+   "user_provided": false,
+   "verified_via": "核查底稿（data/research/parts），无本地原文；引语/数字以底稿中的核查记录为准"
+  },
+  {
+   "id": "S67",
+   "title": "阿里巴巴集团公布 2026 年 6 月份季度业绩（集团官网中文公告）",
+   "url": "https://ali-home.alibaba.com/document-2026456290057781248",
+   "date": "2026-08-20",
+   "tier": 2,
+   "local_copy": "data/research/parts/peer-flash-alibaba.json",
+   "user_provided": false,
+   "verified_via": "核查底稿（data/research/parts），无本地原文；引语/数字以底稿中的核查记录为准"
+  },
+  {
+   "id": "S68",
+   "title": "财联社：阿里最新财报出炉！CEO 吴泳铭：AI 算力 Capex 投入可三年内回本（媒体转述）",
+   "url": "https://www.cls.cn/detail/2460018",
+   "date": "2026-08-20",
+   "tier": 4,
+   "local_copy": "data/research/parts/peer-flash-alibaba.json",
+   "user_provided": false,
+   "verified_via": "核查底稿（data/research/parts），无本地原文；引语/数字以底稿中的核查记录为准",
+   "note": "媒体转述/二手"
+  },
+  {
+   "id": "S70",
+   "title": "Motley Fool：Alibaba (BABA) Q1 2027 Earnings Call Transcript（第三方文字稿）",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/27/alibaba-baba-q1-2027-earnings-call-transcript/",
+   "date": "2026-08-27",
+   "tier": 3,
+   "local_copy": "data/research/parts/peer-flash-alibaba.json",
+   "user_provided": false,
+   "verified_via": "核查底稿（data/research/parts），无本地原文；引语/数字以底稿中的核查记录为准",
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S71",
+   "title": "财联社：直击阿里巴巴业绩会：AI 基建投入资金会远远超过 3800 亿（媒体转述，非逐字）",
+   "url": "https://www.cls.cn/detail/2370588",
+   "date": "2026-05-13",
+   "tier": 4,
+   "local_copy": "data/research/parts/capex-cn.json",
+   "user_provided": false,
+   "verified_via": "核查底稿（data/research/parts），无本地原文；引语/数字以底稿中的核查记录为准",
+   "note": "媒体转述/二手"
+  },
+  {
+   "id": "S72",
+   "title": "阿里 实录目录页（StockAnalysis；最新为 2026-08-20 FY27Q1，上年同期 9 月季度为 2025-11-25）",
+   "url": "https://stockanalysis.com/quote/hkg/9988/transcripts/",
+   "date": "2026-10-26",
+   "tier": 3,
+   "local_copy": "data/src/peers/baba_transcripts_index.html",
+   "user_provided": false,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S80",
+   "title": "Baidu Announces Second Quarter 2026 Results（SEC 6-K Ex99.1）",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001329099/000119312526355431/d112854dex991.htm",
+   "date": "2026-08-18",
+   "tier": 1,
+   "local_copy": "data/src/peers/bidu_q2_2026_6k_ex991.htm",
+   "user_provided": false
+  },
+  {
+   "id": "S81",
+   "title": "Baidu Announces First Quarter 2026 Results（SEC 6-K；经 capex-cn 核查）",
+   "url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm",
+   "date": "2026-05-18",
+   "tier": 1,
+   "local_copy": "data/research/parts/capex-cn.json",
+   "user_provided": false,
+   "verified_via": "核查底稿（data/research/parts），无本地原文；引语/数字以底稿中的核查记录为准"
+  },
+  {
+   "id": "S82",
+   "title": "百度 Q2 2026 业绩会实录（StockAnalysis 673679；非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/9888/transcripts/673679-q2-2026/",
+   "date": "2026-08-18",
+   "tier": 3,
+   "local_copy": "data/src/peers/bidu_q2_2026_transcript_stockanalysis.html",
+   "user_provided": false,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S83",
+   "title": "百度 Q1 2026 业绩会实录（StockAnalysis 571599；非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/9888/transcripts/571599-q1-2026/",
+   "date": "2026-05-18",
+   "tier": 3,
+   "local_copy": "data/src/peers/bidu_q1_2026_transcript_stockanalysis.html",
+   "user_provided": false,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S84",
+   "title": "百度 实录目录页（StockAnalysis；最新为 2026-08-18 Q2，上年同期 Q3 为 2025-11-18）",
+   "url": "https://stockanalysis.com/quote/hkg/9888/transcripts/",
+   "date": "2026-10-26",
+   "tier": 3,
+   "local_copy": "data/src/peers/bidu_transcripts_index.html",
+   "user_provided": false,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S90",
+   "title": "JD.com Announces Second Quarter and Interim 2026 Results（SEC 6-K Ex99.1）",
+   "url": "https://www.sec.gov/Archives/edgar/data/1549802/000119312526347753/d143720dex991.htm",
+   "date": "2026-08-13",
+   "tier": 1,
+   "local_copy": "data/src/peers/jd_q2_2026_6k_ex991.htm",
+   "user_provided": false
+  },
+  {
+   "id": "S91",
+   "title": "JD.com First Quarter 2026 Results（SEC 6-K；经 capex-cn 核查）",
+   "url": "https://www.sec.gov/Archives/edgar/data/1549802/000119312526218013/d128173dex991.htm",
+   "date": "2026-05-12",
+   "tier": 1,
+   "local_copy": "data/research/parts/capex-cn.json",
+   "user_provided": false,
+   "verified_via": "核查底稿（data/research/parts），无本地原文；引语/数字以底稿中的核查记录为准"
+  },
+  {
+   "id": "S92",
+   "title": "京东 Q2 2026 业绩会实录（StockAnalysis 666500；非官方逐字稿，含管理层中文发言英译）",
+   "url": "https://stockanalysis.com/quote/hkg/9618/transcripts/666500-q2-2026/",
+   "date": "2026-08-13",
+   "tier": 3,
+   "local_copy": "data/src/peers/jd_q2_2026_transcript_stockanalysis.html",
+   "user_provided": false,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S94",
+   "title": "京东 实录目录页（StockAnalysis；最新为 2026-08-13 Q2，上年同期 Q3 为 2025-11-13）",
+   "url": "https://stockanalysis.com/quote/hkg/9618/transcripts/",
+   "date": "2026-10-26",
+   "tier": 3,
+   "local_copy": "data/src/peers/jd_transcripts_index.html",
+   "user_provided": false,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  },
+  {
+   "id": "S93",
+   "title": "京东 Q1 2026 业绩会实录（StockAnalysis 583093；非官方逐字稿）",
+   "url": "https://stockanalysis.com/quote/hkg/9618/transcripts/583093-q1-2026/",
+   "date": "2026-05-12",
+   "tier": 3,
+   "local_copy": "data/src/peers/jd_q1_2026_transcript_stockanalysis.html",
+   "user_provided": false,
+   "note": "非官方逐字稿，引用前以官方录音为准"
+  }
+ ],
+ "user_provided_sources": [
+  {
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/374535-q3-2025/",
+   "src": "S14",
+   "local": "data/src/transcripts/374535-q3-2025.html（解析：data/parsed/q3-2025.json）",
+   "used_for": [
+    "T3 口径：CFO 解释资本开支（约130亿）与现金付款（约200亿）之差来自服务器支出计提与付款的时间差、账期约60天",
+    "T2 指引轨迹：CFO 称 2025 年 capex 将低于此前「占收入低双位数」的指引，但金额高于 2024 年",
+    "分析师议题轨迹（4 季计数之一）；修正：第 5、24、40 条 IR 发言中混入的分析师提问已拆出"
+   ]
+  },
+  {
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/419871-q4-2025/",
+   "src": "S11",
+   "local": "data/src/transcripts/419871-q4-2025.html（解析：data/parsed/q4-2025.json）",
+   "used_for": [
+    "T2 指引轨迹：James Mitchell 称新增算力（租赁、进口 GPU、国产 GPU）在下半年加速到位；2026 年收入增速可能快于利润",
+    "T5 回报轨迹：刘炽平称 AI 用于现有业务已见良好 ROI，新 AI 产品先投入后收入",
+    "分析师议题轨迹（4 季计数之一）"
+   ]
+  },
+  {
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/609405-q1-2026/",
+   "src": "S08",
+   "local": "data/src/transcripts/609405-q1-2026.html（解析：data/parsed/q1-2026.json）",
+   "used_for": [
+    "腾讯行 change_vs_prior 的上一季基准（T2 下半年大幅增加、T5 组合管理、T7 全年维持回购、T8 ROI 框架追问）",
+    "分析师议题轨迹（4 季计数之一）"
+   ]
+  },
+  {
+   "url": "https://stockanalysis.com/quote/hkg/0700/transcripts/667897-q2-2026/",
+   "src": "S04",
+   "local": "data/src/transcripts/667897-q2-2026.html（解析：data/parsed/q2-2026.json）",
+   "used_for": [
+    "腾讯行最新季引语主来源：T2 lump sum、T5 转租回收折旧/转售获利>30%、T6 折旧对毛利率、T7 资本配置、T8 六位分析师追问",
+    "补足 capex-cn 核查中「按Q2年化超2000亿」的出处：为伯恩斯坦分析师提问中的简单年化，不是公司指引",
+    "修正：第 39 条「Speaker 12」按主持人介绍归属为大摩 Gary（分析师）"
+   ]
+  },
+  {
+   "url": "https://static.www.tencent.com/uploads/2025/11/13/3ff004e913507e0309f3f62a553185b2.pdf",
+   "src": "S12",
+   "local": "data/src/ir_official/3Q25_ppt.pdf / .txt",
+   "used_for": [
+    "capex 轨迹表：3Q25 资本开支 13.0、CAPEX Paid 20.0（2Q25 分别为 19.1、22.9）十亿元"
+   ]
+  },
+  {
+   "url": "https://static.www.tencent.com/uploads/2026/03/18/2804dbdae364ca25b82d21bc8304f1d3.pdf",
+   "src": "S09",
+   "local": "data/src/ir_official/4Q25_ppt.pdf / .txt",
+   "used_for": [
+    "capex 轨迹表：4Q25 资本开支 19.6、CAPEX Paid 22.4；FY2025 资本开支 79.2 vs CAPEX Paid 88.3 十亿元（全年现金口径高约 91 亿，计算）"
+   ]
+  },
+  {
+   "url": "https://www.tencent.com/investors/results/",
+   "src": "S15",
+   "local": "data/src/results_page.html",
+   "used_for": [
+    "官方材料索引：据此定位 1Q25–2Q26 新闻稿/港交所公告/PPT 的原始链接（见 data/src/ir_official/manifest.tsv）"
+   ]
+  },
+  {
+   "url": "https://static.www.tencent.com/website-2026-upload/2Q26-earnings-PPT_20260812_1800-88b183.pdf",
+   "src": "S03",
+   "local": "data/src/ir_official/2Q26_ppt.pdf / .txt",
+   "used_for": [
+    "T1/T3：Operating CAPEX 51.8、Non-operating 1.0、Total 52.8（+176%）；FCF −13.8；净现金 58.2 十亿元",
+    "T4：云收入增速升至 low-twenties %；GPU 租赁、MaaS、WorkBuddy/CodeBuddy 带来收入但仍受算力约束",
+    "T5：AI 战略页「多数投资为 AI 基础设施，必要时可经腾讯云对外出租」兜底表述",
+    "T7：回购约 3,700 万股（约 RMB14.7bn）、派息约 RMB41.6bn"
+   ]
+  }
+ ],
+ "companies": [
+  {
+   "id": "tencent",
+   "name": "腾讯控股",
+   "ticker": "0700.HK",
+   "group": "中国",
+   "latest": "2Q26",
+   "latest_label": "2026Q2（截至2026-06-30）",
+   "latest_report_date": "2026-08-12",
+   "prior": "1Q26",
+   "prior_label": "2026Q1（截至2026-03-31）",
+   "status": "最近已发布 2Q26；Q3 业绩董事会 2026-11-18（港交所 2026-09-24 公告），发布后重跑",
+   "status_src": [
+    "S16"
+   ],
+   "rerun": {
+    "event": "Q3 2026 业绩（董事会）",
+    "date": "2026-11-18",
+    "confirmed": true,
+    "src": [
+     "S16"
+    ],
+    "label": "公开披露",
+    "how": "发布后按 rerun_method 四步重跑；议题列 T1–T8 不变。"
+   }
+  },
+  {
+   "id": "alibaba",
+   "name": "阿里巴巴",
+   "ticker": "BABA / 9988.HK",
+   "group": "中国",
+   "latest": "FY27Q1",
+   "latest_label": "截至2026-06-30季度（FY27Q1）",
+   "latest_report_date": "2026-08-20",
+   "prior": "FY26Q4",
+   "prior_label": "截至2026-03-31季度（FY26Q4）",
+   "status": "最近已发布 2026-06 季；9 月季度业绩日期在本次核查材料中未见官方公告（2025 年同期为 11-25，见实录目录页），发布后重跑",
+   "status_src": [
+    "S72"
+   ],
+   "rerun": {
+    "event": "2026-09 季业绩",
+    "date": "未公告（2025 年同期 11-25）",
+    "confirmed": false,
+    "src": [
+     "S72"
+    ],
+    "label": "推断",
+    "how": "发布后按 rerun_method 四步重跑；议题列 T1–T8 不变。日期为参考上年同期的推断；公司公告发布日期后先更新 peer_data.RERUN。"
+   }
+  },
+  {
+   "id": "baidu",
+   "name": "百度",
+   "ticker": "BIDU / 9888.HK",
+   "group": "中国",
+   "latest": "2Q26",
+   "latest_label": "2026Q2（截至2026-06-30）",
+   "latest_report_date": "2026-08-18",
+   "prior": "1Q26",
+   "prior_label": "2026Q1（截至2026-03-31）",
+   "status": "最近已发布 2Q26；Q3 日期在本次核查材料中未见官方公告（2025 年同期为 11-18，见实录目录页），发布后重跑",
+   "status_src": [
+    "S84"
+   ],
+   "rerun": {
+    "event": "Q3 2026 业绩",
+    "date": "未公告（2025 年同期 11-18）",
+    "confirmed": false,
+    "src": [
+     "S84"
+    ],
+    "label": "推断",
+    "how": "发布后按 rerun_method 四步重跑；议题列 T1–T8 不变。日期为参考上年同期的推断；公司公告发布日期后先更新 peer_data.RERUN。"
+   }
+  },
+  {
+   "id": "jd",
+   "name": "京东",
+   "ticker": "JD / 9618.HK",
+   "group": "中国",
+   "latest": "2Q26",
+   "latest_label": "2026Q2（截至2026-06-30）",
+   "latest_report_date": "2026-08-13",
+   "prior": "1Q26",
+   "prior_label": "2026Q1（截至2026-03-31）",
+   "status": "最近已发布 2Q26；Q3 日期在本次核查材料中未见官方公告（2025 年同期为 11-13，见实录目录页），发布后重跑",
+   "status_src": [
+    "S94"
+   ],
+   "rerun": {
+    "event": "Q3 2026 业绩",
+    "date": "未公告（2025 年同期 11-13）",
+    "confirmed": false,
+    "src": [
+     "S94"
+    ],
+    "label": "推断",
+    "how": "发布后按 rerun_method 四步重跑；议题列 T1–T8 不变。日期为参考上年同期的推断；公司公告发布日期后先更新 peer_data.RERUN。"
+   }
+  },
+  {
+   "id": "meta",
+   "name": "Meta",
+   "ticker": "META",
+   "group": "美国",
+   "latest": "Q3'26",
+   "latest_label": "2026Q3（截至2026-09-30）",
+   "latest_report_date": "2026-10-21",
+   "prior": "Q2'26",
+   "prior_label": "2026Q2（截至2026-06-30）",
+   "status": "已发布 Q3 2026（2026-10-21，官方新闻稿与实录已下载）；矩阵已更新为最新季",
+   "status_src": [
+    "S20",
+    "S25"
+   ],
+   "rerun": null
+  },
+  {
+   "id": "alphabet",
+   "name": "Alphabet",
+   "ticker": "GOOGL",
+   "group": "美国",
+   "latest": "Q2'26",
+   "latest_label": "2026Q2（截至2026-06-30）",
+   "latest_report_date": "2026-07-22",
+   "prior": "Q1'26",
+   "prior_label": "2026Q1（截至2026-03-31）",
+   "status": "Q3 2026 尚未发布；官方 IR 公告 2026-10-28 发布（2026-10-06 公告），发布后重跑",
+   "status_src": [
+    "S33"
+   ],
+   "rerun": {
+    "event": "Q3 2026 业绩",
+    "date": "2026-10-28",
+    "confirmed": true,
+    "src": [
+     "S33"
+    ],
+    "label": "公开披露",
+    "how": "发布后按 rerun_method 四步重跑；议题列 T1–T8 不变。"
+   }
+  },
+  {
+   "id": "microsoft",
+   "name": "Microsoft",
+   "ticker": "MSFT",
+   "group": "美国",
+   "latest": "FY26Q4",
+   "latest_label": "FY26Q4（截至2026-06-30）",
+   "latest_report_date": "2026-07-29",
+   "prior": "FY26Q3",
+   "prior_label": "FY26Q3（截至2026-03-31）",
+   "status": "FY27Q1（7–9 月）尚未发布；官方 IR 事件页显示 2026-10-28 电话会，发布后重跑",
+   "status_src": [
+    "S44"
+   ],
+   "rerun": {
+    "event": "FY27Q1（2026-07~09）业绩",
+    "date": "2026-10-28",
+    "confirmed": true,
+    "src": [
+     "S44"
+    ],
+    "label": "公开披露",
+    "how": "发布后按 rerun_method 四步重跑；议题列 T1–T8 不变。"
+   }
+  },
+  {
+   "id": "amazon",
+   "name": "Amazon",
+   "ticker": "AMZN",
+   "group": "美国",
+   "latest": "Q2'26",
+   "latest_label": "2026Q2（截至2026-06-30）",
+   "latest_report_date": "2026-07-30",
+   "prior": "Q1'26",
+   "prior_label": "2026Q1（截至2026-03-31）",
+   "status": "Q3 2026 尚未发布；官方确认 2026-10-29 电话会，发布后重跑",
+   "status_src": [
+    "S53"
+   ],
+   "rerun": {
+    "event": "Q3 2026 业绩",
+    "date": "2026-10-29",
+    "confirmed": true,
+    "src": [
+     "S53"
+    ],
+    "label": "公开披露",
+    "how": "发布后按 rerun_method 四步重跑；议题列 T1–T8 不变。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "id": "T1",
+   "name": "本季capex金额与同比"
+  },
+  {
+   "id": "T2",
+   "name": "全年capex指引"
+  },
+  {
+   "id": "T3",
+   "name": "capex口径（公司口径/现金口径）"
+  },
+  {
+   "id": "T4",
+   "name": "AI收入或云增速披露"
+  },
+  {
+   "id": "T5",
+   "name": "投资回报/回本表述"
+  },
+  {
+   "id": "T6",
+   "name": "折旧与利润率影响"
+  },
+  {
+   "id": "T7",
+   "name": "自由现金流与股东回报"
+  },
+  {
+   "id": "T8",
+   "name": "分析师追问焦点"
+  }
+ ],
+ "cells": [
+  {
+   "id": "tencent:T1",
+   "company": "tencent",
+   "topic": "T1",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "528亿元，同比+176%",
+   "detail": "公司口径资本开支 RMB52,784m（2Q25：19,107m）；运营性 51.8bn（+190%）、非运营性 1.0bn。",
+   "src": [
+    "S02",
+    "S03"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "we substantially stepped up our procurement of compute",
+    "speaker": "马化腾（董事会主席兼CEO）",
+    "src": [
+     "S02"
+    ],
+    "tier": 2,
+    "label": "公开披露"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "同比增速由+16%升至+176%。",
+    "text": "实质变化：同比增速由+16%升至+176%。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "319亿元，同比+16%",
+    "detail": "",
+    "src": [
+     "S06",
+     "S07"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "tencent:T2",
+   "company": "tencent",
+   "topic": "T2",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "不给金额指引；称两年集中投",
+   "detail": "刘炽平：不提供具体指引；AI 原生业务 capex 更像今明两年的一笔集中投入（lump sum），不应假设每年新增；推理算力视回报再投。另：伯恩斯坦分析师提问中“单季×4超2,000亿”为简单年化，非公司指引。",
+   "src": [
+    "S04"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "it is more of a sort of a lump sum that we are going to be investing this year and next year",
+    "speaker": "刘炽平（总裁）",
+    "src": [
+     "S04"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "由“今年增加、下半年大幅增加”（1Q26）改为“不给具体指引＋今明两年集中投入”框架；仍无金额。轨迹：3Q25 称 2025 年 capex 低于“占收入低双位数”的原指引（S14）；4Q25 称算力下半年加速到位（S11）。",
+    "text": "实质变化：由“今年增加、下半年大幅增加”（1Q26）改为“不给具体指引＋今明两年集中投入”框架；仍无金额。轨迹：3Q25 称 2025 年 capex 低于“占收入低双位数”的原指引（S14）；4Q25 称算力下半年加速到位（S11）。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "下半年capex将大幅增加",
+    "detail": "",
+    "src": [
+     "S08"
+    ],
+    "label": "公开披露",
+    "quote": {
+     "text": "you should expect a substantial increase in CapEx, especially in the second half of this year",
+     "speaker": "James Mitchell",
+     "src": [
+      "S08"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准"
+    }
+   }
+  },
+  {
+   "id": "tencent:T3",
+   "company": "tencent",
+   "topic": "T3",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "公司口径528亿/现金付款593亿",
+   "detail": "公司口径为资本开支（附注d定义）；现金口径为 capital expenditure payments RMB59.3bn；大额 AI 算力预付款计入经营现金流，剔除后 FCF 为 376 亿（本季首次给出）。“计提 vs 付款时间差”出自 3Q25 CFO 答问；公告未使用“权责发生制”措辞。中报附注20 预付款余额 811.16 亿（2025 年末 140.55 亿）。",
+   "src": [
+    "S01",
+    "S02",
+    "S14",
+    "S18"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "the difference reflects the timing gap between the accrual of server-related expenditure and cash payment",
+    "speaker": "罗硕瀚（CFO），3Q25 业绩会",
+    "src": [
+     "S14"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "口径变化",
+    "note": "新增披露“剔除算力预付款的 FCF”（376 亿）并说明预付款计入经营现金流；资本开支定义未变。",
+    "text": "口径变化：新增披露“剔除算力预付款的 FCF”（376 亿）并说明预付款计入经营现金流；资本开支定义未变。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "公司口径319亿/现金付款370亿",
+    "detail": "",
+    "src": [
+     "S05",
+     "S07"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "tencent:T4",
+   "company": "tencent",
+   "topic": "T4",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "云收入增速升至20%出头",
+   "detail": "PPT：云收入增速升至 low-twenties %（AI 需求、国际扩张、通用云）；GPU 租赁、MaaS、WorkBuddy/CodeBuddy 带来收入，但仍受算力约束；金融科技及企业服务 603 亿（+9%）。未单独披露 AI 收入金额。",
+   "src": [
+    "S03",
+    "S02"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "Cloud revenue growth accelerated to low-twenties % YoY due to AI-related demand",
+    "speaker": "腾讯 2Q26 业绩 PPT",
+    "src": [
+     "S03"
+    ],
+    "tier": 2,
+    "label": "公开披露"
+   },
+   "change_vs_prior": {
+    "status": "新增",
+    "note": "较上季新增“云收入整体增速区间”（1Q26 只给企业服务+20%、云国际收入+40%以上）；AI 收入金额仍未披露。",
+    "text": "新增：较上季新增“云收入整体增速区间”（1Q26 只给企业服务+20%、云国际收入+40%以上）；AI 收入金额仍未披露。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "企业服务+20%，未给云增速",
+    "detail": "",
+    "src": [
+     "S06",
+     "S07"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "tencent:T5",
+   "company": "tencent",
+   "topic": "T5",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "称转租算力可即时回收折旧",
+   "detail": "James Mitchell：按当前算力租赁价格，对外出租可“几乎立即”回收折旧，但公司优先把新增算力用于自研模型和应用；刘炽平：数月前预付/订购的算力如今转售可获超 30% 利润，出租是兜底选项。未给回本期或 ROIC 目标。",
+   "src": [
+    "S04",
+    "S03"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "we could recover the depreciation almost immediately by renting the compute out to third parties",
+    "speaker": "James Mitchell（首席战略官）",
+    "src": [
+     "S04"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "由定性“组合/全生命周期管理”（1Q26）转为给出转租获利（>30%）与“出租兜底”表述。",
+    "text": "实质变化：由定性“组合/全生命周期管理”（1Q26）转为给出转租获利（>30%）与“出租兜底”表述。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "按组合与全生命周期管理回报",
+    "detail": "",
+    "src": [
+     "S08"
+    ],
+    "label": "公开披露",
+    "quote": {
+     "text": "We manage the portfolio, and we manage the products on a full life cycle basis.",
+     "speaker": "James Mitchell",
+     "src": [
+      "S08"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准"
+    }
+   }
+  },
+  {
+   "id": "tencent:T6",
+   "company": "tencent",
+   "topic": "T6",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "非IFRS经营利润率36.9%",
+   "detail": "非IFRS经营利润率 36.9%（同比−0.6pp），剔除新 AI 产品 42%（+2.8pp）；营销服务毛利率 57%（−0.3pp），CFO 称 AI 基础设施折旧与运营成本上升；新 AI 产品拖累 = 861−756 ≈ 105 亿（计算）。",
+   "src": [
+    "S02",
+    "S04"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "higher costs, including depreciation and operating costs associated with expanding our AI infrastructure",
+    "speaker": "罗硕瀚（CFO）",
+    "src": [
+     "S04"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "非IFRS经营利润率 38.5%→36.9%；新 AI 产品拖累约 88 亿→105 亿（计算：84.4−75.6；86.1−75.6）。",
+    "text": "实质变化：非IFRS经营利润率 38.5%→36.9%；新 AI 产品拖累约 88 亿→105 亿（计算：84.4−75.6；86.1−75.6）。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "非IFRS经营利润率38.5%",
+    "detail": "",
+    "src": [
+     "S06",
+     "S08"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "tencent:T7",
+   "company": "tencent",
+   "topic": "T7",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "FCF−138亿；回购169亿港元",
+   "detail": "经营现金流 527 亿，被现金 capex 593 亿、媒体内容 50 亿、租赁 22 亿抵消；剔除算力预付款 FCF 376 亿；净现金 582 亿（1Q26：1,469 亿）；回购约 3,740 万股、约 169 亿港元；派 2025 年末期股息约 416 亿元。",
+   "src": [
+    "S01",
+    "S02",
+    "S03",
+    "S04"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "we will steer more cash toward the capital expenditures than we had in the past, and therefore, potentially less cash toward buybacks",
+    "speaker": "James Mitchell（首席战略官）",
+    "src": [
+     "S04"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "FCF 由 +567 亿转为 −138 亿；回购金额上升（约 76→169 亿港元），表述由“全年维持回购”转为“回购资金可能让位 capex”。",
+    "text": "实质变化：FCF 由 +567 亿转为 −138 亿；回购金额上升（约 76→169 亿港元），表述由“全年维持回购”转为“回购资金可能让位 capex”。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "FCF 567亿；回购76亿港元",
+    "detail": "",
+    "src": [
+     "S05",
+     "S06",
+     "S08"
+    ],
+    "label": "公开披露",
+    "quote": {
+     "text": "That would enable us to sustain buybacks going through the rest of this year.",
+     "speaker": "James Mitchell",
+     "src": [
+      "S08"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准"
+    }
+   }
+  },
+  {
+   "id": "tencent:T8",
+   "company": "tencent",
+   "topic": "T8",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "capex回本、云利润率、回购",
+   "detail": "7 位分析师（第三方文字稿，归属待录音复核）：伯恩斯坦 Robin Zhu（capex 折旧与回本周期）、瑞银 Kenneth Fong（小微净变现、AI 云利润率）、高盛 Ronald Keung（混元 4 差异化、何时把更多 capex 投向云）、花旗 Alicia Yap（小微 agent-to-agent 交易闭环、营销服务增速）、美银 Alex Liu（capex 与回购的资本配置次序）、摩根大通 Alex Yao（前沿模型训练投入、新 AI 产品投入管理）、大摩 Gary（小微推理算力、ROIC 与变现时点；实录误标为 Speaker 12）。",
+   "src": [
+    "S04"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "how should investors think about Tencent's capital allocation priority into the next 12 months- 24 months?",
+    "speaker": "Alex Liu（美银，分析师提问）",
+    "src": [
+     "S04"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "capex 回报与资本配置连续两季为主线；本季新增“折旧/回本周期”“AI 云利润率”追问（议题计数见 analyst_topics）。",
+    "text": "无变化：capex 回报与资本配置连续两季为主线；本季新增“折旧/回本周期”“AI 云利润率”追问（议题计数见 analyst_topics）。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "ROI框架、capex量化、回购",
+    "detail": "瑞银 Kenneth Fong（AI capex 量化指引与 KPI）、摩根大通 Alex Yao（ROI 框架/回本期）、法巴 William Packer（capex 对下半年回购影响）等。",
+    "src": [
+     "S08"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "alibaba:T1",
+   "company": "alibaba",
+   "topic": "T1",
+   "period": "FY27Q1",
+   "period_label": "截至2026-06-30季度（FY27Q1）",
+   "value_short": "676.8亿元，同比+75%",
+   "detail": "capex RMB67,678m（US$9,975m；上年同期 38,676m）；原因：AI 基础设施、采购周期波动、AI Agent 带动 CPU 算力、芯片部件涨价；约占收入 25.2%（计算）。",
+   "src": [
+    "S60",
+    "S62"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "CapEx was CNY 67.7 billion this quarter, reflecting our continued investments in AI infrastructure",
+    "speaker": "徐宏 Toby Xu（CFO）",
+    "src": [
+     "S62"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "单季金额创新高。",
+    "text": "实质变化：单季金额创新高。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "FY26Q4",
+    "period_label": "截至2026-03-31季度（FY26Q4）",
+    "value_short": "268.9亿元",
+    "detail": "",
+    "src": [
+     "S61"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "alibaba:T2",
+   "company": "alibaba",
+   "topic": "T2",
+   "period": "FY27Q1",
+   "period_label": "截至2026-06-30季度（FY27Q1）",
+   "value_short": "3年≥3800亿；已投约1900亿",
+   "detail": "2025-02 公告：未来三年至少 3,800 亿元用于云计算和 AI 基础设施（原文无“硬件”）；本季电话会不更新总额，称截至 6 月季末累计约 1,900 亿、进度大体符合预期（计算：FY26 126,063m＋本季 67,678m≈1,937 亿，约占 3,800 亿的 51%）；提醒勿把单季乘以 4 年化。新浪财经中文实录为“到今年6月季度末已经累计投入了一千九百亿”。",
+   "src": [
+    "S65",
+    "S62",
+    "S64",
+    "S61"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "As of the end of the June quarter this year, we had already spent CNY 190 billion",
+    "speaker": "吴泳铭（CEO，实录英译）",
+    "src": [
+     "S62"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "两季均未给新总额；本季新增投入进度（约 1,900 亿）。",
+    "text": "无变化：两季均未给新总额；本季新增投入进度（约 1,900 亿）。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "FY26Q4",
+    "period_label": "截至2026-03-31季度（FY26Q4）",
+    "value_short": "称可能超出3800亿原计划",
+    "detail": "财联社转述吴泳铭“面向未来五年……远远超过 3800 亿”（转述，非逐字）。",
+    "src": [
+     "S63",
+     "S71"
+    ],
+    "label": "公开披露",
+    "quote": {
+     "text": "we will overshoot the original CapEx figure that we had stated of RMB 380 billion",
+     "speaker": "管理层（实录英译）",
+     "src": [
+      "S63"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准"
+    }
+   }
+  },
+  {
+   "id": "alibaba:T3",
+   "company": "alibaba",
+   "topic": "T3",
+   "period": "FY27Q1",
+   "period_label": "截至2026-06-30季度（FY27Q1）",
+   "value_short": "现金流口径",
+   "detail": "capex 为现金流口径（计算机设备与数据中心、物流、土地使用权与园区等；定义见 2026-05-13 公告，非年报）；FCF 对账扣减“购置物业及设备（不含办公园区土地使用权与在建工程）”RMB67,660m；是否含融资租赁：公告未提（推断不含）。",
+   "src": [
+    "S60",
+    "S61"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": null,
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "口径定义未变。",
+    "text": "无变化：口径定义未变。"
+   },
+   "auto_diff": {
+    "value_short_changed": false
+   },
+   "prior": {
+    "period": "FY26Q4",
+    "period_label": "截至2026-03-31季度（FY26Q4）",
+    "value_short": "现金流口径",
+    "detail": "",
+    "src": [
+     "S61"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "alibaba:T4",
+   "company": "alibaba",
+   "topic": "T4",
+   "period": "FY27Q1",
+   "period_label": "截至2026-06-30季度（FY27Q1）",
+   "value_short": "AI云收入+45%（新分部）",
+   "detail": "新分部“AI 云与算力服务”（云智能＋平头哥）收入 484.37 亿（+45%），外部收入+45%（电话会称 22 个季度最高）；AI 相关产品收入 123.76 亿，连续 12 季三位数增长；MaaS 等 ARR 8 月超 160 亿元（新浪实录）。",
+   "src": [
+    "S60",
+    "S62",
+    "S64"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "This quarter, Alibaba Cloud's external revenue growth accelerated to 45%, a 22-quarter high",
+    "speaker": "吴泳铭 Eddie Wu（CEO）",
+    "src": [
+     "S62"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "口径变化",
+    "note": "分部重组（云智能＋平头哥→AI 云与算力服务），前后增速不完全可比；外部收入增速+40%→+45%。",
+    "text": "口径变化：分部重组（云智能＋平头哥→AI 云与算力服务），前后增速不完全可比；外部收入增速+40%→+45%。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "FY26Q4",
+    "period_label": "截至2026-03-31季度（FY26Q4）",
+    "value_short": "云外部收入+40%",
+    "detail": "云智能集团收入 41,626m（+38%），外部收入+40%；AI 产品占云外部收入 30%。",
+    "src": [
+     "S61",
+     "S63"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "alibaba:T5",
+   "company": "alibaba",
+   "topic": "T5",
+   "period": "FY27Q1",
+   "period_label": "截至2026-06-30季度（FY27Q1）",
+   "value_short": "AI capex约3年回本",
+   "detail": "按当前平均毛利率约 3 年回本，可缩短至 2.5 年甚至 2 年；按当前毛利率、3 年回本假设，增速控制在 33% 以内理论上可实现正现金流，但选择保持 40% 以上增速。",
+   "src": [
+    "S62",
+    "S64"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "Based on average gross margins today, roughly, we can break even on AI related CapEx in three years.",
+    "speaker": "吴泳铭（CEO，实录英译）",
+    "src": [
+     "S62"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "由“3–5 年 ROI 非常清晰”（FY26Q4）细化为“约 3 年回本、可缩至 2.5 年”及 33% 增速—现金流测算。",
+    "text": "实质变化：由“3–5 年 ROI 非常清晰”（FY26Q4）细化为“约 3 年回本、可缩至 2.5 年”及 33% 增速—现金流测算。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "FY26Q4",
+    "period_label": "截至2026-03-31季度（FY26Q4）",
+    "value_short": "3–5年ROI“非常清晰”",
+    "detail": "",
+    "src": [
+     "S63"
+    ],
+    "label": "公开披露",
+    "quote": {
+     "text": "We see the ROI on this investment in the next three to five-year period as being extremely clear.",
+     "speaker": "管理层（实录英译）",
+     "src": [
+      "S63"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准"
+    }
+   }
+  },
+  {
+   "id": "alibaba:T6",
+   "company": "alibaba",
+   "topic": "T6",
+   "period": "FY27Q1",
+   "period_label": "截至2026-06-30季度（FY27Q1）",
+   "value_short": "经调整EBITA同比−30%",
+   "detail": "集团经调整 EBITA 273.29 亿（−30%）；AI 云经调整 EBITA 56.28 亿（利润率约 11.6%，同比+4.4pp）；AI 实验室与应用亏损 138.61 亿；CFO：服务器约 3 年回本、5 年使用寿命。",
+   "src": [
+    "S60",
+    "S62"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "With a five-year useful life, we expect them to generate positive free cash flow, at least in the two years following breakeven.",
+    "speaker": "徐宏 Toby Xu（CFO）",
+    "src": [
+     "S62"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "云利润率环比升至约 12%（CFO）；集团利润因 AI 应用投入下滑。",
+    "text": "实质变化：云利润率环比升至约 12%（CFO）；集团利润因 AI 应用投入下滑。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "FY26Q4",
+    "period_label": "截至2026-03-31季度（FY26Q4）",
+    "value_short": "称云毛利率将显著提升",
+    "detail": "",
+    "src": [
+     "S63"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "alibaba:T7",
+   "company": "alibaba",
+   "topic": "T7",
+   "period": "FY27Q1",
+   "period_label": "截至2026-06-30季度（FY27Q1）",
+   "value_short": "FCF−446.7亿；配售800亿港元",
+   "detail": "FCF −446.70 亿（上年同期 −188.15 亿），归因云基础设施支出；本季回购 1,340 万股普通股、共 1.62 亿美元（6-K；实录英译误作“$162 billion”）；8-23 宣布、8-26 完成配售 7.1 亿股（HK$112.70），约 HK$800 亿全部用于全栈 AI（约 60% 全球算力、约 40% AI 数据中心及传统云升级）。",
+   "src": [
+    "S60",
+    "S66",
+    "S67"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "we have greater strategic and financial flexibility to make disciplined and sustained investments in full-stack AI capabilities",
+    "speaker": "徐宏 Toby Xu（CFO），业绩公告",
+    "src": [
+     "S60"
+    ],
+    "tier": 1,
+    "label": "公开披露"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "FCF 流出扩大（−173 亿→−446.7 亿）；新增股权融资（股本稀释）。",
+    "text": "实质变化：FCF 流出扩大（−173 亿→−446.7 亿）；新增股权融资（股本稀释）。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "FY26Q4",
+    "period_label": "截至2026-03-31季度（FY26Q4）",
+    "value_short": "FCF−173亿；股息1.05美元",
+    "detail": "",
+    "src": [
+     "S63"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "alibaba:T8",
+   "company": "alibaba",
+   "topic": "T8",
+   "period": "FY27Q1",
+   "period_label": "截至2026-06-30季度（FY27Q1）",
+   "value_short": "capex原因、3800亿、MaaS",
+   "detail": "花旗 Alicia Yap（capex 大增原因、3,800 亿是否更新、分配与 ROI）、汇丰 Charlene Liu（闪购与电商战略）、中金白洋（云增速驱动）、中信 Yuan Liao（MaaS ARR 与毛利率）、摩根大通 Alex Yao（全栈 AI 价值沉淀层）（新浪/SA/Motley Fool 第三方文字稿）。",
+   "src": [
+    "S62",
+    "S64",
+    "S70"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "Are there any updates to the existing three-year CapEx budget that you have of this CNY 380 billion that you mentioned before?",
+    "speaker": "Alicia Yap（花旗，分析师提问）",
+    "src": [
+     "S62"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "capex 回报与 MaaS 连续两季为焦点；本季新增对 3,800 亿计划更新的直接追问。",
+    "text": "无变化：capex 回报与 MaaS 连续两季为焦点；本季新增对 3,800 亿计划更新的直接追问。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "FY26Q4",
+    "period_label": "截至2026-03-31季度（FY26Q4）",
+    "value_short": "MaaS、ROIC与FCF、capex",
+    "detail": "高盛（MaaS ARR 自研/第三方占比）、瑞银（AI 投资 ROIC 与 FCF 拖累）、杰富瑞（闪购 UE）、麦格理（资源分配）、大摩（所需 capex 与平头哥）。",
+    "src": [
+     "S63"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "baidu:T1",
+   "company": "baidu",
+   "topic": "T1",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "113.9亿元，同比约+200%",
+   "detail": "FCF 对账表 capex RMB11,390m（US$1,679m）：百度一般业务 11,370m、爱奇艺 20m；上年同期 3,800m。",
+   "src": [
+    "S80"
+   ],
+   "label": "公开披露",
+   "label_note": "金额为公开披露；同比为计算值（+199.7%，见 capex_table）",
+   "quote": null,
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "金额翻倍。",
+    "text": "实质变化：金额翻倍。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "59.2亿元，同比+104%",
+    "detail": "1Q26 5,916m vs 1Q25 2,900m（同比为计算值）。",
+    "src": [
+     "S81"
+    ],
+    "label": "计算",
+    "quote": null
+   }
+  },
+  {
+   "id": "baidu:T2",
+   "company": "baidu",
+   "topic": "T2",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "未给capex指引",
+   "detail": "CFO：仍处 AI 投资周期、投入承诺不变，同时关注 ROI；未给 capex 金额。",
+   "src": [
+    "S82"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "I think we are still in an AI investment cycle, and our commitment to that investment is unwavering.",
+    "speaker": "何海建（CFO）",
+    "src": [
+     "S82"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "两季均无金额指引。",
+    "text": "无变化：两季均无金额指引。"
+   },
+   "auto_diff": {
+    "value_short_changed": false
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "未给capex指引",
+    "detail": "",
+    "src": [
+     "S83"
+    ],
+    "label": "公开披露",
+    "quote": {
+     "text": "our overall approach is to maintain strategic investment intensity while preserving financial discipline",
+     "speaker": "何海建（CFO）",
+     "src": [
+      "S83"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准"
+    }
+   }
+  },
+  {
+   "id": "baidu:T3",
+   "company": "baidu",
+   "topic": "T3",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "FCF对账capex（现金）",
+   "detail": "取自 FCF 对账表“Less: Capital expenditures”，现金口径，含爱奇艺；公告无 capex 定义、未提融资租赁；Q1 CFO 称以经营租赁、融资租赁与银行借款等多渠道为 AI 投资融资。",
+   "src": [
+    "S80",
+    "S83"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": null,
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "口径未变。",
+    "text": "无变化：口径未变。"
+   },
+   "auto_diff": {
+    "value_short_changed": false
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "FCF对账capex（现金）",
+    "detail": "",
+    "src": [
+     "S81"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "baidu:T4",
+   "company": "baidu",
+   "topic": "T4",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "AI云基础设施+50%",
+   "detail": "AI Cloud Infra 收入 73 亿元（+50%），GPU 云+283%（上季+184%）；核心 AI 驱动业务收入 125 亿元（+25%）；营运数据来自内部管理账、未经审计。",
+   "src": [
+    "S80",
+    "S82"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "GPU cloud revenue nearly quadrupled year-over-year, growing 283% and accelerating significantly from an already strong 184% growth rate last quarter.",
+    "speaker": "李彦宏（CEO）",
+    "src": [
+     "S82"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "GPU 云增速+184%→+283%。",
+    "text": "实质变化：GPU 云增速+184%→+283%。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "GPU云+184%",
+    "detail": "",
+    "src": [
+     "S83"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "baidu:T5",
+   "company": "baidu",
+   "topic": "T5",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "强调ROI与资本效率",
+   "detail": "",
+   "src": [
+    "S82"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "We invest with conviction, but just as importantly, we spend wisely and stay closely focused on the ROI.",
+    "speaker": "何海建（CFO）",
+    "src": [
+     "S82"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "均为定性 ROI 表述，未给回本期。",
+    "text": "无变化：均为定性 ROI 表述，未给回本期。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "强调ROI，GPU云利润更高",
+    "detail": "",
+    "src": [
+     "S83"
+    ],
+    "label": "公开披露",
+    "quote": {
+     "text": "We care a lot about ROI of these investments",
+     "speaker": "何海建（CFO）",
+     "src": [
+      "S83"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准"
+    }
+   }
+  },
+  {
+   "id": "baidu:T6",
+   "company": "baidu",
+   "topic": "T6",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "非GAAP经营利润率12%",
+   "detail": "经营利润率 10%、非GAAP 12%；AI 云基础设施利润与利润率同比提升，GPU 云占比提高带动结构改善（管理层）。",
+   "src": [
+    "S82"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "In Q2, AI Cloud Infra profit and margins both increased year-over-year.",
+    "speaker": "沈抖（百度智能云事业群总裁）",
+    "src": [
+     "S82"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "集团利润率持平（10%/12%）。",
+    "text": "无变化：集团利润率持平（10%/12%）。"
+   },
+   "auto_diff": {
+    "value_short_changed": false
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "非GAAP经营利润率12%",
+    "detail": "",
+    "src": [
+     "S83"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "baidu:T7",
+   "company": "baidu",
+   "topic": "T7",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "FCF−79.5亿元",
+   "detail": "经营现金流 34.36 亿；FCF −79.54 亿（上年同期 −46.77 亿，1Q26 −32.46 亿）；6-K：2026 年初以来按现行回购计划累计回购 2.59 亿美元；Q1 电话会称上季已宣布新回购计划并首次推出股息政策。",
+   "src": [
+    "S80",
+    "S83"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": null,
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "capex 翻倍使 FCF 流出扩大（−32.5 亿→−79.5 亿）；回购按计划执行（年初以来 2.59 亿美元），未见新增股东回报安排。",
+    "text": "实质变化：capex 翻倍使 FCF 流出扩大（−32.5 亿→−79.5 亿）；回购按计划执行（年初以来 2.59 亿美元），未见新增股东回报安排。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "经营现金流连续3季为正",
+    "detail": "",
+    "src": [
+     "S83"
+    ],
+    "label": "公开披露",
+    "quote": {
+     "text": "Last quarter, we announced a new buyback program and also introduced the first dividend policy.",
+     "speaker": "何海建（CFO）",
+     "src": [
+      "S83"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准"
+    }
+   }
+  },
+  {
+   "id": "baidu:T8",
+   "company": "baidu",
+   "topic": "T8",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "利润率与capex、文心、昆仑芯",
+   "detail": "美银 Miranda Zhuang（AI 投入与利润率平衡）、花旗 Alicia Yap（云增速与长期利润率）、摩根大通 Alex Yao（文心定位）、高盛 Lincoln Kong（昆仑芯上市）、瑞银 Wei Xiong（港股双重主要上市）、杰富瑞（AI 搜索与广告）、麦格理（萝卜快跑）。",
+   "src": [
+    "S82"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "how will management balance the continued AI investments with profitability?",
+    "speaker": "Miranda Zhuang（美银，分析师提问）",
+    "src": [
+     "S82"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "云增速/利润率/投入平衡延续；capex 直接追问由 Q1 杰富瑞转为本季美银（以利润率角度）。",
+    "text": "无变化：云增速/利润率/投入平衡延续；capex 直接追问由 Q1 杰富瑞转为本季美银（以利润率角度）。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "云驱动、capex水平、利润率",
+    "detail": "",
+    "src": [
+     "S83"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "jd:T1",
+   "company": "jd",
+   "topic": "T1",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "55.2亿元，同比+82%",
+   "detail": "capex 净额 RMB5,520m（US$814m）：开发物业 2,517m、其他 capex 3,003m（+54%）；以物流/仓储/地产为主，未单列 AI 算力 capex（推断：不宜与 AI capex 直接比较）。",
+   "src": [
+    "S90"
+   ],
+   "label": "公开披露",
+   "label_note": "金额为公开披露；同比为计算值（+82.1%，见 capex_table）",
+   "quote": null,
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "其他 capex 环比 1,565m→3,003m（+92%，计算），开发物业环比下降。",
+    "text": "实质变化：其他 capex 环比 1,565m→3,003m（+92%，计算），开发物业环比下降。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "50.6亿元",
+    "detail": "",
+    "src": [
+     "S91"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "jd:T2",
+   "company": "jd",
+   "topic": "T2",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "未找到capex指引",
+   "detail": "未找到 capex 金额指引；管理层称研发投入（尤其 AI 应用）近期保持增长（实录译文）。",
+   "src": [
+    "S92"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "We expect R&D expenses to maintain a growth trajectory for the near term",
+    "speaker": "管理层（实录英译）",
+    "src": [
+     "S92"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "两季均无 capex 指引。",
+    "text": "无变化：两季均无 capex 指引。"
+   },
+   "auto_diff": {
+    "value_short_changed": false
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "未找到capex指引",
+    "detail": "",
+    "src": [
+     "S93"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "jd:T3",
+   "company": "jd",
+   "topic": "T3",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "capex净额（含开发物业）",
+   "detail": "“Capital expenditures, net of related sales proceeds”，现金口径净额，含购置物业设备与软件、在建工程、无形资产、土地使用权与资产收购；分“开发物业”与“其他 capex”两项（各季直接披露）。",
+   "src": [
+    "S90"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": null,
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "口径未变。",
+    "text": "无变化：口径未变。"
+   },
+   "auto_diff": {
+    "value_short_changed": false
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "capex净额（含开发物业）",
+    "detail": "",
+    "src": [
+     "S91"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "jd:T4",
+   "company": "jd",
+   "topic": "T4",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "未披露AI/云收入",
+   "detail": "未披露 AI 或云收入；研发费用 73 亿元（+37.7%，公告）；JoyAI、JoyInside（近 200 个品牌合作）等 AI 应用进展。",
+   "src": [
+    "S90",
+    "S92"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": null,
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "两季均未披露。",
+    "text": "无变化：两季均未披露。"
+   },
+   "auto_diff": {
+    "value_short_changed": false
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "未披露AI/云收入",
+    "detail": "",
+    "src": [
+     "S91",
+     "S93"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "jd:T5",
+   "company": "jd",
+   "topic": "T5",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "新业务坚持ROI纪律",
+   "detail": "",
+   "src": [
+    "S92"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "We remain committed to strict financial discipline, focusing on ROI efficiency",
+    "speaker": "管理层（实录英译）",
+    "src": [
+     "S92"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "财务纪律/ROI 表述延续，未涉及 AI capex 回本。",
+    "text": "无变化：财务纪律/ROI 表述延续，未涉及 AI capex 回本。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "坚持财务纪律、聚焦ROI",
+    "detail": "",
+    "src": [
+     "S93"
+    ],
+    "label": "公开披露",
+    "quote": {
+     "text": "we will strictly maintain our financial discipline and focus on ROI",
+     "speaker": "管理层（实录英译）",
+     "src": [
+      "S93"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准"
+    }
+   }
+  },
+  {
+   "id": "jd:T6",
+   "company": "jd",
+   "topic": "T6",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "研发+37.7%，零售利润率升",
+   "detail": "研发费用 73 亿元（+37.7%）；京东零售经营利润率稳步提升（毛利率改善、营销费用率下降）；研发投入近期保持增长。",
+   "src": [
+    "S90",
+    "S92"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "JD Retail's R&D expenses increased notably in Q2.",
+    "speaker": "管理层（实录英译）",
+    "src": [
+     "S92"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "“研发持续增长”表述延续。",
+    "text": "无变化：“研发持续增长”表述延续。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "研发投入持续上升",
+    "detail": "",
+    "src": [
+     "S93"
+    ],
+    "label": "公开披露",
+    "quote": {
+     "text": "our R&D expense continued to meaningfully increase, and is expected to maintain an upward trend for some time ahead",
+     "speaker": "管理层（实录英译）",
+     "src": [
+      "S93"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准"
+    }
+   }
+  },
+  {
+   "id": "jd:T7",
+   "company": "jd",
+   "topic": "T7",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "TTM FCF314亿；回购10亿美元",
+   "detail": "6-K：TTM FCF 314 亿元（上年同期 101 亿），单季 FCF 318 亿元；上半年回购约 6,990 万股 A 类（3,490 万 ADS）共 10 亿美元，约占 2025 年末流通股 2.5%；三年 50 亿美元回购计划剩余约 10 亿美元、2023 年以来累计回报约 130 亿美元（实录译文）。",
+   "src": [
+    "S90",
+    "S92"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "Last 12 months free cash flow as of the end of Q2 reached RMB 31 billion",
+    "speaker": "单甦 Ian Su Shan（CFO）",
+    "src": [
+     "S92"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "TTM FCF 约 220 亿（1Q26 实录；6-K 为 216 亿）→314 亿；分析师追问是否设定股东回报比例，管理层未给比例。",
+    "text": "实质变化：TTM FCF 约 220 亿（1Q26 实录；6-K 为 216 亿）→314 亿；分析师追问是否设定股东回报比例，管理层未给比例。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "TTM FCF220亿；回购6.3亿美元",
+    "detail": "CFO：截至 Q1 的 TTM FCF 约 220 亿元（上年同期 380 亿）；Q1 回购约 4,450 万股 A 类、共 6.31 亿美元。",
+    "src": [
+     "S93"
+    ],
+    "label": "公开披露",
+    "quote": {
+     "text": "last 12 months free cash flow as of the end of Q1 stood at RMB 22 billion",
+     "speaker": "单甦 Ian Shan（CFO）",
+     "src": [
+      "S93"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准"
+    }
+   }
+  },
+  {
+   "id": "jd:T8",
+   "company": "jd",
+   "topic": "T8",
+   "period": "2Q26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "零售增长、外卖、股东回报",
+   "detail": "瑞银 Kenneth Fong（家电/日百增长）、高盛 Ronald Keung（FCF 与股东回报比例、Joybuy 投入）、花旗 Alicia Yap（外卖份额与广告）、杰富瑞 Thomas Chong（零售利润率与新业务投入）。",
+   "src": [
+    "S92"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "Will management consider setting a more official percentage of annual profits for shareholder returns?",
+    "speaker": "Ronald Keung（高盛，分析师提问）",
+    "src": [
+     "S92"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "两季焦点均在零售增长、外卖与 Joybuy；AI capex 不是追问重点。",
+    "text": "无变化：两季焦点均在零售增长、外卖与 Joybuy；AI capex 不是追问重点。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "1Q26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "增长、Joybuy、外卖盈利",
+    "detail": "",
+    "src": [
+     "S93"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "meta:T1",
+   "company": "meta",
+   "topic": "T1",
+   "period": "Q3'26",
+   "period_label": "2026Q3（截至2026-09-30）",
+   "value_short": "349.1亿美元，同比+80%",
+   "detail": "含融资租赁本金：PP&E 33,942m＋融资租赁本金 964m＝34,906m（Q3'25：18,829m＋545m＝19,374m）；CFO：投向服务器、数据中心与网络。",
+   "src": [
+    "S20",
+    "S22"
+   ],
+   "label": "公开披露",
+   "label_note": "金额为公开披露；同比为计算值（+80.2%，见 capex_table）",
+   "quote": {
+    "text": "Capital expenditures, including principal payments on finance leases, were $34.91 billion.",
+    "speaker": "Meta Q3 2026 新闻稿",
+    "src": [
+     "S20"
+    ],
+    "tier": 2,
+    "label": "公开披露"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "同比增速大体持平（+82.7%→+80.2%）。",
+    "text": "实质变化：同比增速大体持平（+82.7%→+80.2%）。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q2'26",
+    "period_label": "2026Q2（截至2026-06-30）",
+    "value_short": "310.8亿美元，同比+83%",
+    "detail": "",
+    "src": [
+     "S24"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "meta:T2",
+   "company": "meta",
+   "topic": "T2",
+   "period": "Q3'26",
+   "period_label": "2026Q3（截至2026-09-30）",
+   "value_short": "全年1350–1450亿美元",
+   "detail": "2026 年 capex（含融资租赁本金）指引 $135–145bn，由 $130–145bn 收窄（下限+50 亿）；前三季累计 $85.8bn（计算：83,055＋2,769），隐含 Q4 约 $49–59bn（计算）；2027 年预算未定、“继续积极投资”。",
+   "src": [
+    "S20",
+    "S22",
+    "S24",
+    "S26"
+   ],
+   "label": "公开披露",
+   "label_note": "指引为公开披露；前三季累计与隐含 Q4 为计算值",
+   "quote": {
+    "text": "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $135-145 billion",
+    "speaker": "Meta Q3 2026 新闻稿（CFO 展望）",
+    "src": [
+     "S20"
+    ],
+    "tier": 2,
+    "label": "公开披露"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "下限上调 50 亿美元、上限不变；2026 年内第三次调整（115–135→125–145→130–145→135–145；1 月、4 月数值据 capex-us 核查底稿，7 月数值见 Q2 新闻稿）。",
+    "text": "实质变化：下限上调 50 亿美元、上限不变；2026 年内第三次调整（115–135→125–145→130–145→135–145；1 月、4 月数值据 capex-us 核查底稿，7 月数值见 Q2 新闻稿）。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q2'26",
+    "period_label": "2026Q2（截至2026-06-30）",
+    "value_short": "全年1300–1450亿美元",
+    "detail": "",
+    "src": [
+     "S24",
+     "S23"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "meta:T3",
+   "company": "meta",
+   "topic": "T3",
+   "period": "Q3'26",
+   "period_label": "2026Q3（截至2026-09-30）",
+   "value_short": "PP&E+融资租赁本金（现金）",
+   "detail": "Meta 口径＝现金流量表“购置物业设备”＋“融资租赁本金支付”；新闻稿称两项合计代表所需物业设备，无论是否以融资租赁取得。现金流量表 PP&E 单项 $33.94bn。",
+   "src": [
+    "S20"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "these two items collectively represent the amount of property and equipment we need to procure to support our business",
+    "speaker": "Meta Q3 2026 新闻稿（非GAAP说明）",
+    "src": [
+     "S20"
+    ],
+    "tier": 2,
+    "label": "公开披露"
+   },
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "口径定义未变。",
+    "text": "无变化：口径定义未变。"
+   },
+   "auto_diff": {
+    "value_short_changed": false
+   },
+   "prior": {
+    "period": "Q2'26",
+    "period_label": "2026Q2（截至2026-06-30）",
+    "value_short": "PP&E+融资租赁本金（现金）",
+    "detail": "",
+    "src": [
+     "S24"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "meta:T4",
+   "company": "meta",
+   "topic": "T4",
+   "period": "Q3'26",
+   "period_label": "2026Q3（截至2026-09-30）",
+   "value_short": "广告+26%；未披露AI收入",
+   "detail": "广告收入 $63.06bn（+26%），展示量+10%、单价+14%；合作广告年化>150 亿美元；Meta One 订阅与试用>1,500 万；Muse 上线约 6 周美加>1,000 万人设置；CFO：新 AI 业务预计 2027 年开始贡献增量收入。未单独披露 AI 收入。",
+   "src": [
+    "S20",
+    "S22"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "Our AI investments are already delivering substantial incremental advertising revenue",
+    "speaker": "Meta Q3 2026 新闻稿（CFO 展望）",
+    "src": [
+     "S20"
+    ],
+    "tier": 2,
+    "label": "公开披露"
+   },
+   "change_vs_prior": {
+    "status": "新增",
+    "note": "新增 AI 新业务变现路径（订阅/交易/企业）及“2027 年开始贡献增量收入”表述；仍无 AI 收入金额。",
+    "text": "新增：新增 AI 新业务变现路径（订阅/交易/企业）及“2027 年开始贡献增量收入”表述；仍无 AI 收入金额。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q2'26",
+    "period_label": "2026Q2（截至2026-06-30）",
+    "value_short": "广告+27%，A+年化超750亿",
+    "detail": "Advantage+ 端到端方案年化收入超 750 亿美元（实录）。",
+    "src": [
+     "S23",
+     "S24"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "meta:T5",
+   "company": "meta",
+   "topic": "T5",
+   "period": "Q3'26",
+   "period_label": "2026Q3（截至2026-09-30）",
+   "value_short": "MSL回报期长于核心业务",
+   "detail": "CFO：AI 投资已为核心广告带来可观增量；MSL 投资回报期更长，但变现机会广；Muse 计算成本效率目标一年提升 10 倍以上。",
+   "src": [
+    "S20",
+    "S22"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "these investments will take longer to generate returns than those in our core business",
+    "speaker": "Susan Li（CFO）",
+    "src": [
+     "S20"
+    ],
+    "tier": 2,
+    "label": "公开披露"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "首次明确区分“核心业务回报快 vs MSL 回报期更长”，并给出 Muse 成本效率 10 倍目标。",
+    "text": "实质变化：首次明确区分“核心业务回报快 vs MSL 回报期更长”，并给出 Muse 成本效率 10 倍目标。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q2'26",
+    "period_label": "2026Q2（截至2026-06-30）",
+    "value_short": "多路径获取投资回报",
+    "detail": "",
+    "src": [
+     "S23"
+    ],
+    "label": "公开披露",
+    "quote": {
+     "text": "provide us multiple pathways to generate returns on invested capital",
+     "speaker": "Susan Li（CFO）",
+     "src": [
+      "S23"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准"
+    }
+   }
+  },
+  {
+   "id": "meta:T6",
+   "company": "meta",
+   "topic": "T6",
+   "period": "Q3'26",
+   "period_label": "2026Q3（截至2026-09-30）",
+   "value_short": "利润率20%；折旧+44%",
+   "detail": "GAAP 经营利润率 20%（含 98.9 亿美元法律费用；剔除后营业利润 228.8 亿美元，约 35%，计算）；折旧摊销 $7.15bn（Q3'25 $4.96bn，+44%，计算）；成本增长来自法律、基础设施（第三方云、折旧、数据中心运营）与第三方 AI token。",
+   "src": [
+    "S20",
+    "S22"
+   ],
+   "label": "公开披露",
+   "label_note": "利润率为公开披露；折旧同比为计算值（7,154/4,963）",
+   "quote": {
+    "text": "The growth in infrastructure costs was driven by higher third-party cloud spend, depreciation, and data center operating costs.",
+    "speaker": "Susan Li（CFO）",
+    "src": [
+     "S22"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "利润率 31%→20% 主要因 98.9 亿美元一次性法律费用；剔除后约 35%（计算）。",
+    "text": "实质变化：利润率 31%→20% 主要因 98.9 亿美元一次性法律费用；剔除后约 35%（计算）。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q2'26",
+    "period_label": "2026Q2（截至2026-06-30）",
+    "value_short": "GAAP经营利润率31%",
+    "detail": "含 24 亿美元法律费用。",
+    "src": [
+     "S23"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "meta:T7",
+   "company": "meta",
+   "topic": "T7",
+   "period": "Q3'26",
+   "period_label": "2026Q3（截至2026-09-30）",
+   "value_short": "FCF−21亿美元；未回购",
+   "detail": "经营现金流 $32.79bn；FCF −$2.12bn（Q3'25 +$10.63bn）；股息 $1.36bn；2026 年前三季未回购 A 类股（现金流量表回购栏为“—”）；新设无投票权 C 类股（2027-01 生效）用于融资、员工薪酬与并购，称暂无具体融资计划；现金及有价证券 $82.45bn。",
+   "src": [
+    "S20",
+    "S22"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "We do not have any specific financing plans to announce at this time",
+    "speaker": "Susan Li（CFO）",
+    "src": [
+     "S22"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "FCF 由 +7.84 亿转为 −21.2 亿美元；新增 C 类股融资工具。",
+    "text": "实质变化：FCF 由 +7.84 亿转为 −21.2 亿美元；新增 C 类股融资工具。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q2'26",
+    "period_label": "2026Q2（截至2026-06-30）",
+    "value_short": "FCF 7.8亿美元",
+    "detail": "",
+    "src": [
+     "S23",
+     "S24"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "meta:T8",
+   "company": "meta",
+   "topic": "T8",
+   "period": "Q3'26",
+   "period_label": "2026Q3（截至2026-09-30）",
+   "value_short": "Muse成本、2027capex、融资",
+   "detail": "7 位分析师（第三方文字稿，待录音复核）：大摩 Brian Nowak（Muse 增长约束、企业平台）、高盛 Eric Sheridan（代理商务、C 类股与资本来源）、摩根大通 Doug Anmuth（2027 费用与 capex）、美银 Justin Post（新模型对广告提升、2027 收入）、伯恩斯坦 Mark Shmulik（以 Muse 为中心的组织与 SMB）、巴克莱 Ross Sandler（Muse 单用户成本）、Evercore Mark Mahaney（Muse 变现节奏）。",
+   "src": [
+    "S22"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "any updated thoughts broadly about how you think about sources of capital and optimizing your capital structure",
+    "speaker": "Eric Sheridan（高盛，分析师提问）",
+    "src": [
+     "S22"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "焦点由“模型实验室能力/开源”转向“Muse 单位经济与变现”；“资本来源”连续两季被问并升级为资本结构（C 类股）问题。",
+    "text": "实质变化：焦点由“模型实验室能力/开源”转向“Muse 单位经济与变现”；“资本来源”连续两季被问并升级为资本结构（C 类股）问题。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q2'26",
+    "period_label": "2026Q2（截至2026-06-30）",
+    "value_short": "ROIC时点、模型、资本来源",
+    "detail": "大摩（可量化 ROIC、2027 capex 与资金来源）、高盛（企业市场、资本来源）、伯恩斯坦（消费者 AI 采用）、摩根大通（LLM 排序与第三方算力）、美银（MSL 进展）、巴克莱（模型定位/开源）、富国（开源与产能）。",
+    "src": [
+     "S23"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "alphabet:T1",
+   "company": "alphabet",
+   "topic": "T1",
+   "period": "Q2'26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "449.2亿美元，同比+100%",
+   "detail": "购置物业及设备 $44,924m（Q2'25 $22,446m）；CFO：绝大部分用于技术基础设施。",
+   "src": [
+    "S30",
+    "S31"
+   ],
+   "label": "公开披露",
+   "label_note": "金额为公开披露；同比为计算值（+100.1%，见 capex_table）",
+   "quote": {
+    "text": "CapEx was $44.9 billion in the second quarter, with the vast majority of this spent in technical infrastructure",
+    "speaker": "Anat Ashkenazi（CFO）",
+    "src": [
+     "S31"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "金额与增速继续上行。",
+    "text": "实质变化：金额与增速继续上行。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q1'26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "356.7亿美元",
+    "detail": "",
+    "src": [
+     "S30",
+     "S32"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "alphabet:T2",
+   "company": "alphabet",
+   "topic": "T2",
+   "period": "Q2'26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "全年1950–2050亿美元",
+   "detail": "2026 年 capex 指引 $195–205bn（前值 $180–190bn）；2027 年预计显著增加，细节后续给出。",
+   "src": [
+    "S31"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "we are updating our full-year 2026 CapEx guidance range to $195 billion-$205 billion, up from our previous estimate of $180 billion-$190 billion",
+    "speaker": "Anat Ashkenazi（CFO）",
+    "src": [
+     "S31"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "中值上调 150 亿美元；2026 年内第二次上调（175–185→180–190→195–205，据两季实录）。",
+    "text": "实质变化：中值上调 150 亿美元；2026 年内第二次上调（175–185→180–190→195–205，据两季实录）。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q1'26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "全年1800–1900亿美元",
+    "detail": "Q1 由 $175–185bn 上调至 $180–190bn（含 Intersect 收购）。",
+    "src": [
+     "S32"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "alphabet:T3",
+   "company": "alphabet",
+   "topic": "T3",
+   "period": "Q2'26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "购置PP&E（现金口径）",
+   "detail": "capex＝现金流量表“Purchases of property and equipment”；FCF＝经营现金流−该项；不单列融资租赁。",
+   "src": [
+    "S30"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": null,
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "口径未变。",
+    "text": "无变化：口径未变。"
+   },
+   "auto_diff": {
+    "value_short_changed": false
+   },
+   "prior": {
+    "period": "Q1'26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "购置PP&E（现金口径）",
+    "detail": "",
+    "src": [
+     "S30"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "alphabet:T4",
+   "company": "alphabet",
+   "topic": "T4",
+   "period": "Q2'26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "云+82%，积压5140亿美元",
+   "detail": "Google Cloud 收入 $24.8bn（+82%），经营利润 $8.8bn、利润率 35.6%；积压订单 $514bn（环比+500 亿以上），约一半 24 个月内确认。",
+   "src": [
+    "S30",
+    "S31"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "Cloud revenue grew 82%, powered by strong demand for AI infrastructure and AI solutions.",
+    "speaker": "Sundar Pichai（CEO）",
+    "src": [
+     "S31"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "云增速+63%→+82%；积压 $462bn→$514bn。",
+    "text": "实质变化：云增速+63%→+82%；积压 $462bn→$514bn。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q1'26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "云+63%，积压4620亿美元",
+    "detail": "",
+    "src": [
+     "S32"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "alphabet:T5",
+   "company": "alphabet",
+   "topic": "T5",
+   "period": "Q2'26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "有吸引力回报即持续投入",
+   "detail": "",
+   "src": [
+    "S31"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "Our goal is to invest as long as we see an attractive return on that investment",
+    "speaker": "Anat Ashkenazi（CFO）",
+    "src": [
+     "S31"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "均为定性回报表述，未给回本期。",
+    "text": "无变化：均为定性回报表述，未给回本期。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q1'26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "以增速与积压佐证ROIC",
+    "detail": "",
+    "src": [
+     "S32"
+    ],
+    "label": "公开披露",
+    "quote": {
+     "text": "You're seeing the proof point, the ROIC on that in terms of just the growth rate we're seeing",
+     "speaker": "Anat Ashkenazi（CFO）",
+     "src": [
+      "S32"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准"
+    }
+   }
+  },
+  {
+   "id": "alphabet:T6",
+   "company": "alphabet",
+   "topic": "T6",
+   "period": "Q2'26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "利润率34%；折旧压力延续",
+   "detail": "经营利润率 34%（Q1 36.1%）；云利润率 35.6%（Q1 32.9%）；CFO：技术基础设施投资将继续以更高折旧与数据中心运营成本压制损益。",
+   "src": [
+    "S31"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "will continue to put pressure on the P&L in the form of higher depreciation expense",
+    "speaker": "Anat Ashkenazi（CFO）",
+    "src": [
+     "S31"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "集团利润率−2.1pp、云利润率+2.7pp（计算）；折旧压力表述不变。",
+    "text": "实质变化：集团利润率−2.1pp、云利润率+2.7pp（计算）；折旧压力表述不变。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q1'26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "利润率36.1%；云32.9%",
+    "detail": "",
+    "src": [
+     "S32"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "alphabet:T7",
+   "company": "alphabet",
+   "topic": "T7",
+   "period": "Q2'26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "FCF−59亿美元",
+   "detail": "Q2 FCF −$5.9bn（TTM $53.3bn）；季度股息 $0.22/股；6 月股权融资（季内净所得 $49.6bn，用途含 AI 基础设施 capex，据新闻稿）。回购：本季实录未提及。",
+   "src": [
+    "S30",
+    "S31"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "We had negative free cash flow of $5.9 billion in the second quarter, driven by our investments in CapEx.",
+    "speaker": "Anat Ashkenazi（CFO）",
+    "src": [
+     "S31"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "FCF 由 +$10.1bn 转为 −$5.9bn；新增股权融资。",
+    "text": "实质变化：FCF 由 +$10.1bn 转为 −$5.9bn；新增股权融资。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q1'26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "FCF 101亿美元",
+    "detail": "",
+    "src": [
+     "S32"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "alphabet:T8",
+   "company": "alphabet",
+   "topic": "T8",
+   "period": "Q2'26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "capex回报、TPU、产能分配",
+   "detail": "9 位分析师：大摩（GenAI ROIC 与远期 capex 预算）、摩根大通（Gemini 前沿与编码）、高盛（TPU 内外需求、积压与利润率）、巴克莱（模型发布节奏）、MoffettNathanson（护城河、TPU 利润率）、伯恩斯坦（第三方算力与产能分配）、花旗（搜索/YouTube 变现）、富国（2027 算力投资回报）、Wolfe（TPU 长期策略）。",
+   "src": [
+    "S31"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "how would you assess the forecasted returns on compute capacity investments in 2027 compared to prior years",
+    "speaker": "Ken Gawrelski（富国，分析师提问）",
+    "src": [
+     "S31"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "capex 回报/产能分配主线延续；本季 TPU 对外销售相关追问增多。",
+    "text": "无变化：capex 回报/产能分配主线延续；本季 TPU 对外销售相关追问增多。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q1'26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "2027capex、积压、供应链通胀",
+    "detail": "",
+    "src": [
+     "S32"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "microsoft:T1",
+   "company": "microsoft",
+   "topic": "T1",
+   "period": "FY26Q4",
+   "period_label": "FY26Q4（截至2026-06-30）",
+   "value_short": "410亿美元，同比+69%",
+   "detail": "含融资租赁 capex $41.0bn（FY25Q4 $24.2bn），其中融资租赁 $5.6bn；现金购置 PP&E $35.8bn（+110%，计算）；约 2/3 为短寿命资产（CPU/GPU）。",
+   "src": [
+    "S40",
+    "S41",
+    "S42"
+   ],
+   "label": "公开披露",
+   "label_note": "金额为公开披露；同比为计算值（+69.4%，见 capex_table）",
+   "quote": {
+    "text": "Capital expenditures were $41 billion, including the impact from higher component pricing",
+    "speaker": "Amy Hood（CFO）",
+    "src": [
+     "S42"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "季度金额创新高。",
+    "text": "实质变化：季度金额创新高。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "FY26Q3",
+    "period_label": "FY26Q3（截至2026-03-31）",
+    "value_short": "319亿美元（含融资租赁）",
+    "detail": "",
+    "src": [
+     "S43"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "microsoft:T2",
+   "company": "microsoft",
+   "topic": "T2",
+   "period": "FY26Q4",
+   "period_label": "FY26Q4（截至2026-06-30）",
+   "value_short": "CY26约1750亿美元（重分类后）",
+   "detail": "租赁由融资转经营后，CY2026 capex 预期调至约 $175bn；除此影响外投资预期不变；FY27 capex 同比增长；FY27Q1 >$50bn。",
+   "src": [
+    "S41",
+    "S42"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "the shift from finance to operating leases adjusts our expectation to approximately $175 billion",
+    "speaker": "Amy Hood（CFO）",
+    "src": [
+     "S42"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "口径变化",
+    "note": "约 $190bn→约 $175bn 系会计重分类（融资租赁→经营租赁），管理层称投资预期不变。",
+    "text": "口径变化：约 $190bn→约 $175bn 系会计重分类（融资租赁→经营租赁），管理层称投资预期不变。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "FY26Q3",
+    "period_label": "FY26Q3（截至2026-03-31）",
+    "value_short": "CY26约1900亿美元",
+    "detail": "",
+    "src": [
+     "S43"
+    ],
+    "label": "公开披露",
+    "quote": {
+     "text": "For calendar year 2026, we expect to invest roughly $190 billion in capital expenditures",
+     "speaker": "Amy Hood（CFO）",
+     "src": [
+      "S43"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准"
+    }
+   }
+  },
+  {
+   "id": "microsoft:T3",
+   "company": "microsoft",
+   "topic": "T3",
+   "period": "FY26Q4",
+   "period_label": "FY26Q4（截至2026-06-30）",
+   "value_short": "含融资租赁；FY27起口径收窄",
+   "detail": "管理层 capex 含融资租赁（非现金）；现金口径为 cash paid for PP&E $35.8bn；FY27 起数据中心/办公楼折旧年限 15→25 年，更多新租赁记为经营租赁（不计入 capex）。",
+   "src": [
+    "S41",
+    "S42"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "Finance leases are included in capital expenditures, while operating leases are not.",
+    "speaker": "Amy Hood（CFO）",
+    "src": [
+     "S42"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "口径变化",
+    "note": "宣布折旧年限与租赁分类变更，未来 capex 口径将系统性偏低。",
+    "text": "口径变化：宣布折旧年限与租赁分类变更，未来 capex 口径将系统性偏低。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "FY26Q3",
+    "period_label": "FY26Q3（截至2026-03-31）",
+    "value_short": "含融资租赁capex",
+    "detail": "",
+    "src": [
+     "S43"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "microsoft:T4",
+   "company": "microsoft",
+   "topic": "T4",
+   "period": "FY26Q4",
+   "period_label": "FY26Q4（截至2026-06-30）",
+   "value_short": "Azure+43%",
+   "detail": "Azure 及其他云服务+43%（固定汇率+43%）；Microsoft Cloud $59.3bn（+27%）；FY27Q1 Azure 指引约+45%（固定汇率）；未单独披露 AI 收入 run-rate。",
+   "src": [
+    "S40",
+    "S42"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "In Azure and other cloud services, revenue grew 43% against a prior year that included accelerating growth.",
+    "speaker": "Amy Hood（CFO）",
+    "src": [
+     "S42"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "Azure 增速+40%→+43%，指引+45%。",
+    "text": "实质变化：Azure 增速+40%→+43%，指引+45%。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "FY26Q3",
+    "period_label": "FY26Q3（截至2026-03-31）",
+    "value_short": "Azure+40%",
+    "detail": "",
+    "src": [
+     "S43"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "microsoft:T5",
+   "company": "microsoft",
+   "topic": "T5",
+   "period": "FY26Q4",
+   "period_label": "FY26Q4（截至2026-06-30）",
+   "value_short": "称ROIC信心提升",
+   "detail": "",
+   "src": [
+    "S42"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "increased confidence in ROIC, frankly, of the dollars that we're investing",
+    "speaker": "Amy Hood（CFO）",
+    "src": [
+     "S42"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "均为定性回报表述；回应高盛 ROI 追问时称计算方法未变。",
+    "text": "无变化：均为定性回报表述；回应高盛 ROI 追问时称计算方法未变。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "FY26Q3",
+    "period_label": "FY26Q3（截至2026-03-31）",
+    "value_short": "尽快把capex转化为收入",
+    "detail": "",
+    "src": [
+     "S43"
+    ],
+    "label": "公开披露",
+    "quote": {
+     "text": "landing this CapEx as quickly as we can and converting it to revenue as quickly as we can",
+     "speaker": "Amy Hood（CFO）",
+     "src": [
+      "S43"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准"
+    }
+   }
+  },
+  {
+   "id": "microsoft:T6",
+   "company": "microsoft",
+   "topic": "T6",
+   "period": "FY26Q4",
+   "period_label": "FY26Q4（截至2026-06-30）",
+   "value_short": "毛利率67%；折旧年限延长",
+   "detail": "公司毛利率 67%（同比下降，Azure 占比上升与 AI 基础设施投入）；经营利润率 45%；FY27 起折旧年限 15→25 年，对 FY27 营业利润“小幅”有利；FY27 全年经营利润率降幅<1pp。",
+   "src": [
+    "S42"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "This change affects only the timing of future depreciation and is expected to have a minimal benefit to FY 2027 operating income.",
+    "speaker": "Amy Hood（CFO）",
+    "src": [
+     "S42"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "口径变化",
+    "note": "折旧年限会计估计变更（15→25 年）；毛利率 68%→67%、经营利润率 46%→45%。",
+    "text": "口径变化：折旧年限会计估计变更（15→25 年）；毛利率 68%→67%、经营利润率 46%→45%。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "FY26Q3",
+    "period_label": "FY26Q3（截至2026-03-31）",
+    "value_short": "毛利率68%；经营利润率46%",
+    "detail": "",
+    "src": [
+     "S43"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "microsoft:T7",
+   "company": "microsoft",
+   "topic": "T7",
+   "period": "FY26Q4",
+   "period_label": "FY26Q4（截至2026-06-30）",
+   "value_short": "FCF196亿；回报102亿美元",
+   "detail": "FCF $19.6bn（反映更高 capex）；股息＋回购 $10.2bn，FY26 合计>$43bn；预计 FY27 保持 FCF 为正。",
+   "src": [
+    "S42"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "we expect to remain free cash flow positive in FY 2027",
+    "speaker": "Amy Hood（CFO）",
+    "src": [
+     "S42"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "股东回报规模持平（$10.2bn）；FCF 环比上升。",
+    "text": "无变化：股东回报规模持平（$10.2bn）；FCF 环比上升。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "FY26Q3",
+    "period_label": "FY26Q3（截至2026-03-31）",
+    "value_short": "FCF158亿；回报102亿美元",
+    "detail": "",
+    "src": [
+     "S43"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "microsoft:T8",
+   "company": "microsoft",
+   "topic": "T8",
+   "period": "FY26Q4",
+   "period_label": "FY26Q4（截至2026-06-30）",
+   "value_short": "Azure产能、零部件涨价、ROI",
+   "detail": "瑞银（模型选择/开放模型）、Jefferies（Azure 加速与产能约束）、伯恩斯坦（超供担忧与零部件涨价对利润率）、大摩（M365 Copilot）、德银（网络安全）、高盛（capex 的 ROI 与一年前比较）。",
+   "src": [
+    "S42"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "When you look at and track ROI on the CapEx decisions you're making today, how does that compare to a year ago?",
+    "speaker": "Gabriela Borges（高盛，分析师提问）",
+    "src": [
+     "S42"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "capex 回报/利润率主线延续。",
+    "text": "无变化：capex 回报/利润率主线延续。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "FY26Q3",
+    "period_label": "FY26Q3（截至2026-03-31）",
+    "value_short": "H2capex落地、capex与收入错配",
+    "detail": "",
+    "src": [
+     "S43"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "amazon:T1",
+   "company": "amazon",
+   "topic": "T1",
+   "period": "Q2'26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "542.1亿美元，同比+68%",
+   "detail": "购置 PP&E 总额 $54,208m（Q2'25 $32,183m）；扣除出售所得与激励后“现金 capex”$53.1bn（+69%，计算）；另以融资租赁取得 PP&E $563m 未计入。",
+   "src": [
+    "S50",
+    "S51"
+   ],
+   "label": "公开披露",
+   "label_note": "金额为公开披露；同比为计算值（+68.4%，见 capex_table）",
+   "quote": {
+    "text": "Now turning to our cash CapEx, which is $53.1 billion in Q2.",
+    "speaker": "Brian Olsavsky（CFO）",
+    "src": [
+     "S51"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "金额继续上行。",
+    "text": "实质变化：金额继续上行。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q1'26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "442.0亿美元（总额）",
+    "detail": "现金 capex $43.2bn。",
+    "src": [
+     "S54",
+     "S52"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "amazon:T2",
+   "company": "amazon",
+   "topic": "T2",
+   "period": "Q2'26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "现金capex约2200亿美元",
+   "detail": "由约 $200bn 上调，主因内存涨价。",
+   "src": [
+    "S51"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "We now believe we will spend approximately $220 billion in cash CapEx in 2026.",
+    "speaker": "Andy Jassy（CEO）",
+    "src": [
+     "S51"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "上调约 200 亿美元，归因内存成本上升。",
+    "text": "实质变化：上调约 200 亿美元，归因内存成本上升。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q1'26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "现金capex约2000亿美元",
+    "detail": "年初给出（Q2 实录回顾）。",
+    "src": [
+     "S51"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "amazon:T3",
+   "company": "amazon",
+   "topic": "T3",
+   "period": "Q2'26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "购置PP&E总额/现金capex净额",
+   "detail": "现金流量表“Purchases of property and equipment”总额，不含融资租赁；管理层“cash capex”为扣除出售所得与激励后的净额；含物流、Kuiper 等非 AWS 投入。",
+   "src": [
+    "S50",
+    "S51"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": null,
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "口径未变。",
+    "text": "无变化：口径未变。"
+   },
+   "auto_diff": {
+    "value_short_changed": false
+   },
+   "prior": {
+    "period": "Q1'26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "购置PP&E总额/现金capex净额",
+    "detail": "",
+    "src": [
+     "S54"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "amazon:T4",
+   "company": "amazon",
+   "topic": "T4",
+   "period": "Q2'26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "AWS+37%，积压4960亿美元",
+   "detail": "AWS 收入 $42.23bn（Jassy 称+36.7%）；经营利润 $16.62bn（39.4%）；AI 与自研芯片业务年化 run-rate 各超 $25bn（新闻稿）。",
+   "src": [
+    "S50",
+    "S51"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "Our backlog stands at $496 billion, growing triple digits year-over-year.",
+    "speaker": "Andy Jassy（CEO）",
+    "src": [
+     "S51"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "AWS 增速+28%→+37%；积压 $364bn→$496bn。",
+    "text": "实质变化：AWS 增速+28%→+37%；积压 $364bn→$496bn。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q1'26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "AWS+28%，积压3640亿美元",
+    "detail": "",
+    "src": [
+     "S52"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "amazon:T5",
+   "company": "amazon",
+   "topic": "T5",
+   "period": "Q2'26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "称回报清晰并给回本框架",
+   "detail": "服务器使用寿命至少 5–6 年、AI 算力多签 5 年以上合约；回本后 2–3 年产生可观 FCF；数据中心 30 年以上寿命可承载 5–6 代服务器。",
+   "src": [
+    "S51"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "At this level of spend and higher, we have clear line of sight to strong financial returns.",
+    "speaker": "Andy Jassy（CEO）",
+    "src": [
+     "S51"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "由“已有客户承诺”的定性表述，扩展为回本—现金流时间框架（寿命 5–6 年、回本后 2–3 年 FCF）。",
+    "text": "实质变化：由“已有客户承诺”的定性表述，扩展为回本—现金流时间框架（寿命 5–6 年、回本后 2–3 年 FCF）。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q1'26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "已有客户承诺，ROIC可观",
+    "detail": "",
+    "src": [
+     "S52"
+    ],
+    "label": "公开披露",
+    "quote": {
+     "text": "we have high confidence this will be monetized well, as we already have customer commitments for a substantial portion of it",
+     "speaker": "Andy Jassy（CEO）",
+     "src": [
+      "S52"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准"
+    }
+   }
+  },
+  {
+   "id": "amazon:T6",
+   "company": "amazon",
+   "topic": "T6",
+   "period": "Q2'26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "AWS利润率39.4%",
+   "detail": "AWS 经营利润 $16.6bn、利润率 39.4%；服务器使用寿命“至少 5–6 年”；北美/国际经营利润率 7.9%/4.1%。",
+   "src": [
+    "S50",
+    "S51"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "The servers currently have a useful life of at least five to six years",
+    "speaker": "Andy Jassy（CEO）",
+    "src": [
+     "S51"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "实质变化",
+    "note": "AWS 利润率 37.7%→39.4%（Q2 新闻稿季度序列）。",
+    "text": "实质变化：AWS 利润率 37.7%→39.4%（Q2 新闻稿季度序列）。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q1'26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "AWS利润率37.7%",
+    "detail": "Q2 新闻稿季度序列：Q1'26 AWS 经营利润 $14,161m / 收入 $37,587m，经营利润率 37.7%。",
+    "src": [
+     "S50",
+     "S52"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  },
+  {
+   "id": "amazon:T7",
+   "company": "amazon",
+   "topic": "T7",
+   "period": "Q2'26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "TTM FCF−76亿美元",
+   "detail": "TTM 自由现金流 −$7.6bn（新闻稿）；Jassy：数据中心先建后变现，短期 FCF 承压。",
+   "src": [
+    "S50",
+    "S51"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "we'll spend a lot of CapEx and encounter free cash flow headwinds until these data centers come online",
+    "speaker": "Andy Jassy（CEO）",
+    "src": [
+     "S51"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "两季均表述短期 FCF 承压；Q1 TTM FCF 未在已核材料中，不做数值比较。",
+    "text": "无变化：两季均表述短期 FCF 承压；Q1 TTM FCF 未在已核材料中，不做数值比较。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q1'26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "称早期FCF承压",
+    "detail": "",
+    "src": [
+     "S52"
+    ],
+    "label": "公开披露",
+    "quote": {
+     "text": "the early years free cash flow is challenged",
+     "speaker": "Andy Jassy（CEO）",
+     "src": [
+      "S52"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准"
+    }
+   }
+  },
+  {
+   "id": "amazon:T8",
+   "company": "amazon",
+   "topic": "T8",
+   "period": "Q2'26",
+   "period_label": "2026Q2（截至2026-06-30）",
+   "value_short": "AWS利润率、产能、2027投入",
+   "detail": "摩根大通（AWS 39% 利润率可持续性、自研模型）、美银（AWS 加速与新增产能）、大摩（2027 长寿命数据中心投入能否放缓）、Baird（应用层）、富国（RPO 与 2028 产能）、高盛（零售/即时配送）。",
+   "src": [
+    "S51"
+   ],
+   "label": "公开披露",
+   "label_note": "",
+   "quote": {
+    "text": "are you at a point where you're going to be able to start to slow that long-lived data center spend at all in 2027",
+    "speaker": "Brian Nowak（大摩，分析师提问）",
+    "src": [
+     "S51"
+    ],
+    "tier": 3,
+    "label": "公开披露",
+    "note": "非官方逐字稿，引用前以官方录音为准"
+   },
+   "change_vs_prior": {
+    "status": "无变化",
+    "note": "产能/capex 强度/积压订单主线延续。",
+    "text": "无变化：产能/capex 强度/积压订单主线延续。"
+   },
+   "auto_diff": {
+    "value_short_changed": true
+   },
+   "prior": {
+    "period": "Q1'26",
+    "period_label": "2026Q1（截至2026-03-31）",
+    "value_short": "积压订单、投资强度、内存涨价",
+    "detail": "",
+    "src": [
+     "S52"
+    ],
+    "label": "公开披露",
+    "quote": null
+   }
+  }
+ ],
+ "capex_table": {
+  "fx": {
+   "rmb_per_usd": 6.7851,
+   "date": "2026-06-30",
+   "basis": "美联储 H.10 2026-06-30 汇率（RMB6.7851=US$1.00），阿里、百度、京东 2026-06 季业绩公告均按此折算；腾讯无美元折算，按同一汇率计算",
+   "src": [
+    "S60",
+    "S80",
+    "S90"
+   ],
+   "label": "公开披露"
+  },
+  "units": "原币百万（value_m）；展示：人民币亿元、美元十亿（bn）",
+  "rows": [
+   {
+    "company": "tencent",
+    "name": "腾讯控股",
+    "period": "2Q26",
+    "period_label": "2026Q2（截至2026-06-30）",
+    "report_date": "2026-08-12",
+    "ccy": "RMB",
+    "company_basis": {
+     "value_m": 52784,
+     "display": "527.8亿元",
+     "usd_m": 7779,
+     "usd_display": "7.78bn美元",
+     "usd_label": "计算",
+     "base_m": 19107,
+     "base_display": "191.1亿元",
+     "yoy_pct": 176.3,
+     "yoy_display": "+176.3%",
+     "yoy_label": "公开披露",
+     "prior_q_m": 31936,
+     "prior_q_display": "319.4亿元",
+     "qoq_pct": 65.3,
+     "qoq_label": "计算",
+     "definition": "资本开支（附注d：IT基础设施、数据中心、土地使用权、办公物业及知识产权，不含媒体内容）",
+     "src": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S17"
+     ],
+     "label": "公开披露"
+    },
+    "cash_basis": {
+     "value_m": 59300,
+     "display": "593.0亿元",
+     "usd_m": 8740,
+     "usd_display": "8.74bn美元",
+     "usd_label": "计算",
+     "base_m": 22900,
+     "base_display": "229.0亿元",
+     "yoy_pct": 159.0,
+     "yoy_display": "+159.0%",
+     "yoy_label": "计算",
+     "prior_q_m": 37000,
+     "prior_q_display": "370.0亿元",
+     "qoq_pct": 60.3,
+     "qoq_label": "计算",
+     "definition": "capital expenditure payments（现金付款，FCF 计算口径）",
+     "src": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S17"
+     ],
+     "label": "公开披露"
+    },
+    "same_basis": false,
+    "basis_note": "两套口径数值不同，见各自定义",
+    "guidance": {
+     "text": "无金额指引；称AI原生业务capex为今明两年集中投入（lump sum）",
+     "src": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S17"
+     ],
+     "label": "公开披露"
+    },
+    "comparability": "公司口径不含媒体内容；公告称大额 AI 算力预付款计入经营现金流，中报投资现金流另有“购置/预付物业设备”项，两口径差额包含付款时间差与预付款等多种因素"
+   },
+   {
+    "company": "alibaba",
+    "name": "阿里巴巴",
+    "period": "FY27Q1",
+    "period_label": "截至2026-06-30季度（FY27Q1）",
+    "report_date": "2026-08-20",
+    "ccy": "RMB",
+    "company_basis": {
+     "value_m": 67678,
+     "display": "676.8亿元",
+     "usd_m": 9975,
+     "usd_display": "9.97bn美元",
+     "usd_label": "公开披露",
+     "base_m": 38676,
+     "base_display": "386.8亿元",
+     "yoy_pct": 75.0,
+     "yoy_display": "+75.0%",
+     "yoy_label": "公开披露",
+     "prior_q_m": 26887,
+     "prior_q_display": "268.9亿元",
+     "qoq_pct": 151.7,
+     "qoq_label": "计算",
+     "definition": "capital expenditures（现金流口径；定义见 2026-05-13 公告）",
+     "src": [
+      "S60",
+      "S61",
+      "S65",
+      "S62"
+     ],
+     "label": "公开披露"
+    },
+    "cash_basis": {
+     "value_m": 67660,
+     "display": "676.6亿元",
+     "usd_m": 9972,
+     "usd_display": "9.97bn美元",
+     "usd_label": "计算",
+     "base_m": 38629,
+     "base_display": "386.3亿元",
+     "yoy_pct": 75.2,
+     "yoy_display": "+75.2%",
+     "yoy_label": "计算",
+     "prior_q_m": null,
+     "prior_q_display": "未披露",
+     "qoq_pct": null,
+     "qoq_label": "计算",
+     "definition": "FCF 对账扣减的购置物业及设备（不含办公园区土地使用权与在建工程）",
+     "src": [
+      "S60",
+      "S61",
+      "S65",
+      "S62"
+     ],
+     "label": "公开披露"
+    },
+    "same_basis": false,
+    "basis_note": "两套口径数值不同，见各自定义",
+    "guidance": {
+     "text": "2025-02：未来三年至少3,800亿元用于云计算和AI基础设施；未更新总额（截至6月季末累计约1,900亿）",
+     "src": [
+      "S60",
+      "S61",
+      "S65",
+      "S62"
+     ],
+     "label": "公开披露"
+    },
+    "comparability": "现金流口径，含物流、直营与园区等非 AI 投入；公告未提融资租赁"
+   },
+   {
+    "company": "baidu",
+    "name": "百度",
+    "period": "2Q26",
+    "period_label": "2026Q2（截至2026-06-30）",
+    "report_date": "2026-08-18",
+    "ccy": "RMB",
+    "company_basis": {
+     "value_m": 11390,
+     "display": "113.9亿元",
+     "usd_m": 1679,
+     "usd_display": "1.68bn美元",
+     "usd_label": "公开披露",
+     "base_m": 3800,
+     "base_display": "38.0亿元",
+     "yoy_pct": 199.7,
+     "yoy_display": "+199.7%",
+     "yoy_label": "计算",
+     "prior_q_m": 5916,
+     "prior_q_display": "59.2亿元",
+     "qoq_pct": 92.5,
+     "qoq_label": "计算",
+     "definition": "FCF 对账表 capital expenditures（公司未另设口径）",
+     "src": [
+      "S80",
+      "S81"
+     ],
+     "label": "公开披露"
+    },
+    "cash_basis": {
+     "value_m": 11390,
+     "display": "113.9亿元",
+     "usd_m": 1679,
+     "usd_display": "1.68bn美元",
+     "usd_label": "计算",
+     "base_m": 3800,
+     "base_display": "38.0亿元",
+     "yoy_pct": 199.7,
+     "yoy_display": "+199.7%",
+     "yoy_label": "计算",
+     "prior_q_m": 5916,
+     "prior_q_display": "59.2亿元",
+     "qoq_pct": 92.5,
+     "qoq_label": "计算",
+     "definition": "同左（现金口径，含爱奇艺 20m）",
+     "src": [
+      "S80",
+      "S81"
+     ],
+     "label": "公开披露"
+    },
+    "same_basis": true,
+    "basis_note": "公司只披露一个 capex 数，即现金口径（两列相同）",
+    "guidance": {
+     "text": "未找到",
+     "src": [
+      "S80",
+      "S81"
+     ],
+     "label": "公开披露"
+    },
+    "comparability": "含爱奇艺（20m）"
+   },
+   {
+    "company": "jd",
+    "name": "京东",
+    "period": "2Q26",
+    "period_label": "2026Q2（截至2026-06-30）",
+    "report_date": "2026-08-13",
+    "ccy": "RMB",
+    "company_basis": {
+     "value_m": 5520,
+     "display": "55.2亿元",
+     "usd_m": 814,
+     "usd_display": "0.81bn美元",
+     "usd_label": "公开披露",
+     "base_m": 3032,
+     "base_display": "30.3亿元",
+     "yoy_pct": 82.1,
+     "yoy_display": "+82.1%",
+     "yoy_label": "计算",
+     "prior_q_m": 5063,
+     "prior_q_display": "50.6亿元",
+     "qoq_pct": 9.0,
+     "qoq_label": "计算",
+     "definition": "capital expenditures, net of related sales proceeds（含开发物业 2,517m）",
+     "src": [
+      "S90",
+      "S91"
+     ],
+     "label": "公开披露"
+    },
+    "cash_basis": {
+     "value_m": 5520,
+     "display": "55.2亿元",
+     "usd_m": 814,
+     "usd_display": "0.81bn美元",
+     "usd_label": "计算",
+     "base_m": 3032,
+     "base_display": "30.3亿元",
+     "yoy_pct": 82.1,
+     "yoy_display": "+82.1%",
+     "yoy_label": "计算",
+     "prior_q_m": 5063,
+     "prior_q_display": "50.6亿元",
+     "qoq_pct": 9.0,
+     "qoq_label": "计算",
+     "definition": "同左（现金净额）",
+     "src": [
+      "S90",
+      "S91"
+     ],
+     "label": "公开披露"
+    },
+    "same_basis": true,
+    "basis_note": "公司只披露一个 capex 数，即现金口径（两列相同）",
+    "guidance": {
+     "text": "未找到",
+     "src": [
+      "S90",
+      "S91"
+     ],
+     "label": "公开披露"
+    },
+    "comparability": "含开发物业 2,517m；以物流、仓储与地产为主，未单列 AI 算力 capex，不宜与 AI capex 直接比较"
+   },
+   {
+    "company": "meta",
+    "name": "Meta",
+    "period": "Q3'26",
+    "period_label": "2026Q3（截至2026-09-30）",
+    "report_date": "2026-10-21",
+    "ccy": "USD",
+    "company_basis": {
+     "value_m": 34906,
+     "display": "34.91bn美元",
+     "usd_m": 34906,
+     "usd_display": "34.91bn美元",
+     "usd_label": "公开披露",
+     "base_m": 19374,
+     "base_display": "19.37bn美元",
+     "yoy_pct": 80.2,
+     "yoy_display": "+80.2%",
+     "yoy_label": "计算",
+     "prior_q_m": 31078,
+     "prior_q_display": "31.08bn美元",
+     "qoq_pct": 12.3,
+     "qoq_label": "计算",
+     "definition": "购置PP&E＋融资租赁本金支付（33,942＋964）",
+     "src": [
+      "S20",
+      "S24"
+     ],
+     "label": "公开披露"
+    },
+    "cash_basis": {
+     "value_m": 33942,
+     "display": "33.94bn美元",
+     "usd_m": 33942,
+     "usd_display": "33.94bn美元",
+     "usd_label": "公开披露",
+     "base_m": 18829,
+     "base_display": "18.83bn美元",
+     "yoy_pct": 80.3,
+     "yoy_display": "+80.3%",
+     "yoy_label": "计算",
+     "prior_q_m": 30116,
+     "prior_q_display": "30.12bn美元",
+     "qoq_pct": 12.7,
+     "qoq_label": "计算",
+     "definition": "现金流量表 Purchases of property and equipment",
+     "src": [
+      "S20",
+      "S24"
+     ],
+     "label": "公开披露"
+    },
+    "same_basis": false,
+    "basis_note": "两套口径数值不同，见各自定义",
+    "guidance": {
+     "text": "2026年 $135–145bn（含融资租赁本金；前值 $130–145bn）",
+     "src": [
+      "S20",
+      "S24"
+     ],
+     "label": "公开披露"
+    },
+    "comparability": "两项均为现金流量表项目；公司口径＝购置 PP&E＋融资租赁本金"
+   },
+   {
+    "company": "alphabet",
+    "name": "Alphabet",
+    "period": "Q2'26",
+    "period_label": "2026Q2（截至2026-06-30）",
+    "report_date": "2026-07-22",
+    "ccy": "USD",
+    "company_basis": {
+     "value_m": 44924,
+     "display": "44.92bn美元",
+     "usd_m": 44924,
+     "usd_display": "44.92bn美元",
+     "usd_label": "公开披露",
+     "base_m": 22446,
+     "base_display": "22.45bn美元",
+     "yoy_pct": 100.1,
+     "yoy_display": "+100.1%",
+     "yoy_label": "计算",
+     "prior_q_m": 35674,
+     "prior_q_display": "35.67bn美元",
+     "qoq_pct": 25.9,
+     "qoq_label": "计算",
+     "definition": "Purchases of property and equipment（公司以此为 capex）",
+     "src": [
+      "S30",
+      "S31",
+      "S32"
+     ],
+     "label": "公开披露"
+    },
+    "cash_basis": {
+     "value_m": 44924,
+     "display": "44.92bn美元",
+     "usd_m": 44924,
+     "usd_display": "44.92bn美元",
+     "usd_label": "公开披露",
+     "base_m": 22446,
+     "base_display": "22.45bn美元",
+     "yoy_pct": 100.1,
+     "yoy_display": "+100.1%",
+     "yoy_label": "计算",
+     "prior_q_m": 35674,
+     "prior_q_display": "35.67bn美元",
+     "qoq_pct": 25.9,
+     "qoq_label": "计算",
+     "definition": "同左（现金口径，不单列融资租赁）",
+     "src": [
+      "S30",
+      "S31",
+      "S32"
+     ],
+     "label": "公开披露"
+    },
+    "same_basis": true,
+    "basis_note": "公司只披露一个 capex 数，即现金口径（两列相同）",
+    "guidance": {
+     "text": "2026年 $195–205bn（前值 $180–190bn）；2027年显著增加",
+     "src": [
+      "S30",
+      "S31",
+      "S32"
+     ],
+     "label": "公开披露"
+    },
+    "comparability": "不单列融资租赁"
+   },
+   {
+    "company": "microsoft",
+    "name": "Microsoft",
+    "period": "FY26Q4",
+    "period_label": "FY26Q4（截至2026-06-30）",
+    "report_date": "2026-07-29",
+    "ccy": "USD",
+    "company_basis": {
+     "value_m": 41000,
+     "display": "41.00bn美元",
+     "usd_m": 41000,
+     "usd_display": "41.00bn美元",
+     "usd_label": "公开披露",
+     "base_m": 24200,
+     "base_display": "24.20bn美元",
+     "yoy_pct": 69.4,
+     "yoy_display": "+69.4%",
+     "yoy_label": "计算",
+     "prior_q_m": 31900,
+     "prior_q_display": "31.90bn美元",
+     "qoq_pct": 28.5,
+     "qoq_label": "计算",
+     "definition": "含融资租赁的资本开支（融资租赁 $5.6bn）",
+     "src": [
+      "S40",
+      "S41",
+      "S42",
+      "S43"
+     ],
+     "label": "公开披露"
+    },
+    "cash_basis": {
+     "value_m": 35802,
+     "display": "35.80bn美元",
+     "usd_m": 35802,
+     "usd_display": "35.80bn美元",
+     "usd_label": "公开披露",
+     "base_m": 17079,
+     "base_display": "17.08bn美元",
+     "yoy_pct": 109.6,
+     "yoy_display": "+109.6%",
+     "yoy_label": "计算",
+     "prior_q_m": 30900,
+     "prior_q_display": "30.90bn美元",
+     "qoq_pct": 15.9,
+     "qoq_label": "计算",
+     "definition": "Cash paid for PP&E（现金流量表 Additions to property and equipment）",
+     "src": [
+      "S40",
+      "S41",
+      "S42",
+      "S43"
+     ],
+     "label": "公开披露"
+    },
+    "same_basis": false,
+    "basis_note": "两套口径数值不同，见各自定义",
+    "guidance": {
+     "text": "CY2026 约$175bn（租赁重分类后；前值约$190bn）；FY27Q1 >$50bn",
+     "src": [
+      "S40",
+      "S41",
+      "S42",
+      "S43"
+     ],
+     "label": "公开披露"
+    },
+    "comparability": "公司口径含融资租赁（非现金）；FY27 起更多新租赁记为经营租赁、不计入 capex，口径将系统性偏低；财年与日历年错位（FY26Q4＝2026年4–6月）"
+   },
+   {
+    "company": "amazon",
+    "name": "Amazon",
+    "period": "Q2'26",
+    "period_label": "2026Q2（截至2026-06-30）",
+    "report_date": "2026-07-30",
+    "ccy": "USD",
+    "company_basis": {
+     "value_m": 53076,
+     "display": "53.08bn美元",
+     "usd_m": 53076,
+     "usd_display": "53.08bn美元",
+     "usd_label": "公开披露",
+     "base_m": 31368,
+     "base_display": "31.37bn美元",
+     "yoy_pct": 69.2,
+     "yoy_display": "+69.2%",
+     "yoy_label": "计算",
+     "prior_q_m": 43200,
+     "prior_q_display": "43.20bn美元",
+     "qoq_pct": 22.9,
+     "qoq_label": "计算",
+     "definition": "管理层 cash capex（购置PP&E扣除出售所得与激励后净额）",
+     "src": [
+      "S50",
+      "S51",
+      "S52",
+      "S54"
+     ],
+     "label": "公开披露"
+    },
+    "cash_basis": {
+     "value_m": 54208,
+     "display": "54.21bn美元",
+     "usd_m": 54208,
+     "usd_display": "54.21bn美元",
+     "usd_label": "公开披露",
+     "base_m": 32183,
+     "base_display": "32.18bn美元",
+     "yoy_pct": 68.4,
+     "yoy_display": "+68.4%",
+     "yoy_label": "计算",
+     "prior_q_m": 44203,
+     "prior_q_display": "44.20bn美元",
+     "qoq_pct": 22.6,
+     "qoq_label": "计算",
+     "definition": "现金流量表 Purchases of property and equipment 总额（不含融资租赁取得的 $563m）",
+     "src": [
+      "S50",
+      "S51",
+      "S52",
+      "S54"
+     ],
+     "label": "公开披露"
+    },
+    "same_basis": false,
+    "basis_note": "两套口径数值不同，见各自定义",
+    "guidance": {
+     "text": "2026年现金capex约$220bn（前值约$200bn）",
+     "src": [
+      "S50",
+      "S51",
+      "S52",
+      "S54"
+     ],
+     "label": "公开披露"
+    },
+    "comparability": "含物流、Kuiper 等非 AWS 投入；不含以融资租赁取得的 PP&E（$563m）"
+   }
+  ],
+  "notes": [
+   "公司口径＝公司在业绩材料中称为 capex/资本开支的数；现金口径＝现金流量表购置物业设备（或公司 FCF 对账扣减项）。",
+   "同比、环比除注明“公开披露”外均为本脚本按原币百万计算；腾讯现金口径按 0.1 十亿元精度计算。",
+   "人民币按美联储 H.10 2026-06-30 汇率 6.7851 折美元：阿里/百度/京东与公司公告折算值逐一核对（差≤1 百万）；腾讯为本脚本计算。",
+   "各家口径差异较大（含/不含融资租赁、含物流与开发物业等），跨公司比较请先看 definition 与 comparability。"
+  ]
+ },
+ "tencent_capex_trajectory": {
+  "unit": "十亿元人民币",
+  "rows": [
+   {
+    "quarter": "2Q25",
+    "capex_bn": 19.1,
+    "capex_paid_bn": 22.9,
+    "fcf_bn": 43.0,
+    "gap_bn": 3.8,
+    "gap_label": "计算",
+    "src": [
+     "S12",
+     "S17"
+    ],
+    "label": "公开披露",
+    "call_src": "—"
+   },
+   {
+    "quarter": "3Q25",
+    "capex_bn": 13.0,
+    "capex_paid_bn": 20.0,
+    "fcf_bn": 58.5,
+    "gap_bn": 7.0,
+    "gap_label": "计算",
+    "src": [
+     "S12",
+     "S13"
+    ],
+    "label": "公开披露",
+    "call_src": "S14"
+   },
+   {
+    "quarter": "4Q25",
+    "capex_bn": 19.6,
+    "capex_paid_bn": 22.4,
+    "fcf_bn": 34.0,
+    "gap_bn": 2.8,
+    "gap_label": "计算",
+    "src": [
+     "S09",
+     "S10"
+    ],
+    "label": "公开披露",
+    "call_src": "S11"
+   },
+   {
+    "quarter": "1Q26",
+    "capex_bn": 31.9,
+    "capex_paid_bn": 37.0,
+    "fcf_bn": 56.7,
+    "gap_bn": 5.1,
+    "gap_label": "计算",
+    "src": [
+     "S07",
+     "S05"
+    ],
+    "label": "公开披露",
+    "call_src": "S08"
+   },
+   {
+    "quarter": "2Q26",
+    "capex_bn": 52.8,
+    "capex_paid_bn": 59.3,
+    "fcf_bn": -13.8,
+    "gap_bn": 6.5,
+    "gap_label": "计算",
+    "src": [
+     "S03",
+     "S01"
+    ],
+    "label": "公开披露",
+    "call_src": "S04"
+   }
+  ],
+  "note": "资本开支（公司口径）vs CAPEX Paid（现金付款）；差额为计算值。来源：腾讯各季业绩 PPT 与港交所公告。"
+ },
+ "flashes": [
+  {
+   "id": "meta_2026q3",
+   "company": "meta",
+   "title": "Meta 2026Q3 速评",
+   "period": "2026Q3（截至2026-09-30）",
+   "report_date": "2026-10-21",
+   "why": {
+    "text": "Meta 是 8 家同业中唯一已发布 9 月季度的公司（截至 10-26），其 capex 指引、回报表述与资本结构安排是腾讯 11-18 业绩会前最新的海外参照。",
+    "src": [
+     "S20",
+     "S25"
+    ],
+    "label": "公开披露"
+   },
+   "conclusions": [
+    {
+     "text": "capex 继续高位、全年区间收窄：Q3 含融资租赁本金的 capex 349.1 亿美元；2026 年指引由 1,300–1,450 亿美元收窄至 1,350–1,450 亿美元（下限上调 50 亿）；2027 年预算未定，称将“继续积极投资”。",
+     "src": [
+      "S20"
+     ],
+     "label": "公开披露"
+    },
+    {
+     "text": "现金流转负并新设融资工具：Q3 自由现金流 −21.2 亿美元（上年同期 +106.3 亿）；前三季未回购 A 类股；新设无投票权 C 类股（2027-01 生效）用于融资、员工薪酬与并购，CFO 称目前没有具体融资计划。",
+     "src": [
+      "S20",
+      "S22"
+     ],
+     "label": "公开披露"
+    },
+    {
+     "text": "回报表述分两层：CFO 称 AI 投资已为核心广告带来可观增量收入，MSL 投资回报期长于核心业务；新 AI 业务预计 2027 年开始贡献增量收入；Muse 计算成本效率目标为一年内提升 10 倍以上。",
+     "src": [
+      "S20",
+      "S22"
+     ],
+     "label": "公开披露"
+    }
+   ],
+   "key_numbers": [
+    {
+     "metric": "收入",
+     "value": "646.0 亿美元",
+     "yoy": "+26%",
+     "src": [
+      "S20"
+     ],
+     "label": "公开披露",
+     "anchors": [
+      {
+       "src": "S20",
+       "text": "Revenue $ 64,601 $ 51,242 26 %"
+      }
+     ]
+    },
+    {
+     "metric": "广告收入",
+     "value": "630.6 亿美元（展示量+10%，单价+14%）",
+     "yoy": "+26%",
+     "src": [
+      "S20"
+     ],
+     "label": "公开披露",
+     "anchors": [
+      {
+       "src": "S20",
+       "text": "Advertising $ 63,061 $ 50,082"
+      },
+      {
+       "src": "S20",
+       "text": "Ad impressions delivered across our Family of Apps increased by 10% year-over-year"
+      },
+      {
+       "src": "S20",
+       "text": "Average price per ad increased by 14% year-over-year"
+      }
+     ]
+    },
+    {
+     "metric": "GAAP 经营利润率",
+     "value": "20%（上年同期 40%）；剔除 98.9 亿美元法律费用后经营利润 228.8 亿美元",
+     "yoy": "经营利润 −37%",
+     "src": [
+      "S20"
+     ],
+     "label": "公开披露",
+     "anchors": [
+      {
+       "src": "S20",
+       "text": "Operating margin 20 % 40 %"
+      },
+      {
+       "src": "S20",
+       "text": "Income from operations of $12.99 billion would have increased by $9.89 billion to $22.88 billion"
+      }
+     ]
+    },
+    {
+     "metric": "capex（含融资租赁本金）",
+     "value": "349.1 亿美元＝购置 PP&E 339.4 亿＋融资租赁本金 9.6 亿",
+     "yoy": "+80.2%（计算）",
+     "src": [
+      "S20",
+      "S21"
+     ],
+     "label": "计算",
+     "anchors": [
+      {
+       "src": "S20",
+       "text": "Capital expenditures, including principal payments on finance leases, were $34.91 billion"
+      },
+      {
+       "src": "S20",
+       "text": "Purchases of property and equipment (33,942) (18,829)"
+      },
+      {
+       "src": "S20",
+       "text": "Principal payments on finance leases (964) (545)"
+      },
+      {
+       "src": "S21",
+       "text": "were $34.91 billion"
+      }
+     ]
+    },
+    {
+     "metric": "折旧摊销",
+     "value": "71.5 亿美元",
+     "yoy": "+44.1%（计算）",
+     "src": [
+      "S20"
+     ],
+     "label": "计算",
+     "anchors": [
+      {
+       "src": "S20",
+       "text": "Depreciation and amortization 7,154 4,963"
+      }
+     ]
+    },
+    {
+     "metric": "经营现金流 / 自由现金流",
+     "value": "327.9 亿 / −21.2 亿美元（上年同期 FCF +106.3 亿）",
+     "yoy": "经营现金流 +9.3%（计算）",
+     "src": [
+      "S20",
+      "S21"
+     ],
+     "label": "公开披露",
+     "anchors": [
+      {
+       "src": "S20",
+       "text": "Net cash provided by operating activities 32,786 29,999"
+      },
+      {
+       "src": "S20",
+       "text": "Free cash flow $ (2,120) $ 10,625"
+      },
+      {
+       "src": "S21",
+       "text": "Free cash flow $ (2,120) $ 10,625"
+      }
+     ]
+    },
+    {
+     "metric": "股东回报",
+     "value": "股息 13.6 亿美元；2026 年前三季未回购 A 类股（上年同期前三季 262.5 亿）",
+     "yoy": "—",
+     "src": [
+      "S20"
+     ],
+     "label": "公开披露",
+     "anchors": [
+      {
+       "src": "S20",
+       "text": "Dividend and dividend equivalent payments were $1.36 billion"
+      },
+      {
+       "src": "S20",
+       "text": "Repurchases of Class A common stock — (3,327) — (26,248)"
+      }
+     ]
+    },
+    {
+     "metric": "现金及有价证券 / 长期债务",
+     "value": "824.5 亿 / 809.2 亿美元（2025 年末长期债务 587.4 亿；前三季发债净所得 249.1 亿）",
+     "yoy": "—",
+     "src": [
+      "S20"
+     ],
+     "label": "公开披露",
+     "anchors": [
+      {
+       "src": "S20",
+       "text": "Cash, cash equivalents, and marketable securities were $82.45 billion"
+      },
+      {
+       "src": "S20",
+       "text": "Long-term debt 80,922 58,744"
+      },
+      {
+       "src": "S20",
+       "text": "Proceeds from issuance of long-term debt, net — — 24,910 —"
+      }
+     ]
+    },
+    {
+     "metric": "指引：2026 capex / 总费用 / Q4 收入",
+     "value": "1,350–1,450 亿 / 1,750–1,790 亿 / 730–760 亿美元",
+     "yoy": "capex 下限上调 50 亿",
+     "src": [
+      "S20"
+     ],
+     "label": "公开披露",
+     "anchors": [
+      {
+       "src": "S20",
+       "text": "to be in the range of $135-145 billion, narrowed from our prior outlook of $130-145 billion"
+      },
+      {
+       "src": "S20",
+       "text": "full year 2026 total expenses to be in the range of $175-179 billion"
+      },
+      {
+       "src": "S20",
+       "text": "fourth quarter 2026 total revenue to be in the range of $73-76 billion"
+      }
+     ]
+    }
+   ],
+   "ai_capex_guidance": [
+    {
+     "text": "口径：Meta 的 capex＝现金流量表“购置物业设备”＋“融资租赁本金支付”，公司称两项合计代表所需物业设备（无论是否以融资租赁取得）；CFO：Q3 投向服务器、数据中心与网络基础设施。",
+     "src": [
+      "S20",
+      "S22"
+     ],
+     "label": "公开披露"
+    },
+    {
+     "text": "指引轨迹：2026 年 capex 指引 1,150–1,350 亿（1 月）→1,250–1,450 亿（4 月）→1,300–1,450 亿（7 月）→1,350–1,450 亿美元（10 月）。前三季累计 858.2 亿美元（计算：830.55＋27.69），隐含 Q4 约 492–592 亿美元（计算）。",
+     "src": [
+      "S20",
+      "S24",
+      "S26"
+     ],
+     "label": "计算"
+    },
+    {
+     "text": "2027 年：预算与产能计划仍在制定，预计继续积极投资以支持核心业务与新 AI 项目；CFO 称正在评估大量“不同时间维度回报”的投资提案，通常在 Q4 电话会给出次年指引。",
+     "src": [
+      "S20",
+      "S22"
+     ],
+     "label": "公开披露"
+    },
+    {
+     "text": "成本与利润率：总费用增长主要来自法律相关费用、基础设施成本与第三方 AI token 成本；基础设施成本增长来自第三方云支出、折旧与数据中心运营成本。折旧摊销同比+44.1%（计算）。",
+     "src": [
+      "S22",
+      "S20"
+     ],
+     "label": "计算"
+    },
+    {
+     "text": "资金来源：长期债务由 2025 年末 587.4 亿增至 809.2 亿美元；新设无投票权 C 类股，CFO 称旨在建立多元化融资渠道的资本结构框架，目前没有具体融资计划。",
+     "src": [
+      "S20",
+      "S22"
+     ],
+     "label": "公开披露"
+    }
+   ],
+   "analyst_focus": {
+    "note": "第三方文字稿，分析师姓名与机构归属待录音复核；只列公开提问主题，不对个人评价",
+    "items": [
+     {
+      "analyst": "Brian Nowak",
+      "org": "摩根士丹利",
+      "topic": "Muse 用户增长的约束（模型能力、效率、算力）；Meta Enterprise 平台愿景",
+      "src": [
+       "S22"
+      ],
+      "label": "公开披露"
+     },
+     {
+      "analyst": "Eric Sheridan",
+      "org": "高盛",
+      "topic": "代理式商务的摩擦；C 类股发行后的资本来源与资本结构",
+      "src": [
+       "S22"
+      ],
+      "label": "公开披露",
+      "q": "any updated thoughts broadly about how you think about sources of capital and optimizing your capital structure",
+      "qsrc": "S22"
+     },
+     {
+      "analyst": "Doug Anmuth",
+      "org": "摩根大通",
+      "topic": "代理间交易；2027 年费用与 capex 框架",
+      "src": [
+       "S22"
+      ],
+      "label": "公开披露"
+     },
+     {
+      "analyst": "Justin Post",
+      "org": "美国银行",
+      "topic": "新模型对广告系统的提升空间；2027 年收入增长是否包含 AI 新收入",
+      "src": [
+       "S22"
+      ],
+      "label": "公开披露"
+     },
+     {
+      "analyst": "Mark Shmulik",
+      "org": "伯恩斯坦",
+      "topic": "以 Muse 为中心的组织调整；面向中小企业的代理",
+      "src": [
+       "S22"
+      ],
+      "label": "公开披露"
+     },
+     {
+      "analyst": "Ross Sandler",
+      "org": "巴克莱",
+      "topic": "Muse 单用户成本结构与降本路径",
+      "src": [
+       "S22"
+      ],
+      "label": "公开披露"
+     },
+     {
+      "analyst": "Mark Mahaney",
+      "org": "Evercore ISI",
+      "topic": "Muse 变现是否快于以往的产品节奏；购物数据口径",
+      "src": [
+       "S22"
+      ],
+      "label": "公开披露"
+     }
+    ],
+    "summary": {
+     "text": "7 位分析师中，3 位直接追问 Muse 的增长约束、单位成本或变现节奏，2 位追问 2027 年 capex 或资本来源（计算：按提问主题人工归类）。上一季（Q2）追问集中在 ROIC 时点、模型定位/开源与资本来源；本季转向 Muse 的单位经济，资本来源连续两季被问。",
+     "src": [
+      "S22",
+      "S23"
+     ],
+     "label": "计算"
+    }
+   },
+   "implications_for_tencent": [
+    {
+     "text": "回报表述可能被要求分层：Meta 把 AI 投资分为“已在核心广告兑现”和“回报期更长的 MSL”两层，并给出成本效率目标。腾讯 2Q26 已有“转租可几乎即时回收折旧”“转售获利超 30%”等表述，但未区分现有业务 AI 提效与新 AI 产品的回报时间表；分析师可能以 Meta 的分层框架追问。",
+     "basis": "Meta 新闻稿 CFO 展望与电话会；腾讯 2Q26 电话会（见 tencent:T5）",
+     "src": [
+      "S20",
+      "S22",
+      "S04"
+     ],
+     "label": "推断"
+    },
+    {
+     "text": "capex 指引形式的对照：Meta 每季更新全年区间并写明口径（含融资租赁本金），腾讯不给金额指引，且公司口径（528 亿元）与现金付款（593 亿元）不同。同业多以区间指引为常态，腾讯 2026/2027 年 capex 量级与口径差异可能成为固定追问点。",
+     "basis": "Meta 新闻稿；腾讯 2Q26 公告与电话会（见 tencent:T2、tencent:T3）",
+     "src": [
+      "S20",
+      "S01",
+      "S02",
+      "S04"
+     ],
+     "label": "推断"
+    },
+    {
+     "text": "“capex 优先于回购”的同业组合正在出现：Meta FCF 转负、前三季未回购并新设 C 类股；腾讯 2Q26 FCF −138 亿元，首席战略官称未来可能把更多现金投向 capex、相应减少回购。腾讯 Q3 回购金额与资本配置次序可能被放在同一框架下比较。",
+     "basis": "Meta 新闻稿与电话会；腾讯 2Q26 公告与电话会（见 tencent:T7）",
+     "src": [
+      "S20",
+      "S22",
+      "S02",
+      "S04"
+     ],
+     "label": "推断"
+    }
+   ],
+   "tencent_q3_questions": [
+    {
+     "q": "Meta 已收窄 2026 年 capex 区间并称 2027 年继续积极投资。腾讯是否会给出 2026 年全年或 2027 年 capex 的量级？“今明两年集中投入”的表述是否仍然成立？",
+     "why": "同业普遍给区间指引；腾讯 2Q26 只给定性框架。",
+     "public_statement_refs": [
+      "tencent:T2",
+      "tencent:T3"
+     ],
+     "src": [
+      "S20",
+      "S04"
+     ],
+     "label": "推断",
+     "note": "暂无已公开表述（工具只标注，不建议口径）"
+    },
+    {
+     "q": "Meta 区分核心业务回报与 MSL 的长周期回报。腾讯能否分别说明服务现有业务（广告、游戏）的 AI 投入和新 AI 产品（元宝、WorkBuddy 等）的回报时间表？新 AI 产品单季拖累（2Q26 约 105 亿元，推算值）何时见顶？",
+     "why": "Meta 的分层回报表述为分析师提供了现成模板。",
+     "public_statement_refs": [
+      "tencent:T5",
+      "tencent:T6"
+     ],
+     "src": [
+      "S20",
+      "S02",
+      "S04"
+     ],
+     "label": "推断",
+     "note": "暂无已公开表述（工具只标注，不建议口径）"
+    },
+    {
+     "q": "Meta FCF 转负并新设融资工具。腾讯 2Q26 FCF −138 亿元、净现金降至 582 亿元，Q3 是否继续为负？回购与 capex 的优先次序如何安排？",
+     "why": "资本来源已连续两季成为 Meta 电话会追问点。",
+     "public_statement_refs": [
+      "tencent:T7"
+     ],
+     "src": [
+      "S20",
+      "S22",
+      "S02",
+      "S04"
+     ],
+     "label": "推断",
+     "note": "暂无已公开表述（工具只标注，不建议口径）"
+    }
+   ],
+   "source_note": "数字取自 Meta 官方新闻稿（网页与 PDF 两版逐字核对）；电话会内容取自 StockAnalysis 第三方文字稿（非官方逐字稿）。",
+   "quotes": [
+    {
+     "text": "these investments will take longer to generate returns than those in our core business",
+     "speaker": "Susan Li（CFO），新闻稿 CFO 展望",
+     "src": [
+      "S20"
+     ],
+     "tier": 2,
+     "label": "公开披露",
+     "context": "指 MSL 投资；同段称 AI 投资已为核心广告带来可观增量收入"
+    },
+    {
+     "text": "we expect to improve its cost efficiency by more than 10x in the next year",
+     "speaker": "Mark Zuckerberg（CEO）",
+     "src": [
+      "S22"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准",
+     "context": "谈 Muse 的计算成本；称效率提升后在收入规模化时可盈利"
+    },
+    {
+     "text": "We do not have any specific financing plans to announce at this time",
+     "speaker": "Susan Li（CFO）",
+     "src": [
+      "S22"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准",
+     "context": "回应高盛关于 C 类股与资本来源的追问"
+    }
+   ],
+   "watermark": "内部准备材料，不构成公司口径"
+  },
+  {
+   "id": "alibaba_2026q2",
+   "company": "alibaba",
+   "title": "阿里巴巴 截至2026-06-30季度（FY27Q1）速评",
+   "period": "截至2026-06-30季度（FY27Q1）",
+   "report_date": "2026-08-20",
+   "why": {
+    "text": "阿里本季 capex 占收入约 25.2%，腾讯 2Q26 约 25.8%（计算：67,678/268,953；52,784/204,785），投入强度接近；且阿里单独披露 AI 云收入、AI 相关产品收入与回本周期，可直接对照腾讯的披露口径。",
+    "src": [
+     "S60",
+     "S01",
+     "S02"
+    ],
+    "label": "计算"
+   },
+   "conclusions": [
+    {
+     "text": "capex 单季新高、未更新总额：capex 676.8 亿元（+75%），FCF −446.7 亿元；“三年至少 3,800 亿元”计划截至 6 月季末累计投入约 1,900 亿元，管理层不更新总额，并提醒不要把单季乘以 4 年化。",
+     "src": [
+      "S60",
+      "S62",
+      "S65"
+     ],
+     "label": "公开披露"
+    },
+    {
+     "text": "回报框架量化：按当前平均毛利率，AI capex 约 3 年回本，可缩短至 2.5 年甚至 2 年；理论上增速控制在 33% 以内即可实现正现金流，但公司选择保持 40% 以上增速；服务器 5 年使用寿命、回本后至少 2 年正 FCF。",
+     "src": [
+      "S62"
+     ],
+     "label": "公开披露"
+    },
+    {
+     "text": "AI 云对外变现可量化，并以股权融资补充资金：新分部 AI 云与算力服务收入 484.4 亿元（+45%），外部收入增速 45%（电话会称 22 个季度最高），AI 相关产品收入 123.8 亿元、连续 12 季三位数增长；8 月完成约 800 亿港元配售，全部用于全栈 AI。",
+     "src": [
+      "S60",
+      "S62",
+      "S66"
+     ],
+     "label": "公开披露"
+    }
+   ],
+   "key_numbers": [
+    {
+     "metric": "收入",
+     "value": "2,689.5 亿元（396.4 亿美元）",
+     "yoy": "+9%",
+     "src": [
+      "S60"
+     ],
+     "label": "公开披露",
+     "anchors": [
+      {
+       "src": "S60",
+       "text": "Revenue was RMB268,953 million (US$39,639 million), an increase of 9% year-over-year"
+      }
+     ]
+    },
+    {
+     "metric": "经营利润",
+     "value": "151.6 亿元（含商誉减值与拨备）",
+     "yoy": "−57%",
+     "src": [
+      "S60"
+     ],
+     "label": "公开披露",
+     "anchors": [
+      {
+       "src": "S60",
+       "text": "Income from operations was RMB15,161 million (US$2,234 million), a decrease of 57% year-over-year"
+      }
+     ]
+    },
+    {
+     "metric": "经调整 EBITA",
+     "value": "273.3 亿元",
+     "yoy": "−30%",
+     "src": [
+      "S60"
+     ],
+     "label": "公开披露",
+     "anchors": [
+      {
+       "src": "S60",
+       "text": "decreased 30% year-over-year to RMB27,329 million"
+      }
+     ]
+    },
+    {
+     "metric": "Non-GAAP 净利润",
+     "value": "207.2 亿元（上年同期 335.1 亿）",
+     "yoy": "−38%",
+     "src": [
+      "S60"
+     ],
+     "label": "公开披露",
+     "anchors": [
+      {
+       "src": "S60",
+       "text": "was RMB20,715 million (US$3,053 million), a decrease of 38% compared to RMB33,510 million"
+      }
+     ]
+    },
+    {
+     "metric": "AI 云与算力服务收入（新分部：云智能＋平头哥）",
+     "value": "484.4 亿元；外部收入增速 45%",
+     "yoy": "+45%",
+     "src": [
+      "S60"
+     ],
+     "label": "公开披露",
+     "anchors": [
+      {
+       "src": "S60",
+       "text": "revenue from AI Cloud and Compute Services was RMB48,437 million"
+      },
+      {
+       "src": "S60",
+       "text": "revenue from external customers both accelerated to 45%"
+      }
+     ]
+    },
+    {
+     "metric": "AI 云与算力服务 经调整 EBITA",
+     "value": "56.3 亿元（利润率约 11.6%，计算）",
+     "yoy": "+133%",
+     "src": [
+      "S60"
+     ],
+     "label": "计算",
+     "anchors": [
+      {
+       "src": "S60",
+       "text": "AI Cloud and Compute Services 2,419 5,628 830 133 %"
+      }
+     ]
+    },
+    {
+     "metric": "AI 相关产品收入",
+     "value": "123.8 亿元，连续 12 季三位数增长",
+     "yoy": "三位数（未给具体增速）",
+     "src": [
+      "S60"
+     ],
+     "label": "公开披露",
+     "anchors": [
+      {
+       "src": "S60",
+       "text": "achieving RMB12,376 million (US$1,824 million) and delivering the twelfth consecutive quarter of triple-digit year-over-year growth"
+      }
+     ]
+    },
+    {
+     "metric": "AI 实验室与应用 经调整 EBITA",
+     "value": "−138.6 亿元（上年同期 −32.2 亿）",
+     "yoy": "亏损扩大约 106.4 亿（计算）",
+     "src": [
+      "S60"
+     ],
+     "label": "计算",
+     "anchors": [
+      {
+       "src": "S60",
+       "text": "AI Labs and Applications (3,224 ) (13,861 )"
+      }
+     ]
+    },
+    {
+     "metric": "capex",
+     "value": "676.8 亿元（99.8 亿美元），约占收入 25.2%（计算）",
+     "yoy": "+75%",
+     "src": [
+      "S60"
+     ],
+     "label": "计算",
+     "anchors": [
+      {
+       "src": "S60",
+       "text": "capital expenditures were RMB67,678 million (US$9,975 million), an increase of 75% compared to RMB38,676 million"
+      }
+     ]
+    },
+    {
+     "metric": "经营现金流 / 自由现金流",
+     "value": "229.5 亿 / −446.7 亿元（上年同期 FCF −188.2 亿）",
+     "yoy": "经营现金流 +11%",
+     "src": [
+      "S60"
+     ],
+     "label": "公开披露",
+     "anchors": [
+      {
+       "src": "S60",
+       "text": "Net cash provided by operating activities was RMB22,945 million (US$3,382 million), an increase of 11%"
+      },
+      {
+       "src": "S60",
+       "text": "was an outflow of RMB44,670 million (US$6,584 million), compared to an outflow of RMB18,815 million"
+      }
+     ]
+    },
+    {
+     "metric": "现金及其他流动投资 / 本季回购",
+     "value": "4,745.1 亿元 / 1.62 亿美元（1,340 万股普通股）",
+     "yoy": "—",
+     "src": [
+      "S60"
+     ],
+     "label": "公开披露",
+     "anchors": [
+      {
+       "src": "S60",
+       "text": "our cash and other liquid investments (2) were RMB474,505 million"
+      },
+      {
+       "src": "S60",
+       "text": "we repurchased a total of 13.4 million ordinary shares (equivalent to approximately 1.7 million ADSs) for a total of US$162 million"
+      }
+     ]
+    }
+   ],
+   "ai_capex_guidance": [
+    {
+     "text": "capex 原因（公告）：持续投入 AI 基础设施以满足客户需求；同比大增源于采购周期波动、预期客户采用 AI 智能体带来的 CPU 算力增加、多类芯片组件涨价。",
+     "src": [
+      "S60"
+     ],
+     "label": "公开披露"
+    },
+    {
+     "text": "三年计划进度：2025-02 公告“未来三年至少 3,800 亿元用于云计算和 AI 基础设施”；电话会称截至 6 月季末累计约 1,900 亿元、进度大体符合预期（计算核对：FY26 1,260.6 亿＋本季 676.8 亿≈1,937 亿，约 51%）。另据财联社转述（非逐字），5 月电话会上 CEO 表示面向未来五年 AI 基建投入会远超 3,800 亿元。",
+     "src": [
+      "S65",
+      "S62",
+      "S61",
+      "S71"
+     ],
+     "label": "计算"
+    },
+    {
+     "text": "回报框架：约 3 年回本，提升 AI 产品毛利率、提高自研芯片占比、与伙伴共建数据中心及算力预收款三条路径可把回本期缩至 2.5 年甚至 2 年；财联社同日报道亦称“三年内回本”。",
+     "src": [
+      "S62",
+      "S68"
+     ],
+     "label": "公开披露"
+    },
+    {
+     "text": "融资：8-23 宣布、8-26 完成配售 7.1 亿股（每股 112.70 港元），约 800 亿港元全部用于全栈 AI：约 60% 扩建全球算力基础设施，约 40% 建设超大规模 AI 数据中心并升级传统云基础设施。",
+     "src": [
+      "S66"
+     ],
+     "label": "公开披露"
+    },
+    {
+     "text": "展望：管理层预计云收入增速在未来几个季度进一步加快、经调整 EBITA 利润率稳步提升；AI 实验室与应用亏损预计逐季收窄。",
+     "src": [
+      "S62"
+     ],
+     "label": "公开披露"
+    }
+   ],
+   "analyst_focus": {
+    "note": "第三方文字稿，分析师姓名与机构归属待录音复核；只列公开提问主题，不对个人评价",
+    "items": [
+     {
+      "analyst": "Alicia Yap",
+      "org": "花旗",
+      "topic": "capex 大增原因与后续趋势、3,800 亿计划是否更新、capex 分配与 ROIC；管理层答：不更新总额、累计约 1,900 亿、约 3 年回本",
+      "src": [
+       "S62",
+       "S64"
+      ],
+      "label": "公开披露",
+      "q": "Are there any updates to the existing three-year CapEx budget that you have of this CNY 380 billion that you mentioned before?",
+      "qsrc": "S62"
+     },
+     {
+      "analyst": "Charlene Liu",
+      "org": "汇丰",
+      "topic": "即时零售进展与电商集团各板块战略；管理层答：即时零售预计 FY2029 整体盈利，长期看即时零售有望贡献平台整体交易额约 30%",
+      "src": [
+       "S62",
+       "S64"
+      ],
+      "label": "公开披露"
+     },
+     {
+      "analyst": "白洋 Yang Bai",
+      "org": "中金",
+      "topic": "未来几个季度云增速驱动，以及算力紧缺缓解后的长期增长动力",
+      "src": [
+       "S62"
+      ],
+      "label": "公开披露"
+     },
+     {
+      "analyst": "Yuan Liao",
+      "org": "中信证券",
+      "topic": "MaaS ARR 年底目标是否调整、自研与第三方模型占比、开源与竞争对 MaaS 毛利率的影响",
+      "src": [
+       "S62"
+      ],
+      "label": "公开披露"
+     },
+     {
+      "analyst": "Alex Yao",
+      "org": "摩根大通",
+      "topic": "全栈 AI 的价值沉淀在哪一层；算力层竞争格局",
+      "src": [
+       "S62"
+      ],
+      "label": "公开披露"
+     }
+    ],
+    "summary": {
+     "text": "5 位分析师中，2 位直接涉及 capex 回报或价值沉淀，2 位追问云/MaaS 增长，1 位追问电商与即时零售（计算：按提问主题人工归类）；对客户管理收入下滑的追问较少。",
+     "src": [
+      "S62"
+     ],
+     "label": "计算"
+    }
+   },
+   "implications_for_tencent": [
+    {
+     "text": "AI 收入披露颗粒度的差距：阿里单独披露 AI 云收入及增速、AI 相关产品收入、MaaS ARR 与云利润率；腾讯 2Q26 只给出“云收入增速升至 20% 出头”与金融科技及企业服务 603 亿元（+9%），未披露 AI 收入金额。分析师可能以阿里的指标为模板追问腾讯。",
+     "basis": "阿里 6-K 与电话会；腾讯 2Q26 PPT 与新闻稿（见 tencent:T4）",
+     "src": [
+      "S60",
+      "S62",
+      "S03",
+      "S02"
+     ],
+     "label": "推断"
+    },
+    {
+     "text": "回报框架可比性：阿里公开了“约 3 年回本、5 年寿命、增速低于 33% 可正现金流”的量化框架；腾讯 2Q26 有“转租可几乎即时回收折旧”“转售获利超 30%”等表述，但没有回本期或 ROIC 口径。市场可能要求腾讯给出可比口径。",
+     "basis": "阿里电话会；腾讯 2Q26 电话会（见 tencent:T5）",
+     "src": [
+      "S62",
+      "S04"
+     ],
+     "label": "推断"
+    },
+    {
+     "text": "资金来源对比：两家 capex 占收入均约 25%（计算），阿里 FCF −446.7 亿元并以股权融资补充；腾讯 FCF −138 亿元（剔除算力预付款后 +376 亿元）、Q2 仍回购约 169 亿港元。腾讯“以自有现金流支撑、回购可能让位 capex”的表述可能被追问其可持续性。",
+     "basis": "阿里 6-K 与配售公告；腾讯 2Q26 公告与电话会（见 tencent:T7）",
+     "src": [
+      "S60",
+      "S66",
+      "S01",
+      "S02",
+      "S04"
+     ],
+     "label": "推断"
+    }
+   ],
+   "tencent_q3_questions": [
+    {
+     "q": "阿里已披露 AI 相关产品收入、MaaS ARR 和约 3 年的 capex 回本期。腾讯能否量化 AI 带来的收入（云 AI、WorkBuddy/CodeBuddy 订阅、广告增量），并给出可比的回报框架？",
+     "why": "阿里的披露为分析师提供了可直接对照的指标。",
+     "public_statement_refs": [
+      "tencent:T4",
+      "tencent:T5"
+     ],
+     "src": [
+      "S60",
+      "S62",
+      "S03",
+      "S04"
+     ],
+     "label": "推断",
+     "note": "暂无已公开表述（工具只标注，不建议口径）"
+    },
+    {
+     "q": "阿里云外部收入增长 45%、利润率约 12%，并预计继续加速。腾讯云 Q3 增速是多少？新增算力在内部（混元、元宝、广告模型）与对外出租之间如何分配？",
+     "why": "2Q26 已有分析师追问 AI 云利润率与 capex 投向。",
+     "public_statement_refs": [
+      "tencent:T4",
+      "tencent:T8"
+     ],
+     "src": [
+      "S60",
+      "S62",
+      "S04"
+     ],
+     "label": "推断",
+     "note": "暂无已公开表述（工具只标注，不建议口径）"
+    },
+    {
+     "q": "阿里以约 800 亿港元配售为 AI 融资。腾讯净现金已降至 582 亿元，2027 年 capex 与算力预付款如何演变？回购与派息力度能否维持？",
+     "why": "两家投入强度接近而资金来源不同。",
+     "public_statement_refs": [
+      "tencent:T3",
+      "tencent:T7"
+     ],
+     "src": [
+      "S66",
+      "S02",
+      "S04"
+     ],
+     "label": "推断",
+     "note": "暂无已公开表述（工具只标注，不建议口径）"
+    }
+   ],
+   "source_note": "数字取自阿里 SEC 6-K Ex99.1（一级来源，逐字核对）；电话会内容取自 StockAnalysis 第三方文字稿（英译，非官方逐字稿），部分中文表述经核查底稿（新浪财经实录）交叉核对。第三方实录中“本季 capex 671 亿”“回购 1,620 亿美元”与公告不一致，以公告为准。",
+   "quotes": [
+    {
+     "text": "Based on average gross margins today, roughly, we can break even on AI related CapEx in three years.",
+     "speaker": "吴泳铭 Eddie Wu（CEO；实录英译）",
+     "src": [
+      "S62"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准",
+     "context": "回答花旗关于 capex 回报的提问"
+    },
+    {
+     "text": "With a five-year useful life, we expect them to generate positive free cash flow, at least in the two years following breakeven.",
+     "speaker": "徐宏 Toby Xu（CFO）",
+     "src": [
+      "S62"
+     ],
+     "tier": 3,
+     "label": "公开披露",
+     "note": "非官方逐字稿，引用前以官方录音为准",
+     "context": "开场财务回顾，指配备芯片的服务器"
+    },
+    {
+     "text": "we have greater strategic and financial flexibility to make disciplined and sustained investments in full-stack AI capabilities",
+     "speaker": "徐宏 Toby Xu（CFO），业绩公告",
+     "src": [
+      "S60"
+     ],
+     "tier": 1,
+     "label": "公开披露",
+     "context": "业绩公告 CFO 表态"
+    }
+   ],
+   "watermark": "内部准备材料，不构成公司口径"
+  }
+ ],
+ "rerun": [
+  {
+   "company": "alphabet",
+   "name": "Alphabet",
+   "event": "Q3 2026 业绩",
+   "date": "2026-10-28",
+   "confirmed": true,
+   "src": [
+    "S33"
+   ],
+   "label": "公开披露",
+   "how": "发布后按 rerun_method 四步重跑；议题列 T1–T8 不变。"
+  },
+  {
+   "company": "microsoft",
+   "name": "Microsoft",
+   "event": "FY27Q1（2026-07~09）业绩",
+   "date": "2026-10-28",
+   "confirmed": true,
+   "src": [
+    "S44"
+   ],
+   "label": "公开披露",
+   "how": "发布后按 rerun_method 四步重跑；议题列 T1–T8 不变。"
+  },
+  {
+   "company": "amazon",
+   "name": "Amazon",
+   "event": "Q3 2026 业绩",
+   "date": "2026-10-29",
+   "confirmed": true,
+   "src": [
+    "S53"
+   ],
+   "label": "公开披露",
+   "how": "发布后按 rerun_method 四步重跑；议题列 T1–T8 不变。"
+  },
+  {
+   "company": "tencent",
+   "name": "腾讯控股",
+   "event": "Q3 2026 业绩（董事会）",
+   "date": "2026-11-18",
+   "confirmed": true,
+   "src": [
+    "S16"
+   ],
+   "label": "公开披露",
+   "how": "发布后按 rerun_method 四步重跑；议题列 T1–T8 不变。"
+  },
+  {
+   "company": "jd",
+   "name": "京东",
+   "event": "Q3 2026 业绩",
+   "date": "未公告（2025 年同期 11-13）",
+   "confirmed": false,
+   "src": [
+    "S94"
+   ],
+   "label": "推断",
+   "how": "发布后按 rerun_method 四步重跑；议题列 T1–T8 不变。日期为参考上年同期的推断；公司公告发布日期后先更新 peer_data.RERUN。"
+  },
+  {
+   "company": "baidu",
+   "name": "百度",
+   "event": "Q3 2026 业绩",
+   "date": "未公告（2025 年同期 11-18）",
+   "confirmed": false,
+   "src": [
+    "S84"
+   ],
+   "label": "推断",
+   "how": "发布后按 rerun_method 四步重跑；议题列 T1–T8 不变。日期为参考上年同期的推断；公司公告发布日期后先更新 peer_data.RERUN。"
+  },
+  {
+   "company": "alibaba",
+   "name": "阿里巴巴",
+   "event": "2026-09 季业绩",
+   "date": "未公告（2025 年同期 11-25）",
+   "confirmed": false,
+   "src": [
+    "S72"
+   ],
+   "label": "推断",
+   "how": "发布后按 rerun_method 四步重跑；议题列 T1–T8 不变。日期为参考上年同期的推断；公司公告发布日期后先更新 peer_data.RERUN。"
+  }
+ ],
+ "rerun_method": [
+  "1. 在 demo/pipeline/peer_fetch.py 的 FETCH 中加入新季度新闻稿（或 SEC 文件）与实录 URL，运行 python -I demo/pipeline/peer_fetch.py（只下载缺失文件）。",
+  "2. 在 demo/pipeline/peer_data.py 该公司 snapshots 中新增期间快照，latest 改为新期间、prior 改为原 latest；同步更新 CAPEX、SOURCES、NUMBER_ANCHORS。",
+  "3. 逐格人工填写 change_vs_prior（实质变化/口径变化/无变化/新增＋说明）。",
+  "4. 运行 python -I demo/pipeline/peer.py：自动重算同比/折算，并逐条校验引语与数字锚点；任何一条找不到原文即构建失败。"
+ ]
+}
